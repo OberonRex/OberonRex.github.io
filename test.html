@@ -3,8 +3,13 @@
 <head>
 <script>
 function myFunction() {
-    //var json = JSON.parse("");
-    document.getElementById("demo").innerHTML = "You are a loved woman!";
+  var text = '{"employees":[' +
+  '{"firstName":"John","lastName":"Doe" },' +
+  '{"firstName":"Anna","lastName":"Smith" },' +
+  '{"firstName":"Peter","lastName":"Jones" }]}';
+
+  obj = JSON.parse(text);    
+  document.getElementById("demo").innerHTML = "You are a loved woman!";
 }
 </script>
 </head>
