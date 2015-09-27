@@ -2,103 +2,15 @@
 <html>
 <head>
 <script>
-function myFunction() {
-  var text = '{\
-  "response": {\
-  "version":"0.1",\
-  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",\
-  "features": {\
-  "conditions": 1\
-  }\
-	}\
-  ,	"current_observation": {\
-		"image": {\
-		"url":"http://icons.wxug.com/graphics/wu2/logo_130x80.png",\
-		"title":"Weather Underground",\
-		"link":"http://www.wunderground.com"\
-		},\
-		"display_location": {\
-		"full":"Castle Hills, TX",\
-		"city":"Castle Hills",\
-		"state":"TX",\
-		"state_name":"Texas",\
-		"country":"US",\
-		"country_iso3166":"US",\
-		"zip":"78213",\
-		"magic":"2",\
-		"wmo":"99999",\
-		"latitude":"29.520000",\
-		"longitude":"-98.500000",\
-		"elevation":"238.00000000"\
-		},\
-		"observation_location": {\
-		"full":"Castle Hills, San Antonio, Texas",\
-		"city":"Castle Hills, San Antonio",\
-		"state":"Texas",\
-		"country":"US",\
-		"country_iso3166":"US",\
-		"latitude":"29.532188",\
-		"longitude":"-98.518394",\
-		"elevation":"869 ft"\
-		},\
-		"estimated": {\
-		},\
-		"station_id":"KTXSANAN197",\
-		"observation_time":"Last Updated on September 23, 10:22 AM CDT",\
-		"observation_time_rfc822":"Wed, 23 Sep 2015 10:22:00 -0500",\
-		"observation_epoch":"1443021720",\
-		"local_time_rfc822":"Wed, 23 Sep 2015 10:25:03 -0500",\
-		"local_epoch":"1443021903",\
-		"local_tz_short":"CDT",\
-		"local_tz_long":"America/Chicago",\
-		"local_tz_offset":"-0500",\
-		"weather":"Partly Cloudy",\
-		"temperature_string":"81.7 F (27.6 C)",\
-		"temp_f":81.7,\
-		"temp_c":27.6,\
-		"relative_humidity":"69%",\
-		"wind_string":"From the South at 2.7 MPH",\
-		"wind_dir":"South",\
-		"wind_degrees":180,\
-		"wind_mph":2.7,\
-		"wind_gust_mph":0,\
-		"wind_kph":4.3,\
-		"wind_gust_kph":0,\
-		"pressure_mb":"1017",\
-		"pressure_in":"30.04",\
-		"pressure_trend":"+",\
-		"dewpoint_string":"70 F (21 C)",\
-		"dewpoint_f":70,\
-		"dewpoint_c":21,\
-		"heat_index_string":"86 F (30 C)",\
-		"heat_index_f":86,\
-		"heat_index_c":30,\
-		"windchill_string":"NA",\
-		"windchill_f":"NA",\
-		"windchill_c":"NA",\
-		"feelslike_string":"86 F (30 C)",\
-		"feelslike_f":"86",\
-		"feelslike_c":"30",\
-		"visibility_mi":"10.0",\
-		"visibility_km":"16.1",\
-		"solarradiation":"--",\
-		"UV":"3","precip_1hr_string":"-999.00 in ( 0 mm)",\
-		"precip_1hr_in":"-999.00",\
-		"precip_1hr_metric":" 0",\
-		"precip_today_string":"0.00 in (0 mm)",\
-		"precip_today_in":"0.00",\
-		"precip_today_metric":"0",\
-		"icon":"partlycloudy",\
-		"icon_url":"http://icons.wxug.com/i/c/k/partlycloudy.gif",\
-		"forecast_url":"http://www.wunderground.com/US/TX/Castle_Hills.html",\
-		"history_url":"http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KTXSANAN197",\
-		"ob_url":"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=29.532188,-98.518394",\
-		"nowcast":""\
-	}\
-}';
 
+function myFunction() {
   obj = JSON.parse(text);    
   document.getElementById("demo").innerHTML = "You are a loved woman!";
+}
+
+function allDone(){
+// Close config page and return data
+location.href = 'pebblejs://close#success';
 }
 </script>
 </head>
@@ -109,7 +21,8 @@ function myFunction() {
 
 <p id="demo">A Paragraph</p>
 
-<button type="button" onclick="myFunction()">Try it</button>
+<button type="button" onclick="myFunction()">Cynthia's Button</button>
+<button type="button" onclick="allDone()">Done</button>
 
 </body>
 </html>
