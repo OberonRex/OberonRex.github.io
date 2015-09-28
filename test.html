@@ -36,12 +36,18 @@ function allDone(){
   location.href = 'pebblejs://close#' + JSON.stringify(aa);
 }
 
+function WeatherChanged(){
+  if (document.getElementById("WeatherSource").selectedIndex == 0)
+    document.getElementById("WUKeyDiv").style.display="none";
+  else document.getElementById("WUKeyDiv").style.display="inline";
+}
+
 </script>
 </head>
 
 <body onload="SetSelect()">
 
-<h1>My Test Web Page, v4.8</h1>
+<h1>My Test Web Page, v4.9</h1>
 
 Hour Tick Style:&nbsp;&nbsp;<select id="hrTickStyle">
   <option value="3">Circled Dots</option>
@@ -51,7 +57,7 @@ Hour Tick Style:&nbsp;&nbsp;<select id="hrTickStyle">
 Hour Tick Size: &nbsp;&nbsp;<input type="text" id="hrTickSize">
 <br><br>
 
-Weather Source: &nbsp;&nbsp;<select id="WeatherSource">
+Weather Source: &nbsp;&nbsp;<select id="WeatherSource" onchange="WeatherChanged()">
   <option value="0">OpenWeather</option>
   <option value="1">Weather Underground</option>
 </select>
