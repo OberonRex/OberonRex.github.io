@@ -11,6 +11,7 @@ function queryValue(variable){
     var pair = vars[i].split("=");
     if(pair[0] == variable){return pair[1];}
   }
+  alert("not found");
   return NULL;
 }
 
@@ -40,7 +41,7 @@ function allDone(){
 
 <body>
 
-<h1>My Test Web Page, v3.0</h1>
+<h1>My Test Web Page, v3.1</h1>
 
 <select id="TickStyle">
   <option value="3">Circled Dots</option>
