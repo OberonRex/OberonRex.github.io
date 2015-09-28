@@ -14,7 +14,16 @@ function queryValue(variable){
   return NULL;
 }
 
-alert(queryValue("KEY_HRTICKSTYLE"));
+var tsValue = queryValue("KEY_HRTICKSTYLE");
+
+var selectobject = document.getElementById("TickStyle");
+for (var i=0; i<selectobject.length; i++){
+  if (selectobject.options[i].value == queryValue)
+  {
+    selectobject.selectedIndex = i;
+    break;
+  }
+}
 
 function allDone(){
   var tSelect = document.getElementById("TickStyle");
@@ -31,7 +40,7 @@ function allDone(){
 
 <body>
 
-<h1>My Test Web Page, v2.9</h1>
+<h1>My Test Web Page, v3.0</h1>
 
 <select id="TickStyle">
   <option value="3">Circled Dots</option>
