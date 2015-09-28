@@ -17,6 +17,7 @@ function queryValue(variable){
 var tsValue = queryValue("KEY_HRTICKSTYLE");
 
 var selectobject = document.getElementById("TickStyle");
+alert(selectobject.length);
 for (var i=0; i<selectobject.length; i++){
   alert(selectobject.options[i].value);
   alert(queryValue);
@@ -42,7 +43,7 @@ function allDone(){
 
 <body>
 
-<h1>My Test Web Page, v3.2</h1>
+<h1>My Test Web Page, v3.3</h1>
 
 <select id="TickStyle">
   <option value="3">Circled Dots</option>
