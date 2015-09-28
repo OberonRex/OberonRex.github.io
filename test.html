@@ -4,8 +4,8 @@
 <script>
 
 function allDone(){
-  //var tSelect = document.getElementByID("TickStyle");
-  //var ts = tSelect.options[tSelect.selectedIndex].text;
+  var tSelect = document.getElementByID("TickStyle");
+  var ts = tSelect.options[tSelect.selectedIndex].text;
   // Close config page and return data
   location.href = 'pebblejs://close#success'//tickstyle=' + ts;
 }
