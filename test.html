@@ -47,24 +47,40 @@ function WeatherChanged(){
 
 <body onload="SetSelect()">
 
-<h1>My Test Web Page, v4.9</h1>
+<h1>My Test Web Page, v5.0</h1>
 
-Hour Tick Style:&nbsp;&nbsp;<select id="hrTickStyle">
-  <option value="3">Circled Dots</option>
-  <option value="0">Lines</option>
-</select>
-<br>
-Hour Tick Size: &nbsp;&nbsp;<input type="text" id="hrTickSize">
-<br><br>
+<table>
+  <tr>
+    <td>Hour Tick Style:</td>
+    < td>
+      <select id="hrTickStyle">
+        <option value="3">Circled Dots</option>
+        <option value="0">Lines</option>
+      </select>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Hour Tick Size: </td>
+    <td><input type="text" id="hrTickSize"></td>
+  </tr>
 
-Weather Source: &nbsp;&nbsp;<select id="WeatherSource" onchange="WeatherChanged()">
-  <option value="0">OpenWeather</option>
-  <option value="1">Weather Underground</option>
-</select>
-<br>
-<div id=WUKeyDiv style="display: none">
-  Weather Underground Key: &nbsp;&nbsp;<input type="text" id="WUKey">
-</div>
+  <tr>
+    <td>Weather Source:</td>
+    <td>
+      <select id="WeatherSource" onchange="WeatherChanged()">
+        <option value="0">OpenWeather</option>
+        <option value="1">Weather Underground</option>
+      </select>
+    </td>
+  </tr>
+  
+<tr id=WUKeyDiv style="display: none">
+  <td>Weather Underground Key:</td>
+  <td><input type="text" id="WUKey"></td>
+</tr>
+
+</table>
 
 <br><br>
 <button type="button" onclick="allDone()">Done</button>
