@@ -7,9 +7,9 @@ function getQueryStringValue (key) {
   return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
 }
 
-alert(window.location.search);
+//alert(window.location.search);
 var myValue = getQueryStringValue("KEY_HRTICKSTYLE");
-alert(myValue);
+//alert(myValue);
 
 function allDone(){
   var tSelect = document.getElementById("TickStyle");
