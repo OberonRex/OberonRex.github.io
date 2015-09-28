@@ -10,7 +10,7 @@ var aa;
 
 for (var i=0;i<vars.length;i++) {
     var pear = vars[i].split("=");
-    aa.pear[0] = pear[1];
+    aa[pear[0]] = pear[1];
   }
   
 function queryValue(variable){
@@ -55,7 +55,7 @@ function WeatherChanged(){
 
 <body onload="SetSelect()">
 
-<h1>My Test Web Page, v5.6</h1>
+<h1>My Test Web Page, v5.7</h1>
 
 <table>
   <tr>
