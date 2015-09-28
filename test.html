@@ -16,7 +16,7 @@ function queryValue(variable){
 
 function SetSelect(){
   var tsValue = queryValue("KEY_HRTICKSTYLE");
-  var selectobject = document.getElementById("TickStyle");
+  var selectobject = document.getElementById("hrTickStyle");
   for (var i=0; i<selectobject.length; i++){
     if (selectobject.options[i].value == tsValue)
     {
@@ -27,7 +27,7 @@ function SetSelect(){
 }
 
 function allDone(){
-  var tSelect = document.getElementById("TickStyle");
+  var tSelect = document.getElementById("hrTickStyle");
   var tsv = tSelect.options[tSelect.selectedIndex].value;
   var aa = {
     "KEY_HRTICKSTYLE": tsv
@@ -41,14 +41,14 @@ function allDone(){
 
 <body onload="SetSelect()">
 
-<h1>My Test Web Page, v4.7</h1>
+<h1>My Test Web Page, v4.8</h1>
 
-Hour Tick Style:&nbsp;&nbsp;<select id="TickStyle">
+Hour Tick Style:&nbsp;&nbsp;<select id="hrTickStyle">
   <option value="3">Circled Dots</option>
   <option value="0">Lines</option>
 </select>
 <br>
-Hour Tick Size: &nbsp;&nbsp;<text id="TickSize"></text>
+Hour Tick Size: &nbsp;&nbsp;<input type="text" id="hrTickSize">
 <br><br>
 
 Weather Source: &nbsp;&nbsp;<select id="WeatherSource">
@@ -57,7 +57,7 @@ Weather Source: &nbsp;&nbsp;<select id="WeatherSource">
 </select>
 <br>
 <div id=WUKeyDiv style="display: none">
-  Weather Underground Key: &nbsp;&nbsp;<text id="WUKey"></text>
+  Weather Underground Key: &nbsp;&nbsp;<input type="text" id="WUKey">
 </div>
 
 <br><br>
