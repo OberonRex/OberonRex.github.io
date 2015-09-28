@@ -20,6 +20,7 @@ function SetSelect(){
   for (var i=0; i<selectobject.length; i++){
     if (selectobject.options[i].value == queryValue)
     {
+      alert("selecting " + i);
       selectobject.selectedIndex = i;
       break;
     }
@@ -41,7 +42,7 @@ function allDone(){
 
 <body onload="SetSelect()">
 
-<h1>My Test Web Page, v4.2</h1>
+<h1>My Test Web Page, v4.3</h1>
 
 <select id="TickStyle">
   <option value="3">Circled Dots</option>
