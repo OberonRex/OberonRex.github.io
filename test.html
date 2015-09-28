@@ -4,10 +4,10 @@
 <script>
 
 function allDone(){
-  var tSelect = document.getElementByID("TickStyle");
-  var ts = tSelect.options[tSelect.selectedIndex].text;
+  //var tSelect = document.getElementByID("TickStyle");
+  //var ts = tSelect.options[tSelect.selectedIndex].text;
   // Close config page and return data
-  location.href = 'pebblejs://close#tickstyle=' + ts;
+  location.href = 'pebblejs://close#success'//tickstyle=' + ts;
 }
 
 </script>
@@ -21,7 +21,7 @@ function allDone(){
   <option value="0">Circled Dots</option>
   <option value="1">Lines</option>
 </select>
-
+<br><br>
 <button type="button" onclick="allDone()">Done</button>
 
 </body>
