@@ -8,8 +8,10 @@ function myFunction() {
 }
 
 function allDone(){
+  var tSelect = document.getElementByID("TickStyle");
+  var ts = tSelect.options[tSelect.selectedIndex].text;
   // Close config page and return data
-  location.href = 'pebblejs://close#success';
+  location.href = 'pebblejs://close#tickstyle=' + ts;
 }
 
 </script>
@@ -22,7 +24,12 @@ function allDone(){
 <p id="demo">A Paragraph</p>
 
 <button type="button" onclick="myFunction()">Cynthia's New Button</button>
-<br>
+<br><br>
+<select id="TickStyle">
+  <option value="0">Circled Dots</option>
+  <option value="1">Lines</option>
+</select>
+
 <button type="button" onclick="allDone()">Done</button>
 
 </body>
