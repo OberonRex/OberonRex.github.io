@@ -3,6 +3,13 @@
 <head>
 <script>
 
+function getQueryStringValue (key) {  
+  return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+}
+
+var myValue = getQueryStringValue("KEY_HRTICKSTYLE");
+alert(myValue);
+
 function allDone(){
   var tSelect = document.getElementById("TickStyle");
   var tsv = tSelect.options[tSelect.selectedIndex].value;
@@ -18,7 +25,7 @@ function allDone(){
 
 <body>
 
-<h1>My Test Web Page, v2.5</h1>
+<h1>My Test Web Page, v2.6</h1>
 
 <select id="TickStyle">
   <option value="3">Circled Dots</option>
