@@ -9,20 +9,11 @@ var vars = query.split("&");
 var aa = {};
 
 for (var i=0;i<vars.length;i++) {
-    var pear = vars[i].split("=");
-    aa[pear[0]] = pear[1];
+    var pair = vars[i].split("=");
+    aa[pair[0]] = pair[1];
   }
   
-function queryValue(variable){
-  for (var i=0;i<vars.length;i++) {
-    var pair = vars[i].split("=");
-    if(pair[0] == variable){return pair[1];}
-  }
-  return false;
-}
-
 function SetSelect(){
-  //var tsValue = queryValue("KEY_HRTICKSTYLE");
   tsValue = aa.KEY_HRTICKSTYLE;
   var selectobject = document.getElementById("hrTickStyle");
   for (var i=0; i<selectobject.length; i++){
@@ -55,7 +46,7 @@ function WeatherChanged(){
 
 <body onload="SetSelect()">
 
-<h1>My Test Web Page, v5.8</h1>
+<h1>My Test Web Page, v5.9</h1>
 
 <table>
   <tr>
