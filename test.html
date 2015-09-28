@@ -4,6 +4,7 @@
 <script>
 
 var query = window.location.search.substring(1);
+alert("query:" + query);
 var vars = query.split("&");
 
 function queryValue(variable){
@@ -14,9 +15,8 @@ function queryValue(variable){
   return NULL;
 }
 
-var tsValue = queryValue("KEY_HRTICKSTYLE");
-
 function SetSelect(){
+  var tsValue = queryValue("KEY_HRTICKSTYLE");
   var selectobject = document.getElementById("TickStyle");
   for (var i=0; i<selectobject.length; i++){
     alert("HTML: " + selectobject.options[i].value);
@@ -44,7 +44,7 @@ function allDone(){
 
 <body onload="SetSelect()">
 
-<h1>My Test Web Page, v3.9</h1>
+<h1>My Test Web Page, v4.0</h1>
 
 <select id="TickStyle">
   <option value="3">Circled Dots</option>
