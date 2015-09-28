@@ -3,13 +3,18 @@
 <head>
 <script>
 
-//function getQueryStringValue (key) {  
-//  return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
-//}
+var query = window.location.search.substring(1);
+var vars = query.split("&");
 
-//alert(window.location.search);
-//var myValue = getQueryStringValue("KEY_HRTICKSTYLE");
-//alert(myValue);
+function queryValue(variable){
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+    if(pair[0] == variable){return pair[1];}
+  }
+  return NULL;
+}
+
+alert(queryValue("KEY_HRTICKSTYLE"));
 
 function allDone(){
   var tSelect = document.getElementById("TickStyle");
@@ -26,7 +31,7 @@ function allDone(){
 
 <body>
 
-<h1>My Test Web Page, v2.8</h1>
+<h1>My Test Web Page, v2.9</h1>
 
 <select id="TickStyle">
   <option value="3">Circled Dots</option>
