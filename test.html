@@ -7,7 +7,7 @@ function allDone(){
   var tSelect = document.getElementById("TickStyle");
   var tsv = tSelect.options[tSelect.selectedIndex].value;
   var aa = {
-    "TickStyle": tsv
+    "KEY_HRTICKSTYLE": tsv
   }
   // Close config page and return data
   location.href = 'pebblejs://close#' + JSON.stringify(aa);
@@ -18,7 +18,7 @@ function allDone(){
 
 <body>
 
-<h1>My Test Web Page, v2.1</h1>
+<h1>My Test Web Page, v2.3</h1>
 
 <select id="TickStyle">
   <option value="0">Circled Dots</option>
