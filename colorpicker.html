@@ -5,11 +5,15 @@
   function leave(){
   	history.go(-1);
   }
+  
+  function hello(){
+  	alert("hello");
+  }
 </script>
 </head>
 
 <body>
-  V4.5: click here to close<br>
+  V4.6: click here to close<br>
 <button type="button" onclick="leave()">Done</button>
 <br><br>
 <button type="button" onclick="alert(opener.CallBack);opener.CallBack()">Try CallBack</button>
