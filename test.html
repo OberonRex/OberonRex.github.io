@@ -18,6 +18,8 @@ function ImportValues(){
     SetSelect(aa.KEY_HRTICKCOUNT, "hrTickCount");
     document.getElementById("hrTickSize").value = aa.KEY_HRTICKLENGTH;
     document.getElementById("hrTickRadius").value = aa.KEY_HRRADIUSTOTIP;
+    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
+    document.getElementById("WUKey").value = aa.KEY_WUKEY;
 } 
 
 function SetSelect(tsValue, selectID){
@@ -37,7 +39,7 @@ function allDone(){
     "KEY_HRTICKCOUNT": document.getElementById("hrTickCount").options[tSelect.selectedIndex].value,
     "KEY_HRTICKLENGTH": document.getElementById("hrTickSize").value,
     "KEY_HRRADIUSTOTIP": document.getElementById("hrTickRadius").value,
-    "KEY_HRWEATHERSOURCE": document.getElementById("WeatherSource").options[tSelect.selectedIndex].value,
+    "KEY_WEATHERSOURCE": document.getElementById("WeatherSource").options[tSelect.selectedIndex].value,
     "KEY_WUKEY": document.getElementById("WUKey").value
   }
   // Close config page and return data
@@ -64,7 +66,7 @@ function CallBack(){
 
 <body onload="ImportValues()">
 
-<h1>My Configuration Page, v1.40</h1>
+<h1>My Configuration Page, v1.41</h1>
 
 <table>
   <tr>
