@@ -41,14 +41,10 @@ function WeatherChanged(){
   else document.getElementById("WUKeyDiv").style.display="table-row";
 }
 
-var cPicker;
+//var cPicker;
 function CallPicker(){
-    cPicker = window.open('colorpicker.html', 'cp');
-}
-
-function closeMe(){
-    alert("trying to close cPicker");
-    cPicker.close();
+    //cPicker = window.open('colorpicker.html', 'cp');
+    location.href = 'colorpicker.html';
 }
 
 </script>
@@ -56,7 +52,7 @@ function closeMe(){
 
 <body onload="SetSelect()">
 
-<h1>My Configuration Page, v1.9</h1>
+<h1>My Configuration Page, v1.10</h1>
 
 <table>
   <tr>
