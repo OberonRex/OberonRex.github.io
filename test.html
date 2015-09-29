@@ -13,9 +13,13 @@ for (var i=0;i<vars.length;i++) {
     aa[pair[0]] = pair[1];
   }
   
-function SetSelect(){
-  tsValue = aa.KEY_HRTICKSTYLE;
-  var selectobject = document.getElementById("hrTickStyle");
+function ImportValues(){
+    SetSelect(aa.KEY_HRTICKSTYLE, "hrTickStyle");
+    SetSelect(aa.KEY_HRTICKCOUNT, "hrTickCount")
+} 
+
+function SetSelect(tsValue, selectID){
+  var selectobject = document.getElementById(selectID);
   for (var i=0; i<selectobject.length; i++){
     if (selectobject.options[i].value == tsValue)
     {
@@ -28,8 +32,13 @@ function SetSelect(){
 function allDone(){
   var tSelect = document.getElementById("hrTickStyle");
   var tsv = tSelect.options[tSelect.selectedIndex].value;
+  
+  tSelect = document.getElementById("hrTickCount");
+  var tsv2 = tSelect.options[tSelect.selectedIndex].value;
+  
   var aa = {
-    "KEY_HRTICKSTYLE": tsv
+    "KEY_HRTICKSTYLE": tsv,
+    "KEY_HRTICKCOUNT": tsv2
   }
   // Close config page and return data
   location.href = 'pebblejs://close#' + JSON.stringify(aa);
@@ -53,7 +62,7 @@ function CallBack(){
 </script>
 </head>
 
-<body onload="SetSelect()">
+<body onload="ImportValues()">
 
 <h1>My Configuration Page, v1.15</h1>
 
@@ -71,6 +80,17 @@ function CallBack(){
   <tr>
     <td>Hour Tick Size: </td>
     <td><input type="text" id="hrTickSize"></td>
+  </tr>
+  
+  <tr>
+    <td>Hour Tick Style:</td>
+    <td>
+      <select id="hrTickCount">
+        <option value="0">0</option>
+        <option value="4">4</option>
+        <option value="12">12</option>
+      </select>
+    </td>
   </tr>
   
   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
