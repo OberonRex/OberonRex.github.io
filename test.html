@@ -15,7 +15,8 @@ for (var i=0;i<vars.length;i++) {
   
 function ImportValues(){
     SetSelect(aa.KEY_HRTICKSTYLE, "hrTickStyle");
-    SetSelect(aa.KEY_HRTICKCOUNT, "hrTickCount")
+    SetSelect(aa.KEY_HRTICKCOUNT, "hrTickCount");
+    document.getElementById("hrTickSize").innerHtml = aa.KEY_HRTICKLENGTH;
 } 
 
 function SetSelect(tsValue, selectID){
@@ -64,7 +65,7 @@ function CallBack(){
 
 <body onload="ImportValues()">
 
-<h1>My Configuration Page, v1.16</h1>
+<h1>My Configuration Page, v1.17</h1>
 
 <table>
   <tr>
