@@ -3,15 +3,16 @@
 <head>
 <script>
   function leave(){
-    alert("leaving");
-    window.opener = self;
-    window.close();
+  	location.href = 'pebblejs://close
+    //alert("leaving");
+    //window.opener = self;
+    //window.close();
   }
 </script>
 </head>
 
 <body>
-  V3: click here to close<br>
+  V4: click here to close<br>
 <button type="button" onclick="opener.closeMe()">Done</button>
 <br><br>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
