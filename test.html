@@ -37,9 +37,12 @@ function allDone(){
   tSelect = document.getElementById("hrTickCount");
   var tsv2 = tSelect.options[tSelect.selectedIndex].value;
   
+  var tsv3 = document.getElementById("hrTickSize").value;
+  
   var aa = {
     "KEY_HRTICKSTYLE": tsv,
-    "KEY_HRTICKCOUNT": tsv2
+    "KEY_HRTICKCOUNT": tsv2,
+    "KEY_HRTICKLENGTH": tsv3
   }
   // Close config page and return data
   location.href = 'pebblejs://close#' + JSON.stringify(aa);
