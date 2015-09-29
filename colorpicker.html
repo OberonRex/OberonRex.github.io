@@ -4,13 +4,14 @@
 <script>
   function leave(){
     alert("leaving");
+    window.opener = self;
     window.close();
   }
 </script>
 </head>
 
 <body>
-  click here to close<br>
+  V2: click here to close<br>
 <button type="button" onclick="leave();return false;">Done</button>
 </body>
 
