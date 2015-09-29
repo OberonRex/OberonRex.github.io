@@ -41,6 +41,15 @@ function WeatherChanged(){
   else document.getElementById("WUKeyDiv").style.display="table-row";
 }
 
+var cPicker;
+function CallPicker(){
+    cPicker = window.open('colorpicker.html', 'cp');
+}
+
+function closeMe(){
+    window.close(cPicker);
+}
+
 </script>
 </head>
 
@@ -87,7 +96,7 @@ function WeatherChanged(){
 <button type="button" onclick="allDone()">Done</button>
 
 <br><br>
-<button type="button" onclick="window.open('colorpicker.html', 'cp');">Color Picker</button>
+<button type="button" onclick="CallPicker();">Color Picker</button>
 
 </body>
 </html>
