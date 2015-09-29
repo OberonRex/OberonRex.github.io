@@ -32,19 +32,13 @@ function SetSelect(tsValue, selectID){
 }
 
 function allDone(){
-  var tSelect = document.getElementById("hrTickStyle");
-  var tsv = tSelect.options[tSelect.selectedIndex].value;
-  
-  tSelect = document.getElementById("hrTickCount");
-  var tsv2 = tSelect.options[tSelect.selectedIndex].value;
-  
-  var tsv3 = document.getElementById("hrTickSize").value;
-  
   var aa = {
-    "KEY_HRTICKSTYLE": tsv,
-    "KEY_HRTICKCOUNT": tsv2,
-    "KEY_HRTICKLENGTH": tsv3,
-    "KEY_HRRADIUSTOTIP": document.getElementById("hrTickRadius").value
+    "KEY_HRTICKSTYLE": document.getElementById("hrTickStyle").options[tSelect.selectedIndex].value,
+    "KEY_HRTICKCOUNT": document.getElementById("hrTickCount").options[tSelect.selectedIndex].value,
+    "KEY_HRTICKLENGTH": document.getElementById("hrTickSize").value,
+    "KEY_HRRADIUSTOTIP": document.getElementById("hrTickRadius").value,
+    "KEY_HRWEATHERSOURCE": document.getElementById("WeatherSource").options[tSelect.selectedIndex].value,
+    "KEY_WUKEY": document.getElementById("WUKey").value
   }
   // Close config page and return data
   location.href = 'pebblejs://close#' + JSON.stringify(aa);
@@ -70,7 +64,7 @@ function CallBack(){
 
 <body onload="ImportValues()">
 
-<h1>My Configuration Page, v1.23</h1>
+<h1>My Configuration Page, v1.40</h1>
 
 <table>
   <tr>
