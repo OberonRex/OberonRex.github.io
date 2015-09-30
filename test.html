@@ -33,10 +33,6 @@ function ImportValues(){
     WeatherChanged();
 } 
 
-function SetColor(pColor, pID){
-	document.getElementById(pId).setAttribute("fill", pColor);
-}
-
 function SetSelect(tsValue, selectID){
   var selectobject = document.getElementById(selectID);
   for (var i=0; i<selectobject.length; i++){
@@ -72,17 +68,18 @@ function WeatherChanged(){
   else document.getElementById("WUKeyDiv").style.display = "table-row";
 }
 
-//var w;
 function CallPicker(){
     document.getElementById("page1").style.display = "none";
     document.getElementById("page2").style.display = "inline";
-    //w = window.open('colorpicker.html');
 }
 
 function GoPage1(){
     document.getElementById("page1").style.display = "inline";
     document.getElementById("page2").style.display = "none";
-    //w = window.open('colorpicker.html');
+}
+
+function EditColor(pPolygon){
+	alert('editcolor');
 }
 
 </script>
@@ -91,7 +88,7 @@ function GoPage1(){
 <body onload="ImportValues()">
 
 <div id=page1>
-<h1>My Configuration Page, v1.12</h1>
+<h1>My Configuration Page, v1.13</h1>
 
 <table>
   <tr>
@@ -131,13 +128,15 @@ function GoPage1(){
   	<td>TickMark color</td>
   	<td>
     		<svg version="1.1"  x="0px" y="0px" width=20 viewBox="0 0 39 39"  >
-			<polygon id="TMColor" stroke="#000000" stroke-width="1.5" fill="#FFFFAA" points="
-			    17.7,0.7
-			    34.3,10.3
-			    34.3,29.4
-			    17.7,39
-			    1.2,29.4
-			    1.2,10.3 	"/>
+			<polygon id="TMColor" stroke="#000000" stroke-width="1.5" fill="#FFFFAA" 
+				onclick="EditColor(this);"
+				points="
+				    17.7,0.7
+				    34.3,10.3
+				    34.3,29.4
+				    17.7,39
+				    1.2,29.4
+				    1.2,10.3 	"/>
   		</svg>
   		
   	</td>
