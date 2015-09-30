@@ -1,5 +1,8 @@
 function pebble_to_hex(pColor){
+  alert("pColor: " + pColor);
   for (var key in color_picker_colors){
+    alert("key: " + key);
+    alert("binary: " + key.binary);
     if (Number(key.binary) == pColor){
       return key.replace('#', '0x');
     }
