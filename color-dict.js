@@ -5,7 +5,8 @@ function pebble_to_hex(pColor){
     alert("key: " + key);
     alert("binary: " + color_picker_colors[key].binary);
     alert("Number: " + Number(color_picker_colors[key].binary));
-      return key.replace('#', '0x');
+    alert("returning: " + Number(key.replace('#', '0x')));
+      return Number(key.replace('#', '0x'));
     }
   }
 }
