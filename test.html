@@ -54,17 +54,21 @@ function allDone(){
 
 function WeatherChanged(){
   if (document.getElementById("WeatherSource").selectedIndex == 0)
-    document.getElementById("WUKeyDiv").style.display="none";
-  else document.getElementById("WUKeyDiv").style.display="table-row";
+    document.getElementById("WUKeyDiv").style.display = "none";
+  else document.getElementById("WUKeyDiv").style.display = "table-row";
 }
 
-var w;
+//var w;
 function CallPicker(){
-    w = window.open('colorpicker.html');
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "inline";
+    //w = window.open('colorpicker.html');
 }
 
-function CallBack(){
-    //alert('callback');
+function GoPage1(){
+    document.getElementById("page1").style.display = "inline";
+    document.getElementById("page2").style.display = "none";
+    //w = window.open('colorpicker.html');
 }
 
 </script>
@@ -72,7 +76,8 @@ function CallBack(){
 
 <body onload="ImportValues()">
 
-<h1>My Configuration Page, v1.44</h1>
+<div id=page1>
+<h1>My Configuration Page, v1.45</h1>
 
 <table>
   <tr>
@@ -132,6 +137,9 @@ function CallBack(){
 
 <br><br>
 <button type="button" onclick="CallPicker();">Color Picker</button>
-
+</div>
+<div id=page2 style="display: none">
+    <button type="button" onclick="GoPage1();">Color Picker</button>
+</div>
 </body>
 </html>
