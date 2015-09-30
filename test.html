@@ -29,7 +29,7 @@ function ImportValues(){
     document.getElementById("hrTickRadius").value = aa.KEY_HRRADIUSTOTIP;
     SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
     document.getElementById("WUKey").value = aa.KEY_WUKEY;
-    //document.getElementById("TMColor").setAttribute("fill", "#000000");
+    document.getElementById("TMColor").setAttribute("fill", "#000000");
     WeatherChanged();
 } 
 
@@ -79,8 +79,7 @@ function GoPage1(){
 }
 
 function EditColor(pPolygon){
-	//alert(pPolygon.getAttribute("fill");
-	alert();
+	alert(pPolygon.getAttribute("fill");
 }
 
 </script>
@@ -89,7 +88,7 @@ function EditColor(pPolygon){
 <body onload="ImportValues()">
 
 <div id=page1>
-<h1>My Configuration Page, v1.16</h1>
+<h1>My Configuration Page, v1.17</h1>
 
 <table>
   <tr>
