@@ -18,7 +18,6 @@ function updateFavicon(hex) {
 }
 
 function selectColor($polygon) {
-  alert('setting color');
   var hexValue = $polygon.data('hex');
   var correctedHexValue = $polygon.attr('fill');
   var name = color_picker_colors[hexValue].name;
