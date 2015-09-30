@@ -29,7 +29,7 @@ function ImportValues(){
     document.getElementById("hrTickRadius").value = aa.KEY_HRRADIUSTOTIP;
     SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
     document.getElementById("WUKey").value = aa.KEY_WUKEY;
-    document.getElementById("TMColor").setAttribute("fill", "#FFFFFF");
+    document.getElementById("TMColor").setAttribute("fill", pebble-to-hex(aa.TMCOLOR));
     WeatherChanged();
 } 
 
