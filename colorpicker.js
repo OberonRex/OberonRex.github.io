@@ -46,8 +46,8 @@ function selectColor($polygon) {
   $('#js-picker-rgb').text(color_picker_colors[hexValue].literals[1].value);
   $('#js-picker-hex').text(color_picker_colors[hexValue].literals[2].value);
   //$('#js-picker-sample').html(Handlebars.templates['color-picker-sample-window']({ color_name: color_picker_colors[hexValue].c_identifier }));
-  document.title = titleBackup.replace('Color Picker Tool', name + ' // Color Picker Tool');
-  updateFavicon(hexValue);
+  //document.title = titleBackup.replace('Color Picker Tool', name + ' // Color Picker Tool');
+  //updateFavicon(hexValue);
 
   if (window.location.hash !== hexValue) {
     window.location = hexValue;
