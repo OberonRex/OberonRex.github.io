@@ -79,7 +79,9 @@ function GoPage1(){
 }
 
 function EditColor(pPolygon){
-	alert(pPolygon.getAttribute("fill"));
+	//alert(pPolygon.getAttribute("fill"));
+	setColor(pPolygon.getAttribute("fill"));
+	CallPicker();
 }
 
 </script>
@@ -88,7 +90,7 @@ function EditColor(pPolygon){
 <body onload="ImportValues()">
 
 <div id=page1>
-<h1>My Configuration Page, v1.19</h1>
+<h1>My Configuration Page, v1.20</h1>
 
 <table>
   <tr>
