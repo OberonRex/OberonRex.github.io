@@ -69,7 +69,7 @@ function selectPolygon(pColor){
     if (elem.getAttribute('hex') == pColor){
       alert('found it');
     }
-  }
+  });
 }
 
 function applyColorMap(map) {
