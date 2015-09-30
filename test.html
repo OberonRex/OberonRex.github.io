@@ -21,6 +21,15 @@ for (var i=0;i<vars.length;i++) {
     var pair = vars[i].split("=");
     aa[pair[0]] = pair[1];
   }
+ 
+
+function selectPolygonx(pColor){
+  //$('#color-picker polygon').each(function (index, elem) {
+    //if (elem.getAttribute('hex') == pColor){
+      alert('found it');
+    //}
+  //});
+}
   
 function ImportValues(){
     SetSelect(aa.KEY_HRTICKSTYLE, "hrTickStyle");
@@ -88,7 +97,7 @@ function EditColor(pPolygon){
 <body onload="ImportValues()">
 
 <div id=page1>
-<h1>My Configuration Page, v1.18</h1>
+<h1>My Configuration Page, v1.19</h1>
 
 <table>
   <tr>
