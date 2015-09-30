@@ -1,3 +1,11 @@
+function pebble_to_hex(pColor){
+  for (var key in color_picker_colors){
+    if (Number(key.binary) == pColor){
+      return key.replace('#', '0x');
+    }
+  }
+}
+
 var color_picker_colors = {
   "#AAFFAA": {
     "dist": 25.45584412271571, 
