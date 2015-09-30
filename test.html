@@ -29,8 +29,13 @@ function ImportValues(){
     document.getElementById("hrTickRadius").value = aa.KEY_HRRADIUSTOTIP;
     SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
     document.getElementById("WUKey").value = aa.KEY_WUKEY;
+    document.getElementById("TMColor").setAttribute("fill", "#000000");
     WeatherChanged();
 } 
+
+function SetColor(pColor, pID){
+	document.getElementById(pId).setAttribute("fill", pColor);
+}
 
 function SetSelect(tsValue, selectID){
   var selectobject = document.getElementById(selectID);
@@ -86,7 +91,7 @@ function GoPage1(){
 <body onload="ImportValues()">
 
 <div id=page1>
-<h1>My Configuration Page, v1.11</h1>
+<h1>My Configuration Page, v1.12</h1>
 
 <table>
   <tr>
@@ -126,7 +131,7 @@ function GoPage1(){
   	<td>TickMark color</td>
   	<td>
     		<svg version="1.1"  x="0px" y="0px" width=20 viewBox="0 0 39 39"  >
-			<polygon id="x" stroke="#000000" stroke-width="1.5" fill="#FFFFAA" points="
+			<polygon id="TMColor" stroke="#000000" stroke-width="1.5" fill="#FFFFAA" points="
 			    17.7,0.7
 			    34.3,10.3
 			    34.3,29.4
