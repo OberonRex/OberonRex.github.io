@@ -64,6 +64,14 @@ function selectUrlColor() {
   }
 }
 
+function selectPolygon(pColor){
+  $('#color-picker polygon').each(function (index, elem) {
+    if (elem.getAttribute('hex') == pColor{
+      alert('found it');
+    }
+  }
+}
+
 function applyColorMap(map) {
   $('#color-picker polygon').each(function (index, elem) {
     if (map) {
