@@ -67,8 +67,8 @@ function selectUrlColor() {
 function selectPolygon(pColor){
   $('#color-picker polygon').each(function (index, elem) {
     if (elem.getAttribute('fill') == pColor){
-      alert(elem);
-      break;
+      alert('found it');
+      return;
     }
   });
 }
