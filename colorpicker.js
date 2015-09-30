@@ -65,11 +65,11 @@ function selectUrlColor() {
 }
 
 function selectPolygon(pColor){
-  $('#color-picker polygon').each(function (index, elem) {});
+  $('#color-picker polygon').each(function (index, elem) {
     //if (elem.getAttribute('hex') == pColor){
-      alert('found it');
+      alert(elem);
     //}
-  //});
+  });
 }
 
 function applyColorMap(map) {
