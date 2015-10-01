@@ -100,7 +100,21 @@ function EditColor(pPolygon){
 
 <div id=page1>
 <h1>My Configuration Page, v1.24</h1>
-
+    
+    <table>
+    	<tr>
+    		<td>
+    			<div>
+    				<a href="javascript:void(0)" class="btn btn--fg-white btn--bg-purple btn--wide js-btn-colormap" data-colormap="none">Uncorrected</a>
+    			</div>
+    		</td>
+    		<td>
+    			<div>
+				<a href="javascript:void(0)" class="btn btn--fg-white btn--bg-purple btn--wide js-btn-colormap" data-colormap="sunlight">Sunlight</a>    	
+    			</div>
+    		</td>
+    	</tr>
+    </table>
 <table>
   <tr>
     <td>Hour Tick Style:</td>
@@ -233,23 +247,7 @@ function EditColor(pPolygon){
 <div id=page2 style="display: none;">
     <button type="button" onclick="GoPage1();">Back</button>
     <br>
-    
-    <table>
-    	<tr>
-    		<td>
-    			<div>
-    				<a href="javascript:void(0)" class="btn btn--fg-white btn--bg-purple btn--wide js-btn-colormap" data-colormap="none">Uncorrected</a>
-    			</div>
-    		</td>
-    		<td>
-    			<div>
-				<a href="javascript:void(0)" class="btn btn--fg-white btn--bg-purple btn--wide js-btn-colormap" data-colormap="sunlight">Sunlight</a>    	
-    			</div>
-    		</td>
-    	</tr>
-    </table>
-    
-<svg version="1.1" style="background:blue;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	<svg version="1.1" style="background:blue;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="435 240 355 345" enable-background="new 448.1 251.5 329.2 323.8" xml:space="preserve" id="color-picker" class="color-picker" >
 	<polygon stroke="#FFFFFF" stroke-width="1.5" fill="#000000" points="728.4,279.4 744.9,289 744.9,308.1 728.4,317.7 711.8,308.1 711.8,289 	"/>
 	<polygon stroke="#FFFFFF" stroke-width="1.5" fill="#000055" points="629.2,451.6 645.7,461.2 645.7,480.3 629.2,489.9 612.7,480.3 612.7,461.2 	"/>
