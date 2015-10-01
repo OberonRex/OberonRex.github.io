@@ -88,6 +88,7 @@ function applyColorMap(map) {
 var chosenColor = 0;
 function returnColor(pPolygon){
   chosenColor = pPolygon.getAttribute("fill");
+  chosenPolygon.setAttribute("fill", chosenColor);
   GoPage1();
 }
 
