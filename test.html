@@ -77,9 +77,12 @@ function CallPicker(){
 function GoPage1(){
     document.getElementById("page1").style.display = "inline";
     document.getElementById("page2").style.display = "none";
+    chosenPolygon.setAttribute("fill", chosenColor);
 }
 
+var chosenPolygon;
 function EditColor(pPolygon){
+	chosenPolygon = pPolygon;
 	//alert(pPolygon.getAttribute("fill"));
 	selectPolygon(pPolygon.getAttribute("fill"));
 	CallPicker();
@@ -91,7 +94,7 @@ function EditColor(pPolygon){
 <body onload="ImportValues()">
 
 <div id=page1>
-<h1>My Configuration Page, v1.22</h1>
+<h1>My Configuration Page, v1.23</h1>
 
 <table>
   <tr>
