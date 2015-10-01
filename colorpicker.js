@@ -44,7 +44,9 @@ function selectUrlColor() {
 }
 
 function selectPolygon(pColor){
+  alert(pColor);
   $('#color-picker polygon').each(function (index, elem) {
+    alert(elem.getAttribute('hex-data'));
     if (elem.getAttribute('hex-data') == pColor){
       //alert('found it');
       selectColor($(elem));
