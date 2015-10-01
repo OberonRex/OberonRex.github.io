@@ -92,15 +92,13 @@ function returnColor(pPolygon){
 }
 
 $(function () {
-  $('#color-picker polygon').on('click', function (event) {
-    selectColor($(this));
-  });
+  $('#color-picker polygon').on('click', returnColor(this));
 
   $('#color-picker polygon').each(function (index, elem) {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
 
-  $('.js-btn-colormap').on('click', returnColor(this));
+  //$('.js-btn-colormap').on('click', returnColor(this));
 
   window.onpopstate = function(event) {
     selectUrlColor();
