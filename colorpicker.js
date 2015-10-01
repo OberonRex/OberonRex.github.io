@@ -86,11 +86,11 @@ function applyColorMap(map) {
 }
 
 var chosenColor = 0;
-var tPoly;
+//var tPoly;
 function returnColor(pPolygon){
-  tPoly = pPolygon;
-  alert(pPolygon);
-  //chosenColor = pPolygon.getAttribute("fill");
+  //tPoly = pPolygon;
+  //alert(pPolygon);
+  chosenColor = pPolygon.getAttribute("fill");
   GoPage1();
 }
 
