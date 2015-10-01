@@ -85,9 +85,10 @@ function applyColorMap(map) {
   });
 }
 
-var chosenColor;
+var chosenColor = 0;
 function returnColor(pPolygon){
-  chosenColor = pPolygon.getAttribute("fill");
+  alert(pPolygon);
+  //chosenColor = pPolygon.getAttribute("fill");
   GoPage1();
 }
 
