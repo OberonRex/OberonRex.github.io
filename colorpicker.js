@@ -1,22 +1,4 @@
 
-function updateFavicon(hex) {
-  var canvas = document.createElement('canvas');
-  if (! canvas.getContext) {
-    return;
-  }
-  var ctx = canvas.getContext('2d');
-  var img = document.createElement('img');
-  img.onload = function () {
-    canvas.height = this.height;
-    canvas.width = this.width;
-    ctx.drawImage(this, 0, 0);
-    ctx.fillStyle = hex;
-    ctx.fillRect(2, 4, 9, 8);
-    $('#favicon').attr('href', canvas.toDataURL('image/png'));
-  };
-  img.src = '/assets/favicon.png';
-}
-
 function selectColor($polygon) {
   var hexValue = $polygon.data('hex');
   var correctedHexValue = $polygon.attr('fill');
@@ -45,9 +27,6 @@ function selectColor($polygon) {
   $('#js-picker-html-uncorrected').text(hexValue.toUpperCase());
   $('#js-picker-rgb').text(color_picker_colors[hexValue].literals[1].value);
   $('#js-picker-hex').text(color_picker_colors[hexValue].literals[2].value);
-  //$('#js-picker-sample').html(Handlebars.templates['color-picker-sample-window']({ color_name: color_picker_colors[hexValue].c_identifier }));
-  //document.title = titleBackup.replace('Color Picker Tool', name + ' // Color Picker Tool');
-  //updateFavicon(hexValue);
 
   if (window.location.hash !== hexValue) {
     window.location = hexValue;
