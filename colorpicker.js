@@ -63,7 +63,7 @@ function applyColorMap(map) {
     }
   });
   
-  $('polygon').each(function (index, elem) {
+  $('#color-value polygon').each(function (index, elem) {
     if (map) {
       $(elem).attr('fill', map[$(elem).data('hex').toLowerCase()]);
     }
