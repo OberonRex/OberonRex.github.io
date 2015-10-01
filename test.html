@@ -30,6 +30,7 @@ function ImportValues(){
     SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
     document.getElementById("WUKey").value = aa.KEY_WUKEY;
     document.getElementById("TMColor").setAttribute("fill", pebble_to_hex(aa.KEY_TMCOLOR));
+    document.getElementById("HandColor").setAttribute("fill", pebble_to_hex(aa.KEY_HANDCOLOR));
     WeatherChanged();
 } 
 
@@ -57,7 +58,8 @@ function allDone(){
     "KEY_HRRADIUSTOTIP": document.getElementById("hrTickRadius").value,
     "KEY_WEATHERSOURCE": selValue("WeatherSource"),
     "KEY_WUKEY": document.getElementById("WUKey").value,
-    "KEY_TMCOLOR": Number(color_picker_colors[document.getElementById("TMColor").getAttribute("fill")].binary)
+    "KEY_TMCOLOR": Number(color_picker_colors[document.getElementById("TMColor").getAttribute("fill")].binary),
+    "KEY_HANDCOLOR": Number(color_picker_colors[document.getElementById("HandColor").getAttribute("fill")].binary)
   }
   // Close config page and return data
   location.href = 'pebblejs://close#' + JSON.stringify(aa);
@@ -147,6 +149,23 @@ function EditColor(pPolygon){
   	</td>
   </tr>
   
+  <tr>
+  	<td>Hand color</td>
+  	<td>
+    		<svg version="1.1"  x="0px" y="0px" width=20 viewBox="0 0 39 39"  >
+			<polygon id="HandColor" stroke="#000000" stroke-width="1.5" fill="#FFFFAA" 
+				onclick="EditColor(this);"
+				points="
+				    17.7,0.7
+				    34.3,10.3
+				    34.3,29.4
+				    17.7,39
+				    1.2,29.4
+				    1.2,10.3 	"/>
+  		</svg>
+  		
+  	</td>
+  </tr>  
   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
         
   <tr>
