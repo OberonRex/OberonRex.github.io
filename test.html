@@ -77,7 +77,6 @@ function CallPicker(){
 function GoPage1(){
     document.getElementById("page1").style.display = "inline";
     document.getElementById("page2").style.display = "none";
-    chosenPolygon.setAttribute("fill", chosenColor);
 }
 
 var chosenPolygon;
@@ -170,8 +169,6 @@ function EditColor(pPolygon){
 <br><br>
 <button type="button" onclick="allDone()">Done</button>
 
-<br><br>
-<button type="button" onclick="CallPicker();">Color Picker</button>
 </div>
 <div id=page2 style="display: none;">
     <button type="button" onclick="GoPage1();">Back</button>
