@@ -98,7 +98,18 @@ $(function () {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
 
-  //$('.js-btn-colormap').on('click', returnColor(this));
+    $('.js-btn-colormap').on('click', function (event) {
+    var type = $(this).data('colormap');
+    switch (type) {
+      case 'none':
+        applyColorMap(null);
+        break;
+      case 'sunlight':
+        applyColorMap(colorMappingSunlight);
+        break;
+    }
+    selectUrlColor();
+  });
 
   window.onpopstate = function(event) {
     selectUrlColor();
