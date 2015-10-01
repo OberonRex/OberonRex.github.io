@@ -62,6 +62,16 @@ function applyColorMap(map) {
       $(elem).attr('fill', $(elem).data('hex'));
     }
   });
+  
+  $('#color-value polygon').each(function (index, elem) {
+    if (map) {
+      $(elem).attr('fill', map[$(elem).data('hex').toLowerCase()]);
+    }
+    else {
+      $(elem).attr('fill', $(elem).data('hex'));
+    }
+  });
+  
 }
 
 var chosenColor = 0;
