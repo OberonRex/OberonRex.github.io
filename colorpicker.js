@@ -95,7 +95,7 @@ function returnColor(pPolygon){
 }
 
 $(function () {
-  $('#color-picker polygon').on('click', 'returnColor(this)');
+  $('#color-picker polygon').on('click', function(elem){returnColor(elem);});
 
   $('#color-picker polygon').each(function (index, elem) {
     $(elem).attr('data-hex', $(elem).attr('fill'));
