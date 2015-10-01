@@ -85,6 +85,12 @@ function applyColorMap(map) {
   });
 }
 
+var chosenColor;
+function returnColor(pPolygon){
+  chosenColor = pPolygon.getAttribute("fill");
+  GoPage1();
+}
+
 $(function () {
   $('#color-picker polygon').on('click', function (event) {
     selectColor($(this));
@@ -94,18 +100,7 @@ $(function () {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
 
-  $('.js-btn-colormap').on('click', function (event) {
-    var type = $(this).data('colormap');
-    switch (type) {
-      case 'none':
-        applyColorMap(null);
-        break;
-      case 'sunlight':
-        applyColorMap(colorMappingSunlight);
-        break;
-    }
-    selectUrlColor();
-  });
+  $('.js-btn-colormap').on('click', returnColor(this));
 
   window.onpopstate = function(event) {
     selectUrlColor();
