@@ -34,7 +34,7 @@ function ImportValues(){
     document.getElementById("HandColor").setAttribute("fill", pebble_to_hex(aa.KEY_HANDCOLOR));
     document.getElementById("CENTERINNER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTERINNER));
     document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
-    document.getElementById("KEY_HRTICKWIDTH").setAttribute("fill", pebble_to_hex(aa.KEY_HRTICKWIDTH));
+    document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
     WeatherChanged();
     
     $('#color-value polygon').each(function (index, elem) {
@@ -72,7 +72,7 @@ function allDone(){
     "KEY_HANDCOLOR": Number(color_picker_colors[document.getElementById("HandColor").getAttribute("data-hex")].binary),
     "KEY_CENTERINNER": Number(color_picker_colors[document.getElementById("CENTERINNER").getAttribute("data-hex")].binary),
     "KEY_CENTEROUTER": Number(color_picker_colors[document.getElementById("CENTEROUTER").getAttribute("data-hex")].binary),
-    "KEY_HRTICKWIDTH": Number(color_picker_colors[document.getElementById("KEY_HRTICKWIDTH").getAttribute("data-hex")].binary)
+    "KEY_HRTICKWIDTH": Number(document.getElementById("KEY_HRTICKWIDTH").value)
   }
   // Close config page and return data
   location.href = 'pebblejs://close#' + JSON.stringify(aa);
