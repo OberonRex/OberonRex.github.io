@@ -63,7 +63,7 @@ function applyColorMap(map) {
     }
   });
   
-  $('#color-value polygon').each(function (index, elem) {
+  $('polygon').each(function (index, elem) {
     if (map) {
       $(elem).attr('fill', map[$(elem).data('hex').toLowerCase()]);
     }
@@ -84,11 +84,11 @@ function returnColor(pPolygon){
 $(function () {
   $('#color-picker polygon').on('click', function(elem){returnColor(this);});
 
-  $('#color-picker polygon').each(function (index, elem) {
-    $(elem).attr('data-hex', $(elem).attr('fill'));
-  });
+  //$('#color-picker polygon').each(function (index, elem) {
+  //  $(elem).attr('data-hex', $(elem).attr('fill'));
+  //});
   
-  $('#color-value polygon').each(function (index, elem) {
+  $('polygon').each(function (index, elem) {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
   
