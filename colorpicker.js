@@ -88,10 +88,6 @@ $(function () {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
   
-  $('#color-value polygon').each(function (index, elem) {
-    $(elem).attr('data-hex', $(elem).attr('fill'));
-  });
-  
     $('.js-btn-colormap').on('click', function (event) {
     var type = $(this).data('colormap');
     switch (type) {
