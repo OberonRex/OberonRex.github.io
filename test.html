@@ -35,6 +35,12 @@ function ImportValues(){
     document.getElementById("CENTERINNER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTERINNER));
     document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
     WeatherChanged();
+    
+    $('#color-value polygon').each(function (index, elem) {
+	    $(elem).attr('data-hex', $(elem).attr('fill'));
+  	});
+  
+
 } 
 
 function SetSelect(tsValue, selectID){
