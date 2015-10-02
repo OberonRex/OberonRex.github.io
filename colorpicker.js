@@ -88,7 +88,7 @@ $(function () {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
   
-  $('.color-value polygon').each(function (index, elem) {
+  $('#color-value polygon').each(function (index, elem) {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
   
