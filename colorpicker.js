@@ -77,7 +77,8 @@ function applyColorMap(map) {
 var chosenColor = 0;
 function returnColor(pPolygon){
   chosenColor = pPolygon.getAttribute("fill");
-  chosenPolygon.setAttribute("fill", chosenColor);
+  chosenPolygon.setAttribute("fill", pPolygon.getAttribute("fill"));
+  chosenPolygon.setAttribute("data-hex", pPolygon.getAttribute("data-hex"));
   GoPage1();
 }
 
