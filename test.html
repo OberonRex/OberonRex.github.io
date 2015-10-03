@@ -13,17 +13,16 @@
 
 <script>
 
-var query = window.location.search.substring(1); //
-var vars = query.split("&");
-
-var aa = {};
-
-for (var i=0;i<vars.length;i++) {
-    var pair = vars[i].split("=");
-    aa[pair[0]] = pair[1];
-  }
- 
 function ImportInitialValues(){
+	var query = window.location.search.substring(1); //
+	var vars = query.split("&");
+	
+	var aa = {};
+	
+	for (var i=0;i<vars.length;i++) {
+	    var pair = vars[i].split("=");
+	    aa[pair[0]] = pair[1];
+	  }
 	ImportValues(aa);
 }
 
@@ -129,7 +128,7 @@ function EditColor(pPolygon){
 </table>
 
 <div id=page1>
-	<h1>My Configuration Page, v1.32</h1>
+	<h1>My Configuration Page, v1.33</h1>
 	
 	<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
 	<img src = "https://dl.dropboxusercontent.com/u/85450972/site/watchface1.png" onclick="alert('hello world');">
