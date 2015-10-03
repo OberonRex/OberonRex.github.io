@@ -8,9 +8,6 @@
 
 <script type="text/javascript" src="jquery.js"></script>
 
-  <link rel="stylesheet" href="jquery-ui.css">
-  <script src="jquery-ui.js"></script>
-	
 <script type="text/javascript" src="colorpicker.js"></script>
 <script type="text/javascript" src="color-dict.js"></script>
 <script type="text/javascript" src="color-mapping-sunlight.js"></script>
@@ -80,7 +77,7 @@ function allDone(){
     "KEY_HRTICKCOUNT": Number(selValue("hrTickCount")),
     "KEY_HRTICKLENGTH": Number(document.getElementById("hrTickSize").value),
     "KEY_HRRADIUSTOTIP": Number(document.getElementById("hrTickRadius").value),
-    "KEY_WEATHERSOURCE": Number(selValue("WeatherSource")),
+    "KEY_WEATHERSOURCE": selValue("WeatherSource"),
     "KEY_WUKEY": document.getElementById("WUKey").value,
     "KEY_TMCOLOR": Number(color_picker_colors[document.getElementById("TMColor").getAttribute("data-hex")].binary),
     "KEY_HANDCOLOR": Number(color_picker_colors[document.getElementById("HandColor").getAttribute("data-hex")].binary),
@@ -127,9 +124,8 @@ function chooseMe(img){
 <body onload="ImportInitialValues()">
     
 <div id=page1>
-	<h1>jps Watch 1, v1.44</h1>
+	<h1>jps Watch 1, v1.45</h1>
 
-	<div id="accordian">
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
 			<img src = "https://dl.dropboxusercontent.com/u/85450972/site/watchface1.png" 
@@ -145,7 +141,6 @@ function chooseMe(img){
 			onclick=chooseMe(this);
 		>
 		</div>
-	</div>
 
 <table>
   <tr>
