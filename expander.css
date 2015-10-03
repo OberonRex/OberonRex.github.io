@@ -7,7 +7,6 @@
 .list {
     display:none; 
     height:auto;
-    margin:0;
     float: left;
 }
 .show {
@@ -36,7 +35,6 @@
 	box-shadow: 1px 1px 2px #000;
 	background: #cccbbb;
 	opacity: .95;
-	margin-right: 0;
 	float: left;
 }
 
