@@ -38,7 +38,6 @@
 	opacity: .95;
 	margin-right: 0;
 	float: left;
-	margin-bottom: 25px;
 }
 
 .hide:hover, .show:hover {
@@ -47,7 +46,6 @@
 	text-decoration: none;
 	box-shadow: 0 0 4px #222 inset;
 	opacity: 1;
-	margin-bottom: 25px;
 }
 
 .list p{
@@ -57,9 +55,5 @@
 .question {
 	float: left;
 	height: auto;
-	width: 90%;
-	line-height: 20px;
-	padding-left: 20px;
-	margin-bottom: 25px;
 	font-style: italic;
 }
