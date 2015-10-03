@@ -1,7 +1,6 @@
 /* source: http://www.ehow.com/how_12214447_make-collapsing-lists-java.html */
 .FAQ { 
     display : block;
-    margin: 0px 0px 0px 70px;
     vertical-align: top; 
     height:auto !important; 
 }
