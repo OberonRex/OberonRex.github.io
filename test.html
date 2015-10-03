@@ -23,24 +23,30 @@ for (var i=0;i<vars.length;i++) {
     aa[pair[0]] = pair[1];
   }
  
-function ImportValues(){
+function ImportInitialValues(){
+	ImportValues(aa);
+}
+
+function ImportValues(aa){
     SetSelect(aa.KEY_HRTICKSTYLE, "hrTickStyle");
     SetSelect(aa.KEY_HRTICKCOUNT, "hrTickCount");
     document.getElementById("hrTickSize").value = aa.KEY_HRTICKLENGTH;
     document.getElementById("hrTickRadius").value = aa.KEY_HRRADIUSTOTIP;
-    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
-    document.getElementById("WUKey").value = aa.KEY_WUKEY;
     document.getElementById("TMColor").setAttribute("fill", pebble_to_hex(aa.KEY_TMCOLOR));
     document.getElementById("HandColor").setAttribute("fill", pebble_to_hex(aa.KEY_HANDCOLOR));
     document.getElementById("CENTERINNER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTERINNER));
     document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
     document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
-    WeatherChanged();
     
-    $('#color-value polygon').each(function (index, elem) {
-	    $(elem).attr('data-hex', $(elem).attr('fill'));
-  	});
-  
+    if (!aa["settings"]){
+	    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
+	    document.getElementById("WUKey").value = aa.KEY_WUKEY;
+	    WeatherChanged();
+	    
+	    $('#color-value polygon').each(function (index, elem) {
+		    $(elem).attr('data-hex', $(elem).attr('fill'));
+	  	});
+    }
 
 } 
 
@@ -105,7 +111,7 @@ function EditColor(pPolygon){
 </script>
 </head>
 
-<body onload="ImportValues()">
+<body onload="ImportInitialValues()">
     
 <table>
     <tr>
@@ -123,7 +129,7 @@ function EditColor(pPolygon){
 </table>
 
 <div id=page1>
-	<h1>My Configuration Page, v1.31</h1>
+	<h1>My Configuration Page, v1.32</h1>
 	
 	<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
 	<img src = "https://dl.dropboxusercontent.com/u/85450972/site/watchface1.png" onclick="alert('hello world');">
