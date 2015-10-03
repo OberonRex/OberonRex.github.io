@@ -63,21 +63,21 @@ function applyColorMap(map) {
     }
   });
   
-  $('#color-value polygon').each(function (index, elem) {
-    if (map) {
-      $(elem).attr('fill', map[$(elem).data('hex').toLowerCase()]);
-    }
-    else {
-      $(elem).attr('fill', $(elem).data('hex'));
-    }
-  });
+  //$('#color-value polygon').each(function (index, elem) {
+  //  if (map) {
+  //    $(elem).attr('fill', map[$(elem).data('hex').toLowerCase()]);
+  //  }
+  //  else {
+  //    $(elem).attr('fill', $(elem).data('hex'));
+  //  }
+  //});
   
 }
 
-var chosenColor = 0;
+//var chosenColor = 0;
 function returnColor(pPolygon){
-  chosenColor = pPolygon.getAttribute("fill");
-  chosenPolygon.setAttribute("fill", pPolygon.getAttribute("fill"));
+  //chosenColor = pPolygon.getAttribute("fill");
+  chosenPolygon.setAttribute("fill", pPolygon.getAttribute("data-hex"));
   chosenPolygon.setAttribute("data-hex", pPolygon.getAttribute("data-hex"));
   GoPage1();
 }
