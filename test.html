@@ -14,7 +14,11 @@
 <script>
 
 function ImportInitialValues(){
-	var query = window.location.search.substring(1); //
+	var query = window.location.search.substring(1);
+	ImportValues(query);
+}
+
+function ImportValues(query){
 	var vars = query.split("&");
 	
 	var aa = {};
@@ -23,10 +27,7 @@ function ImportInitialValues(){
 	    var pair = vars[i].split("=");
 	    aa[pair[0]] = pair[1];
 	  }
-	ImportValues(aa);
-}
-
-function ImportValues(aa){
+	  
     SetSelect(aa.KEY_HRTICKSTYLE, "hrTickStyle");
     SetSelect(aa.KEY_HRTICKCOUNT, "hrTickCount");
     document.getElementById("hrTickSize").value = aa.KEY_HRTICKLENGTH;
@@ -107,6 +108,11 @@ function EditColor(pPolygon){
 	CallPicker();
 }
 
+function chooseMe(img){
+	ImportValues(img.getAttribute("settings"));
+	
+}
+
 </script>
 </head>
 
@@ -131,7 +137,10 @@ function EditColor(pPolygon){
 	<h1>My Configuration Page, v1.33</h1>
 	
 	<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
-	<img src = "https://dl.dropboxusercontent.com/u/85450972/site/watchface1.png" onclick="alert('hello world');">
+	<img src = "https://dl.dropboxusercontent.com/u/85450972/site/watchface1.png" 
+		settings="settings=0&KEY_HANDCOLOR=252&KEY_CENTEROUTER=252&KEY_HRTICKWIDTH=1&KEY_HRRADIUSTOTIP=56&KEY_HRTICKLENGTH=2&KEY_TMCOLOR=235&KEY_HRTICKSTYLE=1&KEY_WEATHERSOURCE=weatherunderground&KEY_HRTICKCOUNT=4&KEY_CENTERINNER=248&KEY_WUKEY=56"
+		onclick="chooseMe(this);"
+	>
 	<img src = "https://dl.dropboxusercontent.com/u/85450972/site/watchface1.png">
 	<img src = "https://dl.dropboxusercontent.com/u/85450972/site/watchface1.png">
 	</div>
