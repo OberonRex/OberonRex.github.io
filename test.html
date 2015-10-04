@@ -12,6 +12,8 @@
 <script type="text/javascript" src="color-dict.js"></script>
 <script type="text/javascript" src="color-mapping-sunlight.js"></script>
 
+<link rel="stylesheet" type="text/css" href="checkbox.css">
+
 <script>
 
 function ImportInitialValues(){
@@ -121,7 +123,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()">
     
 <div id=page1>
-	<h1>jps Watch 1, v1.47</h1>
+	<h1>jps Watch 1, v1.48</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
@@ -275,8 +277,23 @@ function chooseMe(img){
   <td><input type="text" id="WUKey"></td>
 </tr>
 
+<tr id="OuterCircle" style="display:none">
+  <td>Outer Circle</td>
+  <td>  
+  <section title=".slideThree">
+    <!-- .slideThree -->
+    <div class="slideThree">  
+      <input type="checkbox" value="None" id="slideThree" name="check" checked />
+      <label for="slideThree"></label>
+    </div>
+    <!-- end .slideThree -->
+  </section>
+  </td>
+</tr>
+
 </table>
 
+  
 <br><br>
 <table><tr>
 	<td><button type="button" onclick="ImportInitialValues()">Reset</button></td>
