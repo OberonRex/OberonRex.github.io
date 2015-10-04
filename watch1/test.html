@@ -15,15 +15,11 @@
 <script type="text/javascript" src="color-mapping-sunlight.js"></script>
 
 <script>
-$( document ).ready(function(){
-//   Hide the border by commenting out the variable below
-    var $on = 'section';
-    $($on).css({
-      'background':'none',
-      'border':'none',
-      'box-shadow':'none'
+    $('.slider-button').toggle(function(){
+        $(this).addClass('on').html('YES').parent().next('input[type="checkbox"]').attr('checked', 'checked');
+    },function(){
+        $(this).removeClass('on').html('NO').parent().next('input[type="checkbox"]').removeAttr('checked');
     });
-}); 
 
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
@@ -293,11 +289,10 @@ function chooseMe(img){
 <tr>
 	<td>Outer Circle</td>
 	<td>
-		<!-- Slide THREE -->
-		<div class="slideThree">	
-			<input type="checkbox" value="None" id="slideThree" name="check" style="display:none" />
-			<label for="slideThree"></label>
-		</div>		
+		<div class="slider-frame">
+			<span clas="slider_button">NO</span>
+		</div>
+		<input type="checkbox" />
 	</td>
 </tr>
 
