@@ -5,9 +5,6 @@
 	background: #333;
 	margin: 20px auto;
 
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	border-radius: 50px;
 	position: relative;
 
 	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
@@ -40,10 +37,6 @@
 	display: block;
 	width: 34px;
 	height: 20px;
-
-	-webkit-border-radius: 50px;
-	-moz-border-radius: 50px;
-	border-radius: 50px;
 
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
