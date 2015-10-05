@@ -122,8 +122,8 @@ function chooseMe(img){
 	
 }
 
-function toggle(targetId){
-	if (document.getElementById(targetId).style.display == "none") document.getElementById(targetId).style.display = "block";
+function toggle(chkbox, targetId){
+	if (chkbox.checked) document.getElementById(targetId).style.display = "block";
 	else document.getElementById(targetId).style.display = "none";
 }
 
@@ -279,7 +279,7 @@ function toggle(targetId){
 	<tr>
 	<td>Outer Circle</td>
 	<td>
-		<input type="checkbox" onchange="toggle('expandable1');" />
+		<input type="checkbox" onchange="toggle(this, 'expandable1');" />
 	
 	</td>
 	</tr>
