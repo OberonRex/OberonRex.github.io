@@ -45,6 +45,7 @@ function ImportValues(query){
     document.getElementById("CENTERINNER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTERINNER));
     document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
     document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
+    document.getElementById("OuterCircleCheckbox").checked = true;
     
     if (!aa["settings"]){
 	    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
@@ -279,7 +280,7 @@ function toggle(chkbox, targetId){
 	<tr>
 	<td>Outer Circle</td>
 	<td>
-		<input type="checkbox" onchange="toggle(this, 'expandable1');" />
+		<input id="OuterCircleCheckbox" type="checkbox" onchange="toggle(this, 'expandable1');" />
 	
 	</td>
 	</tr>
