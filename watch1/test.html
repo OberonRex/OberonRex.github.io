@@ -45,7 +45,7 @@ function ImportValues(query){
     document.getElementById("CENTERINNER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTERINNER));
     document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
     document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
-    document.getElementById("OuterCircleCheckbox").checked = true;
+    document.getElementById("OuterCircleCheckbox").checked = false;
     
     if (!aa["settings"]){
 	    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
