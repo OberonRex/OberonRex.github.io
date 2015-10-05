@@ -46,8 +46,11 @@ function ImportValues(query){
     document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
     document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
     
-    document.getElementById("OuterCircleCheckbox").checked = false;
+    document.getElementById("OuterCircleCheckbox").checked = (Number(aa.KEY_OUTERCIRCLES) == 0);
     toggle(document.getElementById("OuterCircleCheckbox"), 'expandable1');
+    document.getElementById("OuterCircleColor").setAttribute("fill", pebble_to_hex(aa.KEY_OUTERCIRCLECOLOR));
+    document.getElementById("OuterCircleStroke").value = aa.KEY_OUTERCIRCLESTROKE;
+    document.getElementById("OuterCircleRadius").value = aa.KEY_OUTERCIRCLERADIUS;
     
     if (!aa["settings"]){
 	    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
@@ -304,8 +307,8 @@ function toggle(chkbox, targetId){
 	  			</svg>
   			</td>
 		  </tr>
-		  <tr><td>Radius</td><td><input type="text" id="OuterCircleSize"></td></tr>
-		  <tr><td>Line Width</td><td><input type="text" id="OuterCircleLineWidth"></td></tr>
+		  <tr><td>Radius</td><td><input type="text" id="OuterCircleRadius"></td></tr>
+		  <tr><td>Line Width</td><td><input type="text" id="OuterCircleLineStroke"></td></tr>
 		</table>
 	</td></tr>
 
