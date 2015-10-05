@@ -46,7 +46,7 @@ function ImportValues(query){
     document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
     document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
     
-    document.getElementById("OuterCircleCheckbox").checked = (Number(aa.KEY_OUTERCIRCLES) == 0);
+    document.getElementById("OuterCircleCheckbox").checked = (Number(aa.KEY_OUTERCIRCLES) != 0);
     toggle(document.getElementById("OuterCircleCheckbox"), 'expandable1');
     document.getElementById("OuterCircleColor").setAttribute("fill", pebble_to_hex(aa.KEY_OUTERCIRCLECOLOR));
     document.getElementById("OuterCircleStroke").value = aa.KEY_OUTERCIRCLESTROKE;
