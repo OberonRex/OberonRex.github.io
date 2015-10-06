@@ -140,15 +140,12 @@ function toggle(chkbox, target){
 }
 
 function expandThis(elem, target){
-	alert(elem.innerText);
 	list = document.getElementsByClassName(target);
+	if (elem.innerText == "+")
+		elem.innerText = "-";
+	else 
+		elem.innerText = "+";
 	for (i = 0; i < list.length; i++) 
-		if (elem.innerText == "+")
-		{
-			elem.innerText = "-";
-		} else {
-			elem.innerText = "+";
-		}
 		list[i].style.display = elem.innerText == "-"  ? "" : "none";
 }
 
@@ -159,7 +156,7 @@ function expandThis(elem, target){
 <body onload="ImportInitialValues()">
     
 <div id=page1>
-	<h1>jps Watch 1, v1.81</h1>
+	<h1>jps Watch 1, v1.82</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
