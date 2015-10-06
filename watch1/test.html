@@ -133,15 +133,13 @@ function chooseMe(img){
 }
 
 function enableCircles(elem, target){
-	//oc = document.getElementById("outercircle").innerText == "-";
-	//chkbox = document.getElementById(elem);
-	//list = document.getElementsByClassName(target);
-	//for (i = 0; i < list.length; i++) 
-	//{
-	//	list[i].style.display = (chkbox.checked && oc) ? "" : "none";
-	//}
-	//if (chkbox.checked) document.getElementById(targetId).style.display = "block";
-	//else document.getElementById(targetId).style.display = "none";
+	oc = document.getElementById("outercircle").innerText == "-";
+	chkbox = document.getElementById(elem);
+	list = document.getElementsByClassName(target);
+	for (i = 0; i < list.length; i++) 
+	{
+		list[i].style.display = (chkbox.checked && oc) ? "" : "none";
+	}
 }
 
 function expandThis(elem, target){
@@ -161,7 +159,7 @@ function expandThis(elem, target){
 <body onload="ImportInitialValues()">
 <div id=page1>
 
-	<h1>jps Watch 1, v1.93</h1>
+	<h1>jps Watch 1, v1.94</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
