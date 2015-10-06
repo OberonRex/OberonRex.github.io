@@ -131,9 +131,12 @@ function chooseMe(img){
 	
 }
 
-function toggle(chkbox, targetId){
-	if (chkbox.checked) document.getElementById(targetId).style.display = "block";
-	else document.getElementById(targetId).style.display = "none";
+function toggle(chkbox, target){
+	list = document.getElementsByClassName(target);
+	for (i = 0; i < list.length; i++) 
+		list[i].style.display = chkbox.checked ? "block" : "none";
+	//if (chkbox.checked) document.getElementById(targetId).style.display = "block";
+	//else document.getElementById(targetId).style.display = "none";
 }
 
 </script>
@@ -142,7 +145,7 @@ function toggle(chkbox, targetId){
 <body onload="ImportInitialValues()">
     
 <div id=page1>
-	<h1>jps Watch 1, v1.71</h1>
+	<h1>jps Watch 1, v1.72</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
@@ -297,11 +300,9 @@ function toggle(chkbox, targetId){
 	</td>
 	</tr>
 	
-	<tr><td colspan=2 width="100%">
-		<table class="expandable" id="expandable1" width="100%" style="margin-left:10px">
-		  <tr width="100%"><td>Color:</td>
-		  	<td>
-	    		<svg  id="color-value" class="color-value" version="1.1"  x="0px" y="0px" width=30 viewBox="0 0 39 39"  >
+	<tr class="expandable1">
+		<td style="padding-left:10px">
+	    	<svg  id="color-value" class="color-value" version="1.1"  x="0px" y="0px" width=30 viewBox="0 0 39 39"  >
 				<polygon id="OuterCircleColor" stroke="#000000" stroke-width="1.5" fill="#FFFFAA" 
 					onclick="EditColor(this);"
 					points="
@@ -312,15 +313,12 @@ function toggle(chkbox, targetId){
 					    1.2,29.4
 					    1.2,10.3 	"/>
 	  			</svg>
-  			</td>
-		  </tr>
-		  <tr><td>Radius:</td><td><input type="text" id="OuterCircleRadius"></td></tr>
-		  <tr><td>Line Width:</td><td><input type="text" id="OuterCircleStroke"></td></tr>
-		</table>
-	</td></tr>
+	  		</td>
+		 </tr>
+	<tr class="expandable1"><td style="padding-left:10px">Radius:</td><td><input type="text" id="OuterCircleRadius"></td></tr>
+	<tr class="expandable1"><td style="padding-left:10px">Line Width:</td><td><input type="text" id="OuterCircleStroke"></td></tr>
 
-
-  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+ 	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
         
   <tr>
     <td>Weather Source:</td>
