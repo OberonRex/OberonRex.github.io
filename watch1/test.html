@@ -141,6 +141,15 @@ function toggle(chkbox, target){
 
 function expandThis(elem, target){
 	alert(elem.innerText);
+	list = document.getElementsByClassName(target);
+	for (i = 0; i < list.length; i++) 
+		if (elem.innerText == "+")
+		{
+			elem.innerText = "-";
+		} else {
+			elem.innerText = "+";
+		}
+		list[i].style.display = elem.innerText == "-"  ? "" : "none";
 }
 
 
@@ -150,7 +159,7 @@ function expandThis(elem, target){
 <body onload="ImportInitialValues()">
     
 <div id=page1>
-	<h1>jps Watch 1, v1.80</h1>
+	<h1>jps Watch 1, v1.81</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
@@ -186,7 +195,7 @@ function expandThis(elem, target){
 
 <table class="setting-list">
 	<tr><td>Tick Marks</td><td onclick="expandThis(this, 'tickmarks')">+</td></tr>
-	<tr>
+	<tr class='tickmarks'>
     <td>Hr Tick Style:</td>
     <td >
       <select id="hrTickStyle">
@@ -198,22 +207,22 @@ function expandThis(elem, target){
     </td>
   </tr>
   
-  <tr>
+  <tr class='tickmarks'>
     <td>Hr Tick Size: </td>
     <td><input type="text" id="hrTickSize"></td>
   </tr>
   
-  <tr>
+  <tr class='tickmarks'>
     <td>Hr Tick Stroke Width: </td>
     <td><input type="text" id="KEY_HRTICKWIDTH"></td>
   </tr>
   
-  <tr>
+  <tr class='tickmarks'>
     <td>Hr Tick Radius: </td>
     <td><input type="text" id="hrTickRadius"></td>
   </tr>
   
-  <tr>
+  <tr class='tickmarks'>
     <td>Hr Tick Count:</td>
     <td>
       <select id="hrTickCount">
@@ -224,7 +233,7 @@ function expandThis(elem, target){
     </td>
   </tr>
   
-  <tr>
+  <tr class='tickmarks'>
   	<td>TickMark color:</td>
   	<td>
     		<svg  id="color-value" class="color-value" version="1.1"  x="0px" y="0px" width=30 viewBox="0 0 39 39"  >
