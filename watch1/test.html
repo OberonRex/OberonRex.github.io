@@ -102,11 +102,11 @@ function allDone(){
   location.href = 'pebblejs://close#' + JSON.stringify(aa);
 }
 
-function WeatherChanged(elem){
+function WeatherChanged(){
   if (document.getElementById("WeatherSource").selectedIndex == 0)
     document.getElementById("WUKeyDiv").style.display = "none";
   else {
-  	if (elem.innerText == "-")
+  	if (document.getElementById("weather").innerText == "-")
   		document.getElementById("WUKeyDiv").style.display = "";
   	else
     	document.getElementById("WUKeyDiv").style.display = "none";
@@ -161,7 +161,7 @@ function expandThis(elem, target){
 <body onload="ImportInitialValues()">
 <div id=page1>
 
-	<h1>jps Watch 1, v1.85</h1>
+	<h1>jps Watch 1, v1.86</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
@@ -350,7 +350,7 @@ function expandThis(elem, target){
 
   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>        
   
-  <tr><td>Weather</td><td onclick="expandThis(this, 'weather'); WeatherChanged(this)">+</td></tr>
+  <tr id="weather"><td>Weather</td><td onclick="expandThis(this, 'weather'); WeatherChanged()">+</td></tr>
   
   <tr class="weather" style="display:none">
   	<td style="padding-left:10px">Source:</td>
