@@ -191,9 +191,11 @@ function expandThis(elem, target){
 		</div>
 
 <table class="setting-list">
+	
 	<tr><td>Tick Marks</td><td onclick="expandThis(this, 'tickmarks')">+</td></tr>
-	<tr class='tickmarks'>
-    <td>Hr Tick Style:</td>
+	
+	<tr class="tickmarks; display:block">
+    <td style="padding-left:10px; display">Hr Tick Style:</td>
     <td >
       <select id="hrTickStyle">
         <option value="0">Lines</option>
@@ -204,24 +206,24 @@ function expandThis(elem, target){
     </td>
   </tr>
   
-  <tr class='tickmarks'>
-    <td>Hr Tick Size: </td>
+  <tr class="tickmarks; display:block">
+    <td style="padding-left:10px">Hr Tick Size: </td>
     <td><input type="text" id="hrTickSize"></td>
   </tr>
   
-  <tr class='tickmarks'>
-    <td>Hr Tick Stroke Width: </td>
+  <tr class="tickmarks; display:block">
+    <td style="padding-left:10px">Hr Tick Stroke Width: </td>
     <td><input type="text" id="KEY_HRTICKWIDTH"></td>
   </tr>
   
-  <tr class='tickmarks'>
-    <td>Hr Tick Radius: </td>
+  <tr class="tickmarks; display:block">
+    <td style="padding-left:10px">Hr Tick Radius: </td>
     <td><input type="text" id="hrTickRadius"></td>
   </tr>
   
-  <tr class='tickmarks'>
+  <tr class="tickmarks; display:block">
     <td>Hr Tick Count:</td>
-    <td>
+    <td style="padding-left:10px">
       <select id="hrTickCount">
         <option value="0">0</option>
         <option value="4">4</option>
@@ -230,8 +232,8 @@ function expandThis(elem, target){
     </td>
   </tr>
   
-  <tr class='tickmarks'>
-  	<td>TickMark color:</td>
+  <tr class="tickmarks; display:block">
+  	<td style="padding-left:10px">TickMark color:</td>
   	<td>
     		<svg  id="color-value" class="color-value" version="1.1"  x="0px" y="0px" width=30 viewBox="0 0 39 39"  >
 			<polygon id="TMColor" stroke="#000000" stroke-width="1.5" fill="#FFFFAA" 
