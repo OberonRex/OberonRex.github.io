@@ -345,9 +345,10 @@ function expandThis(elem, target){
 
   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>        
   
-  <tr><td>Weather</td><td onclick="expandThis(this, 'weather')">+</td></tr>
+  <tr><td>Weather</td><td onclick="expandThis(this, 'weather'); WeatherChanged()">+</td></tr>
   
-  <td>Weather Source:</td>
+  <tr class="weather" style="display:none">
+  <td style="padding-left:10px">Source:</td>
     <td>
       <select id="WeatherSource" onchange="WeatherChanged()">
         <option value="0">OpenWeather</option>
@@ -356,8 +357,8 @@ function expandThis(elem, target){
     </td>
   </tr>
   
-<tr id=WUKeyDiv style="display:none">
-  <td>WU Key:</td>
+<tr class="weather" id=WUKeyDiv style="display:none">
+  <td style="padding-left:10px">License Key:</td>
   <td><input type="text" id="WUKey"></td>
 </tr>
 
