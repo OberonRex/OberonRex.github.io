@@ -300,9 +300,13 @@ function toggle(chkbox, target){
 		</td>
 	</tr>
 
-	
-	<tr class="expandable1"><td style="padding-left:10px">Radius:</td><td><input type="text" id="OuterCircleRadius"></td></tr>
-	<tr class="expandable1"><td style="padding-left:10px">Line Width:</td><td><input type="text" id="OuterCircleStroke"></td></tr>
+	<tr>
+		<td>Outer Circle</td>
+		<td>
+			<input id="OuterCircleCheckbox" type="checkbox" onchange="toggle(this, 'expandable1');" />
+		
+		</td>
+	</tr>
  	
  	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
         
