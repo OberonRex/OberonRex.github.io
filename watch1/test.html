@@ -54,7 +54,7 @@ function ImportValues(query){
     if (!aa["settings"]){
 	    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
 	    document.getElementById("WUKey").value = aa.KEY_WUKEY;
-	    //WeatherChanged();
+	    WeatherChanged();
 	    
     }
     
@@ -104,8 +104,12 @@ function allDone(){
 
 function WeatherChanged(){
   if (document.getElementById("WeatherSource").selectedIndex == 0)
+  else {
+  	if (document.getElementById("WeatherSource").innerText == "+")
+  		document.getElementById("WUKeyDiv").style.display = "table-row";
+  	else
     document.getElementById("WUKeyDiv").style.display = "none";
-  else document.getElementById("WUKeyDiv").style.display = "table-row";
+  }
 }
 
 function CallPicker(){
@@ -156,7 +160,7 @@ function expandThis(elem, target){
 <body onload="ImportInitialValues()">
 <div id=page1>
 
-	<h1>jps Watch 1, v1.82</h1>
+	<h1>jps Watch 1, v1.83</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
