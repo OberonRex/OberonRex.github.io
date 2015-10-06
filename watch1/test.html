@@ -41,7 +41,7 @@ function ImportValues(query){
     document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
     
     document.getElementById("OuterCircleCheckbox").checked = (Number(aa.KEY_OUTERCIRCLES) != 0);
-    enableCircles(document.getElementById("OuterCircleCheckbox"), 'expandable1');
+    enableCircles(document.getElementById("OuterCircleCheckbox"), 'circledata');
     document.getElementById("OuterCircleColor").setAttribute("fill", pebble_to_hex(aa.KEY_OUTERCIRCLECOLOR));
     document.getElementById("OuterCircleStroke").value = aa.KEY_OUTERCIRCLESTROKE;
     document.getElementById("OuterCircleRadius").value = aa.KEY_OUTERCIRCLERADIUS;
@@ -131,6 +131,7 @@ function chooseMe(img){
 }
 
 function enableCircles(elem, target){
+	alert(elem);
 	oc = document.getElementById("outercircle").innerText == "-";
 	chkbox = document.getElementById(elem);
 	list = document.getElementsByClassName(target);
