@@ -46,11 +46,12 @@ function ImportValues(query){
     document.getElementById("OuterCircleStroke").value = aa.KEY_OUTERCIRCLESTROKE;
     document.getElementById("OuterCircleRadius").value = aa.KEY_OUTERCIRCLERADIUS;
     
+    alert("setting weather?)";
     if (!aa["settings"]){
 	    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
 	    document.getElementById("WUKey").value = aa.KEY_WUKEY;
 	    WeatherChanged();
-	    
+	    alert("setting weather)";
     }
     
     $('#color-value polygon').each(function (index, elem) {
@@ -160,7 +161,7 @@ function expandThis(elem, target){
 <body onload="ImportInitialValues()">
 <div id=page1>
 
-	<h1>jps Watch 1, v1.90</h1>
+	<h1>jps Watch 1, v1.91</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
