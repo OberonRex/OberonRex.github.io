@@ -139,6 +139,11 @@ function toggle(chkbox, target){
 	//else document.getElementById(targetId).style.display = "none";
 }
 
+function expandThis(elem, target){
+	alert(elem.content);
+}
+
+
 </script>
 </head>
 
@@ -180,7 +185,7 @@ function toggle(chkbox, target){
 		</div>
 
 <table class="setting-list">
-	<tr><td>Tick Marks</td><td onclick="alert()">+</td></tr>
+	<tr><td>Tick Marks</td><td onclick="expandThis(this, 'tickmarks')">+</td></tr>
 	<tr>
     <td>Hr Tick Style:</td>
     <td >
