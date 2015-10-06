@@ -107,7 +107,7 @@ function WeatherChanged(){
     document.getElementById("WUKeyDiv").style.display = "none";
   else {
   	if (document.getElementById("WeatherSource").innerText == "+")
-  		document.getElementById("WUKeyDiv").style.display = "table-row";
+  		document.getElementById("WUKeyDiv").style.display = "";
   	else
     	document.getElementById("WUKeyDiv").style.display = "none";
   }
@@ -151,7 +151,7 @@ function expandThis(elem, target){
 	else 
 		elem.innerText = "+";
 	for (i = 0; i < list.length; i++) 
-		list[i].style.display = elem.innerText == "-"  ? "" : "none";
+		list[i].style.display = (elem.innerText == "-")  ? "" : "none";
 }
 
 
@@ -353,7 +353,7 @@ function expandThis(elem, target){
   <tr><td>Weather</td><td onclick="expandThis(this, 'weather'); WeatherChanged()">+</td></tr>
   
   <tr class="weather" style="display:none">
-  <td style="padding-left:10px">Source:</td>
+  	<td style="padding-left:10px">Source:</td>
     <td>
       <select id="WeatherSource" onchange="WeatherChanged()">
         <option value="0">OpenWeather</option>
@@ -362,10 +362,10 @@ function expandThis(elem, target){
     </td>
   </tr>
   
-<tr class="weather" id=WUKeyDiv style="display:none">
-  <td style="padding-left:10px">License Key:</td>
-  <td><input type="text" id="WUKey"></td>
-</tr>
+	<tr class="weather" id=WUKeyDiv style="display:none">
+	  <td style="padding-left:10px">License Key:</td>
+	  <td><input type="text" id="WUKey"></td>
+	</tr>
 
 </table>
 
