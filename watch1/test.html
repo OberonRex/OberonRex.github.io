@@ -161,7 +161,7 @@ function expandThis(elem, target){
 <body onload="ImportInitialValues()">
 <div id=page1>
 
-	<h1>jps Watch 1, v1.86</h1>
+	<h1>jps Watch 1, v1.87</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
@@ -350,7 +350,7 @@ function expandThis(elem, target){
 
   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>        
   
-  <tr id="weather"><td>Weather</td><td onclick="expandThis(this, 'weather'); WeatherChanged()">+</td></tr>
+  <tr><td>Weather</td><td id="weather" onclick="expandThis(this, 'weather'); WeatherChanged()">+</td></tr>
   
   <tr class="weather" style="display:none">
   	<td style="padding-left:10px">Source:</td>
