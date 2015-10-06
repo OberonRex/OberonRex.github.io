@@ -133,8 +133,8 @@ function chooseMe(img){
 
 function toggle(chkbox, target){
 	list = document.getElementsByClassName(target);
-	//for (i = 0; i < list.length; i++) 
-	//	list[i].style.display = chkbox.checked ? "block" : "none";
+	for (i = 0; i < list.length; i++) 
+		list[i].style.display = chkbox.checked ? "inline" : "none";
 	//if (chkbox.checked) document.getElementById(targetId).style.display = "block";
 	//else document.getElementById(targetId).style.display = "none";
 }
