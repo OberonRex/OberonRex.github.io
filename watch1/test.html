@@ -5,6 +5,23 @@
    .color-picker polygon{cursor:pointer};
    polygon.color-value {cursor:pointer};
    table.setting-list {border-style:solid; border-width:1px; border-color:black;};
+
+.ListWrapper.hide .ShowableList{
+	display:none;
+}
+
+.ListWrapper.show .ShowableList{
+	display:block;
+}
+	
+.ListWrapper.show .ListHeader:before{
+	content: "-";
+}
+
+.ListWrapper.hide .ListHeader:before{
+	content: "+";
+}
+
 </style>	
 
 <script type="text/javascript" src="../platforms/jquery.js"></script>
@@ -14,6 +31,18 @@
 <script type="text/javascript" src="../tools/color-mapping-sunlight.js"></script>
 
 <script>
+
+function ShowHide(src){
+	hdr = document.getElementById(src);
+	if (hdr.classList.contains('show'))
+	{
+		hdr.classList.remove('show');
+		hdr.classList.add('hide');
+	} else {
+		hdr.classList.remove('hide');
+		hdr.classList.add('show');
+	}
+}
 
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
@@ -157,7 +186,7 @@ function expandThis(elem, target){
 <body onload="ImportInitialValues()">
 <div id=page1>
 
-	<h1>jps Watch 1, v1.102</h1>
+	<h1>jps Watch 1, v1.103</h1>
 
 		<h3>Templates</h3>
 		<div id="watchTemplates" style="white-space: nowrap;overflow:scroll">
@@ -374,6 +403,20 @@ function expandThis(elem, target){
 	<td><button type="button" onclick="allDone()">Done</button></td>
 </tr></table>
 
+	<table>
+		<tbody id="list3" class="ListWrapper hide">
+			<tr><td><a class="ListHeader" href="#" onclick="ShowHide('list3')">Text</a></td><td></td></tr>
+			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
+			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
+			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
+		</tbody>
+		<tbody id="list4" class="ListWrapper hide">
+			<tr><td><a class="ListHeader" href="#" onclick="ShowHide('list4')">Text</a></td><td></td></tr>
+			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
+			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
+			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
+		</tbody>
+	</table>		
 
 </div>
 <div id=page2 style="display: none;">
