@@ -204,7 +204,7 @@ function expandThis(elem, target){
 
 <body onload="ImportInitialValues()">
 <div id=page1>
-	<h1>jps Watch 1, v1.117</h1>
+	<h1>jps Watch 1, v1.118</h1>
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
@@ -365,17 +365,20 @@ function expandThis(elem, target){
   
   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
   
-    <tr><td>Outer Circles</td><td id="outercircle" onclick="expandThis(this, 'expandable1'); enableCircles('OuterCircleCheckbox', 'circledata')">+</td></tr>
-
-	<tr class="expandable1" style="display:none">
+  <tbody id="ocList" class="ListWrapper hide">
+  	
+  	<tr><td><a class="ListHeader" href="#" onclick="ShowHide('ocList')">Outer Circle</a></td><td></td></tr>
+  	
+	<tr class="ShowableList">
 		<td style="padding-left:10px">Enable?</td>
 		<td>
-			<input id="OuterCircleCheckbox" type="checkbox" onchange="enableCircles('OuterCircleCheckbox', 'circledata');" />
+			<input id="OuterCircleCheckbox" type="checkbox" onchange="ShowHideCheckboxList(this, 'ocSubList');" />
 		
 		</td>
 	</tr>
 
-	<tr class="expandable1 circledata" style="display:none">
+	<tbody id="ocSubList">
+	<tr class="ShowableList">
 		<td style="padding-left:10px">Color:</td>
 		<td>
 	    		<svg  id="color-value" class="color-value" version="1.1"  x="0px" y="0px" width=30 viewBox="0 0 39 39"  >
@@ -392,9 +395,11 @@ function expandThis(elem, target){
   		</td>
 	</tr>
 	
-	<tr class="expandable1 circledata" style="display:none"><td style="padding-left:10px">Radius:</td><td><input type="text" id="OuterCircleRadius"></td></tr>
+	<tr class="ShowableList"><td style="padding-left:10px">Radius:</td><td><input type="text" id="OuterCircleRadius"></td></tr>
 	
-	<tr class="expandable1 circledata" style="display:none"><td style="padding-left:10px">Line Width:</td><td><input type="text" id="OuterCircleStroke"></td></tr>
+	<tr class="ShowableList"><td style="padding-left:10px">Line Width:</td><td><input type="text" id="OuterCircleStroke"></td></tr>
+	</tbody>
+	</tbody>
 
   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>        
   
