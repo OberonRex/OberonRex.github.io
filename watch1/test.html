@@ -98,7 +98,7 @@ function ImportValues(query){
     document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
     
     document.getElementById("OuterCircleCheckbox").checked = (Number(aa.KEY_OUTERCIRCLES) != 0);
-    enableCircles("OuterCircleCheckbox", 'circledata');
+    ShowHideCheckboxList(document.getElementById("OuterCircleCheckbox"), 'ocSubList')
     document.getElementById("OuterCircleColor").setAttribute("fill", pebble_to_hex(aa.KEY_OUTERCIRCLECOLOR));
     document.getElementById("OuterCircleStroke").value = aa.KEY_OUTERCIRCLESTROKE;
     document.getElementById("OuterCircleRadius").value = aa.KEY_OUTERCIRCLERADIUS;
@@ -212,7 +212,7 @@ function expandThis(elem, target){
 
 <body onload="ImportInitialValues()">
 <div id=page1>
-	<h1>jps Watch 1, v1.120</h1>
+	<h1>jps Watch 1, v1.121</h1>
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
