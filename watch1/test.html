@@ -176,6 +176,17 @@ function GoPage1(){
 
 var chosenPolygon;
 function EditColor(pPolygon){
+	clrPtr = document.getElementById('colorPainter');
+	if (clrPtr.classsList.contains('show')){
+		chosenPolygon = pPolygon;
+		selectPolygon(pPolygon.getAttribute("data-hex"));
+		CallPicker();
+	} else {
+		
+	}
+}
+
+function EditColorAbs(pPolygon){
 	chosenPolygon = pPolygon;
 	//alert(pPolygon.getAttribute("fill"));
 	selectPolygon(pPolygon.getAttribute("data-hex"));
@@ -259,7 +270,7 @@ function expandThis(elem, target){
 			<td>
 	    		<svg  id="color-value" class="color-value" version="1.1"  x="0px" y="0px" width=30 viewBox="0 0 39 39"  >
 				<polygon id="paintColor" stroke="#000000" stroke-width="1.5" fill="#FFFFAA" 
-					onclick="EditColor(this);"
+					onclick="EditColorAbs(this);"
 					points="
 					    17.7,0.7
 					    34.3,10.3
@@ -272,6 +283,7 @@ function expandThis(elem, target){
 		</tr>
 	</tbody>
 	
+	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 	
 	<tbody id="TickMarksList" class="ListWrapper hide">
 		<tr><td><a class="ListHeader" href="#" onclick="ShowHide('TickMarksList')">Tick Marks</a></td><td></td></td></tr>
