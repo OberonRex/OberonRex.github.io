@@ -212,7 +212,7 @@ function expandThis(elem, target){
 
 <body onload="ImportInitialValues()">
 <div id=page1>
-	<h1>jps Watch 1, v1.121</h1>
+	<h1>jps Watch 1, v1.122</h1>
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
@@ -411,23 +411,28 @@ function expandThis(elem, target){
 
   <tr><td>&nbsp;</td><td>&nbsp;</td></tr>        
   
-  <tr><td>Weather</td><td id="weather" onclick="expandThis(this, 'weather'); WeatherChanged()">+</td></tr>
-  
-  <tr class="weather" style="display:none">
-  	<td style="padding-left:10px">Source:</td>
-    <td>
-      <select id="WeatherSource" onchange="WeatherChanged()">
-        <option value="0">OpenWeather</option>
-        <option value="1">Weather Underground</option>
-      </select>
-    </td>
-  </tr>
-  
-	<tr class="weather" id=WUKeyDiv style="display:none">
-	  <td style="padding-left:10px">License Key:</td>
-	  <td><input type="text" id="WUKey"></td>
-	</tr>
-
+  <tbody id="weatherList" class="ListWrapper hide">
+  	
+	  <tr><td><a class="ListHeader" href="#" onclick="ShowHide('weatherList')">Weather</a></td><td></td></tr>
+	  
+	  <tr class="ShowableList">
+	  	<td style="padding-left:10px">Source:</td>
+	    <td>
+	      <select id="WeatherSource" onchange="ShowHideSelectList(this, 'weatherSubList, 1)">
+	        <option value="0">OpenWeather</option>
+	        <option value="1">Weather Underground</option>
+	      </select>
+	    </td>
+	  </tr>
+	  
+	  <tbody id='weatherSubList' class="ListWrapper sublist">
+		<tr  class="ShowableList">
+		  <td style="padding-left:10px">License Key:</td>
+		  <td><input type="text" id="WUKey"></td>
+		</tr>
+	</tbody>
+		
+	</tbody>
 </table>
 
   
