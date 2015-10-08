@@ -106,7 +106,7 @@ function ImportValues(query){
     if (!aa["settings"]){
 	    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
 	    document.getElementById("WUKey").value = aa.KEY_WUKEY;
-	    //WeatherChanged();
+	    ShowHideSelectList(document.getElementById("WeatherSource"), 'weatherSubList', 1)
     }
     
     $('#color-value polygon').each(function (index, elem) {
@@ -212,7 +212,7 @@ function expandThis(elem, target){
 
 <body onload="ImportInitialValues()">
 <div id=page1>
-	<h1>jps Watch 1, v1.123</h1>
+	<h1>jps Watch 1, v1.124</h1>
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
