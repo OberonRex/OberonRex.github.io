@@ -177,7 +177,7 @@ function GoPage1(){
 var chosenPolygon;
 function EditColor(pPolygon){
 	clrPtr = document.getElementById('colorPainter');
-	if (clrPtr.classList.contains('show')){
+	if (clrPtr.classList.contains('hide')){
 		chosenPolygon = pPolygon;
 		selectPolygon(pPolygon.getAttribute("data-hex"));
 		CallPicker();
@@ -225,7 +225,7 @@ function expandThis(elem, target){
 
 <body onload="ImportInitialValues()">
 <div id=page1>
-	<h1>jps Watch 1, v1.128</h1>
+	<h1>jps Watch 1, v1.129</h1>
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
