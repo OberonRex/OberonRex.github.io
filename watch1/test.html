@@ -29,7 +29,7 @@
 
 <script>
 
-function jsShowHide(src){
+function ShowHide(src){
 	hdr = document.getElementById(src);
 	if (hdr.classList.contains('show'))
 	{
@@ -38,6 +38,17 @@ function jsShowHide(src){
 	} else {
 		hdr.classList.remove('hide');
 		hdr.classList.add('show');
+	}
+}
+
+function ShowHideCheckboxList(chkbox, src){
+	hdr = document.getElementById(src);
+	if (chkbox.checked){
+		hdr.classList.remove("hide");
+		hdr.classList.add("show");
+	} else {
+		hdr.classList.remove("show");
+		hdr.classList.add("hide");
 	}
 }
 
@@ -184,7 +195,7 @@ function expandThis(elem, target){
 	<h1>jps Watch 1, v1.117</h1>
 
 	<div id="templates" class="ListWrapper hide">
-		<a class="ListHeader" href="#" onclick="jsShowHide('templates')">Templates</a>
+		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
 		<div class="ShowableList" id="watchTemplates" style="white-space: nowrap;overflow:scroll">
 		
 			<img src = "faces/watchface6.png" 
@@ -221,7 +232,7 @@ function expandThis(elem, target){
 <br>
 <table>
 	<tbody id="TickMarksList" class="ListWrapper hide">
-		<tr><td><a class="ListHeader" href="#" onclick="jsShowHide('TickMarksList')">Tick Marks</a></td><td></td></td></tr>
+		<tr><td><a class="ListHeader" href="#" onclick="ShowHide('TickMarksList')">Tick Marks</a></td><td></td></td></tr>
 		
 		<tr class="ShowableList">
 		    <td style="padding-left:10px; display">Style:</td>
@@ -283,7 +294,7 @@ function expandThis(elem, target){
   	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
   
   	<tbody id="HandsList" class="ListWrapper hide">
-	  	<tr><td><a class="ListHeader" href="#" onclick="jsShowHide('HandsList')">Hands</a></td><td></td></tr>
+	  	<tr><td><a class="ListHeader" href="#" onclick="ShowHide('HandsList')">Hands</a></td><td></td></tr>
 	  
 	  	<tr class="ShowableList">
 	  		<td style="padding-left:10px">Color:</td>
@@ -403,13 +414,13 @@ function expandThis(elem, target){
 
 	<table>
 		<tbody id="list3" class="ListWrapper hide">
-			<tr><td><a class="ListHeader" href="#" onclick="jsShowHide('list3')">Text</a></td><td></td></tr>
+			<tr><td><a class="ListHeader" href="#" onclick="ShowHide('list3')">Text</a></td><td></td></tr>
 			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
 			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
 			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
 		</tbody>
 		<tbody id="list4" class="ListWrapper hide">
-			<tr><td><a class="ListHeader" href="#" onclick="jsShowHide('list4')">Text</a></td><td></td></tr>
+			<tr><td><a class="ListHeader" href="#" onclick="ShowHide('list4')">Text</a></td><td></td></tr>
 			<tr class="ShowableList"><td>Hello again</td><td>world</td></tr>
 			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
 			<tr class="ShowableList"><td>Hello</td><td>world</td></tr>
