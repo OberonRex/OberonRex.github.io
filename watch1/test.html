@@ -182,7 +182,9 @@ function EditColor(pPolygon){
 		selectPolygon(pPolygon.getAttribute("data-hex"));
 		CallPicker();
 	} else {
-		
+		srcPolygon = document.getElementById('paintColor');
+	  	pPolygon.setAttribute("fill", srcPolygon.getAttribute("data-hex"));
+	  	pPolygon.setAttribute("data-hex", srcPolygon.getAttribute("data-hex"));		
 	}
 }
 
