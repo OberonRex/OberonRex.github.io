@@ -52,6 +52,18 @@ function ShowHideCheckboxList(chkbox, src){
 	}
 }
 
+function ShowHideSelectList(sel, src, value){
+	hdr = document.getElementById(src);
+	if (Number(sel.value) == value)
+	{
+		hdr.classList.remove("hide");
+		hdr.classList.add("show");
+	} else {
+		hdr.classList.remove("show");
+		hdr.classList.add("hide");
+	}
+}
+
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
 	ImportValues(query);
