@@ -11,6 +11,14 @@
 	display:table-row;
 }
 	
+.ListWrapper.hide  + .sublist{
+	display:none;
+}
+
+.ListWrapper.show + .sublist{
+	display:tbody;
+}
+
 .ListWrapper.show .ListHeader:before{
 	content: "-";
 }
@@ -204,7 +212,7 @@ function expandThis(elem, target){
 
 <body onload="ImportInitialValues()">
 <div id=page1>
-	<h1>jps Watch 1, v1.119</h1>
+	<h1>jps Watch 1, v1.120</h1>
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
@@ -377,7 +385,7 @@ function expandThis(elem, target){
 			</td>
 		</tr>
 	
-		<tbody id="ocSubList" class="ListWrapper hide">
+		<tbody id="ocSubList" class="ListWrapper hide sublist">
 		<tr class="ShowableList">
 			<td style="padding-left:10px">Color:</td>
 			<td>
