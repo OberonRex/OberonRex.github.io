@@ -9,7 +9,7 @@ function RestoreIt(id){
 }
 
 function LoadThis(liId){
-	var li = document.getElementById(iiId);
+	var li = document.getElementById(liId);
 	alert(li.getAttribute('query'));
 }
 
