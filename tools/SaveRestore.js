@@ -46,14 +46,12 @@ function LoadSaved(uiID){
 	    
 		//$( '#uiList" ).on( 'click', LoadThis, 'a[rel="load"]');	   
 		
-		$( '#outer" ).on( 'click',
-    function( evt )
-    {
-        alert(evt.target);        // this
-        // this was the anchor that was clicked
-    } ,
-    'a[rel="load"]'
-);
+		$( '#outer" ).on( 'click', 
+			function( evt ){
+				alert(evt.target);
+			} ,
+			'a[rel="load"]'
+		);
 		
 
 
