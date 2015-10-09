@@ -16,7 +16,7 @@ function LoadSaved(uiID){
 	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
 	
-	var target = document.getElementyById(uiID);
+	var target = document.getElementById(uiID);
 	//var aa = {};
 	
 	for (var i=0;i<vars.length;i++) {
