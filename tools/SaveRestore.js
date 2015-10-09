@@ -10,20 +10,18 @@ function RestoreIt(id){
 
 var loaded = false;
 function LoadSaved(uiID){
-	alert('LoadSaved');
 	if (!loaded){
 		
 	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
 	var target = document.getElementById(uiID);
-	//var aa = {};
-	
+
 	for (var i=0;i<values.length;i++) {
-		var sName = "key" + values[i] + "_name";
-		var sQuery = "key" + values[i] + "_query";
+		var keyName = "key" + values[i] + "_name";
+		var keyQuery = "key" + values[i] + "_query";
 	    
-	    alert(sName);
-	    alert(sQuery);
+	    var sName = localStorage.getItem(keyName);
+	    var sQuery = localStorage.getItem(keyQuery);
 	    
 	    var entry = document.createElement('li');
 	    entry.appendChild(document.createTextNode(sName));
