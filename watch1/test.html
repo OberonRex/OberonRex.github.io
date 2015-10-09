@@ -225,13 +225,21 @@ function chooseMe(img){
 	ImportValues(img.getAttribute("settings"));
 }
 
+function SaveIt(id){
+	localStorage.setItem("key" + id + "_name", "dummy");
+	localStorage.setItem("key" + id + "_query", GenerateQueryString());
+}
+
+function RestoreIt(id){
+	alert(localStorage.getItem("key" + id + "_query"));
+}
 </script>
 </head>
 
 <body onload="ImportInitialValues()">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h1>jps Watch 1, v1.133</h1>
+	<h1>jps Watch 1, v1.134</h1>
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
@@ -579,7 +587,10 @@ function chooseMe(img){
 
 </div>
 
-<div class="view" id="SavedView" style="display:none">Saved View Coming Soon!</div>
+<div class="view" id="SavedView" style="display:none">
+	<input type="button" onclick="SaveIt('1')">Save</input>
+	<input type="button" onclick="RestoreIt('1')">Restore</input>
+</div>
 
 <div class="view" id="AckView" style="display:none">Acknowledgement View Coming Soon!</div>
 
