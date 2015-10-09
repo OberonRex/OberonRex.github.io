@@ -55,6 +55,7 @@
 
 <script type="text/javascript" src="../platforms/jquery.js"></script>
 
+<script type="text/javascript" src="../tools/SaveRestore.js"></script>
 <script type="text/javascript" src="../tools/colorpicker.js"></script>
 <script type="text/javascript" src="../tools/color-dict.js"></script>
 <script type="text/javascript" src="../tools/color-mapping-sunlight.js"></script>
@@ -233,14 +234,6 @@ function chooseMe(img){
 	ImportValues(img.getAttribute("settings"));
 }
 
-function SaveIt(id){
-	localStorage.setItem("key" + id + "_name", "dummy");
-	localStorage.setItem("key" + id + "_query", GenerateQueryString());
-}
-
-function RestoreIt(id){
-	ImportValues(localStorage.getItem("key" + id + "_query"));
-}
 </script>
 </head>
 
