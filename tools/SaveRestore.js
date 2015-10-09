@@ -32,9 +32,9 @@ function LoadSaved(uiID){
 	    //entry.appendChild(document.createTextNode(sName));
 	    var anchor = document.createElement('a');
 	    anchor.setAttribute('href', '#');
-	    anchor.setAttribute("onclick", "alert(this)");
-	    anchor.onclick = function(x, e){alert(e); alert(x);};
-	    //anchor.addEventListener("click", "LoadThis(self), false");
+	    //anchor.setAttribute("onclick", "alert(this)");
+	    //anchor.onclick = function(){alert(this);};
+	    anchor.addEventListener("click", alert(this), false);
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 	    entry.appendChild(anchor);
