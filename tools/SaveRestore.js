@@ -35,7 +35,7 @@ function LoadSaved(uiID){
 	    anchor.setAttribute('rel', "load")
 	    var myId = "id"+i;
 	    anchor.setAttribute('id', myId);
-	    anchor.setAttribute("onclick", "alert(" + myId + ")");
+	    anchor.setAttribute("onclick", "alert('" + myId + "')");
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 	    //$(anchor).click(function(){ alert(this); });
