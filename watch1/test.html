@@ -10,6 +10,14 @@
 .ListWrapper.show .ShowableList{
 	display:table-row;
 }
+
+.ListWrapper.hide .ScrollableList{
+	display:none;
+}
+
+.ListWrapper.show .ScrollableList{
+	display:block;
+}
 	
 .ListWrapper.hide  + .sublist{
 	display:none;
@@ -243,7 +251,7 @@ function RestoreIt(id){
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
-		<div class="ShowableList" id="watchTemplates" style="overflow:scroll; width=600px">
+		<div class="ScrollableList" id="watchTemplates" style="white-space: nowrap; overflow:scroll;">
 		
 			<img src = "faces/watchface6.png" 
 				settings="KEY_OUTERCIRCLERADIUS=51&KEY_OUTERCIRCLESTROKE=1&KEY_OUTERCIRCLECOLOR=251&KEY_OUTERCIRCLES=0&KEY_HANDCOLOR=252&KEY_CENTEROUTER=252&KEY_HRTICKWIDTH=1&KEY_HRRADIUSTOTIP=56&KEY_HRTICKLENGTH=20&KEY_TMCOLOR=235&KEY_HRTICKSTYLE=0&KEY_HRTICKCOUNT=4&KEY_CENTERINNER=248"
