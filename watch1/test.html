@@ -200,27 +200,6 @@ function chooseMe(img){
 	ImportValues(img.getAttribute("settings"));
 }
 
-function enableCircles(elem, target){
-	oc = document.getElementById("outercircle").innerText == "-";
-	chkbox = document.getElementById(elem);
-	list = document.getElementsByClassName(target);
-	for (i = 0; i < list.length; i++) 
-	{
-		list[i].style.display = (chkbox.checked && oc) ? "" : "none";
-	}
-}
-
-function expandThis(elem, target){
-	list = document.getElementsByClassName(target);
-	if (elem.innerText == "+")
-		elem.innerText = "-";
-	else 
-		elem.innerText = "+";
-	for (i = 0; i < list.length; i++) 
-		list[i].style.display = (elem.innerText == "-")  ? "" : "none";
-}
-
-
 </script>
 </head>
 
