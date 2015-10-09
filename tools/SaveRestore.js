@@ -32,18 +32,9 @@ function LoadSaved(uiID){
 	    //entry.appendChild(document.createTextNode(sName));
 	    var anchor = document.createElement('a');
 	    anchor.setAttribute('href', '#');
+	    anchor.setAttribute('rel', "load")
 	    //anchor.setAttribute("onclick", "alert(this)");
 	    //anchor.onclick = function(){alert(this);};
-	    
-	$( '#outer" ).on( 'click',
-	    function( evt )
-	    {
-	        LoadThis(evt.target);        // this
-	        // this was the anchor that was clicked
-	    } ,
-	    'a[rel="load"]'
-	)	    
-	    
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 	    $(anchor).click(function(){ alert(this); });
@@ -53,7 +44,14 @@ function LoadSaved(uiID){
 	    //entry.setAttribute("onclick", "alert()");
 	    target.appendChild(entry);
 	    
-   	    anchor.addEventListener("click", LoadThis, false);
+	$( '#outer" ).on( 'click',
+	    function( evt )
+	    {
+	        LoadThis(evt.target);        // this
+	        // this was the anchor that was clicked
+	    } ,
+	    'a[rel="load"]'
+	)	    
 
 
 	  }		
