@@ -26,6 +26,7 @@ function LoadSaved(uiID){
 	    var entry = document.createElement('li');
 	    entry.appendChild(document.createTextNode(sName));
 	    entry.setAttribute("query", sQuery);
+	    entry.setAttribute("onclick", "alert()");
 	    target.appendChild(entry);
 
 	  }		
