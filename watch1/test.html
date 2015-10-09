@@ -194,6 +194,12 @@ function GoPage1(){
     document.getElementById("page2").style.display = "none";
 }
 
+function SetView(ViewID){
+	var views = document.getElementsByClass('view');
+	for (view in views) view.style.display = "none";
+	document.getElementById(ViewID).style.display = "inline";
+}
+
 var chosenPolygon;
 function EditColor(pPolygon){
 	clrPtr = document.getElementById('colorPainter');
@@ -223,8 +229,9 @@ function chooseMe(img){
 </head>
 
 <body onload="ImportInitialValues()">
+<div class="view" id="SettingsView">
 <div id=page1>
-	<h1>jps Watch 1, v1.131</h1>
+	<h1>jps Watch 1, v1.132</h1>
 
 	<div id="templates" class="ListWrapper hide">
 		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
@@ -569,6 +576,14 @@ function chooseMe(img){
 	<polygon stroke="#FFFFFF" stroke-width="1.5" fill="#FFFFAA" points="645.7,250.7 662.3,260.3 662.3,279.4 645.7,289 629.2,279.4 629.2,260.3 	"/>
 </svg>    
 </div>
+
+</div>
+
+<div class="view" id="SavedView">Saved View Coming Soon!</div>
+
+<div class="view" id="AckView">Acknowledgement View Coming Soon!</div>
+
+<div class="view" id="ContactView">Contact View Coming Soon!</div>
 
 <div class="footer">
 	<table width=100%>
