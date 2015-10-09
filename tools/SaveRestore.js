@@ -18,7 +18,7 @@ function LoadSaved(uiID){
 	var target = document.getElementById(uiID);
 	//var aa = {};
 	
-	for (var i=0;i<vars.length;i++) {
+	for (var i=0;i<values.length;i++) {
 		var sName = "key" + values[i] + "_name";
 		var sQuery = "key" + values[i] + "_query";
 	    
