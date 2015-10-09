@@ -10,6 +10,7 @@ function RestoreIt(id){
 
 var loaded = false;
 function LoadSaved(uiID){
+	alert('LoadSaved');
 	if (!loaded){
 		
 	var lStg = localStorage.getItem("list");
