@@ -44,7 +44,7 @@ function LoadSaved(uiID){
 	    //entry.setAttribute("onclick", "alert()");
 	    target.appendChild(entry);
 	    
-	$( '#outer" ).on( 'click',
+	$( '#uiList" ).on( 'click',
 	    function( evt )
 	    {
 	        LoadThis(evt.target);        // this
