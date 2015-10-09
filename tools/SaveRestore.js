@@ -24,9 +24,15 @@ function LoadSaved(uiID){
 	    var sQuery = localStorage.getItem(keyQuery);
 	    
 	    var entry = document.createElement('li');
-	    entry.appendChild(document.createTextNode(sName));
+	    
+	    //entry.appendChild(document.createTextNode(sName));
+	    var anchor = document.createElement('a');
+	    anchor.setAttribute('href', '#');
+	    anchor.setAttribute("onclick", "alert()");
+	    entry.appendChild(anchor);
+	    
 	    entry.setAttribute("query", sQuery);
-	    entry.setAttribute("onclick", "alert()");
+	    //entry.setAttribute("onclick", "alert()");
 	    target.appendChild(entry);
 
 	  }		
