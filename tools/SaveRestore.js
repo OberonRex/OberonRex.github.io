@@ -8,6 +8,10 @@ function RestoreIt(id){
 	ImportValues(localStorage.getItem("key" + id + "_query"));
 }
 
+function LoadThis(elem){
+	alert(elem.setAttribute('query'));
+}
+
 var loaded = false;
 function LoadSaved(uiID){
 	if (!loaded){
@@ -28,11 +32,11 @@ function LoadSaved(uiID){
 	    //entry.appendChild(document.createTextNode(sName));
 	    var anchor = document.createElement('a');
 	    anchor.setAttribute('href', '#');
-	    anchor.setAttribute("onclick", "alert()");
+	    anchor.setAttribute("onclick", "LoadThis(self)");
 	    anchor.innerText = sName;
+	    anchor.setAttribute("query", sQuery);
 	    entry.appendChild(anchor);
 	    
-	    entry.setAttribute("query", sQuery);
 	    //entry.setAttribute("onclick", "alert()");
 	    target.appendChild(entry);
 
