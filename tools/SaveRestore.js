@@ -8,8 +8,8 @@ function RestoreIt(id){
 	ImportValues(localStorage.getItem("key" + id + "_query"));
 }
 
-function LoadThis(){
-	alert(this);
+function LoadThis(evt){
+	alert(evt.target);
 }
 
 var loaded = false;
@@ -44,14 +44,7 @@ function LoadSaved(uiID){
 	    //entry.setAttribute("onclick", "alert()");
 	    target.appendChild(entry);
 	    
-	$( '#uiList" ).on( 'click',
-	    function( evt )
-	    {
-	        LoadThis(evt.target);        // this
-	        // this was the anchor that was clicked
-	    } ,
-	    'a[rel="load"]'
-	)	    
+$( '#uiList" ).on( 'click', LoadThis, 'a[rel="load"]' );)	    
 
 
 	  }		
