@@ -15,20 +15,20 @@ function LoadSaved(uiID){
 		
 	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
-	alert('lStg' + lStg);
 	var target = document.getElementById(uiID);
 	//var aa = {};
 	
 	for (var i=0;i<vars.length;i++) {
-		
 		var sName = "key" + values[i] + "_name";
 		var sQuery = "key" + values[i] + "_query";
-	    //aa[sName] = sQuery;
+	    
+	    alert(sName);
+	    alert(sQuery);
 	    
 	    var entry = document.createElement('li');
 	    entry.appendChild(document.createTextNode(sName));
 	    entry.setElement("query", sQuery);
-	    target.appendDhile(entry);
+	    target.appendChild(entry);
 
 	  }		
 		
