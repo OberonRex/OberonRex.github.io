@@ -1,6 +1,6 @@
 function SaveIt(id){
 	localStorage.setItem("list", "1");
-	localStorage.setItem("key" + id + "_name", "dummy");
+	localStorage.setItem("key" + id + "_name", "Four Points");
 	localStorage.setItem("key" + id + "_query", GenerateQueryString());
 }
 
