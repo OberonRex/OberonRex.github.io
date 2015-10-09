@@ -26,6 +26,23 @@
 	content: "+ ";
 }
 
+.footer {
+   position:fixed;
+   bottom:0px;
+   left:0px;
+   right:0px;
+   //border: 5px solid blue;
+   //width:100%;
+}
+
+.centerText{
+   text-align: center;
+}
+
+.roundCorners{
+	border-radius: 10px;
+}
+
 </style>	
 
 <script type="text/javascript" src="../platforms/jquery.js"></script>
@@ -552,5 +569,17 @@ function chooseMe(img){
 	<polygon stroke="#FFFFFF" stroke-width="1.5" fill="#FFFFAA" points="645.7,250.7 662.3,260.3 662.3,279.4 645.7,289 629.2,279.4 629.2,260.3 	"/>
 </svg>    
 </div>
+
+<div class="footer">
+	<table width=100%>
+		<tr>
+			<td onclick="SetView('SettingsView');" class="centerText roundCorners" width=25% bgcolor="aqua">Settings</td>
+			<td onclick="SetView('SavedView');" class="centerText roundCorners" width=25% bgcolor="aqua">Saved</td>
+			<td onclick="SetView('AckView');" class="centerText roundCorners" width=25% bgcolor="aqua">Acknowledgements</td>
+			<td onclick="SetView('ContactView');" class="centerText roundCorners" width=25% bgcolor="aqua">Contact</td>
+		</tr>
+	</table>
+</div>
+
 </body>
 </html>
