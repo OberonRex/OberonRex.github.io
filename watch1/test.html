@@ -195,8 +195,10 @@ function GoPage1(){
 }
 
 function SetView(ViewID){
+	alert(ViewID);
 	var views = document.getElementsByClassName('view');
 	for (view in views) view.style.display = "none";
+	alert(document.getElementById(ViewID).style.display);
 	document.getElementById(ViewID).style.display = "inline";
 }
 
