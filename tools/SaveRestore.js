@@ -27,7 +27,7 @@ function LoadSaved(uiID){
 	    
 	    var entry = document.createElement('li');
 	    entry.appendChild(document.createTextNode(sName));
-	    entry.setElement("query", sQuery);
+	    entry.setAttribute("query", sQuery);
 	    target.appendChild(entry);
 
 	  }		
