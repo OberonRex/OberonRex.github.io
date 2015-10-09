@@ -14,15 +14,15 @@ function LoadSaved(uiID){
 	if (!loaded){
 		
 	var lStg = localStorage.getItem("list");
-	var vars = lStg.split(",");
+	var values = lStg.split(",");
 	
 	var target = document.getElementyById(uiID);
 	//var aa = {};
 	
 	for (var i=0;i<vars.length;i++) {
 		
-		var sName = "key" + var[i] + "_name";
-		var sQuery = "key" + var[i] + "_query";
+		var sName = "key" + values[i] + "_name";
+		var sQuery = "key" + values[i] + "_query";
 	    //aa[sName] = sQuery;
 	    
 	    var entry = document.createElement('li');
