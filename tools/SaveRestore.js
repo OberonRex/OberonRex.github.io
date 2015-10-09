@@ -30,7 +30,7 @@ function LoadSaved(uiID){
 	    var entry = document.createElement('li');
 	    
 	    //entry.appendChild(document.createTextNode(sName));
-	    var anchor = document.createElement("<a onclick='alert(this)'>");
+	    var anchor = document.createElement("<a onclick='alert(this)'></a>");
 	    anchor.setAttribute('href', '#');
 	    //anchor.setAttribute("onclick", "alert(this)");
 	    //anchor.onclick = function(){alert(this);};
