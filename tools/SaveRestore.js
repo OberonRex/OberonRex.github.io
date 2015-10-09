@@ -34,7 +34,7 @@ function LoadSaved(uiID){
 	    anchor.setAttribute('href', '#');
 	    //anchor.setAttribute("onclick", "alert(this)");
 	    //anchor.onclick = function(){alert(this);};
-	    anchor.addEventListener("click", alert(this), false);
+	    anchor.addEventListener("click", function(){alert(this);}, false);
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 	    entry.appendChild(anchor);
