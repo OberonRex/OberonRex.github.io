@@ -46,7 +46,7 @@ function LoadSaved(uiID){
 	    
 		//$( '#uiList" ).on( 'click', LoadThis, 'a[rel="load"]');	   
 		
-		$( '#outer" ).on( 'click', 
+		$( '#utList" ).on( 'click', 
 			function( evt ){
 				alert(evt.target);
 			} ,
