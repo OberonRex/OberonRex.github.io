@@ -9,7 +9,7 @@ function RestoreIt(id){
 }
 
 function LoadThis(elem){
-	alert(elem.setAttribute('query'));
+	alert(elem.getAttribute('query'));
 }
 
 var loaded = false;
