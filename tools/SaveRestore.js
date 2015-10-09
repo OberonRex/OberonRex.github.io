@@ -33,7 +33,7 @@ function LoadSaved(uiID){
 	    var anchor = document.createElement('a');
 	    anchor.setAttribute('href', '#');
 	    anchor.setAttribute("onclick", "alert(this)");
-	    //anchor.onclick = function(e){alert(e);};
+	    anchor.onclick = function(x, e){alert(e); alert(x);};
 	    //anchor.addEventListener("click", "LoadThis(self), false");
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
