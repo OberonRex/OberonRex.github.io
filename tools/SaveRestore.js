@@ -10,7 +10,7 @@ function RestoreIt(id){
 
 function LoadThis(liId){
 	var li = document.getElementById(liId);
-	alert(li.getAttribute('query'));
+	ImportValues(li.getAttribute('query'));
 }
 
 var loaded = false;
