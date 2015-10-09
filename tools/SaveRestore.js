@@ -37,7 +37,7 @@ function LoadSaved(uiID){
 	    //anchor.onclick = function(){alert(this);};
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
-	    $(anchor).click(function(){ alert(this); });
+	    //$(anchor).click(function(){ alert(this); });
 	    
 	    entry.appendChild(anchor);
 	    
