@@ -8,8 +8,9 @@ function RestoreIt(id){
 	ImportValues(localStorage.getItem("key" + id + "_query"));
 }
 
-function LoadThis(evt){
-	alert(evt.target);
+function LoadThis(liId){
+	var li = document.getElementById(iiId);
+	alert(li.getAttribute('query'));
 }
 
 var loaded = false;
@@ -35,7 +36,7 @@ function LoadSaved(uiID){
 	    anchor.setAttribute('rel', "load")
 	    var myId = "id"+i;
 	    anchor.setAttribute('id', myId);
-	    anchor.setAttribute("onclick", "alert('" + myId + "')");
+	    anchor.setAttribute("onclick", "LoadThis('" + myId + "')");
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 	    //$(anchor).click(function(){ alert(this); });
