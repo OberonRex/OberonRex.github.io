@@ -28,7 +28,7 @@ function LoadSaved(tableID){
 	    var sName = localStorage.getItem(keyName);
 	    var sQuery = localStorage.getItem(keyQuery);
 
-		var row = table.insertRow(0);
+		var row = table.insertRow(table.rows.length);
 		var cell1 = row.insertCell(0);
 		var cell2 = row.insertCell(1);
 		
