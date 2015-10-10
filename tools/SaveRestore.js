@@ -23,10 +23,19 @@ function DeleteThis(anchorID){
 
 function RenameThis(anchorID){
 	var anchor = document.getElementById(anchorID);
-	var newName = prompt("New name: ", anchor.getAttribute('desc'));
+	//var newName = prompt("New name: ", anchor.getAttribute('desc'));
 	
 	var cell = anchor.parentNode;
 	var row = cell.parentNode;
+	
+	cell = row.cells[0];
+	var inp = cell.children[0];
+	inp.setAttribute("style", border:single);
+	int.setAttribute("readonly", false);
+}
+
+function SaveNewName(inpID){
+	alert(inpID);
 	
 	var cell0 = row.cells[0];
 	cell0.innerHTML = newName;
@@ -35,8 +44,8 @@ function RenameThis(anchorID){
 	anchor = cell2.children[0];
 	anchor.setAttribute('desc', newName);
 	
-	SaveAll();
-	LoadSaved();
+	//SaveAll();
+	//LoadSaved();
 }
 
 function CaptureThis(anchorID){
@@ -66,11 +75,10 @@ function InUse(table, candidate){
 }
 
 function AddNew(){
-	var newName = prompt("name", "New");
 	var table  = document.getElementById("SaveTable");
 	
 	for (var i = 0; InUse(table, i); i++);
-	AddOne(table, i, newName, GenerateQueryString());
+	AddOne(table, i, "New", GenerateQueryString());
 	
 	SaveAll();
 	LoadSaved();
@@ -127,12 +135,15 @@ function buildSimpleAnchor(keyNum, idBase, desc, fcnName, text){
     return anchor;
 }
 
-function buildInput(sName){
+function buildInput(keyNum, sName){
 	var inp = document.createElement('input');
 	inp.setAttribute('type', 'text');
 	inp.setAttribute('value', sName);
 	inp.setAttribute('readonly', true);
 	inp.setAttribute('style', 'border:none');
+	var myId = "rename" + keyNum;
+	int.setAttribute("id", myId);
+	inp.setAttribute("onchange", "SaveNewName('" + myId + "')");
 	return inp;
 }
 
@@ -146,7 +157,7 @@ function AddOne(table, keyNum, sName, sQuery){
 	
 	cell1.width = "100%";
 
-	cell1.innerHTML = buildInput(sName).outerHTML;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+	cell1.innerHTML = buildInput(KeyNum, sName).outerHTML;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
 	cell2.innerHTML = buildLoadAnchor(keyNum, sName, sQuery).outerHTML;
 	cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Rename").outerHTML;
 	cell4.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Recapture").outerHTML;
