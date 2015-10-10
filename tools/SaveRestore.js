@@ -8,20 +8,38 @@ function RestoreIt(id){
 	ImportValues(localStorage.getItem("key" + id + "_query"));
 }
 
-function LoadThis(liId){
-	var li = document.getElementById(liId);
-	alert(li.getAttribute('query'));
+function LoadThis(anchorID){
+	var anchor = document.getElementById(anchorID);
+	alert(anchor.getAttribute('query'));
 }
 
-function buildAnchor(fcnName, i, sName, sQuery){
+function DeleteThis(anchorID){
+	var anchor = document.getElementById(anchorID);
+	alert(anchor.getAttribute('keyNum'));
+}
+
+function buildLoadAnchor(keyNum, sName, sQuery){
     var anchor = document.createElement('a');
     anchor.setAttribute('href', '#');
-    anchor.setAttribute('rel', "load")
-    var myId = "id"+i;
+    var myId = "loadID"+keyNum;
     anchor.setAttribute('id', myId);
-    anchor.setAttribute("onclick", fcnName + "('" + myId + "')");
+    anchor.setAttribute("onclick", "LoadThis('" + myId + "')");
+    anchor.setAttribute('keyNum', keyNum);
+
     anchor.innerText = sName;
     anchor.setAttribute("query", sQuery);
+    return anchor;
+}
+
+function buildDeleteAnchor(keyNum){
+    var anchor = document.createElement('a');
+    anchor.setAttribute('href', '#');
+    var myId = "delID"+keyNum;
+    anchor.setAttribute('id', myId);
+    anchor.setAttribute("onclick", DeleteThis('" + myId + "')");
+    anchor.setAttribute('keyNum', keyNum);
+    
+    anchor.innerText = "-";
     return anchor;
 }
 
@@ -43,18 +61,9 @@ function LoadSaved(tableID){
 		var row = table.insertRow(table.rows.length);
 		var cell1 = row.insertCell(0);
 		var cell2 = row.insertCell(1);
-		
-	    var anchor = document.createElement('a');
-	    anchor.setAttribute('href', '#');
-	    anchor.setAttribute('rel', "load")
-	    var myId = "id"+i;
-	    anchor.setAttribute('id', myId);
-	    anchor.setAttribute("onclick", "LoadThis('" + myId + "')");
-	    anchor.innerText = sName;
-	    anchor.setAttribute("query", sQuery);
-		
-		cell1.innerHTML = buildAnchor("LoadThis", i, sName, sQuery).outerHTML;
-		cell2.innerHTML = "cell2";
+
+		cell1.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+		cell2.innerHTML = buildDeleteAnchor(values[i], "-").outerHTML;
 	  }		
 		
 		loaded = true;
