@@ -127,6 +127,14 @@ function buildSimpleAnchor(keyNum, idBase, desc, fcnName, text){
     return anchor;
 }
 
+function buildInput(sName){
+	var inp = document.createElement('input');
+	inp.setAttribute('type', 'text');
+	inp.value = sName;
+	inp.setAttribute('readonly', true);
+	return inp;
+}
+
 function AddOne(table, keyNum, sName, sQuery){
 	var row = table.insertRow(table.rows.length);
 	var cell1 = row.insertCell(0);
@@ -137,7 +145,7 @@ function AddOne(table, keyNum, sName, sQuery){
 	
 	cell1.width = "100%";
 
-	cell1.innerHTML = sName;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+	cell1.innerHTML = buildInput(sName);//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
 	cell2.innerHTML = buildLoadAnchor(keyNum, sName, sQuery).outerHTML;
 	cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Rename").outerHTML;
 	cell4.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Recapture").outerHTML;
