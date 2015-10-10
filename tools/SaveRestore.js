@@ -114,7 +114,7 @@ function buildSimpleAnchor(keyNum, idBase, desc, fcnName, text){
     return anchor;
 }
 
-function AddOne(table, sName, sQuery){
+function AddOne(table, keyNum, sName, sQuery){
 	var row = table.insertRow(table.rows.length);
 	var cell1 = row.insertCell(0);
 	var cell2 = row.insertCell(1);
@@ -125,10 +125,10 @@ function AddOne(table, sName, sQuery){
 	cell1.width = "100%";
 
 	cell1.innerHTML = sName;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-	cell2.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-	cell3.innerHTML = buildSimpleAnchor(values[i], "ren", sName, "RenameThis", "Rename").outerHTML;
-	cell4.innerHTML = buildSimpleAnchor(values[i], "cap", sName, "CaptureThis", "Recapture").outerHTML;
-	cell5.innerHTML = buildSimpleAnchor(values[i], "del", sName, "DeleteThis", "Delete").outerHTML;	
+	cell2.innerHTML = buildLoadAnchor(keyNum, sName, sQuery).outerHTML;
+	cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Rename").outerHTML;
+	cell4.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Recapture").outerHTML;
+	cell5.innerHTML = buildSimpleAnchor(keyNum, "del", sName, "DeleteThis", "Delete").outerHTML;	
 }
 
 function LoadSaved(){
@@ -145,6 +145,6 @@ function LoadSaved(){
 	    
 	    var sName = localStorage.getItem(keyName);
 	    var sQuery = localStorage.getItem(keyQuery);
-		AddOne(table, sName, sQuery);
+		AddOne(table, values[i], sName, sQuery);
 	  }		
 }
