@@ -29,7 +29,7 @@ function RenameThis(anchorID){
 	cell0.innerHTML = newName;
 		
 	var cell2 = row.cells[2];
-	anchor = cell2.chilren[0];
+	anchor = cell2.children[0];
 	anchor.setAttribute('desc', newName);
 	
 	SaveAll();
