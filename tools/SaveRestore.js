@@ -36,7 +36,7 @@ function buildDeleteAnchor(keyNum){
     anchor.setAttribute('href', '#');
     var myId = "delID"+keyNum;
     anchor.setAttribute('id', myId);
-    anchor.setAttribute("onclick", DeleteThis('" + myId + "')");
+    anchor.setAttribute("onclick", "DeleteThis('" + myId + "')");
     anchor.setAttribute('keyNum', keyNum);
     
     anchor.innerText = "-";
@@ -63,7 +63,7 @@ function LoadSaved(tableID){
 		var cell2 = row.insertCell(1);
 
 		cell1.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-		//cell2.innerHTML = buildDeleteAnchor(values[i], "-").outerHTML;
+		cell2.innerHTML = buildDeleteAnchor(values[i], "-").outerHTML;
 	  }		
 		
 		loaded = true;
