@@ -49,7 +49,7 @@ function SaveNewName(inpID){
 	//inp.setAttribute('value', sName);
 
 	var cell2 = row.cells[1];
-	anchor = cell2.children[0];
+	anchor = cell2.children[2];
 	anchor.setAttribute('desc', inp.getAttribute('value'));
 	
 	SaveAll();
