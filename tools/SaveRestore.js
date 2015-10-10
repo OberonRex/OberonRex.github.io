@@ -21,7 +21,8 @@ function buildAnchor(fcnName, i, sName, sQuery){
     anchor.setAttribute('id', myId);
     anchor.setAttribute("onclick", fcnName + "('" + myId + "')");
     anchor.innerText = sName;
-    anchor.setAttribute("query", sQuery);	
+    anchor.setAttribute("query", sQuery);
+    return anchor;
 }
 
 var loaded = false;
