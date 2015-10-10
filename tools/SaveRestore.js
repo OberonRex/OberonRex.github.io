@@ -130,7 +130,7 @@ function buildSimpleAnchor(keyNum, idBase, desc, fcnName, text){
 function buildInput(sName){
 	var inp = document.createElement('input');
 	inp.setAttribute('type', 'text');
-	inp.value = sName;
+	inp.setAttribute('value', sName);
 	inp.setAttribute('readonly', true);
 	return inp;
 }
