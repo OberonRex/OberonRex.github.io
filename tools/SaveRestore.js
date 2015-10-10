@@ -36,7 +36,7 @@ function buildLoadAnchor(keyNum, sName, sQuery){
     anchor.setAttribute("onclick", "LoadThis('" + myId + "')");
     anchor.setAttribute('keyNum', keyNum);
 
-    anchor.innerText = sName;
+    anchor.innerText = "Load";
     anchor.setAttribute("query", sQuery);
     return anchor;
 }
@@ -49,7 +49,7 @@ function buildSimpleAnchor(keyNum, idBase, fcnName, text){
     anchor.setAttribute("onclick", fcnName + "('" + myId + "')");
     anchor.setAttribute('keyNum', keyNum);
     
-    anchor.innerText = "Load";
+    anchor.innerText = text;
     return anchor;
 }
 
