@@ -66,7 +66,7 @@ function AddNew(){
 	var newName = prompt("name", "New");
 	var table  = document.getElementById("SaveTable");
 	
-	for (var i = 0; InUse(table, i), i++);
+	for (var i = 0; InUse(table, i); i++);
 	AddOne(table, i, newName, GenerateQueryString());
 	
 	SaveAll();
