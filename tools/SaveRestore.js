@@ -52,8 +52,8 @@ function SaveNewName(inpID){
 	anchor = cell2.children[0];
 	anchor.setAttribute('desc', inp.getAttribute('value'));
 	
-	//SaveAll();
-	//LoadSaved();
+	SaveAll();
+	LoadSaved();
 }
 
 function CaptureThis(anchorID){
