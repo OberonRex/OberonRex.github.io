@@ -41,7 +41,7 @@ function LoadSaved(tableID){
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 
-		cell1.innerHTML = anchor;
+		cell1.innerHTML = "cell1";
 		cell2.innerHTML = "cell2";
 	  }		
 		
