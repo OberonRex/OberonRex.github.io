@@ -13,7 +13,7 @@ function LoadThis(liId){
 	alert(li.getAttribute('query'));
 }
 
-function buildAnchor(fcnName){
+function buildAnchor(fcnName, i){
     var anchor = document.createElement('a');
     anchor.setAttribute('href', '#');
     anchor.setAttribute('rel', "load")
@@ -52,7 +52,7 @@ function LoadSaved(tableID){
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 		
-		cell1.innerHTML = buildAnchor("LoadThis").outerHTML;
+		cell1.innerHTML = buildAnchor("LoadThis", i).outerHTML;
 		cell2.innerHTML = "cell2";
 	  }		
 		
