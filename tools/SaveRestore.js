@@ -52,7 +52,7 @@ function LoadSaved(tableID){
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 		
-		cell1.innerHTML = anchorBuild("LoadThis").outerHTML;
+		cell1.innerHTML = buildAnchor("LoadThis").outerHTML;
 		cell2.innerHTML = "cell2";
 	  }		
 		
