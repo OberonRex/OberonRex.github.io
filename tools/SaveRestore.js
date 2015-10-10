@@ -38,7 +38,7 @@ function SaveAll(){
 	var dictStg = "";
 	for (var i = 1; i < table.rows.length; i++){
 		var row = table.rows[i];
-		var cell = row.cells[0];
+		var cell = row.cells[1];
 		alert(cell.getAttribute('query'));
 		alert(cell.getAttribute('desc'));
 	}
@@ -95,8 +95,6 @@ function LoadSaved(){
 		cell1.width = "100%";
 
 		cell1.innerHTML = sName;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-		cell1.setAttribute('query', sQuery);
-		call1.setAttribute('desc', sName);
 		cell2.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
 		cell3.innerHTML = buildSimpleAnchor(values[i], "ren", sName, "RenameThis", "Rename").outerHTML;
 		cell4.innerHTML = buildSimpleAnchor(values[i], "cap", sName, "CaptureThis", "Recapture").outerHTML;
