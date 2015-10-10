@@ -48,8 +48,8 @@ function SaveNewName(inpID){
 	inp.setAttribute('style', 'border:none');
 	//inp.setAttribute('value', sName);
 
-	var cell2 = row.cells[1];
-	anchor = cell2.children[2];
+	var cell2 = row.cells[2];
+	anchor = cell2.children[0];
 	anchor.setAttribute('desc', inp.getAttribute('value'));
 	
 	SaveAll();
