@@ -21,6 +21,7 @@ function DeleteThis(anchorID){
 function RenameThis(anchorID){
 	var anchor = document.getElementById(anchorID);
 	var newName = prompt("New name: ", anchor.getAttribute('desc'));
+	SaveAll();
 }
 
 function CaptureThis(anchorID){
@@ -30,6 +31,17 @@ function CaptureThis(anchorID){
 
 function AddNew(){
 	
+}
+
+function SaveAll(){
+	var table = document.getElementById("SaveTable");
+	var dictStg = "";
+	for (var i = 1; i < table.rows.length){
+		var row = table.rows[i];
+		var cell = row.cells[0];
+		alert(cell.getAttribute('query'));
+		alert(cell.getAttribute('desc'));
+	}
 }
 
 function buildLoadAnchor(keyNum, sName, sQuery){
@@ -58,15 +70,15 @@ function buildSimpleAnchor(keyNum, idBase, desc, fcnName, text){
     return anchor;
 }
 
-var loaded = false;
-function LoadSaved(tableID){
-	if (!loaded){
+function LoadSaved(){
+
+	var table = document.getElementById("SaveTable");
+	for (var i = 1; i < table.rows.length) table.deleteRow(1);
 		
 	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
-	var table = document.getElementById(tableID);
 
-	for (var i=0;i<values.length;i++) {
+	for (var i=0; i<values.length; i++) {
 		var keyName = "key" + values[i] + "_name";
 		var keyQuery = "key" + values[i] + "_query";
 	    
@@ -82,13 +94,13 @@ function LoadSaved(tableID){
 		
 		cell1.width = "100%";
 
-		cell1.innerHTML = sName//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+		cell1.innerHTML = sName;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+		cell1.setAttribute('query', sQuery);
+		call1.setAttribute('desc', sName);
 		cell2.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
 		cell3.innerHTML = buildSimpleAnchor(values[i], "ren", sName, "RenameThis", "Rename").outerHTML;
 		cell4.innerHTML = buildSimpleAnchor(values[i], "cap", sName, "CaptureThis", "Recapture").outerHTML;
 		cell5.innerHTML = buildSimpleAnchor(values[i], "del", sName, "DeleteThis", "Delete").outerHTML;
 	  }		
-		
-		loaded = true;
 	}
 }
