@@ -148,7 +148,7 @@ function buildInput(keyNum, sName){
 	inp.setAttribute('type', 'text');
 	inp.setAttribute('value', sName);
 	inp.setAttribute('readonly', true);
-	inp.setAttribute('style', 'border:none; width:100px');
+	inp.setAttribute('style', 'border:none; width:150px');
 	var myId = "rename" + keyNum;
 	inp.setAttribute("id", myId);
 	inp.setAttribute("onchange", "SaveNewName('" + myId + "')");
