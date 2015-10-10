@@ -30,7 +30,7 @@ function RenameThis(anchorID){
 	
 	cell = row.cells[0];
 	var inp = cell.children[0];
-	inp.setAttribute("style", border:single);
+	inp.setAttribute("style", "border:single");
 	int.setAttribute("readonly", false);
 }
 
