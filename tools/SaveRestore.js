@@ -132,7 +132,7 @@ function buildInput(sName){
 	inp.setAttribute('type', 'text');
 	inp.setAttribute('value', sName);
 	inp.setAttribute('readonly', true);
-	inp.setAttribute('border', 0);
+	inp.setAttribute('style', 'border:none');
 	return inp;
 }
 
