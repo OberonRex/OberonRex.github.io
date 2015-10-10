@@ -14,12 +14,14 @@ function LoadThis(liId){
 }
 
 var loaded = false;
-function LoadSaved(uiID){
+function LoadSaved(tableID){
 	if (!loaded){
 		
 	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
 	var target = document.getElementById(uiID);
+	
+    var table = document.getElementById(tableID);
 
 	for (var i=0;i<values.length;i++) {
 		var keyName = "key" + values[i] + "_name";
@@ -27,10 +29,11 @@ function LoadSaved(uiID){
 	    
 	    var sName = localStorage.getItem(keyName);
 	    var sQuery = localStorage.getItem(keyQuery);
-	    
-	    var entry = document.createElement('li');
-	    
-	    //entry.appendChild(document.createTextNode(sName));
+
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		
 	    var anchor = document.createElement('a');
 	    anchor.setAttribute('href', '#');
 	    anchor.setAttribute('rel', "load")
@@ -39,13 +42,9 @@ function LoadSaved(uiID){
 	    anchor.setAttribute("onclick", "LoadThis('" + myId + "')");
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
-	    //$(anchor).click(function(){ alert(this); });
-	    
-	    entry.appendChild(anchor);
-	    
-	    //entry.setAttribute("onclick", "alert()");
-	    target.appendChild(entry);
-	    
+
+		cell1.innerHTML = anchor;
+		cell2.innerHTML = "cell2";
 	  }		
 		
 		loaded = true;
