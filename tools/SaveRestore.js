@@ -148,7 +148,7 @@ function buildInput(keyNum, sName){
 	inp.setAttribute('type', 'text');
 	inp.setAttribute('value', sName);
 	inp.setAttribute('readonly', true);
-	inp.setAttribute('style', 'border:none');
+	inp.setAttribute('style', 'border:none; width:100px');
 	var myId = "rename" + keyNum;
 	inp.setAttribute("id", myId);
 	inp.setAttribute("onchange", "SaveNewName('" + myId + "')");
@@ -167,9 +167,9 @@ function AddOne(table, keyNum, sName, sQuery){
 
 	cell1.innerHTML = buildInput(keyNum, sName).outerHTML;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
 	cell2.innerHTML = buildLoadAnchor(keyNum, sName, sQuery).outerHTML;
-	cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Rename").outerHTML;
-	cell4.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Recapture").outerHTML;
-	cell5.innerHTML = buildSimpleAnchor(keyNum, "del", sName, "DeleteThis", "Delete").outerHTML;	
+	cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Ren").outerHTML;
+	cell4.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Scan").outerHTML;
+	cell5.innerHTML = buildSimpleAnchor(keyNum, "del", sName, "DeleteThis", "Del").outerHTML;	
 }
 
 function LoadSaved(){
