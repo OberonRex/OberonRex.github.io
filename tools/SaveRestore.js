@@ -53,7 +53,7 @@ function CaptureThis(anchorID){
 function AddNew(){
 	var newName = prompt("name", "New");
 	var table  = document.getElementById("SaveTable");
-	AddOne(table, newName, GenerateQueryString());
+	AddOne(table, 2, newName, GenerateQueryString());
 	
 	SaveAll();
 	LoadSaved();
