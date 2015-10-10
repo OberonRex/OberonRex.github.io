@@ -38,11 +38,20 @@ function SaveAll(){
 	var dictStg = "";
 	for (var i = 1; i < table.rows.length; i++){
 		var row = table.rows[i];
+		
 		var cell = row.cells[1];
 		var anchor = cell.children[0];
 		alert(anchor.getAttribute('query'));
+
+		anchor = cell.children[0];
+		cell = row.cells[2];
 		alert(anchor.getAttribute('desc'));
+		alert(anchor.getAttribute('keyNum'));
+		
+		if (i > 1) dictStg += ",";
+		dictStg += anchor.getAttribute('keyNum');
 	}
+	alert("dict: " + dictStg);
 }
 
 function buildLoadAnchor(keyNum, sName, sQuery){
