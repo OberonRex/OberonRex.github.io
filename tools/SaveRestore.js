@@ -1,6 +1,7 @@
 function LoadThis(anchorID){
 	var anchor = document.getElementById(anchorID);
 	ImportValues(anchor.getAttribute('query'));
+	AllDone();
 }
 
 //
@@ -128,7 +129,7 @@ function buildLoadAnchor(keyNum, sName, sQuery){
     anchor.setAttribute("onclick", "LoadThis('" + myId + "')");
     anchor.setAttribute('keyNum', keyNum);
 
-    anchor.innerText = "Load";
+    anchor.innerText = "Apply";
     anchor.setAttribute("query", sQuery);
     return anchor;
 }
