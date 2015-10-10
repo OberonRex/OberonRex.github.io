@@ -22,7 +22,7 @@ function RenameThis(anchorID){
 	var anchor = document.getElementById(anchorID);
 	var newName = prompt("New name: ", anchor.getAttribute('desc'));
 	
-	var cell = anchor.parent;
+	var cell = anchor.parentNode;
 	var row = cell.parent;
 	var cell1 = row.cells[0];
 	var anchor2 = cell1.children[0];
