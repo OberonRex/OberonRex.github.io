@@ -73,7 +73,7 @@ function buildSimpleAnchor(keyNum, idBase, desc, fcnName, text){
 function LoadSaved(){
 	var table = document.getElementById("SaveTable");
 	
-	for (var i = 1; i < table.rows.length) table.deleteRow(1);
+	for (var i = 1; i < table.rows.length; i++) table.deleteRow(1);
 		
 	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
