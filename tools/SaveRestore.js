@@ -36,7 +36,7 @@ function AddNew(){
 function SaveAll(){
 	var table = document.getElementById("SaveTable");
 	var dictStg = "";
-	for (var i = 1; i < table.rows.length){
+	for (var i = 1; i < table.rows.length; i++){
 		var row = table.rows[i];
 		var cell = row.cells[0];
 		alert(cell.getAttribute('query'));
@@ -71,4 +71,35 @@ function buildSimpleAnchor(keyNum, idBase, desc, fcnName, text){
 }
 
 function LoadSaved(){
+	var table = document.getElementById("SaveTable");
+	
+	for (var i = 1; i < table.rows.length) table.deleteRow(1);
+		
+	var lStg = localStorage.getItem("list");
+	var values = lStg.split(",");
+
+	for (var i=0; i<values.length; i++) {
+		var keyName = "key" + values[i] + "_name";
+		var keyQuery = "key" + values[i] + "_query";
+	    
+	    var sName = localStorage.getItem(keyName);
+	    var sQuery = localStorage.getItem(keyQuery);
+
+		var row = table.insertRow(table.rows.length);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		var cell5 = row.insertCell(4);
+		
+		cell1.width = "100%";
+
+		cell1.innerHTML = sName;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+		cell1.setAttribute('query', sQuery);
+		call1.setAttribute('desc', sName);
+		cell2.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+		cell3.innerHTML = buildSimpleAnchor(values[i], "ren", sName, "RenameThis", "Rename").outerHTML;
+		cell4.innerHTML = buildSimpleAnchor(values[i], "cap", sName, "CaptureThis", "Recapture").outerHTML;
+		cell5.innerHTML = buildSimpleAnchor(values[i], "del", sName, "DeleteThis", "Delete").outerHTML;
+	  }		
 }
