@@ -61,9 +61,13 @@ function LoadSaved(tableID){
 		var row = table.insertRow(table.rows.length);
 		var cell1 = row.insertCell(0);
 		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		
+		cell1.width = "100%";
 
 		cell1.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-		cell2.innerHTML = buildDeleteAnchor(values[i], "-").outerHTML;
+		cell2.innerHTML = buildDeleteAnchor(values[i], "Rename").outerHTML;
+		cell3.innerHTML = buildDeleteAnchor(values[i], "Delete").outerHTML;
 	  }		
 		
 		loaded = true;
