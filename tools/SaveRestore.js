@@ -3,6 +3,7 @@ function LoadThis(anchorID){
 	ImportValues(anchor.getAttribute('query'));
 }
 
+//
 function DeleteThis(anchorID){
 	var anchor = document.getElementById(anchorID);
 	var cell = anchor.parentNode;
