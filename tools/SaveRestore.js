@@ -36,7 +36,11 @@ function RenameThis(anchorID){
 }
 
 function SaveNewName(inpID){
-	alert(inpID);
+	var anchor = document.getElementById(anchorID);
+	//var newName = prompt("New name: ", anchor.getAttribute('desc'));
+	
+	var cell = anchor.parentNode;
+	var row = cell.parentNode;
 	
 	var cell0 = row.cells[0];
 	cell0.innerHTML = newName;
