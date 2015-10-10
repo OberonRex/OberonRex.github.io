@@ -43,8 +43,8 @@ function SaveAll(){
 		var anchor = cell.children[0];
 		alert(anchor.getAttribute('query'));
 
-		anchor = cell.children[0];
 		cell = row.cells[2];
+		anchor = cell.children[0];
 		alert(anchor.getAttribute('desc'));
 		alert(anchor.getAttribute('keyNum'));
 		
