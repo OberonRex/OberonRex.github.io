@@ -24,8 +24,8 @@ function RenameThis(anchorID){
 	
 	var cell = anchor.parentNode;
 	var row = cell.parentNode;
-	var cell1 = row.cells[0];
-	var anchor2 = cell1.children[0];
+	var cell2 = row.cells[1];
+	var anchor2 = cell2.children[0];
 	alert(anchor2.getAttribute('query'));
 	
 	//SaveAll();
