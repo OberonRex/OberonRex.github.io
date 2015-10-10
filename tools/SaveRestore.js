@@ -1,7 +1,7 @@
 function LoadThis(anchorID){
 	var anchor = document.getElementById(anchorID);
 	ImportValues(anchor.getAttribute('query'));
-	AllDone();
+	allDone();
 }
 
 //
