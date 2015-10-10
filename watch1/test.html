@@ -51,6 +51,10 @@
 	border-radius: 10px;
 }
 
+.bordered{
+	border: 1px solid black;
+}
+
 </style>	
 
 <script type="text/javascript" src="../platforms/jquery.js"></script>
@@ -607,10 +611,10 @@ function chooseMe(img){
 <div class="footer">
 	<table width=100%>
 		<tr>
-			<td onclick="SetView('SettingsView');" class="centerText roundCorners" border=1 width=25% bgcolor="aqua">Settings</td>
-			<td onclick="SetView('SavedView'); LoadSaved('SaveTable');" class="centerText roundCorners" width=25% bgcolor="aqua">Saved</td>
-			<td onclick="SetView('AckView');" class="centerText roundCorners" width=25% bgcolor="aqua">Acknowledgements</td>
-			<td onclick="SetView('ContactView');" class="centerText roundCorners" width=25% bgcolor="aqua">Contact</td>
+			<td onclick="SetView('SettingsView');" class="centerText roundCorners bordered" border=1 width=25% bgcolor="aqua">Settings</td>
+			<td onclick="SetView('SavedView'); LoadSaved('SaveTable');" class="centerText roundCorners bordered" width=25% bgcolor="aqua">Saved</td>
+			<td onclick="SetView('AckView');" class="centerText roundCorners bordered" width=25% bgcolor="aqua">Acknowledgements</td>
+			<td onclick="SetView('ContactView');" class="centerText roundCorners bordered" width=25% bgcolor="aqua">Contact</td>
 		</tr>
 	</table>
 </div>
