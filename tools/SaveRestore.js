@@ -1,21 +1,18 @@
-function SaveIt(id){
-	localStorage.setItem("list", "1");
-	localStorage.setItem("key" + id + "_name", "Four Points");
-	localStorage.setItem("key" + id + "_query", GenerateQueryString());
-}
-
-function RestoreIt(id){
-	ImportValues(localStorage.getItem("key" + id + "_query"));
-}
-
 function LoadThis(anchorID){
 	var anchor = document.getElementById(anchorID);
-	alert(anchor.getAttribute('query'));
+	ImportValues(anchor.getAttribute('query'));
 }
 
 function DeleteThis(anchorID){
 	var anchor = document.getElementById(anchorID);
+	var cell = anchor.parentNode;
+	var row = cell.parentNode;
+	
+	var keyNum = anchor.getAttribute('keynum');
 	alert("delete: " + anchor.getAttribute('keyNum'));
+	
+	var table  = document.getElementById("SaveTable");
+	table.deleteRow(row.rowIndex);
 }
 
 function RenameThis(anchorID){
