@@ -9,10 +9,16 @@ function DeleteThis(anchorID){
 	var row = cell.parentNode;
 	
 	var keyNum = anchor.getAttribute('keynum');
-	alert("delete: " + anchor.getAttribute('keyNum'));
+	var keyName = "key" + keyNum + "_name";
+	var keyQuery = "key" + keyNum + "_query";
+	localStorage.removeItem(keyName);
+	localStorage.removeItem(keyQuery);
 	
 	var table  = document.getElementById("SaveTable");
 	table.deleteRow(row.rowIndex);
+	
+	SaveAll();
+	LOadSaved();
 }
 
 function RenameThis(anchorID){
@@ -70,10 +76,6 @@ function AddNew(){
 	LoadSaved();
 }
 
-function setItem(stg1, stg2){
-	alert(stg1 + ": " + stg2);
-}
-
 function SaveAll(){
 	var table = document.getElementById("SaveTable");
 	var dictStg = "";
@@ -92,11 +94,11 @@ function SaveAll(){
 		var keyNum = anchor.getAttribute('keyNum');
 		dictStg += keyNum;
 		
-		setItem("key" + keyNum + "_name", desc);
-		setItem("key" + keyNum + "_query", query);
+		localStorage.setItem("key" + keyNum + "_name", desc);
+		localStorage.setItem("key" + keyNum + "_query", query);
 
 	}
-	setItem("list", dictStg);
+	localStorage.setItem("list", dictStg);
 }
 
 function buildLoadAnchor(keyNum, sName, sQuery){
