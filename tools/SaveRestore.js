@@ -19,9 +19,7 @@ function LoadSaved(tableID){
 		
 	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
-	var target = document.getElementById(uiID);
-	
-    var table = document.getElementById(tableID);
+	var table = document.getElementById(tableID);
 
 	for (var i=0;i<values.length;i++) {
 		var keyName = "key" + values[i] + "_name";
