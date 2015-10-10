@@ -40,8 +40,11 @@ function LoadSaved(tableID){
 	    anchor.setAttribute("onclick", "LoadThis('" + myId + "')");
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
-
-		cell1.innerHTML = "cell1";
+		
+		alert(anchor.innerHTML);
+		alert(anchor.outerHTML);
+		
+		cell1.innerHTML = anchor.outerHTML;
 		cell2.innerHTML = "cell2";
 	  }		
 		
