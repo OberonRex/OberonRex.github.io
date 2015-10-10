@@ -43,11 +43,14 @@ function SaveNewName(inpID){
 	var row = cell.parentNode;
 	
 	var cell0 = row.cells[0];
-	cell0.innerHTML = newName;
-		
+	var inp = cell0.children[0];
+	inp.setAttribute('readonly', true);
+	inp.setAttribute('style', 'border:none');
+	//inp.setAttribute('value', sName);
+
 	var cell2 = row.cells[2];
 	anchor = cell2.children[0];
-	anchor.setAttribute('desc', newName);
+	anchor.setAttribute('desc', inp.getAttribute('value'));
 	
 	//SaveAll();
 	//LoadSaved();
