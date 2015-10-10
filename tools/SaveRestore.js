@@ -39,8 +39,9 @@ function SaveAll(){
 	for (var i = 1; i < table.rows.length; i++){
 		var row = table.rows[i];
 		var cell = row.cells[1];
-		alert(cell.getAttribute('query'));
-		alert(cell.getAttribute('desc'));
+		var anchor = cell.children[0];
+		alert(anchor.getAttribute('query'));
+		alert(anchor.getAttribute('desc'));
 	}
 }
 
