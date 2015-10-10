@@ -181,15 +181,15 @@ function AddOne(table, keyNum, sName, sQuery){
 	var cell2 = row.insertCell(1);
 	var cell3 = row.insertCell(2);
 	var cell4 = row.insertCell(3);
-	var cell5 = row.insertCell(4);
+	//var cell5 = row.insertCell(4);
 	
 	//cell1.width = "100%";
 
 	cell1.innerHTML = buildInput(keyNum, sName).outerHTML;
 	cell2.innerHTML = buildLoadAnchor(keyNum, sName, sQuery).outerHTML;
-	cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Ren").outerHTML;
-	cell4.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Scan").outerHTML;
-	cell5.innerHTML = buildSimpleAnchor(keyNum, "del", sName, "DeleteThis", "Del").outerHTML;	
+	//cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Ren").outerHTML;
+	cell3.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Scan").outerHTML;
+	cell4.innerHTML = buildSimpleAnchor(keyNum, "del", sName, "DeleteThis", "Del").outerHTML;	
 }
 
 function LoadSaved(){
