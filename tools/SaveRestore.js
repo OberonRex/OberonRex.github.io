@@ -147,7 +147,7 @@ function AddOne(table, keyNum, sName, sQuery){
 function LoadSaved(){
 	var table = document.getElementById("SaveTable");
 	
-	for (var i = table.rows.length; i > 0; i--) table.deleteRow(i);
+	for (var i = table.rows.length-1; i > 0; i--) table.deleteRow(i);
 		
 	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
