@@ -26,10 +26,11 @@ function RenameThis(anchorID){
 	var row = cell.parentNode;
 	
 	var cell0 = row.cells[0];
+	cell0.innerHTML = newName;
 	
-	var cell1 = row.cells[1];
-	anchor = cell1.children[0];
-	alert(anchor.getAttribute('query'));
+	//var cell1 = row.cells[1];
+	//anchor = cell1.children[0];
+	//alert(anchor.getAttribute('query'));
 	
 	//SaveAll();
 }
