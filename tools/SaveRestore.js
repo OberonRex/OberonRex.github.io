@@ -158,7 +158,7 @@ function AddOne(table, keyNum, sName, sQuery){
 	
 	cell1.width = "100%";
 
-	cell1.innerHTML = buildInput(KeyNum, sName).outerHTML;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+	cell1.innerHTML = buildInput(keyNum, sName).outerHTML;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
 	cell2.innerHTML = buildLoadAnchor(keyNum, sName, sQuery).outerHTML;
 	cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Rename").outerHTML;
 	cell4.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Recapture").outerHTML;
