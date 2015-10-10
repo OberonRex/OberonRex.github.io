@@ -51,7 +51,12 @@ function CaptureThis(anchorID){
 }
 
 function AddNew(){
+	var newName = prompt("name", "New");
+	var table  = document.getElementById("SaveTable");
+	AddOne(table, newName, GenerateQueryString());
 	
+	SaveAll();
+	LoadSaved();
 }
 
 function setItem(stg1, stg2){
@@ -109,6 +114,23 @@ function buildSimpleAnchor(keyNum, idBase, desc, fcnName, text){
     return anchor;
 }
 
+function AddOne(table, sName, sQuery){
+	var row = table.insertRow(table.rows.length);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	var cell4 = row.insertCell(3);
+	var cell5 = row.insertCell(4);
+	
+	cell1.width = "100%";
+
+	cell1.innerHTML = sName;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+	cell2.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+	cell3.innerHTML = buildSimpleAnchor(values[i], "ren", sName, "RenameThis", "Rename").outerHTML;
+	cell4.innerHTML = buildSimpleAnchor(values[i], "cap", sName, "CaptureThis", "Recapture").outerHTML;
+	cell5.innerHTML = buildSimpleAnchor(values[i], "del", sName, "DeleteThis", "Delete").outerHTML;	
+}
+
 function LoadSaved(){
 	var table = document.getElementById("SaveTable");
 	
@@ -123,20 +145,6 @@ function LoadSaved(){
 	    
 	    var sName = localStorage.getItem(keyName);
 	    var sQuery = localStorage.getItem(keyQuery);
-
-		var row = table.insertRow(table.rows.length);
-		var cell1 = row.insertCell(0);
-		var cell2 = row.insertCell(1);
-		var cell3 = row.insertCell(2);
-		var cell4 = row.insertCell(3);
-		var cell5 = row.insertCell(4);
-		
-		cell1.width = "100%";
-
-		cell1.innerHTML = sName;//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-		cell2.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-		cell3.innerHTML = buildSimpleAnchor(values[i], "ren", sName, "RenameThis", "Rename").outerHTML;
-		cell4.innerHTML = buildSimpleAnchor(values[i], "cap", sName, "CaptureThis", "Recapture").outerHTML;
-		cell5.innerHTML = buildSimpleAnchor(values[i], "del", sName, "DeleteThis", "Delete").outerHTML;
+		AddOne(table, sName, sQuery);
 	  }		
 }
