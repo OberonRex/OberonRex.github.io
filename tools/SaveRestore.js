@@ -18,7 +18,12 @@ function DeleteThis(anchorID){
 	alert("delete: " + anchor.getAttribute('keyNum'));
 }
 
-function EditThis(anchorID){
+function RenameThis(anchorID){
+	var anchor = document.getElementById(anchorID);
+	alert("edit: " + anchor.getAttribute('keyNum'));
+}
+
+function CaptureThis(anchorID){
 	var anchor = document.getElementById(anchorID);
 	alert("edit: " + anchor.getAttribute('keyNum'));
 }
@@ -44,7 +49,7 @@ function buildSimpleAnchor(keyNum, idBase, fcnName, text){
     anchor.setAttribute("onclick", fcnName + "('" + myId + "')");
     anchor.setAttribute('keyNum', keyNum);
     
-    anchor.innerText = text;
+    anchor.innerText = "Load";
     return anchor;
 }
 
@@ -67,12 +72,16 @@ function LoadSaved(tableID){
 		var cell1 = row.insertCell(0);
 		var cell2 = row.insertCell(1);
 		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		var cell5 = row.insertCell(4);
 		
 		cell1.width = "100%";
 
-		cell1.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-		cell2.innerHTML = buildSimpleAnchor(values[i], "del", "DeleteThis", "Delete").outerHTML;
-		cell3.innerHTML = buildSimpleAnchor(values[i], "edit", "EditThis", "Edit").outerHTML;
+		cell1.innerHTML = sName//buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+		cell2.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
+		cell3.innerHTML = buildSimpleAnchor(values[i], "ren", "RenameThis", "Rename").outerHTML;
+		cell4.innerHTML = buildSimpleAnchor(values[i], "cap", "CaptureThis", "Recapture").outerHTML;
+		cell5.innerHTML = buildSimpleAnchor(values[i], "del", "DeleteThis", "Delete").outerHTML;
 	  }		
 		
 		loaded = true;
