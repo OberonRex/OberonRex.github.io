@@ -10,7 +10,7 @@ function RestoreIt(id){
 
 function LoadThis(liId){
 	var li = document.getElementById(liId);
-	ImportValues(li.getAttribute('query'));
+	alert(li.getAttribute('query'));
 }
 
 var loaded = false;
@@ -40,9 +40,6 @@ function LoadSaved(tableID){
 	    anchor.setAttribute("onclick", "LoadThis('" + myId + "')");
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
-		
-		alert(anchor.innerHTML);
-		alert(anchor.outerHTML);
 		
 		cell1.innerHTML = anchor.outerHTML;
 		cell2.innerHTML = "cell2";
