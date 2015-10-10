@@ -63,7 +63,7 @@ function LoadSaved(tableID){
 		var cell2 = row.insertCell(1);
 
 		cell1.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-		cell2.innerHTML = buildDeleteAnchor(values[i], "-").outerHTML;
+		//cell2.innerHTML = buildDeleteAnchor(values[i], "-").outerHTML;
 	  }		
 		
 		loaded = true;
