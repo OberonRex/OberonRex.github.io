@@ -50,10 +50,24 @@ function CaptureThis(anchorID){
 	LoadSaved();
 }
 
+function InUse(table, candidate){
+	for (var i = 1; i < table.rows.length; i++)
+	{
+		var row = table.rows[i];
+		cell = row.cells[2];
+		anchor = cell.children[0];
+		var keyNum = anchor.getAttribute('keyNum');
+		if (Number(keyNum) == candidate) return true;
+	}
+	return false;
+}
+
 function AddNew(){
 	var newName = prompt("name", "New");
 	var table  = document.getElementById("SaveTable");
-	AddOne(table, 2, newName, GenerateQueryString());
+	
+	for (var i = 0; InUse(table, i), i++);
+	AddOne(table, i, newName, GenerateQueryString());
 	
 	SaveAll();
 	LoadSaved();
