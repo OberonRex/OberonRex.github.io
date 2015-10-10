@@ -35,15 +35,18 @@ function RenameThis(anchorID){
 	inp.removeAttribute("readonly");
 }
 
+function ClearRW(inpID){
+	var inp = document.getElementById(inpID);
+	inp.setAttribute('readonly', true);
+	inp.setAttribute('style', 'border:none');
+}
+
 function SaveNewName(inpID){
 	var inp = document.getElementById(inpID);
-	//var newName = prompt("New name: ", anchor.getAttribute('desc'));
-	
+
 	var cell = inp.parentNode;
 	var row = cell.parentNode;
 	
-	//var cell0 = row.cells[0];
-	//var inp = cell0.children[0];
 	inp.setAttribute('readonly', true);
 	inp.setAttribute('style', 'border:none');
 	//inp.setAttribute('value', sName);
@@ -151,7 +154,8 @@ function buildInput(keyNum, sName){
 	inp.setAttribute('style', 'border:none; width:150px');
 	var myId = "rename" + keyNum;
 	inp.setAttribute("id", myId);
-	inp.setAttribute("onblur", "SaveNewName('" + myId + "')");
+	inp.setAttribute("onblur", "ClearRW('" + myId + "')");
+	inp.setAttribute("onchange", "SaveNewName('" + myId + "')");
 	return inp;
 }
 
