@@ -36,14 +36,14 @@ function RenameThis(anchorID){
 }
 
 function SaveNewName(inpID){
-	var anchor = document.getElementById(anchorID);
+	var inp = document.getElementById(inpID);
 	//var newName = prompt("New name: ", anchor.getAttribute('desc'));
 	
-	var cell = anchor.parentNode;
+	var cell = inp.parentNode;
 	var row = cell.parentNode;
 	
-	var cell0 = row.cells[0];
-	var inp = cell0.children[0];
+	//var cell0 = row.cells[0];
+	//var inp = cell0.children[0];
 	inp.setAttribute('readonly', true);
 	inp.setAttribute('style', 'border:none');
 	//inp.setAttribute('value', sName);
