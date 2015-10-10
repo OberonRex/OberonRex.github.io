@@ -23,7 +23,7 @@ function RenameThis(anchorID){
 	var newName = prompt("New name: ", anchor.getAttribute('desc'));
 	
 	var cell = anchor.parentNode;
-	var row = cell.parent;
+	var row = cell.parentNode;
 	var cell1 = row.cells[0];
 	var anchor2 = cell1.children[0];
 	alert(anchor2.getAttribute('query'));
