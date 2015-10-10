@@ -143,7 +143,7 @@ function buildInput(keyNum, sName){
 	inp.setAttribute('readonly', true);
 	inp.setAttribute('style', 'border:none');
 	var myId = "rename" + keyNum;
-	int.setAttribute("id", myId);
+	inp.setAttribute("id", myId);
 	inp.setAttribute("onchange", "SaveNewName('" + myId + "')");
 	return inp;
 }
