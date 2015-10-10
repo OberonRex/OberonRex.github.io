@@ -36,7 +36,7 @@ function buildLoadAnchor(keyNum, sName, sQuery){
     return anchor;
 }
 
-function buildSimpleAnchor(keyNum, idBase, fcnName){
+function buildSimpleAnchor(keyNum, idBase, fcnName, text){
     var anchor = document.createElement('a');
     anchor.setAttribute('href', '#');
     var myId = idBase+keyNum;
@@ -44,7 +44,7 @@ function buildSimpleAnchor(keyNum, idBase, fcnName){
     anchor.setAttribute("onclick", fcnName + "('" + myId + "')");
     anchor.setAttribute('keyNum', keyNum);
     
-    anchor.innerText = "-";
+    anchor.innerText = text;
     return anchor;
 }
 
@@ -71,8 +71,8 @@ function LoadSaved(tableID){
 		cell1.width = "100%";
 
 		cell1.innerHTML = buildLoadAnchor(values[i], sName, sQuery).outerHTML;
-		cell2.innerHTML = buildDeleteAnchor(values[i], "del", "DeleteThis").outerHTML;
-		cell3.innerHTML = buildDeleteAnchor(values[i], "edit", "EditThis").outerHTML;
+		cell2.innerHTML = buildSimpleAnchor(values[i], "del", "DeleteThis", "Delete").outerHTML;
+		cell3.innerHTML = buildSimpleAnchor(values[i], "edit", "EditThis", "Edit").outerHTML;
 	  }		
 		
 		loaded = true;
