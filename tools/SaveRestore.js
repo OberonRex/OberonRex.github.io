@@ -13,6 +13,17 @@ function LoadThis(liId){
 	alert(li.getAttribute('query'));
 }
 
+function buildAnchor(fcnName){
+    var anchor = document.createElement('a');
+    anchor.setAttribute('href', '#');
+    anchor.setAttribute('rel', "load")
+    var myId = "id"+i;
+    anchor.setAttribute('id', myId);
+    anchor.setAttribute("onclick", fcnName + "('" + myId + "')");
+    anchor.innerText = sName;
+    anchor.setAttribute("query", sQuery);	
+}
+
 var loaded = false;
 function LoadSaved(tableID){
 	if (!loaded){
@@ -41,7 +52,7 @@ function LoadSaved(tableID){
 	    anchor.innerText = sName;
 	    anchor.setAttribute("query", sQuery);
 		
-		cell1.innerHTML = anchor.outerHTML;
+		cell1.innerHTML = anchorBuild("LoadThis").outerHTML;
 		cell2.innerHTML = "cell2";
 	  }		
 		
