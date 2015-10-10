@@ -28,20 +28,30 @@ function RenameThis(anchorID){
 	var cell0 = row.cells[0];
 	cell0.innerHTML = newName;
 	
-	//var cell1 = row.cells[1];
-	//anchor = cell1.children[0];
-	//alert(anchor.getAttribute('query'));
-	
-	//SaveAll();
+	SaveAll();
+	LoadSaved();
 }
 
 function CaptureThis(anchorID){
 	var anchor = document.getElementById(anchorID);
-	alert("capture: " + anchor.getAttribute('keyNum'));
+
+	var cell = anchor.parentNode;
+	var row = cell.parentNode;
+	
+	var cell1 = row.cells[1];
+	anchor = cell1.children[0];
+	anchor.setAttribute('desc', GenerateQueryString());
+	
+	SaveAll();
+	LoadSaved();
 }
 
 function AddNew(){
 	
+}
+
+function setItem(stg1, stg2){
+	alert(stg1 + ": " + stg2);
 }
 
 function SaveAll(){
@@ -62,11 +72,11 @@ function SaveAll(){
 		var keyNum = anchor.getAttribute('keyNum');
 		dictStg += keyNum;
 		
-		localStorage.setItem("key" + keyNum + "_name", desc);
-		localStorage.setItem("key" + keyNum + "_query", query);
+		setItem("key" + keyNum + "_name", desc);
+		setItem("key" + keyNum + "_query", query);
 
 	}
-	localStorage.setItem("list", dictStg);
+	setItem("list", dictStg);
 }
 
 function buildLoadAnchor(keyNum, sName, sQuery){
