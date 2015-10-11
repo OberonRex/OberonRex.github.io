@@ -1,10 +1,10 @@
 
 function MakeRWbyID(inpID){
-	MakeRW(document.getElementById(inpID);
+	MakeRW(document.getElementById(inpID));
 }
 
 function MakeRObyID(inpID){
-	MakeRO(document.getElementById(inpID);
+	MakeRO(document.getElementById(inpID));
 }
 
 function LoadThis(anchorID){
