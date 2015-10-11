@@ -50,10 +50,6 @@
 	background-color: #55FFFF;
 }
 
-.mButton.down{
-	border: 2px inset #888888;
-}
-
 .centerText{
    text-align: center;
 }
@@ -78,14 +74,6 @@
 <link rel="stylesheet" type="text/css" href="../tools/checkbox.css">
 
 <script>
-function goDown(elem){
-	elem.classList.add("down");
-}
-
-function goUp(elem){
-	elem.classList.remove("down");
-}
-
 function ShowHide(src){
 	hdr = document.getElementById(src);
 	if (hdr.classList.contains('show'))
@@ -521,7 +509,7 @@ function chooseMe(img){
 <br><br>
 <table width="100%">
 	<tr>
-		<td onclick="ImportInitialValues()" class="mButton" onmousedown="goDown(this)" onmouseup="goUp(this)" border=1 width=50% >Reset</td>
+		<td onclick="ImportInitialValues()" class="mButton" border=1 width=50% >Reset</td>
 		<td onclick="allDone()" class="mButton" width=50%>Apply</td>
 	</tr>	
 </table>
@@ -630,7 +618,6 @@ function chooseMe(img){
 			<td onclick="SetView('SettingsView'); GoPage1()" class="mButton" border=1 width=25%>Settings</td>
 			<td onclick="SetView('SavedView'); LoadSaved('SaveTable');" class="mButton" width=25%>Saved</td>
 			<td onclick="SetView('AckView');" class="mButton" width=25%>Acknowledgements</td>
-			<td onclick="SetView('ContactView');" class="mButton" width=25%>Contact</td>
 		</tr>
 	</table>
 </div>
