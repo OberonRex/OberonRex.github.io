@@ -23,39 +23,6 @@ function DeleteThis(anchorID){
 	LOadSaved();
 }
 
-function RenameThis(anchorID){
-	var anchor = document.getElementById(anchorID);
-	//var newName = prompt("New name: ", anchor.getAttribute('desc'));
-	
-	var cell = anchor.parentNode;
-	var row = cell.parentNode;
-	
-	cell = row.cells[0];
-	var inp = cell.children[0];
-	inp.setAttribute("style", "border:single");
-	inp.removeAttribute("readonly");
-}
-
-function RenameThis2(inpID){
-	//var anchor = document.getElementById(anchorID);
-	//var newName = prompt("New name: ", anchor.getAttribute('desc'));
-	
-	//var cell = anchor.parentNode;
-	//var row = cell.parentNode;
-	
-	//cell = row.cells[0];
-	//var inp = cell.children[0];
-	var inp = document.getElementById(inpID);
-	inp.setAttribute("style", "border:single");
-	inp.removeAttribute("readonly");
-}
-
-function ClearRW(inpID){
-	var inp = document.getElementById(inpID);
-	inp.setAttribute('readonly', true);
-	inp.setAttribute('style', 'border:none');
-}
-
 function SaveNewName(inpID){
 	var inp = document.getElementById(inpID);
 
@@ -169,9 +136,9 @@ function buildInput(keyNum, sName){
 	inp.setAttribute('style', 'border:none');
 	var myId = "rename" + keyNum;
 	inp.setAttribute("id", myId);
-	inp.setAttribute("onblur", "ClearRW('" + myId + "')");
+	inp.setAttribute("onblur", "MakeRO('" + myId + "')");
 	inp.setAttribute("onchange", "SaveNewName('" + myId + "')");
-	inp.setAttribute("onfocus", "RenameThis2('" + myId + "')");
+	inp.setAttribute("onfocus", "MakeRW('" + myId + "')");
 	return inp;
 }
 
@@ -187,7 +154,6 @@ function AddOne(table, keyNum, sName, sQuery){
 
 	cell1.innerHTML = buildInput(keyNum, sName).outerHTML;
 	cell2.innerHTML = buildLoadAnchor(keyNum, sName, sQuery).outerHTML;
-	//cell3.innerHTML = buildSimpleAnchor(keyNum, "ren", sName, "RenameThis", "Ren").outerHTML;
 	cell3.innerHTML = buildSimpleAnchor(keyNum, "cap", sName, "CaptureThis", "Scan").outerHTML;
 	cell4.innerHTML = buildSimpleAnchor(keyNum, "del", sName, "DeleteThis", "Del").outerHTML;	
 }
