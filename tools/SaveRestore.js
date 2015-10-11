@@ -142,7 +142,7 @@ function buildInput(keyNum, sName){
 	inp.setAttribute('type', 'text');
 	inp.setAttribute('value', sName);
 	inp.setAttribute('readonly', true);
-	inp.setAttribute('style', 'border:none');
+	//inp.setAttribute('style', 'border:none');
 	var myId = "rename" + keyNum;
 	inp.setAttribute("id", myId);
 	inp.setAttribute("onblur", "MakeRObyID('" + myId + "')");
