@@ -348,17 +348,17 @@ function chooseMe(img){
 	  
 	  	<tr class="ShowableList">
 	    	<td style="padding-left:10px">Size: </td>
-	    	<td><input type="text" id="hrTickSize"></td>
+	    	<td><input type="text" onblur="MakeRO(this)" onfocus="MakeRW(this)" readonly=true id="hrTickSize"></td>
 	  	</tr>
 	  
 	  	<tr class="ShowableList">
 	    	<td style="padding-left:10px">Stroke Width: </td>
-	    	<td><input type="text" id="KEY_HRTICKWIDTH"></td>
+	    	<td><input type="text" onblur="MakeRO(this)" onfocus="MakeRW(this)" readonly=true id="KEY_HRTICKWIDTH"></td>
 	  	</tr>
 	  
 	  	<tr class="ShowableList">
 	    	<td style="padding-left:10px">Radius: </td>
-	    	<td><input type="text" id="hrTickRadius"></td>
+	    	<td><input type="text" onblur="MakeRO(this)" onfocus="MakeRW(this)" readonly=true id="hrTickRadius"></td>
 	  	</tr>
 	  
 	  	<tr class="ShowableList">
@@ -488,9 +488,9 @@ function chooseMe(img){
 	  		</td>
 		</tr>
 		
-		<tr class="ShowableList"><td style="padding-left:10px">Radius:</td><td><input type="text" id="OuterCircleRadius"></td></tr>
+		<tr class="ShowableList"><td style="padding-left:10px">Radius:</td><td><input type="text" onblur="MakeRO(this)" onfocus="MakeRW(this)" readonly=true id="OuterCircleRadius"></td></tr>
 		
-		<tr class="ShowableList"><td style="padding-left:10px">Line Width:</td><td><input type="text" id="OuterCircleStroke"></td></tr>
+		<tr class="ShowableList"><td style="padding-left:10px">Line Width:</td><td><input type="text" onblur="MakeRO(this)" onfocus="MakeRW(this)" readonly=true id="OuterCircleStroke"></td></tr>
 		</tbody>
 	</tbody>
 
@@ -513,7 +513,7 @@ function chooseMe(img){
 	  <tbody id='weatherSubList' class="ListWrapper sublist">
 		<tr  class="ShowableList">
 		  <td style="padding-left:10px">License Key:</td>
-		  <td><input type="text" id="WUKey"></td>
+		  <td><input type="text" onblur="MakeRO(this)" onfocus="MakeRW(this)" readonly=true id="WUKey"></td>
 		</tr>
 	</tbody>
 		
