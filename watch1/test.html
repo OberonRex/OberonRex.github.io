@@ -79,14 +79,12 @@ input, select{
 
 <script>
 
-function MakeRW(inpID){
-	var inp = document.getElementById(inpID);
+function MakeRW(inp){
 	inp.setAttribute("style", "border:single");
 	inp.removeAttribute("readonly");
 }
 
-function MakeRO(inpID){
-	var inp = document.getElementById(inpID);
+function MakeRO(inp){
 	inp.setAttribute('readonly', true);
 	inp.setAttribute('style', 'border:none');
 }
