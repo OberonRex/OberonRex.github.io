@@ -78,6 +78,19 @@ input, select{
 <link rel="stylesheet" type="text/css" href="../tools/checkbox.css">
 
 <script>
+
+function MakeRW(inpID){
+	var inp = document.getElementById(inpID);
+	inp.setAttribute("style", "border:single");
+	inp.removeAttribute("readonly");
+}
+
+function MakeRO(inpID){
+	var inp = document.getElementById(inpID);
+	inp.setAttribute('readonly', true);
+	inp.setAttribute('style', 'border:none');
+}
+
 function ShowHide(src){
 	hdr = document.getElementById(src);
 	if (hdr.classList.contains('show'))
