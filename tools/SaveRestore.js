@@ -145,9 +145,9 @@ function buildInput(keyNum, sName){
 	//inp.setAttribute('style', 'border:none');
 	var myId = "rename" + keyNum;
 	inp.setAttribute("id", myId);
-	inp.setAttribute("onblur", "MakeRObyID('" + myId + "')");
+	//inp.setAttribute("onblur", "MakeRObyID('" + myId + "')");
 	inp.setAttribute("onchange", "SaveNewName('" + myId + "')");
-	inp.setAttribute("onfocus", "MakeRWbyID('" + myId + "')");
+	//inp.setAttribute("onfocus", "MakeRWbyID('" + myId + "')");
 	return inp;
 }
 
