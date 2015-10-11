@@ -50,7 +50,7 @@
 	background-color: #55FFFF;
 }
 
-.mButton:hover, mButton:active{
+.mButton.down{
 	border: 2px inset #888888;
 }
 
@@ -78,6 +78,13 @@
 <link rel="stylesheet" type="text/css" href="../tools/checkbox.css">
 
 <script>
+function goDown(elem){
+	elem.classList.add("down");
+}
+
+function goUp(elem){
+	elem.classList.remove("down");
+}
 
 function ShowHide(src){
 	hdr = document.getElementById(src);
@@ -514,7 +521,7 @@ function chooseMe(img){
 <br><br>
 <table width="100%">
 	<tr>
-		<td onclick="ImportInitialValues()" class="mButton" border=1 width=50% >Reset</td>
+		<td onclick="ImportInitialValues()" class="mButton" onmousedown="goDown(this)" onmouseup="goUp(this)" border=1 width=50% >Reset</td>
 		<td onclick="allDone()" class="mButton" width=50%>Apply</td>
 	</tr>	
 </table>
