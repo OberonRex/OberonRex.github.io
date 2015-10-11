@@ -7,6 +7,14 @@ input, select{
 	background-image: url(backgrounds/CreamPaper.JPG);
 }
 
+input[type="text"][readonly=true]{
+	border: none;
+}
+
+input[type="text"][readonly=false]{
+	border: single;
+}
+
 .ListWrapper.hide .ShowableList{
 	display:none;
 }
@@ -80,13 +88,13 @@ input, select{
 <script>
 
 function MakeRW(inp){
-	inp.setAttribute("style", "border:single");
+	//inp.setAttribute("style", "border:single");
 	inp.removeAttribute("readonly");
 }
 
 function MakeRO(inp){
 	inp.setAttribute('readonly', true);
-	inp.setAttribute('style', 'border:none');
+	//inp.setAttribute('style', 'border:none');
 }
 
 function ShowHide(src){
