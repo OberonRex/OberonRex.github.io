@@ -84,8 +84,11 @@ function AddNew(){
 	
 	SaveAll();
 	LoadSaved();
-
-	document.getElementById('rename'+i).focus();
+	
+	var e = document.getElementById('rename'+i);
+	var l = e.length;
+	e.setSelectionRange(l, l);
+	e.focus();
 }
 
 function SaveAll(){
