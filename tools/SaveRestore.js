@@ -84,6 +84,8 @@ function AddNew(){
 	
 	SaveAll();
 	LoadSaved();
+
+	document.getElementById('rename'+i).focus();
 }
 
 function SaveAll(){
