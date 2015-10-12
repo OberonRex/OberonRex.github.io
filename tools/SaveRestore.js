@@ -86,9 +86,9 @@ function AddNew(){
 	LoadSaved();
 	
 	var e = document.getElementById('rename'+i);
-	//var l = e.length;
-	//e.setSelectionRange(l, l);
-	e.value = e.value;
+	var l = e.value.length;
+	e.setSelectionRange(l, l);
+	//e.value = e.value;
 	e.focus();
 }
 
