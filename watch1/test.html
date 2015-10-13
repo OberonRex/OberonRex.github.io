@@ -22,7 +22,7 @@ input[type="text"][readonly=false]{
 	display:none;
 }
 
-.ListWrapper.show .ShowableList{
+.ListWrapper.showIt .ShowableList{
 	display:table-row;
 }
 
@@ -30,7 +30,7 @@ input[type="text"][readonly=false]{
 	display:none;
 }
 
-.ListWrapper.show .ScrollableList{
+.ListWrapper.showIt .ScrollableList{
 	display:block;
 }
 	
@@ -38,11 +38,11 @@ input[type="text"][readonly=false]{
 	display:none;
 }
 
-.ListWrapper.show + .sublist{
+.ListWrapper.showIt + .sublist{
 	display:tbody;
 }
 
-.ListWrapper.show .ListHeader:before{
+.ListWrapper.showIt .ListHeader:before{
 	content: "- ";
 }
 .ListWrapper.hideIt .ListHeader:before{
@@ -92,13 +92,13 @@ function MakeRO(inp){
 
 function ShowHide(src){
 	hdr = document.getElementById(src);
-	if (hdr.classList.contains('show'))
+	if (hdr.classList.contains('showIt'))
 	{
-		hdr.classList.remove('show');
+		hdr.classList.remove('showIt');
 		hdr.classList.add('hideIt');
 	} else {
 		hdr.classList.remove('hideIt');
-		hdr.classList.add('show');
+		hdr.classList.add('showIt');
 	}
 }
 
@@ -120,9 +120,9 @@ function ShowHideCheckboxList(chkbox, src){
 	hdr = document.getElementById(src);
 	if (chkbox.checked){
 		hdr.classList.remove("hideIt");
-		hdr.classList.add("show");
+		hdr.classList.add("showIt");
 	} else {
-		hdr.classList.remove("show");
+		hdr.classList.remove("showIt");
 		hdr.classList.add("hideIt");
 	}
 }
@@ -132,9 +132,9 @@ function ShowHideSelectList(sel, src, value){
 	if (Number(sel.value) == value)
 	{
 		hdr.classList.remove("hideIt");
-		hdr.classList.add("show");
+		hdr.classList.add("showIt");
 	} else {
-		hdr.classList.remove("show");
+		hdr.classList.remove("showIt");
 		hdr.classList.add("hideIt");
 	}
 }
