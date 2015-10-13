@@ -80,8 +80,6 @@ input[type="text"][readonly=false]{
 </style>	
 
 <script>
-$( "#page2" ).load( "../tools/colorpicker.html" );
-
 function MakeRW(inp){
 	//inp.setAttribute("style", "border:single");
 	inp.removeAttribute("readonly");
@@ -564,10 +562,15 @@ function chooseMe(img){
 
 <script type="text/javascript" src="../platforms/jquery.js"></script>
 
+<script type="text/javascript">
+	$( "#page2" ).load( "../tools/colorpicker.html" );
+</script>
+
 <script type="text/javascript" src="../tools/SaveRestore.js"></script>
 <script type="text/javascript" src="../tools/colorpicker.js"></script>
 <script type="text/javascript" src="../tools/color-dict.js"></script>
 <script type="text/javascript" src="../tools/color-mapping-sunlight.js"></script>
+
 
 </body>
 </html>
