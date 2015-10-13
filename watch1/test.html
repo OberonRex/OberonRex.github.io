@@ -22,7 +22,7 @@ input[type="text"][readonly=false]{
 	display:none;
 }
 
-.ListWrapper.show .ShowableList{
+.ListWrapper.showit .ShowableList{
 	display:table-row;
 }
 
@@ -30,7 +30,7 @@ input[type="text"][readonly=false]{
 	display:none;
 }
 
-.ListWrapper.show .ScrollableList{
+.ListWrapper.showit .ScrollableList{
 	display:block;
 }
 	
@@ -38,11 +38,11 @@ input[type="text"][readonly=false]{
 	display:none;
 }
 
-.ListWrapper.show + .sublist{
+.ListWrapper.showit + .sublist{
 	display:tbody;
 }
 
-.ListWrapper.show .ListHeader:before{
+.ListWrapper.showit .ListHeader:before{
 	content: "- ";
 }
 .ListWrapper.hide .ListHeader:before{
@@ -92,26 +92,26 @@ function MakeRO(inp){
 
 function ShowHide(src){
 	hdr = document.getElementById(src);
-	if (hdr.classList.contains('show'))
+	if (hdr.classList.contains('showit'))
 	{
-		hdr.classList.remove('show');
+		hdr.classList.remove('showit');
 		hdr.classList.add('hide');
 	} else {
 		hdr.classList.remove('hide');
-		hdr.classList.add('show');
+		hdr.classList.add('showit');
 	}
 }
 
 function ShowHideTarget(src){
 	//hdr = document.getElementById(src);
 	hdr = document.getElementById(src.getAttribute("target"));
-	if (hdr.classList.contains('show'))
+	if (hdr.classList.contains('showit'))
 	{
-		hdr.classList.remove('show');
+		hdr.classList.remove('showit');
 		hdr.classList.add('hide');
 	} else {
 		hdr.classList.remove('hide');
-		hdr.classList.add('show');
+		hdr.classList.add('showit');
 	}
 }
 
@@ -119,9 +119,9 @@ function ShowHideCheckboxList(chkbox, src){
 	hdr = document.getElementById(src);
 	if (chkbox.checked){
 		hdr.classList.remove("hide");
-		hdr.classList.add("show");
+		hdr.classList.add("showit");
 	} else {
-		hdr.classList.remove("show");
+		hdr.classList.remove("showit");
 		hdr.classList.add("hide");
 	}
 }
@@ -131,9 +131,9 @@ function ShowHideSelectList(sel, src, value){
 	if (Number(sel.value) == value)
 	{
 		hdr.classList.remove("hide");
-		hdr.classList.add("show");
+		hdr.classList.add("showit");
 	} else {
-		hdr.classList.remove("show");
+		hdr.classList.remove("showit");
 		hdr.classList.add("hide");
 	}
 }
