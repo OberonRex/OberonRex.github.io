@@ -58,7 +58,7 @@ function CaptureThis(anchorID){
 	
 	var cell1 = row.cells[1];
 	anchor = cell1.children[0];
-	anchor.setAttribute('desc', GenerateQueryString());
+	anchor.setAttribute('query', GenerateQueryString());
 	
 	SaveAll();
 	LoadSaved();
