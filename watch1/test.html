@@ -102,6 +102,19 @@ function ShowHide(src){
 	}
 }
 
+function ShowHideTarget(src){
+	//hdr = document.getElementById(src);
+	hdr = document.getElementById(src.getAttribute("target"));
+	if (hdr.classList.contains('show'))
+	{
+		hdr.classList.remove('show');
+		hdr.classList.add('hide');
+	} else {
+		hdr.classList.remove('hide');
+		hdr.classList.add('show');
+	}
+}
+
 function ShowHideCheckboxList(chkbox, src){
 	hdr = document.getElementById(src);
 	if (chkbox.checked){
@@ -269,7 +282,7 @@ function chooseMe(img){
 	<h4>Watch 1, v1.0, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hide">
-		<a class="ListHeader" href="#" onclick="ShowHide('templates')">Templates</a>
+		<a class="ListHeader" href="#" target='templates'>Templates</a>
 		<div class="ScrollableList" id="watchTemplates" style="white-space: nowrap; overflow:scroll;">
 		
 			<img src = "faces/watchface6.png" 
@@ -307,7 +320,7 @@ function chooseMe(img){
 <table>
 
 	<tbody id="colorPainter" class="ListWrapper hide">
-		<tr><td><a class="ListHeader" href="#" onclick="ShowHide('colorPainter')">Color Painter</a></td><td></td></td></tr>
+		<tr><td><a class="ListHeader" href="#" target='colorPainter'>Color Painter</a></td><td></td></td></tr>
 		<tr class="ShowableList">
 			<td style="padding-left:10px">Paint with</td>
 			<td>
@@ -329,7 +342,7 @@ function chooseMe(img){
 	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 	
 	<tbody id="TickMarksList" class="ListWrapper hide">
-		<tr><td><a class="ListHeader" href="#" onclick="ShowHide('TickMarksList')">Tick Marks</a></td><td></td></td></tr>
+		<tr><td><a class="ListHeader" href="#" target='TickMarksList'>Tick Marks</a></td><td></td></td></tr>
 		
 		<tr class="ShowableList">
 		    <td style="padding-left:10px">Style:</td>
@@ -391,7 +404,7 @@ function chooseMe(img){
   	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
   
   	<tbody id="HandsList" class="ListWrapper hide">
-	  	<tr><td><a class="ListHeader" href="#" onclick="ShowHide('HandsList')">Hands</a></td><td></td></tr>
+	  	<tr><td><a class="ListHeader" href="#" target='HandsList'>Hands</a></td><td></td></tr>
 	  
 	  	<tr class="ShowableList">
 	  		<td style="padding-left:10px">Color:</td>
@@ -452,7 +465,7 @@ function chooseMe(img){
   
   <tbody id="ocList" class="ListWrapper hide">
   	
-	  	<tr><td><a class="ListHeader" href="#" onclick="ShowHide('ocList')">Outer Circle</a></td><td></td></tr>
+	  	<tr><td><a class="ListHeader" href="#" target='ocList'>Outer Circle</a></td><td></td></tr>
 	  	
 		<tr class="ShowableList">
 			<td style="padding-left:10px">Enable?</td>
@@ -495,7 +508,7 @@ function chooseMe(img){
   
   <tbody id="weatherList" class="ListWrapper hide">
   	
-	  <tr><td><a class="ListHeader" href="#" onclick="ShowHide('weatherList')">Weather</a></td><td></td></tr>
+	  <tr><td><a class="ListHeader" href="#" target='weatherList'>Weather</a></td><td></td></tr>
 	  
 	  <tr class="ShowableList">
 	  	<td style="padding-left:10px">Source:</td>
@@ -644,6 +657,7 @@ function chooseMe(img){
 
 <script type="text/javascript">
 	//$( "#page2" ).load( "../tools/colorpicker.html" );
+	$('.ListHeader').on('click', function(elem){ShowHideTarget(this);});
 </script>
 
 <script type="text/javascript" src="../tools/SaveRestore.js"></script>
