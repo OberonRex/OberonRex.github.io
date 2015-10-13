@@ -102,6 +102,20 @@ function ShowHide(src){
 	}
 }
 
+-function ShowHideTarget(src){
+-	//hdr = document.getElementById(src);
+-	hdr = document.getElementById(src.getAttribute("target"));
+-	if (hdr.classList.contains('showit'))
+-	{
+-		hdr.classList.remove('showit');
+-		hdr.classList.add('hide');
+-	} else {
+-		hdr.classList.remove('hide');
+-		hdr.classList.add('showit');
+ 	}
+ }
+
+
 function ShowHideCheckboxList(chkbox, src){
 	hdr = document.getElementById(src);
 	if (chkbox.checked){
