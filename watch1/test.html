@@ -104,7 +104,7 @@ function ShowHide(src){
 
 function ShowHideTarget(src){
 	//hdr = document.getElementById(src);
-	hdr = document.getElementById(src).getAttribute("target");
+	hdr = document.getElementById(src.getAttribute("target"));
 	if (hdr.classList.contains('showit'))
 	{
 		hdr.classList.remove('showit');
@@ -583,7 +583,7 @@ function chooseMe(img){
 
 <script type="text/javascript">
 	$( "#page2" ).load( "../tools/colorpicker.html", wireUpColorPicker());
-	$('.ListHeader').on('click', ShowHideTarget(this));
+	$('.ListHeader').on('click', function(elem){ShowHideTarget(this);});
 </script>
 
 
