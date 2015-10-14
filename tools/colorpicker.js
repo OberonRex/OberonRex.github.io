@@ -82,7 +82,7 @@ function returnColor(pPolygon){
   GoPage1();
 }
 
-function wireUpColorPicker {
+function wireUpColorPicker() {
   $('#color-picker polygon').on('click', function(elem){returnColor(this);});
 
   $('#color-picker polygon').each(function (index, elem) {
