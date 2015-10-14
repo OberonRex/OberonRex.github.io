@@ -104,7 +104,7 @@ function ShowHide(src){
 
 function ShowHideTarget(src){
 	//hdr = document.getElementById(src);
-	hdr = document.getElementById(src.getAttribute("target"));
+	hdr = document.getElementById(src.getAttribute("sh-target"));
 	if (hdr.classList.contains('showit'))
 	{
 		hdr.classList.remove('showit');
@@ -283,7 +283,7 @@ function chooseMe(img){
 	<h4>Watch 1, v1.1, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
-		<a class="ListHeader" href="#" onclick="ShowHide('templates')" target="templates">Templates</a>
+		<a class="ListHeader" href="#" onclick="ShowHide('templates')" sh-target="templates">Templates</a>
 		<div class="ScrollableList" id="watchTemplates" style="white-space: nowrap; overflow:scroll;">
 		
 			<img src = "faces/watchface6.png" 
@@ -321,7 +321,7 @@ function chooseMe(img){
 <table>
 
 	<tbody id="colorPainter" class="ListWrapper hideIt">
-		<tr><td><a class="ListHeader" href="#" onclick="ShowHide('colorPainter')" target="colorPainter">Color Painter</a></td><td></td></td></tr>
+		<tr><td><a class="ListHeader" href="#" onclick="ShowHide('colorPainter')" sh-target="colorPainter">Color Painter</a></td><td></td></td></tr>
 		<tr class="ShowableList">
 			<td style="padding-left:10px">Paint with</td>
 			<td>
@@ -343,7 +343,7 @@ function chooseMe(img){
 	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
 	
 	<tbody id="TickMarksList" class="ListWrapper hideIt">
-		<tr><td><a class="ListHeader" href="#" onclick="ShowHide('TickMarksList')" target="TickMarksList">Tick Marks</a></td><td></td></td></tr>
+		<tr><td><a class="ListHeader" href="#" onclick="ShowHide('TickMarksList')" sh-target="TickMarksList">Tick Marks</a></td><td></td></td></tr>
 		
 		<tr class="ShowableList">
 		    <td style="padding-left:10px">Style:</td>
@@ -405,7 +405,7 @@ function chooseMe(img){
   	<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
   
   	<tbody id="HandsList" class="ListWrapper hideIt">
-	  	<tr><td><a class="ListHeader" href="#" onclick="ShowHide('HandsList')" target="HandsList">Hands</a></td><td></td></tr>
+	  	<tr><td><a class="ListHeader" href="#" onclick="ShowHide('HandsList')" sh-target="HandsList">Hands</a></td><td></td></tr>
 	  
 	  	<tr class="ShowableList">
 	  		<td style="padding-left:10px">Color:</td>
@@ -466,7 +466,7 @@ function chooseMe(img){
   
   <tbody id="ocList" class="ListWrapper hideIt">
   	
-	  	<tr><td><a class="ListHeader" href="#" onclick="ShowHide('ocList')" target="ocList">Outer Circle</a></td><td></td></tr>
+	  	<tr><td><a class="ListHeader" href="#" onclick="ShowHide('ocList')" sh-target="ocList">Outer Circle</a></td><td></td></tr>
 	  	
 		<tr class="ShowableList">
 			<td style="padding-left:10px">Enable?</td>
@@ -509,7 +509,7 @@ function chooseMe(img){
   
   <tbody id="weatherList" class="ListWrapper hideIt">
   	
-	  <tr><td><a class="ListHeader" href="#" onclick="ShowHide('weatherList')" target="weatherList">Weather</a></td><td></td></tr>
+	  <tr><td><a class="ListHeader" href="#" onclick="ShowHide('weatherList')" sh-target="weatherList">Weather</a></td><td></td></tr>
 	  
 	  <tr class="ShowableList">
 	  	<td style="padding-left:10px">Source:</td>
@@ -583,7 +583,7 @@ function chooseMe(img){
 
 <script type="text/javascript">
 	$( "#page2" ).load( "../tools/colorpicker.html", wireUpColorPicker());
-	//$('.ListHeader').on('click', function(elem){ShowHideTarget(this);});
+	//$('.ListHeader').on('click', function(elem){ShowHidTarget(this);});
 </script>
 
 
