@@ -214,6 +214,7 @@ function GenerateQueryString(){
 }
 
 function BundleItUp(){
+	try{
   return {
     "KEY_HRTICKSTYLE": Number(selValue("hrTickStyle")),
 	"KEY_HRTICKCOUNT": Number(selValue("hrTickCount")),
@@ -231,6 +232,11 @@ function BundleItUp(){
     "KEY_OUTERCIRCLESTROKE": Number(document.getElementById("OuterCircleStroke").value),
     "KEY_OUTERCIRCLERADIUS": Number(document.getElementById("OuterCircleRadius").value)
   };
+	}
+	catch (e){
+		alert(e.message);
+		return {};
+	}
 }
 
 function allDone(){
