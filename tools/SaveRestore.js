@@ -182,7 +182,7 @@ function LoadSaved(){
 	
 	for (var i = table.rows.length-1; i > 0; i--) table.deleteRow(i);
 		
-	var lStg = localStorage.getItem(keybase() + "list");
+	var lStg = localStorage.getItem("list");
 	var values = lStg.split(",");
 
 	for (var i=0; i<values.length; i++) {
