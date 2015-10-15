@@ -144,7 +144,7 @@ function ImportInitialValues(){
 	ImportValues(query);
 }
 
-var WatchToken;
+var MyUUID;
 function ImportValues(query){
 	var vars = query.split("&");
 	
@@ -177,10 +177,10 @@ function ImportValues(query){
 	    ShowHideSelectList(document.getElementById("WeatherSource"), 'weatherSubList', 1)
     }
     
-    if (aa["KEY_WATCHTOKEN"])
-    	WatchToken = KEY_WATCHTOKEN;
-    else WatchToken = "";
-    
+    if (aa["KEY_MYUUID"])
+    	MyUUID = KEY_MYUUID;
+    else MyUUID = "";
+        
     $('#color-value polygon').each(function (index, elem) {
 	    $(elem).attr('data-hex', $(elem).attr('fill'));
   	});
