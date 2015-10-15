@@ -13,10 +13,6 @@ function LoadThis(anchorID){
 	allDone();
 }
 
-function newkeybase(){
-	return "key_" + WatchToken + "_";
-}
-
 function keybase(){
 	return "key";
 }
@@ -117,8 +113,8 @@ function SaveAll(){
 		var keyNum = anchor.getAttribute('keyNum');
 		dictStg += keyNum;
 		
-		localStorage.setItem(newkeybase() + keyNum + "_name", desc);
-		localStorage.setItem(newkeybase() + keyNum + "_query", query);
+		localStorage.setItem(keybase() + keyNum + "_name", desc);
+		localStorage.setItem(keybase() + keyNum + "_query", query);
 
 	}
 	localStorage.setItem("list", dictStg);
