@@ -14,7 +14,7 @@ function LoadThis(anchorID){
 }
 
 function keybase(){
-	return "key";
+	return "key_" + WatchToken + "_";
 }
 //
 function DeleteThis(anchorID){
