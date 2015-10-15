@@ -13,14 +13,14 @@ function LoadThis(anchorID){
 	allDone();
 }
 
-function newkeybase(){
+function keybase(){
 	return "key_" + MyUUID + "_";
 	return "key";
 }
 
-function keybase(){
-	return "key";
-}
+//function keybase(){
+//	return "key";
+//}
 
 function DeleteThis(anchorID){
 	var anchor = document.getElementById(anchorID);
@@ -118,11 +118,11 @@ function SaveAll(){
 		var keyNum = anchor.getAttribute('keyNum');
 		dictStg += keyNum;
 		
-		localStorage.setItem(newkeybase() + keyNum + "_name", desc);
-		localStorage.setItem(newkeybase() + keyNum + "_query", query);
+		localStorage.setItem(keybase() + keyNum + "_name", desc);
+		localStorage.setItem(keybase() + keyNum + "_query", query);
 
 	}
-	localStorage.setItem(newkeybase() + "list", dictStg);
+	localStorage.setItem(keybase() + "list", dictStg);
 }
 
 function buildLoadAnchor(keyNum, sName, sQuery){
