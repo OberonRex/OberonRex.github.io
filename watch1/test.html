@@ -205,9 +205,7 @@ function selValue(elemID){
 
 function GenerateQueryString(){
 	var qstg = "";
-	alert('bundling');
 	var aa = BundleItUp();
-	alert('bundled');
 	for (var key in aa){
 		if (qstg.length > 0) qstg += "&";
 		qstg += key + "=" + aa[key];
