@@ -83,10 +83,9 @@ function AddNew(){
 	var table  = document.getElementById("SaveTable");
 	
 	for (var i = 0; InUse(table, i); i++);
-	alert('inuse done');
+	alert(GenerateQueryString());
 	AddOne(table, i, "New", GenerateQueryString());
-	alert('Addone done');
-	
+
 	SaveAll();
 	LoadSaved();
 
