@@ -13,11 +13,15 @@ function LoadThis(anchorID){
 	allDone();
 }
 
-function keybase(){
-	//return "key_" + WatchToken + "_";
+function newkeybase(){
+	return "key_" + MyUUID + "_";
 	return "key";
 }
-//
+
+function keybase(){
+	return "key";
+}
+
 function DeleteThis(anchorID){
 	var anchor = document.getElementById(anchorID);
 	var cell = anchor.parentNode;
@@ -114,11 +118,11 @@ function SaveAll(){
 		var keyNum = anchor.getAttribute('keyNum');
 		dictStg += keyNum;
 		
-		localStorage.setItem(keybase() + keyNum + "_name", desc);
-		localStorage.setItem(keybase() + keyNum + "_query", query);
+		localStorage.setItem(newkeybase() + keyNum + "_name", desc);
+		localStorage.setItem(newkeybase() + keyNum + "_query", query);
 
 	}
-	localStorage.setItem(keybase() + "list", dictStg);
+	localStorage.setItem(newkeybase() + "list", dictStg);
 }
 
 function buildLoadAnchor(keyNum, sName, sQuery){
