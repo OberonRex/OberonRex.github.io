@@ -117,8 +117,8 @@ function SaveAll(){
 		var keyNum = anchor.getAttribute('keyNum');
 		dictStg += keyNum;
 		
-		localStorage.setItem(newkeybase + keyNum + "_name", desc);
-		localStorage.setItem(newkeybase + keyNum + "_query", query);
+		localStorage.setItem(newkeybase() + keyNum + "_name", desc);
+		localStorage.setItem(newkeybase() + keyNum + "_query", query);
 
 	}
 	localStorage.setItem("list", dictStg);
@@ -189,8 +189,8 @@ function LoadSaved(){
 	var values = lStg.split(",");
 
 	for (var i=0; i<values.length; i++) {
-		var keyName = keybase + values[i] + "_name";
-		var keyQuery = keybase + values[i] + "_query";
+		var keyName = keybase() + values[i] + "_name";
+		var keyQuery = keybase() + values[i] + "_query";
 	    
 	    var sName = localStorage.getItem(keyName);
 	    var sQuery = localStorage.getItem(keyQuery);
