@@ -205,9 +205,7 @@ function selValue(elemID){
 
 function GenerateQueryString(){
 	var qstg = "";
-	alert('bundling');
 	var aa = BundleItUp();
-	alert('bundled');
 	for (var key in aa){
 		if (qstg.length > 0) qstg += "&";
 		qstg += key + "=" + aa[key];
@@ -216,15 +214,14 @@ function GenerateQueryString(){
 }
 
 function BundleItUp(){
-	alert('doing it');
   return {
-//    "KEY_HRTICKSTYLE": Number(selValue("hrTickStyle")),
-//	"KEY_HRTICKCOUNT": Number(selValue("hrTickCount")),
-//    "KEY_HRTICKLENGTH": Number(document.getElementById("hrTickSize").value),
-//    "KEY_HRRADIUSTOTIP": Number(document.getElementById("hrTickRadius").value),
-//    "KEY_WEATHERSOURCE": Number(selValue("WeatherSource")),
-//    "KEY_WUKEY": document.getElementById("WUKey").value,
-//    "KEY_TMCOLOR": Number(color_picker_colors[document.getElementById("TMColor").getAttribute("data-hex")].binary),
+    "KEY_HRTICKSTYLE": Number(selValue("hrTickStyle")),
+	"KEY_HRTICKCOUNT": Number(selValue("hrTickCount")),
+    "KEY_HRTICKLENGTH": Number(document.getElementById("hrTickSize").value),
+    "KEY_HRRADIUSTOTIP": Number(document.getElementById("hrTickRadius").value),
+    "KEY_WEATHERSOURCE": Number(selValue("WeatherSource")),
+    "KEY_WUKEY": document.getElementById("WUKey").value,
+    "KEY_TMCOLOR": Number(color_picker_colors[document.getElementById("TMColor").getAttribute("data-hex")].binary),
     "KEY_HANDCOLOR": Number(color_picker_colors[document.getElementById("HandColor").getAttribute("data-hex")].binary),
     "KEY_CENTERINNER": Number(color_picker_colors[document.getElementById("CENTERINNER").getAttribute("data-hex")].binary),
     "KEY_CENTEROUTER": Number(color_picker_colors[document.getElementById("CENTEROUTER").getAttribute("data-hex")].binary),
