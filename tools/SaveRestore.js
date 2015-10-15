@@ -80,18 +80,16 @@ function InUse(table, candidate){
 }
 
 function AddNew(){
-	alert('adding');
 	var table  = document.getElementById("SaveTable");
 	
 	for (var i = 0; InUse(table, i); i++);
+	alert('inuse done');
 	AddOne(table, i, "New", GenerateQueryString());
+	alert('Addone done');
 	
-	alert('added');
 	SaveAll();
-	alert('saved');
 	LoadSaved();
-	alert('reloading');
-	
+
 	var e = document.getElementById('rename'+i);
 	var l = e.value.length;
 	e.setSelectionRange(l, l);
