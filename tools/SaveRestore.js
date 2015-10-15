@@ -80,6 +80,7 @@ function InUse(table, candidate){
 }
 
 function AddNew(){
+	alert('adding');
 	var table  = document.getElementById("SaveTable");
 	
 	for (var i = 0; InUse(table, i); i++);
