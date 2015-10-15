@@ -85,8 +85,11 @@ function AddNew(){
 	for (var i = 0; InUse(table, i); i++);
 	AddOne(table, i, "New", GenerateQueryString());
 	
+	alert('added');
 	SaveAll();
+	alert('saved');
 	LoadSaved();
+	alert('reloading');
 	
 	var e = document.getElementById('rename'+i);
 	var l = e.value.length;
