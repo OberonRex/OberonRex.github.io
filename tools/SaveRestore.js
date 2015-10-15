@@ -14,7 +14,8 @@ function LoadThis(anchorID){
 }
 
 function keybase(){
-	return "key_" + WatchToken + "_";
+	//return "key_" + WatchToken + "_";
+	return "key";
 }
 //
 function DeleteThis(anchorID){
@@ -117,7 +118,7 @@ function SaveAll(){
 		localStorage.setItem(keybase() + keyNum + "_query", query);
 
 	}
-	localStorage.setItem("list", dictStg);
+	localStorage.setItem(keybase() + "list", dictStg);
 }
 
 function buildLoadAnchor(keyNum, sName, sQuery){
@@ -181,7 +182,7 @@ function LoadSaved(){
 	
 	for (var i = table.rows.length-1; i > 0; i--) table.deleteRow(i);
 		
-	var lStg = localStorage.getItem("list");
+	var lStg = localStorage.getItem(keybase() + "list");
 	var values = lStg.split(",");
 
 	for (var i=0; i<values.length; i++) {
