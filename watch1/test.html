@@ -205,7 +205,9 @@ function selValue(elemID){
 
 function GenerateQueryString(){
 	var qstg = "";
+	alert('bundling');
 	var aa = BundleItUp();
+	alert('bundled');
 	for (var key in aa){
 		if (qstg.length > 0) qstg += "&";
 		qstg += key + "=" + aa[key];
@@ -214,6 +216,7 @@ function GenerateQueryString(){
 }
 
 function BundleItUp(){
+	alert('doing it');
   return {
     "KEY_HRTICKSTYLE": Number(selValue("hrTickStyle")),
     "KEY_HRTICKCOUNT": Number(selValue("hrTickCount")),
