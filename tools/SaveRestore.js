@@ -13,6 +13,13 @@ function LoadThis(anchorID){
 	allDone();
 }
 
+function newkeybase(){
+	return "key_" + WatchToken + "_";
+}
+
+function keybase(){
+	return "key";
+}
 //
 function DeleteThis(anchorID){
 	var anchor = document.getElementById(anchorID);
@@ -20,8 +27,8 @@ function DeleteThis(anchorID){
 	var row = cell.parentNode;
 	
 	var keyNum = anchor.getAttribute('keynum');
-	var keyName = "key" + keyNum + "_name";
-	var keyQuery = "key" + keyNum + "_query";
+	var keyName = keybase() + keyNum + "_name";
+	var keyQuery = keybase() + keyNum + "_query";
 	localStorage.removeItem(keyName);
 	localStorage.removeItem(keyQuery);
 	
@@ -29,7 +36,7 @@ function DeleteThis(anchorID){
 	table.deleteRow(row.rowIndex);
 	
 	SaveAll();
-	LOadSaved();
+	LoadSaved();
 }
 
 function SaveNewName(inpID){
@@ -110,8 +117,8 @@ function SaveAll(){
 		var keyNum = anchor.getAttribute('keyNum');
 		dictStg += keyNum;
 		
-		localStorage.setItem("key" + keyNum + "_name", desc);
-		localStorage.setItem("key" + keyNum + "_query", query);
+		localStorage.setItem(newkeybase + keyNum + "_name", desc);
+		localStorage.setItem(newkeybase + keyNum + "_query", query);
 
 	}
 	localStorage.setItem("list", dictStg);
@@ -182,8 +189,8 @@ function LoadSaved(){
 	var values = lStg.split(",");
 
 	for (var i=0; i<values.length; i++) {
-		var keyName = "key" + values[i] + "_name";
-		var keyQuery = "key" + values[i] + "_query";
+		var keyName = keybase + values[i] + "_name";
+		var keyQuery = keybase + values[i] + "_query";
 	    
 	    var sName = localStorage.getItem(keyName);
 	    var sQuery = localStorage.getItem(keyQuery);
