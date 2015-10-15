@@ -87,13 +87,13 @@ function AddNew(){
 	AddOne(table, i, "New", GenerateQueryString());
 
 	SaveAll();
-	LoadSaved();
+	//LoadSaved();
 
-	//var e = document.getElementById('rename'+i);
-	//var l = e.value.length;
-	//e.setSelectionRange(l, l);
-	//e.value = e.value;
-	//e.focus();
+	var e = document.getElementById('rename'+i);
+	var l = e.value.length;
+	e.setSelectionRange(l, l);
+	e.value = e.value;
+	e.focus();
 }
 
 function SaveAll(){
@@ -182,7 +182,7 @@ function LoadSaved(){
 	
 	for (var i = table.rows.length-1; i > 0; i--) table.deleteRow(i);
 		
-	var lStg = localStorage.getItem("list");
+	var lStg = localStorage.getItem(keybase() + "list");
 	var values = lStg.split(",");
 
 	for (var i=0; i<values.length; i++) {
