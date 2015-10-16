@@ -181,7 +181,7 @@ function ImportValues(query){
     	MyUUID = KEY_MYUUID;
     else MyUUID = "";
         
-    $('.color-value polygon').each(function (index, elem) {
+    $('.color-value').each(function (index, elem) {
 	    $(elem).attr('data-hex', $(elem).attr('fill'));
   	});
 
