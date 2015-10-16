@@ -213,8 +213,16 @@ function GenerateQueryString(){
 	return qstg;
 }
 
+function pebbleColor(polyId){
+	try{
+		return Number(color_picker_colors[document.getElementById(polyId).getAttribute("data-hex")].binary)
+	}
+	catch (e){
+		return 255;
+	}
+}
+
 function BundleItUp(){
-	alert(document.getElementById("OuterCircleColor"));
 	try{
   return {
     "KEY_HRTICKSTYLE": Number(selValue("hrTickStyle")),
@@ -223,13 +231,13 @@ function BundleItUp(){
     "KEY_HRRADIUSTOTIP": Number(document.getElementById("hrTickRadius").value),
     "KEY_WEATHERSOURCE": Number(selValue("WeatherSource")),
     "KEY_WUKEY": document.getElementById("WUKey").value,
-    "KEY_TMCOLOR": Number(color_picker_colors[document.getElementById("TMColor").getAttribute("data-hex")].binary),
-    "KEY_HANDCOLOR": Number(color_picker_colors[document.getElementById("HandColor").getAttribute("data-hex")].binary),
-    "KEY_CENTERINNER": Number(color_picker_colors[document.getElementById("CENTERINNER").getAttribute("data-hex")].binary),
-    "KEY_CENTEROUTER": Number(color_picker_colors[document.getElementById("CENTEROUTER").getAttribute("data-hex")].binary),
+    "KEY_TMCOLOR": pebbleColor("TMColor"),
+    "KEY_HANDCOLOR": pebbleColor"HandColor"),
+    "KEY_CENTERINNER": pebbleColor("CENTERINNER"),
+    "KEY_CENTEROUTER": pebbleColor("CENTEROUTER"),
     "KEY_HRTICKWIDTH": Number(document.getElementById("KEY_HRTICKWIDTH").value),
     "KEY_OUTERCIRCLES": document.getElementById("OuterCircleCheckbox").checked ? 1 : 0,
-    "KEY_OUTERCIRCLECOLOR": Number(color_picker_colors[document.getElementById("OuterCircleColor").getAttribute("data-hex")].binary),
+    "KEY_OUTERCIRCLECOLOR": pebbleColor("OuterCircleColor"),
     "KEY_OUTERCIRCLESTROKE": Number(document.getElementById("OuterCircleStroke").value),
     "KEY_OUTERCIRCLERADIUS": Number(document.getElementById("OuterCircleRadius").value)
   };
@@ -292,7 +300,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 1, v1.9, &copy; jps@home</h4>
+	<h4>Watch 1, v1.10, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
