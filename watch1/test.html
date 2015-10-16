@@ -181,11 +181,12 @@ function ImportValues(query){
     	MyUUID = KEY_MYUUID;
     else MyUUID = "";
         
-    $('.color-value').each(function (index, elem) {
-    	alert('before: ' + elem);
-	    $(elem).attr('data-hex', $(elem).attr('fill'));
-	    alert('after: ' + elem);
-  	});
+    //$('.color-value').each(function (index, elem) {
+	//    $(elem).attr('data-hex', $(elem).attr('fill'));
+  	//});
+  	myPolys = document.getElementsByClassName("color-value");
+  	for (var i = 0; i < myPolys.length; i++)
+  		myPolys[i].setAttribute('data-hex', myPolys[i].getAttribute('fill'));
 
 } 
 
