@@ -223,10 +223,10 @@ function BundleItUp(){
     "KEY_HRRADIUSTOTIP": Number(document.getElementById("hrTickRadius").value),
     "KEY_WEATHERSOURCE": Number(selValue("WeatherSource")),
     "KEY_WUKEY": document.getElementById("WUKey").value,
-    "KEY_TMCOLOR": 238,//Number(color_picker_colors[document.getElementById("TMColor").getAttribute("data-hex")].binary),
-    "KEY_HANDCOLOR": 238,//Number(color_picker_colors[document.getElementById("HandColor").getAttribute("data-hex")].binary),
-    "KEY_CENTERINNER": 238,//Number(color_picker_colors[document.getElementById("CENTERINNER").getAttribute("data-hex")].binary),
-    "KEY_CENTEROUTER": 238,//Number(color_picker_colors[document.getElementById("CENTEROUTER").getAttribute("data-hex")].binary),
+    "KEY_TMCOLOR": Number(color_picker_colors[document.getElementById("TMColor").getAttribute("data-hex")].binary),
+    "KEY_HANDCOLOR": Number(color_picker_colors[document.getElementById("HandColor").getAttribute("data-hex")].binary),
+    "KEY_CENTERINNER": Number(color_picker_colors[document.getElementById("CENTERINNER").getAttribute("data-hex")].binary),
+    "KEY_CENTEROUTER": Number(color_picker_colors[document.getElementById("CENTEROUTER").getAttribute("data-hex")].binary),
     "KEY_HRTICKWIDTH": Number(document.getElementById("KEY_HRTICKWIDTH").value),
     "KEY_OUTERCIRCLES": document.getElementById("OuterCircleCheckbox").checked ? 1 : 0,
     "KEY_OUTERCIRCLECOLOR": Number(color_picker_colors[document.getElementById("OuterCircleColor").getAttribute("data-hex")].binary),
@@ -292,7 +292,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 1, v1.8, &copy; jps@home</h4>
+	<h4>Watch 1, v1.9, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
