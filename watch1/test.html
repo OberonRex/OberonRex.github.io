@@ -144,6 +144,11 @@ function ImportInitialValues(){
 	ImportValues(query);
 }
 
+function SetColor(polyID, colorKey){
+	document.getElementById(polyID).setAttribute("fill", pebble_to_hex(colorKey));
+	document.getElementById(polyID).setAttribute("data-hex", pebble_to_hex(colorKey));
+}
+
 var MyUUID;
 function ImportValues(query){
 	var vars = query.split("&");
@@ -159,15 +164,27 @@ function ImportValues(query){
     SetSelect(aa.KEY_HRTICKCOUNT, "hrTickCount");
     document.getElementById("hrTickSize").value = aa.KEY_HRTICKLENGTH;
     document.getElementById("hrTickRadius").value = aa.KEY_HRRADIUSTOTIP;
-    document.getElementById("TMColor").setAttribute("fill", pebble_to_hex(aa.KEY_TMCOLOR));
-    document.getElementById("HandColor").setAttribute("fill", pebble_to_hex(aa.KEY_HANDCOLOR));
-    document.getElementById("CENTERINNER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTERINNER));
-    document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
+    
+    SetColor("TMColor", aa.KEY_TMCOLOR);
+    //document.getElementById("TMColor").setAttribute("fill", pebble_to_hex(aa.KEY_TMCOLOR));
+    
+    SetColor("HandColor", aa.KEY_HANDCOLOR);
+    //document.getElementById("HandColor").setAttribute("fill", pebble_to_hex(aa.KEY_HANDCOLOR));
+    
+    SetColor("CENTERINNER", aa.KEY_CENTERINNER);
+    //document.getElementById("CENTERINNER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTERINNER));
+    
+    SetColor("CENTEROUTER", aa.KEY_CENTEROUTER);
+    //document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
+    
     document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
     
     document.getElementById("OuterCircleCheckbox").checked = (Number(aa.KEY_OUTERCIRCLES) != 0);
     ShowHideCheckboxList(document.getElementById("OuterCircleCheckbox"), 'ocSubList')
-    document.getElementById("OuterCircleColor").setAttribute("fill", pebble_to_hex(aa.KEY_OUTERCIRCLECOLOR));
+    
+    SetColor("OuterCircleColor", aa.KEY_OUTERCIRCLECOLOR);
+    //document.getElementById("OuterCircleColor").setAttribute("fill", pebble_to_hex(aa.KEY_OUTERCIRCLECOLOR));
+    
     document.getElementById("OuterCircleStroke").value = aa.KEY_OUTERCIRCLESTROKE;
     document.getElementById("OuterCircleRadius").value = aa.KEY_OUTERCIRCLERADIUS;
     
