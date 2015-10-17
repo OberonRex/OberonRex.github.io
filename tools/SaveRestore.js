@@ -173,7 +173,7 @@ function AddOne(table, keyNum, sName, sQuery){
 	var cell4 = row.insertCell(3);
 	//var cell5 = row.insertCell(4);
 	
-	//cell1.width = "100%";
+	cell1.width = "100%";
 
 	cell1.innerHTML = buildInput(keyNum, sName).outerHTML;
 	cell2.innerHTML = buildLoadAnchor(keyNum, sName, sQuery).outerHTML;
