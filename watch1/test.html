@@ -140,7 +140,6 @@ function ShowHideSelectList(sel, src, value){
 }
 
 function ImportInitialValues(){
-	alert("resetting");
 	var query = window.location.search.substring(1);
 	ImportValues(query);
 }
@@ -271,7 +270,6 @@ function BundleItUp(){
 }
 
 function allDone(){
-	alert("closing");
   // Close config page and return data
   //location.href = 'pebblejs://close#' + JSON.stringify(BundleItUp());
   location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(BundleItUp()));
