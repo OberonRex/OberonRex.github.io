@@ -178,8 +178,8 @@ function ImportValues(query){
 	    ShowHideSelectList(document.getElementById("WeatherSource"), 'weatherSubList', 1)
     }
     
-    if (aa["KEY_MYUUID"])
-    	MyUUID = KEY_MYUUID;
+    if (aa["KEY_APPUUID"])
+    	MyUUID = aa.KEY_APPUUID;
     else MyUUID = "";
         
     $('#color-value polygon').each(function (index, elem) {
