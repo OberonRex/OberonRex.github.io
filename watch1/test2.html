@@ -143,8 +143,18 @@ var SaveQuery;
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
 	ImportValues(query);
+
 	var vars = query.split("&");
+	var aa = {};
+	
+	for (var i=0;i<vars.length;i++) {
+	    var pair = vars[i].split("=");
+	    aa[pair[0]] = pair[1];
+	    alert("key: " + pair[0] + ", value: " + pair[1]);
+	  }
 	SaveQuery = vars[1];
+	alert(vars[0]);
+	alert(vars[1]);
 }
 
 var MyUUID;
@@ -254,7 +264,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v2.2, &copy; jps@home</h4>
+	<h4>Watch 2, v2.3, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
