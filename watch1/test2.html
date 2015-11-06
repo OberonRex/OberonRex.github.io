@@ -149,9 +149,8 @@ var SaveQueryPayload;
 function ImportValues(query){
 	alert("Raw: " + query);
 	alert("decoded: " + decodeURIComponent(query));
-	var SaveQuery = decodeURIComponent(query);
-	var vars = SaveQuery.split("&");
-	SaveQueryPayload = vars[1];
+	
+	SaveQueryPayload = query.substring(query.indexof("=")+1);
 } 
 
 function SetSelect(tsValue, selectID){
@@ -255,7 +254,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v2.4, &copy; jps@home</h4>
+	<h4>Watch 2, v2.5, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
