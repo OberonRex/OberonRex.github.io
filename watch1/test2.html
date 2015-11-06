@@ -139,9 +139,11 @@ function ShowHideSelectList(sel, src, value){
 	}
 }
 
+var SaveQuery;
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
 	ImportValues(query);
+	SaveQuery = query;
 }
 
 var MyUUID;
@@ -188,7 +190,7 @@ function pebbleColor(polyId){
 function BundleItUp(){
 	try{
   return {
-    "KEY_CONTAINER": query
+    "KEY_CONTAINER": SaveQuery
   };
 	}
 	catch (e){
@@ -251,7 +253,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.1, &copy; jps@home</h4>
+	<h4>Watch 2, v2.0, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
