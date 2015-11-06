@@ -146,45 +146,8 @@ function ImportInitialValues(){
 
 var MyUUID;
 function ImportValues(query){
-	var vars = query.split("&");
-	
-	var aa = {};
-	
-	for (var i=0;i<vars.length;i++) {
-	    var pair = vars[i].split("=");
-	    aa[pair[0]] = pair[1];
-	  }
-	  
-    SetSelect(aa.KEY_HRTICKSTYLE, "hrTickStyle");
-    SetSelect(aa.KEY_HRTICKCOUNT, "hrTickCount");
-    document.getElementById("hrTickSize").value = aa.KEY_HRTICKLENGTH;
-    document.getElementById("hrTickRadius").value = aa.KEY_HRRADIUSTOTIP;
-    document.getElementById("TMColor").setAttribute("fill", pebble_to_hex(aa.KEY_TMCOLOR));
-    document.getElementById("HandColor").setAttribute("fill", pebble_to_hex(aa.KEY_HANDCOLOR));
-    document.getElementById("CENTERINNER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTERINNER));
-    document.getElementById("CENTEROUTER").setAttribute("fill", pebble_to_hex(aa.KEY_CENTEROUTER));
-    document.getElementById("KEY_HRTICKWIDTH").value = aa.KEY_HRTICKWIDTH;
-    
-    document.getElementById("OuterCircleCheckbox").checked = (Number(aa.KEY_OUTERCIRCLES) != 0);
-    ShowHideCheckboxList(document.getElementById("OuterCircleCheckbox"), 'ocSubList')
-    document.getElementById("OuterCircleColor").setAttribute("fill", pebble_to_hex(aa.KEY_OUTERCIRCLECOLOR));
-    document.getElementById("OuterCircleStroke").value = aa.KEY_OUTERCIRCLESTROKE;
-    document.getElementById("OuterCircleRadius").value = aa.KEY_OUTERCIRCLERADIUS;
-    
-    if (aa["KEY_WEATHERSOURCE"]){
-	    SetSelect(aa.KEY_WEATHERSOURCE, "WeatherSource");
-	    document.getElementById("WUKey").value = aa.KEY_WUKEY;
-	    ShowHideSelectList(document.getElementById("WeatherSource"), 'weatherSubList', 1)
-    }
-    
-    if (aa["KEY_APPUUID"])
-    	MyUUID = aa.KEY_APPUUID;
-    else MyUUID = "";
-        
-    $('#color-value polygon').each(function (index, elem) {
-	    $(elem).attr('data-hex', $(elem).attr('fill'));
-  	});
-
+	alert("Raw: " + query);
+	alert("decoded: " + decodeURIComponent(query));
 } 
 
 function SetSelect(tsValue, selectID){
@@ -225,21 +188,7 @@ function pebbleColor(polyId){
 function BundleItUp(){
 	try{
   return {
-    "KEY_HRTICKSTYLE": Number(selValue("hrTickStyle")),
-	"KEY_HRTICKCOUNT": Number(selValue("hrTickCount")),
-    "KEY_HRTICKLENGTH": Number(document.getElementById("hrTickSize").value),
-    "KEY_HRRADIUSTOTIP": Number(document.getElementById("hrTickRadius").value),
-    "KEY_WEATHERSOURCE": Number(selValue("WeatherSource")),
-    "KEY_WUKEY": document.getElementById("WUKey").value,
-    "KEY_TMCOLOR": pebbleColor("TMColor"),
-    "KEY_HANDCOLOR": pebbleColor("HandColor"),
-    "KEY_CENTERINNER": pebbleColor("CENTERINNER"),
-    "KEY_CENTEROUTER": pebbleColor("CENTEROUTER"),
-    "KEY_HRTICKWIDTH": Number(document.getElementById("KEY_HRTICKWIDTH").value),
-    "KEY_OUTERCIRCLES": document.getElementById("OuterCircleCheckbox").checked ? 1 : 0,
-    "KEY_OUTERCIRCLECOLOR": pebbleColor("OuterCircleColor"),
-    "KEY_OUTERCIRCLESTROKE": Number(document.getElementById("OuterCircleStroke").value),
-    "KEY_OUTERCIRCLERADIUS": Number(document.getElementById("OuterCircleRadius").value)
+    "KEY_CONTAINER": query
   };
 	}
 	catch (e){
@@ -251,7 +200,8 @@ function BundleItUp(){
 function allDone(){
   // Close config page and return data
   //location.href = 'pebblejs://close#' + JSON.stringify(BundleItUp());
-  location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(BundleItUp()));
+  //location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(BundleItUp()));
+  location.href = 'pebblejs://close#' + JSON.stringify(BundleItUp());
 }
 
 function CallPicker(){
