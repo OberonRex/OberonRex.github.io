@@ -203,7 +203,7 @@ function allDone(){
   // Close config page and return data
   //location.href = 'pebblejs://close#' + JSON.stringify(BundleItUp());
   //location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(BundleItUp()));
-  location.href = 'pebblejs://close#' + SaveQuery;
+  location.href = 'pebblejs://close#' + JSON.stringify(BundleItUp());
 }
 
 function CallPicker(){
@@ -253,7 +253,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v2.0, &copy; jps@home</h4>
+	<h4>Watch 2, v2.1, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
