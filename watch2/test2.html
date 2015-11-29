@@ -153,7 +153,8 @@ function ImportInitialValues(){
 	
 	ImportValues(query);
 	
-	if ("return_to" in aa) return_to = decodeURI(aa.return_to);
+	if ("return_to" in aa) return_to = decodeURIComponent(aa.return_to);
+	alert("return_to: " + return_to);
 }
 
 var MyUUID;
@@ -268,7 +269,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.10 &copy; jps@home</h4>
+	<h4>Watch 2, v1.11 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
