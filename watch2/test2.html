@@ -143,8 +143,11 @@ var gQuery;
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
 	gQuery = query;
+	
+	var pieces = query.split("&");
+	alert("return_to:" + pieces.return_to);
 	//alert("decoded: " + decodeURIComponent(query));
-	ImportValues(query);
+	//ImportValues(query);
 }
 
 var MyUUID;
@@ -258,7 +261,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.1, &copy; jps@home</h4>
+	<h4>Watch 2, v1.2, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
