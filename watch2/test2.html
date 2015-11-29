@@ -139,6 +139,7 @@ function ShowHideSelectList(sel, src, value){
 	}
 }
 
+var return_to = "pebblejs://close#";
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
 	var vars = query.split("&");
@@ -152,8 +153,7 @@ function ImportInitialValues(){
 	
 	ImportValues(query);
 	
-	if ("return_to" in obj) alert("found return_to: " + aa.return_to);
-	if ("return_tox" in obj) alert("found return_tox: " + aa.return_tox);
+	if ("return_to" in obj) return_to = aa.return_to);
 }
 
 var MyUUID;
@@ -217,7 +217,7 @@ function allDone(){
   // Close config page and return data
   //location.href = 'pebblejs://close#' + JSON.stringify(BundleItUp());
   //location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(BundleItUp()));
-  location.href = 'pebblejs://close#' + JSON.stringify(BundleItUp());
+  location.href = return_to + JSON.stringify(BundleItUp());
 }
 
 function CallPicker(){
@@ -267,7 +267,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.5 &copy; jps@home</h4>
+	<h4>Watch 2, v1.6 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
