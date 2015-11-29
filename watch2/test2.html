@@ -139,16 +139,19 @@ function ShowHideSelectList(sel, src, value){
 	}
 }
 
-var pieces;
-var gQuery;
+var aa;// = {};
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
-	gQuery = query;
+	var vars = query.split("&");
 	
-	pieces = query.split("&");
-	alert("return_to:" + pieces["return_to"]);
-	//alert("decoded: " + decodeURIComponent(query));
-	//ImportValues(query);
+	aa = {};
+	
+	for (var i=0;i<vars.length;i++) {
+	    var pair = vars[i].split("=");
+	    aa[pair[0]] = pair[1];
+	}
+	
+	alert("return_to: " + aa.return_to);
 }
 
 var MyUUID;
@@ -262,7 +265,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.3 &copy; jps@home</h4>
+	<h4>Watch 2, v1.4 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
