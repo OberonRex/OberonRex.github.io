@@ -141,7 +141,7 @@ function ShowHideSelectList(sel, src, value){
 
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
-	alert(query);
+	alert("decoded: " + decodeURIComponent(query));
 	ImportValues(query);
 }
 
@@ -256,7 +256,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v2.9, &copy; jps@home</h4>
+	<h4>Watch 2, v1.0, &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
