@@ -139,11 +139,12 @@ function ShowHideSelectList(sel, src, value){
 	}
 }
 
+var query;
 var properties;
 var return_to = "pebblejs://close#";
 function ImportInitialValues(){
-	var query = window.location.search.substring(1);
-	console.log("received: " + query);
+	query = window.location.search.substring(1);
+	//console.log("received: " + query);
 	var vars = query.split("&");
 	
 	properties = {};
@@ -206,8 +207,8 @@ function pebbleColor(polyId){
 function BundleItUp(){
 	try{
   return {
-    //"KEY_CONTAINER": SaveQueryPayload
-    "KEY_CONTAINER": "abc=123&xyz=456"
+    "KEY_CONTAINER": query
+    //"KEY_CONTAINER": "abc=123&xyz=456"
   };
 	}
 	catch (e){
@@ -271,7 +272,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.18 &copy; jps@home</h4>
+	<h4>Watch 2, v1.19 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
