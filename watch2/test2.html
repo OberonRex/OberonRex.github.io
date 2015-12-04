@@ -222,7 +222,7 @@ function allDone(){
   //location.href = 'pebblejs://close#' + JSON.stringify(BundleItUp());
   //location.href = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(BundleItUp()));
   //alert("trying to return: " + return_to + JSON.stringify(BundleItUp()));
-  location.href = return_to + JSON.stringify(BundleItUp());
+  location.href = return_to + JSON.stringify(query);
 }
 
 function CallPicker(){
@@ -272,7 +272,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.19 &copy; jps@home</h4>
+	<h4>Watch 2, v1.20 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
