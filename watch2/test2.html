@@ -163,12 +163,31 @@ function ImportInitialValues(){
 }
 
 var MyUUID;
-var SaveQueryPayload;
-function ImportValues(query){
-	//alert("Raw: " + query);
-	//alert("decoded: " + decodeURIComponent(query));
-	//alert("index: " + query.indexOf("="));
-	SaveQueryPayload = properties.KEY_CONTAINER;//query.substring(query.indexOf("=")+1);
+var DecodedPayload;
+function ImportValues(stg){
+	stg = stg.replace(/Q/g, '=');
+	stg = stg.replace(/A/g, '&');
+	stg = stg.replace(/C/g, ':');
+	
+	stg = stg.replace(/%51/g, 'Q');
+	stg = stg.replace(/%41/g, 'A');
+	stg = stg.replace(/%43/g, 'C');
+	stg = stg.replace(/%25/g, '%');
+	DecodedPayload = stg;	//properties.KEY_CONTAINER;//query.substring(query.indexOf("=")+1);
+	
+	alert("decoded: " + stg);
+	
+	stg = stg.replace(/%/g, '%25');
+	stg = stg.replace(/Q/g, '%51');
+	stg = stg.replace(/A/g, '%41');
+	stg = stg.replace(/C/g, '%43');
+	
+	stg = stg.replace(/=/g, 'Q');
+	stg = stg.replace(/&/g, 'A');
+	stg = stg.replace(/:/g, 'C');
+	
+	alert("encoded again: " + stg);
+	
 	//alert("payload: " + SaveQueryPayload);
 } 
 
@@ -273,7 +292,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.24 &copy; jps@home</h4>
+	<h4>Watch 2, v1.25 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
