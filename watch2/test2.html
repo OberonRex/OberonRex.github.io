@@ -140,16 +140,12 @@ function ShowHideSelectList(sel, src, value){
 }
 
 var kcontainer;
-var query;
-var properties;
 var return_to = "pebblejs://close#";
 function ImportInitialValues(){
-	query = window.location.search.substring(1);
-	//console.log("received: " + query);
+	var query = window.location.search.substring(1);
 	var vars = query.split("&");
 	
-	properties = {};
-	
+	var properties = {};
 	for (var i=0;i<vars.length;i++) {
 	    var pair = vars[i].split("=");
 	    properties[pair[0]] = pair[1];
@@ -157,14 +153,12 @@ function ImportInitialValues(){
 	
 	kcontainer = properties.KEY_CONTAINER;
 	
-	ImportValues(kcontainer);
+	ImportValues(properties.KEY_CONTAINER);
 	
 	if ("return_to" in properties) return_to = decodeURIComponent(properties.return_to);
 }
 
-var MyUUID;
-var DecodedPayload;
-function ImportValues(stg){
+function Decode(stg){
 	stg = stg.replace(/Q/g, '=');
 	stg = stg.replace(/A/g, '&');
 	stg = stg.replace(/C/g, ':');
@@ -173,10 +167,11 @@ function ImportValues(stg){
 	stg = stg.replace(/%41/g, 'A');
 	stg = stg.replace(/%43/g, 'C');
 	stg = stg.replace(/%25/g, '%');
-	DecodedPayload = stg;	//properties.KEY_CONTAINER;//query.substring(query.indexOf("=")+1);
 	
-	alert("decoded: " + stg);
-	
+	return stg;	
+}
+
+function Encode(stg){
 	stg = stg.replace(/%/g, '%25');
 	stg = stg.replace(/Q/g, '%51');
 	stg = stg.replace(/A/g, '%41');
@@ -186,9 +181,31 @@ function ImportValues(stg){
 	stg = stg.replace(/&/g, 'A');
 	stg = stg.replace(/:/g, 'C');
 	
-	alert("encoded again: " + stg);
+	return stg;
 	
-	//alert("payload: " + SaveQueryPayload);
+}
+
+var myProperties;
+var MyUUID;
+var DecodedPayload;
+function ImportValues(stg){
+	var DecodedPayload = Decode(stg);
+	alert("decoded: " + DecodedPayload);
+	alert("encoded again: " + Encode(DecodedPayload));
+	
+	myProperties = {};
+	var vars = query.split("&");
+	
+	for (myProperties i=0;i<myProperties.length;i++) {
+	    var pair = myProperties[i].split("=");
+	    myProperties[pair[0]] = pair[1];
+	}
+	
+	for (var key in myProperties){
+		var x = key.indexOf(":");
+		var t = key.substring(x+1);
+		alert(key " wants to create " + myProperties[key] + " children");
+	}
 } 
 
 function SetSelect(tsValue, selectID){
@@ -292,7 +309,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.26 &copy; jps@home</h4>
+	<h4>Watch 2, v1.27 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
