@@ -190,8 +190,8 @@ var MyUUID;
 var DecodedPayload;
 function ImportValues(stg){
 	var DecodedPayload = Decode(stg);
-	alert("decoded: " + DecodedPayload);
-	alert("encoded again: " + Encode(DecodedPayload));
+	//alert("decoded: " + DecodedPayload);
+	//alert("encoded again: " + Encode(DecodedPayload));
 	
 	myProperties = {};
 	var vars = DecodedPayload.split("&");
@@ -203,9 +203,10 @@ function ImportValues(stg){
 	}
 	
 	for (var key in myProperties){
-		var x = key.indexOf(":");
-		var t = key.substring(x+1);
-		alert(key + " wants to create " + myProperties[key] + " children");
+		var pair = key.split(":");
+		if (pair[1] == "n"){
+			alert("we want to create " + myProperties[key] + " children for " + pair[0]);
+		}
 	}
 } 
 
@@ -310,7 +311,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.31 &copy; jps@home</h4>
+	<h4>Watch 2, v1.32 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
