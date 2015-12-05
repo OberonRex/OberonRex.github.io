@@ -194,7 +194,7 @@ function ImportValues(stg){
 	alert("encoded again: " + Encode(DecodedPayload));
 	
 	myProperties = {};
-	var vars = query.split("&");
+	var vars = DecodedPayload.split("&");
 	
 	for (var i=0; i<myProperties.length; i++) {
 	    var pair = myProperties[i].split("=");
@@ -309,7 +309,7 @@ function chooseMe(img){
 <body onload="ImportInitialValues()" background="backgrounds/CreamPaper.JPG">
 <div class="view" id="SettingsView">
 <div id=page1>
-	<h4>Watch 2, v1.29 &copy; jps@home</h4>
+	<h4>Watch 2, v1.30 &copy; jps@home</h4>
 
 	<div id="templates" class="ListWrapper hideIt">
 		<a class="ListHeader" href="#" sh-target="templates">Templates</a>
