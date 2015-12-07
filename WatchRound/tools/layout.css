@@ -1,0 +1,22 @@
+.jps_ListWrapper.jps_hideList > .jps_ListItem{display:none;}
+.jps_ListWrapper.jps_showList > .jps_ListItem{display:block;}
+
+.jps_ListWrapper.jps_hideList > .jps_AddButton{display:none;}
+.jps_ListWrapper.jps_showList > .jps_AddButton{display:block;}
+
+.jps_ListWrapper > .jps_ListItem{padding-left: 15px;}
+	
+.jps_ListWrapper.jps_showList > .jps_ListHeader:before{content: "- ";}
+.jps_ListWrapper.jps_hideList > .jps_ListHeader:before{content: "+ ";} 
+
+.jps_deletable:after{
+	content: "-";
+	float:right;
+}
+
+.jps_AddButton{float:right;}
+
+.jps_clearboth {clear:both; }
+.jps_stdColumn {width:90px;float:left;}
+.jps_short1Column {width:75px;float:left;}
+.jps_columnRight(width:1em;float:right;)
