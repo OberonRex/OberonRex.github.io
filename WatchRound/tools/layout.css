@@ -17,6 +17,6 @@
 .jps_AddButton{float:right;}
 
 .jps_clearboth {clear:both; }
-.jps_stdColumn {width:90px;float:left;}
-.jps_short1Column {width:75px;float:left;}
+.jps_stdColumn {width:200px;float:left;}
+.jps_short1Column {width:185px;float:left;}
 .jps_columnRight(width:1em;float:right;)
