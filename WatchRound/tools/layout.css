@@ -14,11 +14,12 @@
 	float:right;
 }
 
-/*
-.jps_AddButton{float:right;}
-*/
 
+.jps_AddButton{float:right;}
+
+/*
 .jps_stdBox {width:360px;clear:both;}
+*/
 
 .jps_clearboth {clear:both; }
 .jps_stdColumn {width:200px;float:left;}
