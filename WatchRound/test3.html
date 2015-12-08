@@ -8,7 +8,7 @@
 <body background="backgrounds/CreamPaper.JPG">
 	<div class="jps_stdBox">
 	
-		<div><img src="images/WatchFace.png" height="50" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.10</div>
+		<div><img src="images/WatchFace.png" height="50" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.11</div>
 		<br>
 		<div class="jps_ListWrapper jps_hideList" add="TickMark">
 			<a class="jps_ListHeader">Tick Marks</a><a class="jps_AddButton">+</a>
@@ -110,7 +110,8 @@
 		var boxWidth = screen.width;
 		if (boxWidth > 480) boxWidth = 360; else boxWidth = Math.min(screen.width, 480);
 		var rule = ".jps_stdBox {width:" + boxWidth + "px;clear:both;}"
-		document.styleSheets[0].insertRule(rule, 0);
+		//document.styleSheets[0].insertRule(rule, 0);
+		document.styleSheets[0].insertRule(".jps_stdBox {width:360px;clear:both;}"
 		//$("#addTemplates" ).load("file:addTemplates.html");
 		wireUpFramework();
 	</script>
