@@ -61,6 +61,26 @@
 					<input class=" jps_2ndColumn" type="text" onblur="jps_MakeRO(this)" onfocus="jps_MakeRW(this)" readonly=true>
 				</div>
 				
+				<div class="jps_ListItem">
+					<div class="jps_ListItem jps_stdColumn">Stroke Width: </div> 
+					<input class=" jps_2ndColumn" type="text" onblur="jps_MakeRO(this)" onfocus="jps_MakeRW(this)" readonly=true>
+				</div>
+				
+				<div class="jps_ListItem">
+					<div class="jps_ListItem jps_stdColumn">Stroke Color: </div>
+		    		<svg  id="color-value" version="1.1"  x="0px" y="0px" width=30 viewBox="0 0 39 39"  >
+					<polygon id="paintColor" stroke="#000000" stroke-width="1.5" fill="#FFFFFF" class="color-value"
+						onclick="EditColorAbs(this);"
+						points="
+						    17.7,0.7
+						    34.3,10.3
+						    34.3,29.4
+						    17.7,39
+						    1.2,29.4
+						    1.2,10.3 	"/>
+		  			</svg>				
+				</div>
+				
 				<div class="jps_clearboth"></div>
 			</div>
 			
