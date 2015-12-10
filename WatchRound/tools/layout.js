@@ -30,6 +30,7 @@ function jps_AddOne(pElem){
 	//var template = document.getElementById(pElem.getAttribute('add'));
 	var template = pElem.getElementsByClassName('jps_Template')[0];
 	var clone = template.cloneNode(true);
+	close.SetAttribute("abc", "xyz");
 	pElem.appendChild(clone);
 	
 	//var cb = document.getElementById('clearboth');
