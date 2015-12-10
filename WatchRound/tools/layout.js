@@ -28,7 +28,7 @@ function wireUpFramework(){
 
 function jps_AddOne(pElem){
 	//var template = document.getElementById(pElem.getAttribute('add'));
-	var template = pElem.getElementsByClassName('template')[0];
+	var template = pElem.getElementsByClassName('jps_template')[0];
 	var clone = template.cloneNode(true);
 	pElem.appendChild(clone);
 	
