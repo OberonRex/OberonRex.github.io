@@ -15,6 +15,7 @@
 }
 
 .jps_ListHeader{border-bottom-style: solid; border-bottom-width: 1px; width: auto;}
+.jps_ListWrapper{width: auto;}
 
 .jps_AddButton{float:right;}
 
