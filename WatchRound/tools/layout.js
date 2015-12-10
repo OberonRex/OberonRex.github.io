@@ -32,9 +32,9 @@ function jps_AddOne(pElem){
 	var clone = template.cloneNode(true);
 	pElem.appendChild(clone);
 	
-	var cb = document.getElementById('clearboth');
-	clone = cb.cloneNode(true);
-	pElem.appendChild(clone);
+	//var cb = document.getElementById('clearboth');
+	//clone = cb.cloneNode(true);
+	//pElem.appendChild(clone);
 	
 	wireUpFramework();
 }
