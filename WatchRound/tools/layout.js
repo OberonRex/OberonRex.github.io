@@ -37,5 +37,5 @@ function jps_AddOne(pElem){
 	//clone = cb.cloneNode(true);
 	//pElem.appendChild(clone);
 	
-	wireUpFramework();
+	//wireUpFramework();
 }
