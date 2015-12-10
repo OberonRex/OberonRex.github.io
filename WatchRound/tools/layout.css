@@ -14,8 +14,8 @@
 	float:right;
 }
 
-.jps_ListHeader{border-bottom-style: solid; border-bottom-width: 1px; width: auto;}
-.jps_ListWrapper{width: auto;}
+.jps_ListHeader{border-bottom-style: solid; border-bottom-width: 1px; width: 100%;}
+.jps_ListWrapper{width: 100%;}
 
 .jps_AddButton{float:right;}
 
