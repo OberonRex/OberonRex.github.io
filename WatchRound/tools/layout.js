@@ -33,7 +33,8 @@ function jps_AddOne(pElem){
 	clone.setAttribute("abc", "xyz");
 	pElem.appendChild(clone);
 	
-	$(clone).on('click', function(){jps_toggleShowList(this.parentElement);});
+	var header = close.getElementsByClassName('jps_ListHeader')[0];
+	$(header).on('click', function(){jps_toggleShowList(this.parentElement);});
 	
 	//var cb = document.getElementById('clearboth');
 	//clone = cb.cloneNode(true);
