@@ -36,8 +36,6 @@ function jps_AddOne(pElem){
 	var header = clone.getElementsByClassName('jps_ListHeader')[0];
 	$(header).on('click', function(){jps_toggleShowList(this.parentElement);});
 	
-	
-	jps_ListItem jps_ListWrapper 
 	clone.classList.remove('jps_Template');
 	clone.classList.add('jps_ListItem');
 	clone.classList.add(jps_ListWrapper);
