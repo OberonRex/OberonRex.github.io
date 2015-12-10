@@ -33,7 +33,7 @@ function jps_AddOne(pElem){
 	clone.setAttribute("abc", "xyz");
 	pElem.appendChild(clone);
 	
-	var header = close.getElementsByClassName('jps_ListHeader')[0];
+	var header = clone.getElementsByClassName('jps_ListHeader')[0];
 	$(header).on('click', function(){jps_toggleShowList(this.parentElement);});
 	
 	//var cb = document.getElementById('clearboth');
