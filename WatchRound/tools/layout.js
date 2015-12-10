@@ -21,8 +21,8 @@ function wireUpFramework(){
 	$('.jps_AddButton').on('click',function() {jps_AddOne(this.parentElement)});
 	$('.jps_ListHeader').on('click', function(){jps_toggleShowList(this.parentElement);});
 	
-	$('.jps_AddButton').attr('href', '#');
-	$('.jps_ListHeader').attr('href', '#');
+	//$('.jps_AddButton').attr('href', '#');
+	//$('.jps_ListHeader').attr('href', '#');
 	
 }
 
@@ -32,6 +32,8 @@ function jps_AddOne(pElem){
 	var clone = template.cloneNode(true);
 	clone.setAttribute("abc", "xyz");
 	pElem.appendChild(clone);
+	
+	$(clone).on('click', function(){jps_toggleShowList(this.parentElement);});
 	
 	//var cb = document.getElementById('clearboth');
 	//clone = cb.cloneNode(true);
