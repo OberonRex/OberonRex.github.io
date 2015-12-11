@@ -11,14 +11,10 @@
 .jps_ListWrapper.jps_showList > .jps_ListHeader:before{content: "- ";}
 .jps_ListWrapper.jps_hideList > .jps_ListHeader:before{content: "+ ";} 
 
-.jps_deletable:after{
-	content: "-";
-	float:right;
-}
-
 .jps_ListHeader{border-bottom-style: solid; border-bottom-width: 1px;}
 
 .jps_AddButton{float:right;}
+.jps_RemoveButton{float:right;}
 
 /*
 .jps_stdBox {width:360px;clear:both;}
