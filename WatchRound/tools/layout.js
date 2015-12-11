@@ -9,13 +9,13 @@ function jps_toggleShowList(wrapper){
 	}
 }
 
-function jps_MakeRW(inp){
-	inp.removeAttribute('readonly');
-}
+//function jps_MakeRW(inp){
+//	inp.removeAttribute('readonly');
+//}
 
-function jps_MakeRO(inp){
-	inp.setAttribute('readonly', true);
-}
+//function jps_MakeRO(inp){
+//	inp.setAttribute('readonly', true);
+//}
 
 function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(this.parentElement)});
