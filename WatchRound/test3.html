@@ -131,11 +131,6 @@
 	<script type="text/javascript" src="tools/layout.js"></script>
 	
 	<script type="text/javascript">
-		var boxWidth = screen.width;
-		if (boxWidth > 480) boxWidth = 360; else boxWidth = Math.min(screen.width, 480);
-		boxWidth -= 20;
-		var rule = ".jps_stdBox {width:" + boxWidth + "px;clear:both;}"
-		document.styleSheets[0].insertRule(rule, 1);
 		wireUpFramework();
 	</script>
 </body>
