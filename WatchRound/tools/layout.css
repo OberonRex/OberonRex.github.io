@@ -1,10 +1,10 @@
-.jps_ListWrapper.jps_hideList > .jps_ListItem{display:none;}
-.jps_ListWrapper.jps_showList > .jps_ListItem{display:block;}
+.jps_ListWrapper.jps_hideList > .jps_ListItem, .jps_Template{display:none;}
+.jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template){display:block;}
 
 .jps_ListWrapper.jps_hideList > .jps_AddButton{display:none;}
 .jps_ListWrapper.jps_showList > .jps_AddButton{display:block;}
 
-.jps_Template{display:none;}
+/*.jps_Template{display:none;}*/
 
 .jps_ListWrapper > .jps_ListItem{padding-left: 15px;}
 	
