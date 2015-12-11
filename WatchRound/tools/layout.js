@@ -24,7 +24,7 @@ function wireUpFramework(){
 	
 	//<input class="jps_2ndColumn" type="text" onblur="jps_MakeRO(this)" onfocus="jps_MakeRW(this)" readonly=true>
 	$('div#jps_MasterDiv').on('blur', 'input[type="text"', function(){alert()});
-	$('div#jps_MasterDiv').on('focus', input[type="text"', function(){alert()});
+	$('div#jps_MasterDiv').on('focus', 'input[type="text"', function(){alert()});
 
 }
 
