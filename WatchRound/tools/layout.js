@@ -47,3 +47,7 @@ function jps_AddOne(pElem){
 	var rb  = clone.getElementsByClassName('jps_RemoveButton')[0];
 	$(rb).on('click',function() {jps_RemoveOne(this.parentElement)});
 }
+
+function jps_RemoveOne(pElem){
+	pElem.remove();
+}
