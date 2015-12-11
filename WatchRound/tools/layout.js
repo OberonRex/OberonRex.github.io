@@ -22,6 +22,10 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(this.parentElement);});
 	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {jps_RemoveOne(this.parentElement)});
 	
+	//<input class="jps_2ndColumn" type="text" onblur="jps_MakeRO(this)" onfocus="jps_MakeRW(this)" readonly=true>
+	$('input[type="text"').on('blur', function(){alert()});
+	$('input[type="text"').on('focus', function(){alert()});
+
 }
 
 function jps_AddOne(pElem){
