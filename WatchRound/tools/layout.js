@@ -18,8 +18,11 @@ function jps_MakeRO(inp){
 }
 
 function wireUpFramework(){
-	$('.jps_AddButton').on('click',function() {jps_AddOne(this.parentElement)});
-	$('.jps_ListHeader').on('click', function(){jps_toggleShowList(this.parentElement);});
+	//$('.jps_AddButton').on('click',function() {jps_AddOne(this.parentElement)});
+	//$('.jps_ListHeader').on('click', function(){jps_toggleShowList(this.parentElement);});
+	
+	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(this.parentElement)});
+	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(this.parentElement);});
 	
 	//$('.jps_AddButton').attr('href', '#');
 	//$('.jps_ListHeader').attr('href', '#');
@@ -34,7 +37,7 @@ function jps_AddOne(pElem){
 	pElem.appendChild(clone);
 	
 	var header = clone.getElementsByClassName('jps_ListHeader')[0];
-	$(header).on('click', function(){jps_toggleShowList(this.parentElement);});
+	//$(header).on('click', function(){jps_toggleShowList(this.parentElement);});
 	
 	clone.classList.remove('jps_Template');
 	clone.classList.add('jps_ListItem');
@@ -45,7 +48,7 @@ function jps_AddOne(pElem){
 	
 	//wireUpFramework();
 	var rb  = clone.getElementsByClassName('jps_RemoveButton')[0];
-	$(rb).on('click',function() {jps_RemoveOne(this.parentElement)});
+	//$(rb).on('click',function() {jps_RemoveOne(this.parentElement)});
 }
 
 function jps_RemoveOne(pElem){
