@@ -23,7 +23,7 @@ function wireUpFramework(){
 	
 	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(this.parentElement)});
 	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(this.parentElement);});
-	
+	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {jps_RemoveOne(this.parentElement)});
 	//$('.jps_AddButton').attr('href', '#');
 	//$('.jps_ListHeader').attr('href', '#');
 	
