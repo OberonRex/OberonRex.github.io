@@ -9,14 +9,6 @@ function jps_toggleShowList(wrapper){
 	}
 }
 
-//function jps_MakeRW(inp){
-//	inp.removeAttribute('readonly');
-//}
-
-//function jps_MakeRO(inp){
-//	inp.setAttribute('readonly', true);
-//}
-
 function wireUpFramework(){
 	var boxWidth = screen.width;
 	if (boxWidth > 480) boxWidth = 360; else boxWidth = Math.min(screen.width, 480);
@@ -26,7 +18,7 @@ function wireUpFramework(){
 
 	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(this.parentElement)});
 	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(this.parentElement);});
-	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {jps_RemoveOne(this.parentElement)});
+	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {this.remove()});
 	
 	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly')});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', true)});
@@ -42,6 +34,6 @@ function jps_AddOne(pElem){
 	clone.classList.add('jps_ListWrapper');
 }
 
-function jps_RemoveOne(pElem){
-	pElem.remove();
-}
+//function jps_RemoveOne(pElem){
+//	pElem.remove();
+//}
