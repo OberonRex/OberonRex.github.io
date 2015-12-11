@@ -30,6 +30,6 @@ function jps_AddOne(pElem){
 	pElem.appendChild(clone);
 	
 	clone.classList.remove('jps_Template');
-	clone.classList.add('jps_ListItem');
-	clone.classList.add('jps_ListWrapper');
+	//clone.classList.add('jps_ListItem');
+	//clone.classList.add('jps_ListWrapper');
 }
