@@ -23,8 +23,8 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {jps_RemoveOne(this.parentElement)});
 	
 	//<input class="jps_2ndColumn" type="text" onblur="jps_MakeRO(this)" onfocus="jps_MakeRW(this)" readonly=true>
-	$('input[type="text"').on('blur', '.jps_Text', function(){alert()});
-	$('input[type="text"').on('focus', '.jps_Text', function(){alert()});
+	$('div#jps_MasterDiv').on('blur', 'input[type="text"', function(){alert()});
+	$('div#jps_MasterDiv').on('focus', input[type="text"', function(){alert()});
 
 }
 
