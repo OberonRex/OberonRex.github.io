@@ -4,8 +4,6 @@
 .jps_ListWrapper.jps_hideList > .jps_AddButton{display:none;}
 .jps_ListWrapper.jps_showList > .jps_AddButton{display:block;}
 
-/*.jps_Template{display:none;}*/
-
 .jps_ListWrapper > .jps_ListItem{padding-left: 15px;}
 	
 .jps_ListWrapper.jps_showList > .jps_ListHeader:before{content: "- ";}
