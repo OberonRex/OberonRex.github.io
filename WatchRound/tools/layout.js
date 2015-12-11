@@ -33,7 +33,3 @@ function jps_AddOne(pElem){
 	clone.classList.add('jps_ListItem');
 	clone.classList.add('jps_ListWrapper');
 }
-
-//function jps_RemoveOne(pElem){
-//	pElem.remove();
-//}
