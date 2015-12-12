@@ -25,12 +25,13 @@ function wireUpFramework(){
 }
 
 function jps_RenumberChildren(elem){
-	//$(elem).children('.jps_ListElement:not(.jps_Template')
+	$(elem).children('.jps_ListElement:not(.jps_Template)').each(function(){
+		alert(this.outerHTML);
+	})
 	
-	$(elem).find( '[idtemplate]' ).each(function(){
-		alert(this.innerHTML);
-		
-	});
+//	$(elem).find( '[idtemplate]' ).each(function(){
+//		alert(this.innerHTML);
+//	});
 }
 
 function jps_AddOne(pElem, show){
