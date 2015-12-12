@@ -24,6 +24,10 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', true)});
 }
 
+function jps_RenumberAllChildren(){
+	$(.jps_ListWrapper).each(function(){RenumberChildren(this)});
+}
+
 function jps_RenumberChildren(elem){
 	var litems = $(elem).children('.jps_ListItem:not(.jps_Template)');
 
@@ -45,5 +49,6 @@ function jps_AddOne(pElem, show){
 	clone.classList.remove('jps_hideList');
 	clone.classList.add( show ? 'jps_showList' : 'jps_hideList');
 	
-	jps_RenumberChildren(pElem);
+	//jps_RenumberChildren(pElem);
+	jps_RenumberAllChildren();
 }
