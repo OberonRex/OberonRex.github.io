@@ -11,8 +11,8 @@
 
 .jps_ListHeader{border-bottom-style: solid; border-bottom-width: 1px;}
 
-.jps_AddButton{float:right;border-bottom-style: solid; border-bottom-width: 1px;}
-.jps_RemoveButton{float:right;border-bottom-style: solid; border-bottom-width: 1px;}
+.jps_AddButton{float:right;}
+.jps_RemoveButton{float:right;}
 
 .jps_clearboth {clear:both; }
 .jps_stdColumn {width:200px;float:left;}
