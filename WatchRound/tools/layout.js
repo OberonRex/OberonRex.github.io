@@ -29,7 +29,8 @@ function jps_RenumberChildren(elem){
 
 	for (var ndx = 0; ndx < litems.length; ndx++)
 		$(litems[ndx]).find( '[idtemplate]' ).each(function(){
-			alert(this.outerHTML);
+			var newID = this.getAttribute("idtemplate").replace("#", ndx);
+			this.setAttribute("id", newID );
 		});
 }
 
