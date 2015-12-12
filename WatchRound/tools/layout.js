@@ -25,7 +25,10 @@ function wireUpFramework(){
 }
 
 function jps_RenumberChildren(elem){
-	$(elem).find( '[idtemplate]' ).each(function(){alert(this.innerHTML)});
+	$(elem).find( '[idtemplate]' ).each(function(){
+		alert(this.innerHTML);
+		
+	});
 }
 
 function jps_AddOne(pElem, show){
