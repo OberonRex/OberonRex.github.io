@@ -27,9 +27,10 @@ function wireUpFramework(){
 function jps_RenumberChildren(elem){
 	var litems = $(elem).children('.jps_ListItem:not(.jps_Template)');
 
-	$(litems).find( '[idtemplate]' ).each(function(){
-		alert(this.outerHTML);
-	});
+	for (var ndx = 0; ndx < litems.length; ndx++)
+		$(litems[ndx]).find( '[idtemplate]' ).each(function(){
+			alert(this.outerHTML);
+		});
 }
 
 function jps_AddOne(pElem, show){
