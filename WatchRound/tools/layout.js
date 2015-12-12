@@ -35,9 +35,9 @@ function jps_AddOne(pElem, show){
 	
 	clone.classList.remove('jps_Template');
 	
-	close.classList.remove('jps_showList');
-	close.classList.remove('jps_hideList');
-	close.classList.add( show ? 'jps_showList' : 'jps_hideList');
+	clone.classList.remove('jps_showList');
+	clone.classList.remove('jps_hideList');
+	clone.classList.add( show ? 'jps_showList' : 'jps_hideList');
 	
 	jps_RenumberChildren(pElem);
 }
