@@ -24,10 +24,14 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', true)});
 }
 
-function jps_AddOne(pElem){
+function jps_AddOne(pElem, show){
 	var template = pElem.getElementsByClassName('jps_Template')[0];
 	var clone = template.cloneNode(true);
 	pElem.appendChild(clone);
 	
 	clone.classList.remove('jps_Template');
+	
+	close.classList.remove('jps_showList');
+	close.classList.remove('jps_hideList');
+	close.classList.add( show ? 'jps_showList' : 'jps_hideList');
 }
