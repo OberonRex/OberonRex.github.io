@@ -25,7 +25,7 @@ function wireUpFramework(){
 }
 
 function jps_RenumberChildren(elem){
-	$(elem).find(["idTemplate"]).each(function(){alert(this.innerHTML)});
+	$(elem).find( '[id_Template]' ).each(function(){alert(this.innerHTML)});
 }
 
 function jps_AddOne(pElem, show){
