@@ -65,7 +65,7 @@ function ImportValues(stg){
 	    		var cnt = parseInt(pair[1]);
 	    		for(var n = 0; n < cnt; n++) jps_AddOne(elem, false);
 	    	} else {
-	    		elem.setAttribute("value", pair[1]);
+	    		elem.value = pair[1];
 	    	}
 	    } else {
 	    }
