@@ -58,7 +58,15 @@ function ImportValues(stg){
 	    var pair = vars[i].split("=");
 	    //myProperties[pair[0]] = pair[1];
 	    
-	    if (document.getElementById(pair[0])){
+	    // can we find an element with the id?
+	    var elem = document.getElementById(pair[0]);
+	    if (elem != NULL){
+	    	if ((elem.tagName == "div") && elem.classList.contains('jps_ListWrapper'){
+	    		int cnt = parseInt(pair[1]);
+	    		for(var n = 0; n < cnt; n++) jps_AddOne(elem, false);
+	    	} else {
+	    		elem.setAttribute("value", pair[1]);
+	    	}
 	    } else {
 	    }
 	    
