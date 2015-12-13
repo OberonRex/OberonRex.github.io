@@ -1,4 +1,12 @@
 
+function EditColorAbs(pPolygon){
+	chosenPolygon = pPolygon;
+	//alert(pPolygon.getAttribute("fill"));
+	selectPolygon(pPolygon.getAttribute("data-hex"));
+	//CallPicker();
+	jps_GoToPage('colorPickerPage');
+}
+
 function selectColor($polygon) {
   var hexValue = $polygon.data('hex');
   var correctedHexValue = $polygon.attr('fill');
