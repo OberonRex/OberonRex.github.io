@@ -134,7 +134,14 @@
 	<script type="text/javascript" src="platforms/jquery.js"></script>
 	<script type="text/javascript" src="tools/layout.js"></script>
 	
+	<script type="text/javascript" src="../colors/colorpicker.js"></script>
+	<script type="text/javascript" src="../colors/color-dict.js"></script>
+	<script type="text/javascript" src="../colors/color-mapping-sunlight.js"></script>
+
+
+	
 	<script type="text/javascript">
+		$( "#page2" ).load( "../colors/colorpicker.html", function(elem){wireUpColorPicker();});
 		wireUpFramework();
 	</script>
 </body>
