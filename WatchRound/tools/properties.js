@@ -62,7 +62,7 @@ function ImportValues(stg){
 	    var elem = document.getElementById(pair[0]);
 	    if (elem != NULL){
 	    	if ((elem.tagName == "div") && elem.classList.contains('jps_ListWrapper')){
-	    		int cnt = parseInt(pair[1]);
+	    		var cnt = parseInt(pair[1]);
 	    		for(var n = 0; n < cnt; n++) jps_AddOne(elem, false);
 	    	} else {
 	    		elem.setAttribute("value", pair[1]);
