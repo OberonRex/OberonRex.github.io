@@ -97,18 +97,24 @@ function wireUpColorPicker() {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
   
-    $('div#jps_MasterDiv').on('click', '.js-btn-colormap', function (event) {
-    var type = $(this).data('colormap');
-    switch (type) {
-      case 'none':
-        applyColorMap(null);
-        break;
-      case 'sunlight':
-        applyColorMap(colorMappingSunlight);
-        break;
-    }
-    selectUrlColor();
+	$('div#jps_MasterDiv').on('click', '.js-btn-colormap', function (event) {
+	var type = $(this).data('colormap');
+	switch (type) {
+	  case 'none':
+	    applyColorMap(null);
+	    break;
+	  case 'sunlight':
+	    applyColorMap(colorMappingSunlight);
+	    break;
+	}
+	selectUrlColor();
+	});
+  
+  $('div#jps_MasterDiv').on('click', '.color-value', function (event) {
+  	EditColorAbs(this);
   });
+
+  
 
   window.onpopstate = function(event) {
     selectUrlColor();
