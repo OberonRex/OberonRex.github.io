@@ -87,7 +87,7 @@ function returnColor(pPolygon){
   //chosenColor = pPolygon.getAttribute("fill");
   chosenPolygon.setAttribute("fill", pPolygon.getAttribute("data-hex"));
   chosenPolygon.setAttribute("data-hex", pPolygon.getAttribute("data-hex"));
-  GoPage1();
+  jps_GoToPage('page1');
 }
 
 function wireUpColorPicker() {
