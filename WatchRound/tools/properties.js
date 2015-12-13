@@ -61,7 +61,7 @@ function ImportValues(stg){
 	    // can we find an element with the id?
 	    var elem = document.getElementById(pair[0]);
 	    if (elem != null){
-	    	if ((elem.tagName == "div") && elem.classList.contains('jps_ListWrapper')){
+	    	if ((elem.tagName == "DIV") && elem.classList.contains('jps_ListWrapper')){
 	    		var cnt = parseInt(pair[1]);
 	    		for(var n = 0; n < cnt; n++) jps_AddOne(elem, false);
 	    	} else {
