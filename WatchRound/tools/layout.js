@@ -25,6 +25,7 @@ function wireUpFramework(){
 }
 
 function jps_RenumberAllChildren(){
+	var xlist = $('.jps_ListWrapper:not(.jps_Template)');
 	$('.jps_ListWrapper:not(.jps_Template)').each(function(){jps_RenumberChildren(this)});
 }
 
