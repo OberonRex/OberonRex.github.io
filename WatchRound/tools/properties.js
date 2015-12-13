@@ -65,7 +65,10 @@ function ImportValues(stg){
 	    		var cnt = parseInt(pair[1]);
 	    		for(var n = 0; n < cnt; n++) jps_AddOne(elem, false);
 	    	} else {
+	    		var b = elem.readonly;
+	    		elem.readonly = false;
 	    		elem.value = pair[1];
+	    		elem.readonly = b;
 	    	}
 	    } else {
 	    }
