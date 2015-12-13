@@ -55,6 +55,4 @@ function jps_AddOne(pElem, show){
 
 function jps_GoToPage(pageID){
 }
-	
-	
-}
+
