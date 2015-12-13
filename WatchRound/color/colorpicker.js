@@ -111,7 +111,7 @@ function wireUpColorPicker() {
 	});
   
   $('div#jps_MasterDiv').on('click', '.color-value', function (event) {
-  	EditColorAbs(this);
+  	EditColor(this);
   });
 
   
@@ -122,3 +122,18 @@ function wireUpColorPicker() {
 
   selectUrlColor();
 };
+
+var chosenPolygon;
+function EditColor(pPolygon){
+	clrPtr = document.getElementById('colorPainter');
+	if (clrPtr.style.display == 'none'){
+		chosenPolygon = pPolygon;
+		selectPolygon(pPolygon.getAttribute("data-hex"));
+		jps_GoToPage('colorPickerPage');
+	} else {
+		srcPolygon = document.getElementById('paintColor');
+	  	pPolygon.setAttribute("fill", srcPolygon.getAttribute("data-hex"));
+	  	pPolygon.setAttribute("data-hex", srcPolygon.getAttribute("data-hex"));		
+	}
+}
+
