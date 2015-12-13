@@ -30,7 +30,7 @@ function jps_RenumberAllChildren(){
 }
 
 function jps_RenumberChildren(elem){
-	var litems = $(elem).children('.jps_ListItem');
+	var litems = $(elem).children('> .jps_ListItem');
 
 	for (var ndx = 0; ndx < litems.length; ndx++)
 		$(litems[ndx]).find( '[idtemplate]' ).each(function(){
