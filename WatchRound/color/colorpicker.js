@@ -97,7 +97,7 @@ function wireUpColorPicker() {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
   
-    $('.js-btn-colormap').on('click', function (event) {
+    $('div#jps_MasterDiv').on('click', '.js-btn-colormap', function (event) {
     var type = $(this).data('colormap');
     switch (type) {
       case 'none':
