@@ -54,7 +54,7 @@ function jps_AddOne(pElem, show){
 }
 
 function jps_GoToPage(pageID){
-	$('#jps_page').each(
+	$('.jps_page').each(
 		function(){
 			this.style.display = this.id == pageID ? "block" : "none";	
 		})
