@@ -52,3 +52,9 @@ function jps_AddOne(pElem, show){
 	//jps_RenumberChildren(pElem);
 	jps_RenumberAllChildren();
 }
+
+function jps_GoToPage(pageID){
+}
+	
+	
+}
