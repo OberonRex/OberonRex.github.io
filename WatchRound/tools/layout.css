@@ -19,3 +19,13 @@
 .jps_2ndColumn {width:100px;float:left;}
 .jps_short1Column {width:185px;float:left;}
 .jps_columnRight(width:1em;float:right;)
+
+.footer {
+   position:fixed;
+   bottom:0px;
+   left:0px;
+   right:0px;
+   //border: 5px solid blue;
+   //width:100%;
+}
+
