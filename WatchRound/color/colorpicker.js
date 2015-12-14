@@ -126,7 +126,7 @@ function wireUpColorPicker() {
 var chosenPolygon;
 function EditColor(pPolygon){
 	clrPtr = document.getElementById('colorPainter');
-	if (clrPtr.style.display != 'block'){
+	if (clrPtr.classList.contains('jps_hideList')){
 		chosenPolygon = pPolygon;
 		selectPolygon(pPolygon.getAttribute("data-hex"));
 		jps_GoToPage('colorPickerPage');
