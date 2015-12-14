@@ -65,7 +65,7 @@ function ImportValues(stg){
 	    		var cnt = parseInt(pair[1]);
 	    		for(var n = 0; n < cnt; n++) jps_AddOne(elem, false);
 	    	} else {
-	    		if ((elem.tagName == "SVG")) SetColor(pair[0], pair[1]);
+	    		if ((elem.tagName == "polygon")) SetColor(pair[0], pair[1]);
 	    		else elem.value = pair[1];
 	    	}
 	    } else {
