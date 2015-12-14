@@ -80,3 +80,10 @@ function ImportValues(stg){
 	//	}
 	//}
 } 
+
+function SetColor(polyID, colorKey){
+	document.getElementById(polyID).setAttribute("fill", pebble_to_hex(colorKey));
+	document.getElementById(polyID).setAttribute("data-hex", pebble_to_hex(colorKey));
+}
+
+
