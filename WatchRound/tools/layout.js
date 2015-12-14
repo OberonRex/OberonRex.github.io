@@ -25,12 +25,11 @@ function wireUpFramework(){
 }
 
 function jps_RenumberAllChildren(){
-	var xlist = $('.jps_ListWrapper:not(.jps_Template)');
 	$('.jps_ListWrapper:not(.jps_Template)').each(function(){jps_RenumberChildren(this)});
 }
 
 function jps_RenumberChildren(elem){
-	var litems = $(elem).children('> .jps_ListItem');
+	var litems = $(elem).children(''.jps_ListItem:not(.jps_Template)');
 
 	for (var ndx = 0; ndx < litems.length; ndx++)
 		$(litems[ndx]).find( '[idtemplate]' ).each(function(){
