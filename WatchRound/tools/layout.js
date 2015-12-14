@@ -29,7 +29,7 @@ function jps_RenumberAllChildren(){
 }
 
 function jps_RenumberChildren(elem){
-	var litems = $(elem).children('.jps_ListItem:not(.jps_Template)');
+	var litems = $(elem).children('[idtemplate]:not(.jps_Template)');
 
 	for (var ndx = 0; ndx < litems.length; ndx++)
 		$(litems[ndx]).find( '[idtemplate]' ).each(function(){
