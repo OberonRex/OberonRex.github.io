@@ -33,7 +33,7 @@ function wireUpFramework(){
 	});
 	
 	$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch', function(){EditColor(this);});
-	
+
 }
 
 function jps_RenumberAllChildren(){
