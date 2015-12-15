@@ -64,6 +64,8 @@ function ImportValues(stg){
 	    	if ((elem.tagName == "DIV") && elem.classList.contains('jps_ListWrapper')){
 	    		var cnt = parseInt(pair[1]);
 	    		for(var n = 0; n < cnt; n++) jps_AddOne(elem, false);
+	    		elem.value = cnt;
+	    		jps_RenumberChildren(elem);
 	    	} else {
 	    		if ((elem.tagName == "polygon")) SetColor(pair[0], pair[1]);
 	    		else elem.value = pair[1];
