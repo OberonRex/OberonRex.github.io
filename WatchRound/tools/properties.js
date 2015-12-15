@@ -1,4 +1,3 @@
-//var kcontainer;
 var return_to = "pebblejs://close#";
 function ImportInitialValues(){
 	var query = window.location.search.substring(1);
@@ -10,8 +9,6 @@ function ImportInitialValues(){
 	    properties[pair[0]] = pair[1];
 	}
 	
-	//kcontainer = properties.KEY_CONTAINER;
-	
 	ImportValues(properties.KEY_CONTAINER);
 	
 	if ("return_to" in properties) return_to = decodeURIComponent(properties.return_to);
@@ -20,11 +17,9 @@ function ImportInitialValues(){
 function Decode(stg){
 	stg = stg.replace(/Q/g, '=');
 	stg = stg.replace(/A/g, '&');
-	//stg = stg.replace(/C/g, ':');
-	
+
 	stg = stg.replace(/%51/g, 'Q');
 	stg = stg.replace(/%41/g, 'A');
-	//stg = stg.replace(/%43/g, 'C');
 	stg = stg.replace(/%25/g, '%');
 	
 	return stg;	
@@ -34,25 +29,19 @@ function Encode(stg){
 	stg = stg.replace(/%/g, '%25');
 	stg = stg.replace(/Q/g, '%51');
 	stg = stg.replace(/A/g, '%41');
-	//stg = stg.replace(/C/g, '%43');
-	
+
 	stg = stg.replace(/=/g, 'Q');
 	stg = stg.replace(/&/g, 'A');
-	//stg = stg.replace(/:/g, 'C');
-	
+
 	return stg;
 	
 }
 
 var myProperties;
-//var MyUUID;
-//var DecodedPayload;
 function ImportValues(stg){
-	//var DecodedPayload = Decode(stg);
-
 	var vars = Decode(stg).split("&");
 	
-	myProperties = {};
+	//myProperties = {};
 
 	for (var i=0; i<vars.length; i++) {
 	    var pair = vars[i].split("=");
@@ -75,14 +64,18 @@ function ImportValues(stg){
 	    
 	    //alert(pair[0] + "=" + pair[1]);
 	}
-	
-	//for (var key in myProperties){
-	//	var pair = myProperties[key].split(":");
-	//	if (pair[1] == "n"){
-	//		alert("we want to create " + pair[0] + " children for " + key);
-	//	}
-	//}
 } 
+
+function jps_PropertyString(){
+	var stg = "";
+	
+	$('.dynamic').each(function(){ stg += (stg == "" ? "" : "&") + this.id + '=' + this.value });
+	
+	$('.jps_property').each(function(){
+		if (this.tagName == 'polygon') stg += (stg == "" ? "" : "&") + this.id + '=' + pebbleColor(this.id);
+		else stg += (stg == "" ? "" : "&") + this.id + '=' + this.value;
+	});
+}
 
 function SetColor(polyID, colorKey){
 	document.getElementById(polyID).setAttribute("fill", pebble_to_hex(colorKey));
