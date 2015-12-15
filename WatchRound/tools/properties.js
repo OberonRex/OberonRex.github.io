@@ -66,14 +66,19 @@ function ImportValues(stg){
 	}
 } 
 
+function maybeAmpersand(stg){
+	return stg == "" ? "" : "&";
+}
+
 function jps_PropertyString(){
 	var stg = "";
 	
-	$('.dynamic').each(function(){ stg += (stg == "" ? "" : "&") + this.id + '=' + this.value });
+	$('.dynamic').each(function(){ stg += maybeAmpersand(stg) + this.id + '=' + this.value });
 	
 	$('.jps_property').each(function(){
-		if (this.tagName == 'polygon') stg += (stg == "" ? "" : "&") + this.id + '=' + pebbleColor(this.id);
-		else stg += (stg == "" ? "" : "&") + this.id + '=' + this.value;
+		stg += maybeAmpersand(stg) + this.id + "=" + (this.tagname == 'polygon') ? pebbleColor(this.id) : this.value;
+		//if (this.tagName == 'polygon') stg += maybeAmpersand(stg) + this.id + '=' + pebbleColor(this.id);
+		//else stg += maybeAmpersand(stg) + this.id + '=' + this.value;
 	});
 }
 
