@@ -41,12 +41,9 @@ var myProperties;
 function ImportValues(stg){
 	var vars = Decode(stg).split("&");
 	
-	//myProperties = {};
-
 	for (var i=0; i<vars.length; i++) {
 	    var pair = vars[i].split("=");
-	    //myProperties[pair[0]] = pair[1];
-	    
+
 	    // can we find an element with the id?
 	    var elem = document.getElementById(pair[0]);
 	    if (elem != null){
@@ -60,9 +57,9 @@ function ImportValues(stg){
 	    		else elem.value = pair[1];
 	    	}
 	    } else {
+	    	//alert(pair[0] + "=" + pair[1]);
 	    }
 	    
-	    //alert(pair[0] + "=" + pair[1]);
 	}
 } 
 
@@ -86,5 +83,3 @@ function SetColor(polyID, colorKey){
 	document.getElementById(polyID).setAttribute("fill", pebble_to_hex(colorKey));
 	document.getElementById(polyID).setAttribute("data-hex", pebble_to_hex(colorKey));
 }
-
-
