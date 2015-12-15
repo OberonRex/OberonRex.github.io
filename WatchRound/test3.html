@@ -17,15 +17,8 @@
 				<div id="colorPainter" class="jps_ListItem">
 					<div class="jps_longColumn">Paint With: </div>
 					<svg  id="color-value" version="1.1"  width=20 height=20>
-						<polygon id="paintColor" stroke="#000000" stroke-width="1" fill="#FFFFFF" class="color-picker jps_color-picker"
-							onclick="EditColorAbs(this);"
-							points="
-								8.85,	0.35
-								17.15, 	5.15
-								17.15,	14.7
-								8.85,	19.5
-								0.6,	14.7
-								0.6,	5.15 	"/>
+						<polygon jps_ColorSwatch class="color-picker jps_color-picker"
+							onclick="EditColorAbs(this);"/>
 					</svg>
 				</div>
 				
@@ -92,16 +85,9 @@
 				<div class="jps_ListItem">
 					<div class="jps_stdColumn">Stroke Color: </div>
 		    		<svg version="1.1"  width=20 height=20  >
-						<polygon stroke="#000000" stroke-width="1" fill="#FFFFFF" class="color-value jps_property"
+						<polygon jps_ColorSwatch class="color-value jps_property"
 							onclick="EditColor(this);"
-							idtemplate="c"
-							points="
-							8.85,	0.35
-							17.15, 	5.15
-							17.15,	14.7
-							8.85,	19.5
-							0.6,	14.7
-							0.6,	5.15 	"/>
+							idtemplate="c" />
 			  		</svg>				
 				</div>
 				
@@ -133,15 +119,8 @@
 			<div class="jps_ListItem">
 				<div class="jps_ListItem jps_longColumn">Background Color: </div>
 	    		<svg version="1.1" width=20 height=20  >
-				<polygon stroke="#000000" stroke-width="1" fill="#FFFFFF" class="color-value"
-					onclick="EditColor(this);"
-					points="
-						8.85,	0.35
-						17.15, 	5.15
-						17.15,	14.7
-						8.85,	19.5
-						0.6,	14.7
-						0.6,	5.15 	"/>
+				<polygon jps_ColorSwatch class="color-value"
+					onclick="EditColor(this);" />
 	  			</svg>				
 			</div>
 			
