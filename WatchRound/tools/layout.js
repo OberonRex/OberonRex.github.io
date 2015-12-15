@@ -33,7 +33,8 @@ function jps_RenumberChildren(elem){
 
 	for (var ndx = 0; ndx < litems.length; ndx++)
 		$(litems[ndx]).find( '[idtemplate]' ).each(function(){
-			var newID = this.getAttribute("idtemplate").replace("#", ndx);
+			//var newID = this.getAttribute("idtemplate").replace("#", ndx);
+			var newID = elem.id + ndx + this.getAttribute("idtemplate");
 			this.setAttribute("id", newID );
 		});
 }
