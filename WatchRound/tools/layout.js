@@ -50,7 +50,7 @@ function jps_AddOne(pElem, show){
 	clone.classList.add( show ? 'jps_showList' : 'jps_hideList');
 	
 	//jps_RenumberChildren(pElem);
-	jps_RenumberAllChildren();
+	//jps_RenumberAllChildren();
 }
 
 function jps_GoToPage(pageID){
