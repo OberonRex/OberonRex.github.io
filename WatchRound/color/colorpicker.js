@@ -1,3 +1,16 @@
+var chosenPolygon;
+function EditColor(pPolygon){
+	clrPtr = document.getElementById('PaintWith');
+	if (clrPtr.classList.contains('jps_hideList')){
+		chosenPolygon = pPolygon;
+		selectPolygon(pPolygon.getAttribute("data-hex"));
+		jps_GoToPage('colorPickerPage');
+	} else {
+		srcPolygon = document.getElementById('paintColor');
+	  	pPolygon.setAttribute("fill", srcPolygon.getAttribute("data-hex"));
+	  	pPolygon.setAttribute("data-hex", srcPolygon.getAttribute("data-hex"));		
+	}
+}
 
 function EditColorAbs(pPolygon){
 	chosenPolygon = pPolygon;
@@ -122,18 +135,3 @@ function wireUpColorPicker() {
 
   selectUrlColor();
 };
-
-var chosenPolygon;
-function EditColor(pPolygon){
-	clrPtr = document.getElementById('PaintWith');
-	if (clrPtr.classList.contains('jps_hideList')){
-		chosenPolygon = pPolygon;
-		selectPolygon(pPolygon.getAttribute("data-hex"));
-		jps_GoToPage('colorPickerPage');
-	} else {
-		srcPolygon = document.getElementById('paintColor');
-	  	pPolygon.setAttribute("fill", srcPolygon.getAttribute("data-hex"));
-	  	pPolygon.setAttribute("data-hex", srcPolygon.getAttribute("data-hex"));		
-	}
-}
-
