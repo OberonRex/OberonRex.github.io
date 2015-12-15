@@ -23,7 +23,7 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly')});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', true)});
 	
-	$('.jps_ColorSwatch').each(function(){
+	$('.jps_ColorSwatch','jps_ColorPicker').each(function(){
 		this.setAttribute('points', '8.85, 0.35 17.15, 5.15 17.15, 14.7 8.85, 19.5 0.6,	14.7 0.6, 5.15');
 		this.setAttribute('stroke', '#000000');
 		this.setAttribute('stroke-width', '1');
@@ -32,7 +32,7 @@ function wireUpFramework(){
 		this.classList.add('jps_property');
 	});
 	
-	$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch:not(.jps_ColorPicker)', function(){EditColor(this);});
+	$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch', function(){EditColor(this);});
 	
 }
 
