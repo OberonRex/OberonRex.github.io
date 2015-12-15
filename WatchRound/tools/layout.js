@@ -32,7 +32,7 @@ function wireUpFramework(){
 		this.classList.add('jps_property');
 	});
 	
-	//$('[jps_ColorSwatch],not([jps_ColorPicker').on('click')
+	$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch,not(.jps_ColorPicker)', function(){EditColor(this);});
 	
 }
 
