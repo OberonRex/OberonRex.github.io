@@ -28,8 +28,8 @@ function wireUpFramework(){
 		this.setAttribute('stroke', '#000000');
 		this.setAttribute('stroke-width', '1');
 		this.setAttribute('fill', '#FFFFFF');
-		this.classList.Add('color-value');
-		this.classList.Add('jps_property');
+		this.classList.add('color-value');
+		this.classList.add('jps_property');
 	});
 	
 	//$('[jps_ColorSwatch],not([jps_ColorPicker').on('click')
