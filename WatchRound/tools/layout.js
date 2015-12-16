@@ -29,7 +29,7 @@ function wireUpFramework(){
 		this.setAttribute('stroke-width', '1');
 		this.setAttribute('fill', '#FFFFFF');
 		this.classList.add('color-value');
-		if (!this.classList.contains('jps_ColorPicker') this.classList.add('jps_property');
+		if (!this.classList.contains('jps_ColorPicker')) this.classList.add('jps_property');
 	});
 	
 	$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch', function(){EditColor(this);});
