@@ -75,7 +75,7 @@ function maybeAmpersand(stg){
 function jps_PropertyString(){
 	var stg = "";
 	
-	$('.dynamic').each(function(){ stg += maybeAmpersand(stg) + this.id + '=' + this.value });
+	$('.dynamic[id]').each(function(){ stg += maybeAmpersand(stg) + this.id + '=' + this.value });
 	
 	$('.jps_property[id]').each(function(){
 		stg += maybeAmpersand(stg) + this.id + "=" + (this.tagName == 'polygon' ? pebbleColor(this.id) : this.value);
