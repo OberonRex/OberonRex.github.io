@@ -82,6 +82,8 @@ function jps_PropertyString(){
 		//if (this.tagName == 'polygon') stg += maybeAmpersand(stg) + this.id + '=' + pebbleColor(this.id);
 		//else stg += maybeAmpersand(stg) + this.id + '=' + this.value;
 	});
+	
+	return stg;
 }
 
 function SetColor(polyID, colorKey){
