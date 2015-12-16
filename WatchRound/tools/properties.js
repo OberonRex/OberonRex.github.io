@@ -14,7 +14,7 @@ function ImportInitialValues(){
 	if ("return_to" in properties) return_to = decodeURIComponent(properties.return_to);
 }
 
-function ReturnValues(){
+function ReturnProperties(){
 	alert("returning: " + return_to + Encode(jps_PropertyString()));
 	location.href = return_to + Encode(jps_PropertyString());
 }
