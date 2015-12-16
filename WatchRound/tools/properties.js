@@ -78,7 +78,7 @@ function jps_PropertyString(){
 	$('.dynamic').each(function(){ stg += maybeAmpersand(stg) + this.id + '=' + this.value });
 	
 	$('.jps_property[id]').each(function(){
-		stg += maybeAmpersand(stg) + this.id + "=" + (this.tagName == 'polygon') ? pebbleColor(this.id) : this.value;
+		stg += maybeAmpersand(stg) + this.id + "=" + (this.tagName == 'polygon' ? pebbleColor(this.id) : this.value);
 		//if (this.tagName == 'polygon') stg += maybeAmpersand(stg) + this.id + '=' + pebbleColor(this.id);
 		//else stg += maybeAmpersand(stg) + this.id + '=' + this.value;
 	});
