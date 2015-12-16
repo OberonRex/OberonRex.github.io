@@ -14,6 +14,11 @@ function ImportInitialValues(){
 	if ("return_to" in properties) return_to = decodeURIComponent(properties.return_to);
 }
 
+function ReturnValues(){
+	alert("returning: " + return_to + Encode(jps_PropertyString()));
+	location.href = return_to + Encode(jps_PropertyString());
+}
+
 function Decode(stg){
 	stg = stg.replace(/Q/g, '=');
 	stg = stg.replace(/A/g, '&');
