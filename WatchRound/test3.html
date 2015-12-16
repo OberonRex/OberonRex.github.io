@@ -9,118 +9,132 @@
 	<div id="jps_MasterDiv" class="jps_stdBox">
 		<div class="jps_page" id="page1" style="display:block">
 	
-		<div><img src="images/WatchFace.png" height="50" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.34</div>
-		<br>
-		
-		<div id="PaintWith" class="jps_ListWrapper jps_hideList">
-				<span class="jps_ListHeader">Color Painter</span>
-				<div class="jps_ListItem">
-					<div class="jps_longColumn">Paint With: </div>
-					<svg version="1.1"  width=20 height=20>
-						<polygon id="paintColor" class="jps_ColorPicker" onclick="EditColorAbs(this);"/>
-					</svg>
+			<div><img src="images/WatchFace.png" height="50" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.34</div>
+			<br>
+			
+			<div id="PaintWith" class="jps_ListWrapper jps_hideList">
+					<span class="jps_ListHeader">Color Painter</span>
+					<div class="jps_ListItem">
+						<div class="jps_longColumn">Paint With: </div>
+						<svg version="1.1"  width=20 height=20>
+							<polygon id="paintColor" class="jps_ColorPicker" onclick="EditColorAbs(this);"/>
+						</svg>
+					</div>
+					
+					<div class="jps_clearboth"></div>
+				
+			</div>
+			
+			<div class="jps_ListWrapper jps_hideList dynamic">
+				<span class="jps_ListHeader">Tick Marks</span><span class="jps_AddButton">+</span>
+			</div>
+			
+			<div class="jps_clearboth"></div>
+			
+			<!-- HANDS -->
+			<div class="jps_ListWrapper jps_hideList">
+				<span class="jps_ListHeader">Hands</span>
+			
+				<!-- Hour Hand Parts -->
+				<div class="jps_ListItem jps_ListWrapper jps_hideList dynamic">
+					<span class="jps_ListHeader">Hour Hand Parts</span><span class="jps_AddButton">+</span>
+					<div class="jps_clearboth"></div>
 				</div>
 				
-				<div class="jps_clearboth"></div>
-			
-		</div>
-		
-		<div class="jps_ListWrapper jps_hideList dynamic">
-			<span class="jps_ListHeader">Tick Marks</span><span class="jps_AddButton">+</span>
-		</div>
-		
-		<div class="jps_clearboth"></div>
-		
-		<!-- HANDS -->
-		<div class="jps_ListWrapper jps_hideList">
-			<span class="jps_ListHeader">Hands</span>
-		
-			<!-- Hour Hand Parts -->
-			<div class="jps_ListItem jps_ListWrapper jps_hideList dynamic">
-				<span class="jps_ListHeader">Hour Hand Parts</span><span class="jps_AddButton">+</span>
-				<div class="jps_clearboth"></div>
+				<!-- Minute Hand Parts -->
+				<div class="jps_ListItem jps_ListWrapper jps_hideList dynamic">
+					<span class="jps_ListHeader">Minute Hand Parts</span><span class="jps_AddButton">+</span>
+					<div class="jps_clearboth"></div>
+				</div>
+				
+				<!-- Center Circle Properties -->
+				<div class="jps_ListItem jps_ListWrapper jps_hideList">
+					<span class="jps_ListHeader">Center Circles</span>
+					<div class="jps_clearboth"></div>
+				</div>
 			</div>
 			
-			<!-- Minute Hand Parts -->
-			<div class="jps_ListItem jps_ListWrapper jps_hideList dynamic">
-				<span class="jps_ListHeader">Minute Hand Parts</span><span class="jps_AddButton">+</span>
-				<div class="jps_clearboth"></div>
-			</div>
-			
-			<!-- Center Circle Properties -->
-			<div class="jps_ListItem jps_ListWrapper jps_hideList">
-				<span class="jps_ListHeader">Center Circles</span>
-				<div class="jps_clearboth"></div>
-			</div>
-		</div>
-		
-		<div class="jps_clearboth"></div>
-		
-		<!-- Windows -->
-		<div class="jps_ListWrapper jps_hideList dynamic">
-			<span class="jps_ListHeader">Windows</span><span class="jps_AddButton">+</span>
 			<div class="jps_clearboth"></div>
-		</div>
-
-		<div class="jps_clearboth"></div>
-		
-		<!-- Outer Circles -->
-		<div id="o" class="jps_ListWrapper jps_hideList dynamic">
-			<span class="jps_ListHeader">Outer Circles</span><span class="jps_AddButton">+</span>
+			
+			<!-- Windows -->
+			<div class="jps_ListWrapper jps_hideList dynamic">
+				<span class="jps_ListHeader">Windows</span><span class="jps_AddButton">+</span>
+				<div class="jps_clearboth"></div>
+			</div>
 	
-			<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
-				<span class="jps_ListHeader">Outer Circle</span><span class="jps_RemoveButton">-</span>
-				
-				<div class="jps_ListItem">
-					<div class="jps_stdColumn">radius: </div> 
-					<input class="jps_2ndColumn jps_Text jps_property" type="number" readonly=true idtemplate="r" value="50">
-				</div>
-				
-				<div class="jps_ListItem">
-					<div class="jps_stdColumn">Stroke Width: </div> 
-					<input class="jps_2ndColumn jps_Text jps_property" type="number" readonly=true value="3" idtemplate="w">
-				</div>
-				
-				<div class="jps_ListItem">
-					<div class="jps_stdColumn">Stroke Color: </div>
-					<svg version="1.1"  width=20 height=20  >
-						<polygon class="jps_property jps_ColorSwatch" idtemplate="c" />
-					</svg>				
-				</div>
-				
-				<div class="jps_clearboth"></div>
-			</div>
-			
 			<div class="jps_clearboth"></div>
-		</div>
+			
+			<!-- Outer Circles -->
+			<div id="o" class="jps_ListWrapper jps_hideList dynamic">
+				<span class="jps_ListHeader">Outer Circles</span><span class="jps_AddButton">+</span>
 		
-		<div class="jps_clearboth"></div>
-
-		<!-- Misc -->
-		<div class="jps_ListWrapper jps_hideList">
-			<span class="jps_ListHeader">Misc</span>
-
-			<!-- Battery Bar -->
-			<div class="jps_ListItem jps_ListWrapper jps_hideList">
-				<span class="jps_ListHeader">Battery Bar</span>
+				<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
+					<span class="jps_ListHeader">Outer Circle</span><span class="jps_RemoveButton">-</span>
+					
+					<div class="jps_ListItem">
+						<div class="jps_stdColumn">radius: </div> 
+						<input class="jps_2ndColumn jps_Text jps_property" type="number" readonly=true idtemplate="r" value="50">
+					</div>
+					
+					<div class="jps_ListItem">
+						<div class="jps_stdColumn">Stroke Width: </div> 
+						<input class="jps_2ndColumn jps_Text jps_property" type="number" readonly=true value="3" idtemplate="w">
+					</div>
+					
+					<div class="jps_ListItem">
+						<div class="jps_stdColumn">Stroke Color: </div>
+						<svg version="1.1"  width=20 height=20  >
+							<polygon class="jps_property jps_ColorSwatch" idtemplate="c" />
+						</svg>				
+					</div>
+					
+					<div class="jps_clearboth"></div>
+				</div>
+				
 				<div class="jps_clearboth"></div>
-			</div>
-
-			<!-- Weather -->
-			<div class="jps_ListItem jps_ListWrapper jps_hideList">
-				<span class="jps_ListHeader">Weather</span>
-				<div class="jps_clearboth"></div>
-			</div>
-			
-			<!-- Background Color -->
-			<div class="jps_ListItem">
-				<div class="jps_ListItem jps_longColumn">Background Color: </div>
-		    		<svg version="1.1" width=20 height=20  >
-					<polygon class="jps_ColorSwatch jps_property" />
-		  		</svg>				
 			</div>
 			
 			<div class="jps_clearboth"></div>
+	
+			<!-- Misc -->
+			<div class="jps_ListWrapper jps_hideList">
+				<span class="jps_ListHeader">Misc</span>
+	
+				<!-- Battery Bar -->
+				<div class="jps_ListItem jps_ListWrapper jps_hideList">
+					<span class="jps_ListHeader">Battery Bar</span>
+					<div class="jps_clearboth"></div>
+				</div>
+	
+				<!-- Weather -->
+				<div class="jps_ListItem jps_ListWrapper jps_hideList">
+					<span class="jps_ListHeader">Weather</span>
+					<div class="jps_clearboth"></div>
+				</div>
+				
+				<!-- Background Color -->
+				<div class="jps_ListItem">
+					<div class="jps_ListItem jps_longColumn">Background Color: </div>
+			    		<svg version="1.1" width=20 height=20  >
+						<polygon class="jps_ColorSwatch jps_property" />
+			  		</svg>				
+				</div>
+				
+				<div class="jps_clearboth"></div>
+				
+			</div>
+			
+			<br><br>
+			<div class="jps_stdBox"
+				<table width="100%">
+					<tr>
+						<td onclick="ImportInitialValues()" class="mButton" border=1 width=50% >Reset</td>
+						<td onclick="allDone()" class="mButton" width=50%>Apply</td>
+					</tr>	
+				</table>
+				<br><br>
+			</div>
+			
 			
 		</div>
 
