@@ -20,6 +20,16 @@ function EditColorAbs(pPolygon){
 	jps_GoToPage('colorPickerPage');
 }
 
+function pebbleColor(polyId){
+	try{
+		return Number(color_picker_colors[document.getElementById(polyId).getAttribute("data-hex")].binary)
+	}
+	catch (e){
+		alert("color failed: " + polyId + " " + document.getElementById(polyId).getAttribute("data-hex"));
+		return 255;
+	}
+}
+
 function selectColor($polygon) {
   var hexValue = $polygon.data('hex');
   var correctedHexValue = $polygon.attr('fill');
