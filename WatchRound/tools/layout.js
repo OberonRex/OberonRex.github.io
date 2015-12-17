@@ -52,6 +52,8 @@ function setupCustomElements(){
 }
 
 function wireUpFramework(){
+	setupCustomElements();
+	
 	var boxWidth = screen.width;
 	if (boxWidth > 480) boxWidth = 360; else boxWidth = Math.min(screen.width, 480);
 	boxWidth -= 20;
