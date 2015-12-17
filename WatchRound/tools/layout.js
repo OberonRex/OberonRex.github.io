@@ -88,6 +88,42 @@ function setupCustomElements(){
 			
 		});
 
+		$('j-selectorProperty').each(function(){
+			var cInner = this.innerHTML;
+			this.classList.add('jps_ListItem');
+			
+			var cDiv = document.createElement('div');
+			cDiv.innerHTML = cInner;
+			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+
+			var cSel = document.createElement('selector');
+			cSel.classList.add('jps_property');
+			cSel.classList.add('jps_ColorSwatch');
+			if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
+			if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+
+			var opts = this.getAttribute('options').split(',');
+			for (var n = 0; n < opts.length; n++)
+				{
+					var opt = document.createElement("option");
+					opt.value = n;
+					opt.innerHTML = opts[n];
+					cSel.appendChild(opt);
+				}
+			var cBoth = document.createElement('div');
+			cBoth.classList.add('jps_clearboth');
+				
+			this.removeAttribute('value');
+			this.removeAttribute('id');
+			this.removeAttribute('idtemplate');
+			this.innerHTML = "";
+			
+			this.appendChild(cDiv);
+			this.appendChild(cSel);
+			this.appendChild(cBoth);
+				
+		});
+
 }
 
 function wireUpFramework(){
