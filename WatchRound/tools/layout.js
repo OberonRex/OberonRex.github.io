@@ -45,8 +45,8 @@ function setupCustomElements(){
 			this.removeAttribute('idtemplate');
 			this.innerHTML = "";
 			
-			cDiv.appendChild(cInput);
 			this.appendChild(cDiv);
+			this.appendChild(cInput);
 			
 		});
 }
