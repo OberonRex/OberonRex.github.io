@@ -30,6 +30,9 @@ function setupCustomElements(){
 			cDiv.innerHTML = cInner;
 			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 			
+			var cBoth = document.createElement('div');
+			cBoth.classList.add('jps_clearboth');
+			
 			var cInput = document.createElement('input');
 			cInput.classList.add('jps_property');
 			cInput.classList.add('jps_2ndColumn');
@@ -47,6 +50,7 @@ function setupCustomElements(){
 			
 			this.appendChild(cDiv);
 			this.appendChild(cInput);
+			this.appendChild(cBoth);
 			
 		});
 }
