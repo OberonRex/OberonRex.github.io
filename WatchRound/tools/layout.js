@@ -9,6 +9,48 @@ function jps_toggleShowList(wrapper){
 	}
 }
 
+function setupCustomElements(){
+		document.registerElement('j-intProperty', {
+			prototype: Object.create(HTMLDivElement.prototype)});
+
+		document.registerElement('j-stgProperty', {
+			prototype: Object.create(HTMLDivElement.prototype)});
+
+		document.registerElement('j-colorProperty', {
+			prototype: Object.create(HTMLDivElement.prototype)});
+			
+		document.registerElement('j-selectorProperty', {
+			prototype: Object.create(HTMLDivElement.prototype)});
+			
+		$('j-intProperty,j-stgProperty').each(function(){
+			var cInner = this.innerHTML;
+			this.classList.add('jps_ListItem');
+			
+			var cDiv = document.createElement('div');
+			cDiv.innerHTML = cInner;
+			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+			
+			var cInput = document.createElement('input');
+			cInput.classList.add('jps_property');
+			cInput.classList.add('jps_2ndColumn');
+			cInput.classList.add('jps_Text');
+			cInput.setAttribute('readonly', 'true');
+			cInput.setAttribute('type', this.tagName == 'jps_intProperty' ? 'number' : 'text');
+			if (this.hasAttribute('value')) cInput.setAttribute('value', this.getAttribute('value'));
+			if (this.hasAttribute('id')) cInput.setAttribute('id', this.getAttribute('id'));
+			if (this.hasAttribute('idtemplate')) cInput.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+			
+			this.removeAttribute('value');
+			this.removeAttribute('id');
+			this.removeAttribute('idtemplate');
+			this.innerHTML = "";
+			
+			cDiv.appendChild(cInput);
+			this.appendChild(cDiv);
+			
+		});
+}
+
 function wireUpFramework(){
 	var boxWidth = screen.width;
 	if (boxWidth > 480) boxWidth = 360; else boxWidth = Math.min(screen.width, 480);
