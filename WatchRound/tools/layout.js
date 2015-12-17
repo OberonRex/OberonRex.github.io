@@ -38,7 +38,7 @@ function setupCustomElements(){
 			cInput.classList.add('jps_2ndColumn');
 			cInput.classList.add('jps_Text');
 			cInput.setAttribute('readonly', 'true');
-			cInput.setAttribute('type', this.tagName == 'jps_intProperty' ? 'number' : 'text');
+			cInput.setAttribute('type', this.tagName == 'J-INTPROPERTY' ? 'number' : 'text');
 			if (this.hasAttribute('value')) cInput.setAttribute('value', this.getAttribute('value'));
 			if (this.hasAttribute('id')) cInput.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cInput.setAttribute('idtemplate', this.getAttribute('idtemplate'));
