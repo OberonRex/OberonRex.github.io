@@ -53,6 +53,41 @@ function setupCustomElements(){
 			this.appendChild(cBoth);
 			
 		});
+		
+		$('j-intProperty,j-stgProperty').each(function(){
+			var cInner = this.innerHTML;
+			this.classList.add('jps_ListItem');
+			
+			var cDiv = document.createElement('div');
+			cDiv.innerHTML = cInner;
+			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+			
+			var cSvg = document.createElement('svg');
+			cSvg.setAttribute('version', '1.1');
+			cSvg.setAttribute('width', 20);
+			cSvg.setAttribute('height', 20);
+			
+			var cPoly = document.createElement('polygon');
+			cPoly.classList.add('jps_property');
+			cPoly.classList.add('jps_ColorSwatch');
+			if (this.hasAttribute('id')) cPoly.setAttribute('id', this.getAttribute('id'));
+			if (this.hasAttribute('idtemplate')) cPoly.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+			
+			var cBoth = document.createElement('div');
+			cBoth.classList.add('jps_clearboth');
+			
+			this.removeAttribute('value');
+			this.removeAttribute('id');
+			this.removeAttribute('idtemplate');
+			this.innerHTML = "";
+			
+			this.appendChild(cDiv);
+			this.appendChild(cSvg);
+			cSvg.appendChild(cPoly);
+			this.appendChild(cBoth);
+			
+		});
+
 }
 
 function wireUpFramework(){
