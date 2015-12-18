@@ -54,7 +54,7 @@ function setupCustomElements(){
 			
 		});
 		
-		$('j-intProperty,j-stgProperty').each(function(){
+		$('j-colorProperty').each(function(){
 			var cInner = this.innerHTML;
 			this.classList.add('jps_ListItem');
 			
