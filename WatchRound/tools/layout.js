@@ -105,6 +105,10 @@ function setupCustomElements(){
 			cSel.classList.add('jps_ColorSwatch');
 			if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+			$(cSel).on('change', function() {
+				if (this.selectedIndex == 0) document.getElementById('wk').style.display = "none";
+				else document.getElementById('wk').style.display = "block";
+			});
 
 			var opts = this.getAttribute('options').split(',');
 			for (var n = 0; n < opts.length; n++)
