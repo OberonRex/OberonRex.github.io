@@ -67,10 +67,11 @@ function setupCustomElements(){
 			cSvg.setAttribute('width', 20);
 			cSvg.setAttribute('height', 20);*/
 			var cSvg = document.getElementById("svgMaster").cloneNode(true);
+			cSvg.removeAttribute('id');
 			
-			var cPoly = document.createElement('polygon');
-			cPoly.classList.add('jps_property');
-			cPoly.classList.add('jps_ColorSwatch');
+			var cPoly = cSvg.childNodes[0];
+			//cPoly.classList.add('jps_property');
+			//cPoly.classList.add('jps_ColorSwatch');
 			if (this.hasAttribute('id')) cPoly.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cPoly.setAttribute('idtemplate', this.getAttribute('idtemplate'));
 
@@ -85,7 +86,7 @@ function setupCustomElements(){
 			this.appendChild(cDiv);
 			//this.appendChild(document.getElementById('xxx').cloneNode(true));
 			this.appendChild(cSvg);
-			cSvg.appendChild(cPoly);
+			//cSvg.appendChild(cPoly);
 			this.appendChild(cBoth);
 			
 		});
