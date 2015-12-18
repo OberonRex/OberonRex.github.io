@@ -92,7 +92,7 @@ function setupCustomElements(){
 			
 		});
 
-		$('j-selectorProperty').each(function(){
+		$('j-selectProperty').each(function(){
 			var cInner = this.innerHTML;
 			this.classList.add('jps_ListItem');
 			
