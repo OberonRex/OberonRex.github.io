@@ -71,23 +71,10 @@
 				<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
 					<span class="jps_ListHeader">Outer Circle</span><span class="jps_RemoveButton">-</span>
 					
-					<div class="jps_ListItem">
-						<div class="jps_stdColumn">radius: </div> 
-						<input class="jps_2ndColumn jps_Text jps_property" type="number" readonly=true idtemplate="r" value="50">
-					</div>
-					
-					<div class="jps_ListItem">
-						<div class="jps_stdColumn">stroke width: </div> 
-						<input class="jps_2ndColumn jps_Text jps_property" type="number" readonly=true idtemplate="2" value="3">
-					</div>
-					
-					<div class="jps_ListItem">
-						<div class="jps_stdColumn">Stroke Color: </div>
-						<svg version="1.1"  width=20 height=20  >
-							<polygon class="jps_property jps_ColorSwatch" idtemplate="c" />
-						</svg>				
-					</div>
-					
+						<j-intProperty idtemplate="r" value="50">radius: </j-intProperty>
+						<j-intProperty idtemplate="w" value="3">Stroke width: </j-intProperty>
+						<j-colorProperty idtemplate="c">Stroke color: </j-colorProperty>
+
 					<div class="jps_clearboth"></div>
 				</div>
 				
