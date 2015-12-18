@@ -102,7 +102,6 @@ function setupCustomElements(){
 
 			var cSel = document.createElement('selector');
 			cSel.classList.add('jps_property');
-			cSel.classList.add('jps_ColorSwatch');
 			if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
 			$(cSel).on('change', function() {
