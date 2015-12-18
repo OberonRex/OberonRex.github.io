@@ -69,7 +69,7 @@ function setupCustomElements(){
 			var cSvg = document.getElementById("svgMaster").cloneNode(true);
 			cSvg.removeAttribute('id');
 			
-			var cPoly = cSvg.childNodes[1];
+			var cPoly = $(cSvg).find('polygon'); //cSvg.childNodes[1];
 			//cPoly.classList.add('jps_property');
 			//cPoly.classList.add('jps_ColorSwatch');
 			if (this.hasAttribute('id')) cPoly.setAttribute('id', this.getAttribute('id'));
