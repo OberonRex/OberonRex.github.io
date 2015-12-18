@@ -62,10 +62,11 @@ function setupCustomElements(){
 			cDiv.innerHTML = cInner;
 			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 			
-			var cSvg = document.createElement('svg');
+			/*var cSvg = document.createElement('svg');
 			cSvg.setAttribute('version', '1.1');
 			cSvg.setAttribute('width', 20);
-			cSvg.setAttribute('height', 20);
+			cSvg.setAttribute('height', 20);*/
+			var cSvg = document.getElementById("svgMaster").cloneNode(true);
 			
 			var cPoly = document.createElement('polygon');
 			cPoly.classList.add('jps_property');
@@ -82,9 +83,9 @@ function setupCustomElements(){
 			this.innerHTML = "";
 			
 			this.appendChild(cDiv);
-			this.appendChild(document.getElementById('xxx').cloneNode(true));
-			//this.appendChild(cSvg);
-			//cSvg.appendChild(cPoly);
+			//this.appendChild(document.getElementById('xxx').cloneNode(true));
+			this.appendChild(cSvg);
+			cSvg.appendChild(cPoly);
 			this.appendChild(cBoth);
 			
 		});
