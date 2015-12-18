@@ -73,7 +73,17 @@
 					
 						<j-intProperty idtemplate="r" value="50">radius: </j-intProperty>
 						<j-intProperty idtemplate="w" value="3">Stroke width: </j-intProperty>
-						<j-colorProperty idtemplate="c">Stroke color: </j-colorProperty>
+						
+						<div class="jps_ListItem">
+							<div class="jps_stdColumn">Stroke Color: </div>
+							<svg version="1.1"  width=20 height=20  >
+								<polygon class="jps_property jps_ColorSwatch" idtemplate="c" />
+							</svg>				
+						</div>
+						
+						
+						
+						<!--<j-colorProperty idtemplate="c">Stroke color: </j-colorProperty>-->
 
 					<div class="jps_clearboth"></div>
 				</div>
@@ -87,8 +97,6 @@
 			<div class="jps_ListWrapper jps_hideList">
 				<span class="jps_ListHeader">Misc</span>
 				
-				<j-intProperty id="r" value="3">test!: </j-intProperty>
-
 				<!-- Battery Bar -->
 				<div class="jps_ListItem jps_ListWrapper jps_hideList">
 					<span class="jps_ListHeader">Battery Bar</span>
