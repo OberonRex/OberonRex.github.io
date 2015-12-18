@@ -100,7 +100,7 @@ function setupCustomElements(){
 			cDiv.innerHTML = cInner;
 			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 
-			var cSel = document.createElement('selector');
+			var cSel = document.createElement('select');
 			cSel.classList.add('jps_property');
 			if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
