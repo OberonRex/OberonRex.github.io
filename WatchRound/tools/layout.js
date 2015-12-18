@@ -67,11 +67,14 @@ function setupCustomElements(){
 			cSvg.setAttribute('width', 20);
 			cSvg.setAttribute('height', 20);
 			
-			var cPoly = document.createElement('polygon');
+			/*var cPoly = document.createElement('polygon');
 			cPoly.classList.add('jps_property');
 			cPoly.classList.add('jps_ColorSwatch');
 			if (this.hasAttribute('id')) cPoly.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cPoly.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+			*/
+			
+			var cPoly = document.getElementById('paintColor').cloneNode(true);
 			
 			var cBoth = document.createElement('div');
 			cBoth.classList.add('jps_clearboth');
