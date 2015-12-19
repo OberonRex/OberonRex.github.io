@@ -108,9 +108,16 @@ function setupCustomElements(){
 			
 			if (this.getAttribute('id')=='ws'){
 				$(cSel).on('change', function() {
-					var target = $(this.parentElement).next()[0];
-					if (this.selectedIndex == 0) target.style.display = "none";
-					else target.style.display = "block";
+					//var target = $(this.parentElement).next()[0];
+					//if (this.selectedIndex == 0) target.style.display = "none";
+					//else target.style.display = "block";
+					
+					// if it's WU, then it needs a key
+					if (this.selectedIndex == 1){
+						if (!this.classList.contains('jps_needsKey')) this.classList.add('jps_needsKey');
+					} else {
+						if (this.classList.contains('jps_needsKey')) this.classList.remove('jps_needsKey');
+					}
 				});
 			}
 
