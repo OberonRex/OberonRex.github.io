@@ -114,9 +114,11 @@ function setupCustomElements(){
 					
 					// if it's WU, then it needs a key
 					if (this.selectedIndex == 1){
-						if (!this.classList.contains('jps_needsKey')) this.classList.add('jps_needsKey');
+						if (!this.parentElement.classList.contains('jps_needsKey')) 
+							this.parentElement.classList.add('jps_needsKey');
 					} else {
-						if (this.classList.contains('jps_needsKey')) this.classList.remove('jps_needsKey');
+						if (this.parentElement.classList.contains('jps_needsKey')) 
+							this.parentElement.classList.remove('jps_needsKey');
 					}
 				});
 			}
