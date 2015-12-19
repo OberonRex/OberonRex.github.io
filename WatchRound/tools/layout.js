@@ -108,7 +108,7 @@ function setupCustomElements(){
 			
 			if (this.getAttribute('id')=='ws'){
 				$(cSel).on('change', function() {
-					var target = this.getElementsByTagName('jps_stgProperty');
+					var target = $(this.parentElement).next();
 					if (this.selectedIndex == 0) target.style.display = "none";
 					else target.style.display = "block";
 				});
