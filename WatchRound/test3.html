@@ -31,32 +31,73 @@
 			
 			<div class="jps_clearboth"></div>
 			
-			<!-- HANDS -->
+			<!--
+			****************************
+			** HANDS 
+			****************************
+			-->
 			<div class="jps_ListWrapper jps_hideList">
 				<span class="jps_ListHeader">Hands</span>
 			
 				<!-- Hour Hand Parts -->
 				<div class="jps_ListItem jps_ListWrapper jps_hideList dynamic">
 					<span class="jps_ListHeader">Hour Hand Parts</span><span class="jps_AddButton">+</span>
+	
+					<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
+						<span class="jps_ListHeader">***</span><span class="jps_RemoveButton">-</span>
+						
+						<!-- put properties here -->
+						<j-selectProperty idtemplate="s" options="Outline, Fill, Both">Draw Style: </j-selectProperty>
+						<j-colorProperty idtemplate="c" >Stroke Color: </j-colorProperty>
+						<j-colorProperty idtemplate="f" >Fill Color: </j-colorProperty>
+						<j-intProperty idtemplate="w" >Stroke Width: </j-intProperty>
+						<j-selectProperty idtemplate="y"  options="Box, Line, Dot">Line Style: </j-selectProperty>
+						<j-intProperty idtemplate="l" >Length: </j-intProperty>
+						<j-intProperty idtemplate="r" >Radius: </j-intProperty>
+						
+					</div>
+	
 					<div class="jps_clearboth"></div>
 				</div>
 				
 				<!-- Minute Hand Parts -->
 				<div class="jps_ListItem jps_ListWrapper jps_hideList dynamic">
 					<span class="jps_ListHeader">Minute Hand Parts</span><span class="jps_AddButton">+</span>
+	
+					<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
+						<span class="jps_ListHeader">***</span><span class="jps_RemoveButton">-</span>
+						
+						<!-- put properties here -->
+						<j-selectProperty idtemplate="s" options="Outline, Fill, Both">Draw Style: </j-selectProperty>
+						<j-colorProperty idtemplate="c" >Stroke Color: </j-colorProperty>
+						<j-colorProperty idtemplate="f" >Fill Color: </j-colorProperty>
+						<j-intProperty idtemplate="w" >Stroke Width: </j-intProperty>
+						<j-selectProperty idtemplate="y"  options="Box, Line, Dot">Line Style: </j-selectProperty>
+						<j-intProperty idtemplate="l" >Length: </j-intProperty>
+						<j-intProperty idtemplate="r" >Radius: </j-intProperty>
+						
+					</div>
+	
 					<div class="jps_clearboth"></div>
 				</div>
 				
 				<!-- Center Circle Properties -->
 				<div class="jps_ListItem jps_ListWrapper jps_hideList">
 					<span class="jps_ListHeader">Center Circles</span>
+						<j-colorProperty id="f">Fill Color: </j-colorProperty>
+						<j-colorProperty id="c">Stroke Color: </j-colorProperty>
+						<j-colorProperty id="if">Inner Fill: </j-colorProperty>
 					<div class="jps_clearboth"></div>
 				</div>
 			</div>
 			
 			<div class="jps_clearboth"></div>
 			
-			<!-- Windows -->
+			<!--
+			**************************
+			** Windows 
+			**************************
+			-->
 			<div class="jps_ListWrapper jps_hideList dynamic">
 				<span class="jps_ListHeader">Windows</span><span class="jps_AddButton">+</span>
 				
@@ -64,6 +105,17 @@
 					<span class="jps_ListHeader">Outer Circle</span><span class="jps_RemoveButton">-</span>
 					
 					<!-- put properties here -->
+					<j-colorProperty idtemplate="b">Back Color: </j-colorProperty>
+					<j-colorProperty idtemplate="f">Font Color: </j-colorProperty>
+					<j-colorProperty idtemplate="r">Frame Color: </j-colorProperty>
+					<j-selectProperty idtemplate="s"  options="Day, Month, Year, Day of Week, " + 
+						"MMDDYY, DDMMYY, DOWMMDDYY, DOWDDMMYY, DOWMMDD, DOWDDMM, DOWMONDD, DOWDDMON, " + 
+						"MMDD, DDMM, Time 12, Time 24, BlueTooth, Battery, Temp F, Temp C">Source: </j-selectProperty>
+					<j-selectProperty idtemplate="x" options="Rect, Circle, None">Frame Type: </j-selectProperty>
+					<j-selectProperty idtemplate="w" options="Normal, Flick, Both">Show: </j-selectProperty>
+					<j-selectProperty idtemplate="p" options="Upper Left, Upper Middle, Upper Right, " + 
+						"Nine o'clock, Three o'clock, Lower Left, Lower Middle, Lower Right, " +
+						"Lower Wide, Lower Mid Wide">Position: </j-selectProperty>
 					
 				</div>
 				
@@ -72,7 +124,11 @@
 	
 			<div class="jps_clearboth"></div>
 			
-			<!-- Outer Circles -->
+			<!--
+			**************************
+			** Outer Circles
+			**************************
+			-->
 			<div id="o" class="jps_ListWrapper jps_hideList dynamic">
 				<span class="jps_ListHeader">Outer Circles</span><span class="jps_AddButton">+</span>
 				
@@ -110,7 +166,7 @@
 				<div class="jps_ListItem jps_ListWrapper jps_hideList">
 					<span class="jps_ListHeader">Weather</span>
 						<j-selectProperty id="ws" options="Open Weather, W. Underground">Source: </j-selectProperty>
-						<j-stgProperty id="wk">License Key: </j-intProperty>
+						<j-stgProperty id="wk">License Key: </j-stgProperty>
 					<div class="jps_clearboth"></div>
 				</div>
 				
