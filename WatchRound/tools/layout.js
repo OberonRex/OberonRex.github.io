@@ -108,7 +108,7 @@ function setupCustomElements(){
 			
 			if (this.getAttribute('id')=='ws'){
 				$(cSel).on('change', function() {
-					var target = cSel.getElementsByTagName('DIV');
+					var target = this.getElementsByTagName('jps_stgProperty');
 					if (this.selectedIndex == 0) target.style.display = "none";
 					else target.style.display = "block";
 				});
