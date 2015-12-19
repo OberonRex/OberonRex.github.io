@@ -1,5 +1,5 @@
-.jps_ListWrapper.jps_hideList > .jps_ListItem, .jps_Template, .jps_noKey + .jps_ListItem{display:none;}
-.jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template), .jps_needsKey + .jps_ListItem{display:block;}
+.jps_ListWrapper.jps_hideList > .jps_ListItem, .jps_Template, .jps_noKey + jps_stgproperty{display:none;}
+.jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template), .jps_needsKey + jps_stgproperty{display:block;}
 
 .jps_ListWrapper.jps_hideList > .jps_AddButton{display:none;}
 .jps_ListWrapper.jps_showList > .jps_AddButton{display:block;}
