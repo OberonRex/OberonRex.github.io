@@ -108,19 +108,17 @@ function setupCustomElements(){
 			
 			if (this.getAttribute('id')=='ws'){
 				$(cSel).on('change', function() {
-					var target = $(this.parentElement).next()[0];
+					if (this.selectedIndex == 1){
+						this.classList.add("jps_needsKey");
+						this.classList.remove("jps_noKey");
+					} else {
+						this.classList.remove("jps_needsKey");
+						this.classList.add("jps_noKey");
+					}
+					//var target = $(this.parentElement).next()[0];
 					//if (this.selectedIndex == 0) target.style.display = "none";
 					//else target.style.display = "block";
-					
-					var wrapper = findWrapper(this);
-					
-					// if it's WU, then it needs a key
-					
-					var showIt = (this.selectedIndex == 1) && wrapper.classList.contains('jps_showList');
-					
-					if (showIt) target.style.display = "block";
-					else target.style.display = "none";
-					
+				
 				});
 			}
 
