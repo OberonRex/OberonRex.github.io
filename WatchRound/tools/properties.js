@@ -64,7 +64,7 @@ function ImportValues(stg){
 	    	}
 	    	else elem.value = pair[1];
 	    } else {
-	    	alert(pair[0] + "=" + pair[1]);
+	    	if (false) alert(pair[0] + "=" + pair[1]);
 	    }
 	    
 	}
