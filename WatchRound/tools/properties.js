@@ -58,8 +58,10 @@ function ImportValues(stg){
 	    		elem.value = cnt;
 	    		jps_RenumberChildren(elem);
 	    	} else if ((elem.tagName == "polygon")) SetColor(pair[0], pair[1]);
-	    	else if ((elem.tagName == "SELECT")) 
+	    	else if ((elem.tagName == "SELECT")) {
 	    		elem.selectedIndex = pair[1];
+	    		elem.trigger('change');
+	    	}
 	    	else elem.value = pair[1];
 	    } else {
 	    	//alert(pair[0] + "=" + pair[1]);
