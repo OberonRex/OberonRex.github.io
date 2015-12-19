@@ -1,5 +1,5 @@
 .jps_ListWrapper.jps_hideList > .jps_ListItem, 
-	.jps_ListWrapper.jps_showList > .jps_noKey+.jps_ListItem,
+	.jps_ListWrapper.jps_hideList > .jps_noKey+.jps_ListItem,
 	.jps_Template{display:none;}
 	
 .jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template), 
