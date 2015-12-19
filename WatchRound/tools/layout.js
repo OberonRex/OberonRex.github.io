@@ -116,9 +116,11 @@ function setupCustomElements(){
 					if (this.selectedIndex == 1){
 						if (!this.parentElement.classList.contains('jps_needsKey')) 
 							this.parentElement.classList.add('jps_needsKey');
+						this.parentElement.classList.remove('jps_noKey');
 					} else {
-						if (this.parentElement.classList.contains('jps_needsKey')) 
-							this.parentElement.classList.remove('jps_needsKey');
+						if (!this.parentElement.classList.contains('jps_noKey')) 
+							this.parentElement.classList.add('jps_noKey');
+						this.parentElement.classList.remove('jps_needsKey');
 					}
 				});
 			}
