@@ -108,20 +108,19 @@ function setupCustomElements(){
 			
 			if (this.getAttribute('id')=='ws'){
 				$(cSel).on('change', function() {
-					//var target = $(this.parentElement).next()[0];
+					var target = $(this.parentElement).next()[0];
 					//if (this.selectedIndex == 0) target.style.display = "none";
 					//else target.style.display = "block";
 					
+					var wrapper = findWrapper(this);
+					
 					// if it's WU, then it needs a key
-					if (this.selectedIndex == 1){
-						if (!this.parentElement.classList.contains('jps_needsKey')) 
-							this.parentElement.classList.add('jps_needsKey');
-						this.parentElement.classList.remove('jps_noKey');
-					} else {
-						if (!this.parentElement.classList.contains('jps_noKey')) 
-							this.parentElement.classList.add('jps_noKey');
-						this.parentElement.classList.remove('jps_needsKey');
-					}
+					
+					var showIt = (this.selectedIndex == 1) && wrapper.classList.contains('jps_showList');
+					
+					if (showIt) target.style.display = "block";
+					else target.style.display = "none";
+					
 				});
 			}
 
@@ -147,6 +146,11 @@ function setupCustomElements(){
 				
 		});
 
+}
+
+function findWrapper(elem){
+	while (!elem.classList.contains('jps_ListWrapper')) elem = elem.parentElement;
+	return elem;
 }
 
 function wireUpFramework(){
