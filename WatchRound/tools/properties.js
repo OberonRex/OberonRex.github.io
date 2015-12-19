@@ -82,10 +82,17 @@ function jps_PropertyString(){
 	$('.jps_property[id]').each(function(){
 		switch (this.tagName){
 			case "polygon":;
+				stg += maybeAmpersand(stg) + this.id + "=" +  pebbleColor(this.id);
+				break;
+				
+			case "INPUT":
+				stg += maybeAmpersand(stg) + this.id + "=" + this.value;
+				break;
+			
+			case "SELECT":
+				stg += maybeAmpersand(stg) + this.id + "=" + this.selectedIndex;
+				break;
 		}
-		stg += maybeAmpersand(stg) + this.id + "=" + (this.tagName == 'polygon' ? pebbleColor(this.id) : this.value);
-		//if (this.tagName == 'polygon') stg += maybeAmpersand(stg) + this.id + '=' + pebbleColor(this.id);
-		//else stg += maybeAmpersand(stg) + this.id + '=' + this.value;
 	});
 	
 	return stg;
