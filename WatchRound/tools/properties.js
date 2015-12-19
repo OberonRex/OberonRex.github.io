@@ -80,6 +80,9 @@ function jps_PropertyString(){
 	$('.dynamic[id]').each(function(){ stg += maybeAmpersand(stg) + this.id + '=' + this.value });
 	
 	$('.jps_property[id]').each(function(){
+		switch (this.tagName){
+			case "polygon":;
+		}
 		stg += maybeAmpersand(stg) + this.id + "=" + (this.tagName == 'polygon' ? pebbleColor(this.id) : this.value);
 		//if (this.tagName == 'polygon') stg += maybeAmpersand(stg) + this.id + '=' + pebbleColor(this.id);
 		//else stg += maybeAmpersand(stg) + this.id + '=' + this.value;
