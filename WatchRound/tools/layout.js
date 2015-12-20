@@ -116,8 +116,8 @@ function setupCustomElements(){
 					//	this.parentElement.classList.add("jps_noKey");
 					//}
 					var target = $(this.parentElement).next()[0];
-					if (this.selectedIndex == 1) target.style.display = "inherit";
-					else target.style.display = "none";
+					if (this.selectedIndex == 1) target.classList.remove('jps_hideKey'); //style.display = "inherit";
+					else target.classList.add('jps_hideKey');//style.display = "none";
 				
 				});
 			}
