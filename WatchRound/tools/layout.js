@@ -108,16 +108,16 @@ function setupCustomElements(){
 			
 			if (this.getAttribute('id')=='ws'){
 				$(cSel).on('change', function() {
-					if (this.selectedIndex == 1){
-						this.parentElement.classList.add("jps_needsKey");
-						this.parentElement.classList.remove("jps_noKey");
-					} else {
-						this.parentElement.classList.remove("jps_needsKey");
-						this.parentElement.classList.add("jps_noKey");
-					}
-					//var target = $(this.parentElement).next()[0];
-					//if (this.selectedIndex == 0) target.style.display = "none";
-					//else target.style.display = "block";
+					//if (this.selectedIndex == 1){
+					//	this.parentElement.classList.add("jps_needsKey");
+					//	this.parentElement.classList.remove("jps_noKey");
+					//} else {
+					//	this.parentElement.classList.remove("jps_needsKey");
+					//	this.parentElement.classList.add("jps_noKey");
+					//}
+					var target = $(this.parentElement).next()[0];
+					if (this.selectedIndex == 1) target.style.display = "inherit";
+					else target.style.display = "none";
 				
 				});
 			}
