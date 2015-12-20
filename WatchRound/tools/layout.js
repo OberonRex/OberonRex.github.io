@@ -181,21 +181,21 @@ function wireUpFramework(){
 }
 
 function jps_RenumberAllChildren(){
-	$('.dynamic').each(function(){jps_RenumberChildren(this)});
+	$('.dynamic').each(function(){
+		jps_RenumberChildren(this)
+	});
 }
 
 function jps_RenumberChildren(elem){
 	var litems = $(elem).children('.jps_ListItem:not(.jps_Template)');
 
-	var cnt = 0;
 	for (var ndx = 0; ndx < litems.length; ndx++)
 		$(litems[ndx]).find( '[idtemplate]' ).each(function(){
 			//var newID = this.getAttribute("idtemplate").replace("#", ndx);
 			var newID = elem.id + ndx + this.getAttribute("idtemplate");
 			this.setAttribute("id", newID );
-		cnt++;
 		});
-	elem.setAttribute('value', cnt);
+	elem.setAttribute('value', litems.length);
 }
 
 function jps_AddOne(pElem, show){
