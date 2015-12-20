@@ -187,12 +187,15 @@ function jps_RenumberAllChildren(){
 function jps_RenumberChildren(elem){
 	var litems = $(elem).children('.jps_ListItem:not(.jps_Template)');
 
+	var cnt = 0;
 	for (var ndx = 0; ndx < litems.length; ndx++)
 		$(litems[ndx]).find( '[idtemplate]' ).each(function(){
 			//var newID = this.getAttribute("idtemplate").replace("#", ndx);
 			var newID = elem.id + ndx + this.getAttribute("idtemplate");
 			this.setAttribute("id", newID );
+		cnt++;
 		});
+	elem.setAttribute('value', cnt);
 }
 
 function jps_AddOne(pElem, show){
