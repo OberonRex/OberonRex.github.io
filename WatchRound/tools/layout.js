@@ -195,7 +195,7 @@ function jps_RenumberChildren(elem){
 			var newID = elem.id + ndx + this.getAttribute("idtemplate");
 			this.setAttribute("id", newID );
 		});
-	elem.setAttribute('value', litems.length);
+	elem.value = litems.length;
 }
 
 function jps_AddOne(pElem, show){
