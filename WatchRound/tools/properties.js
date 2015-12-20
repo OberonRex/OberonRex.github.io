@@ -15,7 +15,8 @@ function ImportInitialValues(){
 }
 
 function ReturnProperties(){
-	alert("returning: " + return_to + Encode(jps_PropertyString()));
+	//alert("returning: " + return_to + Encode(jps_PropertyString()));
+	RenumberAllChildren();
 	location.href = return_to + Encode(jps_PropertyString());
 }
 
