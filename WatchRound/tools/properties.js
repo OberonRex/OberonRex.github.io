@@ -43,8 +43,10 @@ function Encode(stg){
 	
 }
 
-var myProperties;
+var CurrentEncodedPropertyStg;
 function ImportValues(stg){
+	CurrentEncodedPropertyStg = stg;
+	
 	var vars = Decode(stg).split("&");
 	
 	for (var i=0; i<vars.length; i++) {
@@ -54,6 +56,9 @@ function ImportValues(stg){
 	    var elem = document.getElementById(pair[0]);
 	    if (elem != null){
 	    	if ((elem.tagName == "DIV") && elem.classList.contains('jps_ListWrapper')){
+	    		// Before adding N children, first delete existing ones, except for templates
+	    		$(elem).children('.jps_ListItem:not(.jps_Template)').remove();
+	    		
 	    		var cnt = parseInt(pair[1]);
 	    		for(var n = 0; n < cnt; n++) jps_AddOne(elem, false);
 	    		elem.value = cnt;
