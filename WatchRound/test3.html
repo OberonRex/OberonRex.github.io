@@ -12,19 +12,6 @@
 			<div><img src="images/WatchFace.png" height="50" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.42</div>
 			<br>
 			
-			<div id="PaintWith" class="jps_ListWrapper jps_hideList">
-					<span class="jps_ListHeader">Color Painter</span>
-					<div class="jps_ListItem">
-						<div class="jps_longColumn">Paint With: </div>
-						<svg version="1.1"  width=20 height=20>
-							<polygon id="paintColor" class="jps_ColorPicker" onclick="EditColorAbs(this);"/>
-						</svg>
-					</div>
-					
-					<div class="jps_clearboth"></div>
-				
-			</div>
-
 			<!--
 			****************************
 			** Presets
@@ -38,7 +25,22 @@
 						onclick="chooseMe(this);"
 				</div>
 			</div>	
+			<div class="jps_clearboth"></div>
 			
+			<div id="PaintWith" class="jps_ListWrapper jps_hideList">
+					<span class="jps_ListHeader">Color Painter</span>
+					<div class="jps_ListItem">
+						<div class="jps_longColumn">Paint With: </div>
+						<svg version="1.1"  width=20 height=20>
+							<polygon id="paintColor" class="jps_ColorPicker" onclick="EditColorAbs(this);"/>
+						</svg>
+					</div>
+					
+					<div class="jps_clearboth"></div>
+				
+			</div>
+			<div class="jps_clearboth"></div>
+
 			<!--
 			****************************
 			** Tick Marks
