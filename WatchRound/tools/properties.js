@@ -9,7 +9,7 @@ function ImportInitialValues(){
 	    properties[pair[0]] = pair[1];
 	}
 	
-	ImportValues(properties.KEY_CONTAINER, true);
+	ImportValues(Decode(properties.KEY_CONTAINER), true);
 	
 	if ("return_to" in properties) return_to = decodeURIComponent(properties.return_to);
 }
@@ -44,7 +44,7 @@ function Encode(stg){
 }
 
 function ImportValues(stg, forceReloadAll){
-	var vars = Decode(stg).split("&");
+	var vars = stg.split("&");
 	
 	for (var i=0; i<vars.length; i++) {
 	    var pair = vars[i].split("=");
