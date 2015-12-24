@@ -9,7 +9,7 @@ function ImportInitialValues(){
 	    properties[pair[0]] = pair[1];
 	}
 	
-	ImportValues(properties.KEY_CONTAINER);
+	ImportValues(properties.KEY_CONTAINER, true);
 	
 	if ("return_to" in properties) return_to = decodeURIComponent(properties.return_to);
 }
@@ -44,7 +44,7 @@ function Encode(stg){
 }
 
 var CurrentEncodedPropertyStg;
-function ImportValues(stg){
+function ImportValues(stg, forceReloadAll){
 	CurrentEncodedPropertyStg = stg;
 	
 	var vars = Decode(stg).split("&");
