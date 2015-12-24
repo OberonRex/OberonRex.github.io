@@ -103,6 +103,10 @@ function jps_PropertyString(){
 	return stg;
 }
 
+function chooseThis(elem){
+	ImportValues(elem.getAttribute("settings"),false);	
+}
+
 function SetColor(polyID, colorKey){
 	document.getElementById(polyID).setAttribute("fill", pebble_to_hex(colorKey));
 	document.getElementById(polyID).setAttribute("data-hex", pebble_to_hex(colorKey));
