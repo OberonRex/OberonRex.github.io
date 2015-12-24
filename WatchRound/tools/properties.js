@@ -43,10 +43,7 @@ function Encode(stg){
 	
 }
 
-var CurrentEncodedPropertyStg;
 function ImportValues(stg, forceReloadAll){
-	CurrentEncodedPropertyStg = stg;
-	
 	var vars = Decode(stg).split("&");
 	
 	for (var i=0; i<vars.length; i++) {
