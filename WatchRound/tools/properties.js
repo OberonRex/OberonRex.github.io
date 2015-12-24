@@ -103,7 +103,7 @@ function jps_PropertyString(){
 	return stg;
 }
 
-function chooseThis(elem){
+function chooseMe(elem){
 	ImportValues(elem.getAttribute("settings"),false);	
 }
 
