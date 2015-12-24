@@ -183,8 +183,8 @@
 				<!-- Weather -->
 				<div class="jps_ListItem jps_ListWrapper jps_hideList">
 					<span class="jps_ListHeader">Weather</span>
-						<j-selectProperty id="ws" options="Open Weather, W. Underground">Source: </j-selectProperty>
-						<j-stgProperty id="wk">License Key: </j-stgProperty>
+						<j-selectProperty id="ws" options="Open Weather, W. Underground", NoReload>Source: </j-selectProperty>
+						<j-stgProperty id="wk", NoReload>License Key: </j-stgProperty>
 					<div class="jps_clearboth"></div>
 				</div>
 				
@@ -199,7 +199,7 @@
 			<div class="jps_stdBox">
 				<table width="100%">
 					<tr>
-						<td onclick="ImportInitialValues()" class="mButton" border=1 width=50% >Reset</td>
+						<td onclick="ImportValues(CurrentEncodedPropertyStg, true)" class="mButton" border=1 width=50% >Reset</td>
 						<td onclick="ReturnProperties()" class="mButton" width=50%>Apply</td>
 					</tr>	
 				</table>
