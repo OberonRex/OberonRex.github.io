@@ -54,7 +54,7 @@ function ImportValues(stg, forceReloadAll){
 
 	    // can we find an element with the id?
 	    var elem = document.getElementById(pair[0]);
-	    if (elem != null){
+	    if ((elem != null) && (forceReloadAll || !elem.hasAttribute('NoReload'))){
 	    	if ((elem.tagName == "DIV") && elem.classList.contains('jps_ListWrapper')){
 	    		// Before adding N children, first delete existing ones, except for templates
 	    		$(elem).children('.jps_ListItem:not(.jps_Template)').remove();
