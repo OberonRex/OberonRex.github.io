@@ -209,10 +209,8 @@ function jps_AddOne(pElem, show){
 	clone.classList.remove('jps_showList');
 	clone.classList.remove('jps_hideList');
 	clone.classList.add( show ? 'jps_showList' : 'jps_hideList');
-}
-
-function jps_AddUserConfig(pElem){
-	jps_AddOne(pElem, true);
+	
+	return clone;
 }
 
 function jps_GoToPage(pageID){
