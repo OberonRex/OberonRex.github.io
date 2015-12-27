@@ -39,6 +39,7 @@
 
 			<div class="jps_ListWrapper jps_hideList">
 				<span class="jps_ListHeader">Color Editing</span>
+				
 				<div id="PaintWith" class="jps_ListWrapper jps_hideList jps_ListItem">
 						<span class="jps_ListHeader">Color Painter</span>
 						<div class="jps_ListItem">
@@ -47,9 +48,33 @@
 								<polygon id="paintColor" class="jps_ColorPicker jps_ColorSwatch" onclick="EditColorAbs(this);"/>
 							</svg>
 						</div>
-						
 						<div class="jps_clearboth"></div>
-					
+				</div>
+				
+				<div class="jps_ListWrapper jps_hideList jps_ListItem">
+						<span class="jps_ListHeader">Swap Colors</span>
+						<div class="jps_ListItem">
+							<div class="jps_longColumn">Swap: </div>
+							<svg version="1.1"  width=20 height=20>
+								<polygon id="paintColor" class="jps_ColorPicker jps_ColorSwatch" onclick="EditColorAbs(this);"/>
+							</svg>
+							<span> with </span>
+							<svg version="1.1"  width=20 height=20>
+								<polygon id="paintColor" class="jps_ColorPicker jps_ColorSwatch" onclick="EditColorAbs(this);"/>
+							</svg>
+						</div>
+						<div class="jps_clearboth"></div>
+				</div>
+				
+				<div id="PaintWith" class="jps_ListWrapper jps_hideList jps_ListItem">
+						<span class="jps_ListHeader">Replace Color</span>
+						<div class="jps_ListItem">
+							<div class="jps_longColumn">Paint With: </div>
+							<svg version="1.1"  width=20 height=20>
+								<polygon id="paintColor" class="jps_ColorPicker jps_ColorSwatch" onclick="EditColorAbs(this);"/>
+							</svg>
+						</div>
+						<div class="jps_clearboth"></div>
 				</div>
 				
 			<div class="jps_clearboth"></div>
