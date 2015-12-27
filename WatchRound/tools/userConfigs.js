@@ -4,7 +4,7 @@
 
 function findConfig(elem){
 	while (!elem.classSet.contains('jps_Config')) elem = elem.parentElem;
-	return elem.;
+	return elem;
 }
 
 function findInput(configElem){
