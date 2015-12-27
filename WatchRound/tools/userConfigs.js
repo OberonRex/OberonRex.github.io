@@ -12,7 +12,7 @@ function findInput(configElem){
 }
 
 function jps_AddUserConfig(parentElem){
-	var newConfig = jps_AddOne(pElem, true);
+	var newConfig = jps_AddOne(parentElem, true);
 	var e = findInput(newConfig);
 	e.value = "New";
 	var l = e.value.length;
