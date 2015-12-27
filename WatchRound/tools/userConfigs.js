@@ -57,3 +57,15 @@ function SaveEverything(){
 		localStorage.setItem(n, sName + "&" + sProp);
 	}
 }
+
+function LoadConfigs(){
+	var configRoot = document.getElementById('jps_UserConfigWrapper');
+	var count = atoi(localStorage.getItem("count"));
+	for (var n = 0; n < count; n++){
+		var newConfig = jps_AddOne(configRoot, true);
+		var fStg = localStorage.getItem(n);
+		var pair = fStg.split('&');
+		findInput(newConfig).value = pair[0];
+		newConfig.setAttribute('properties', pair[1]);
+	}
+}
