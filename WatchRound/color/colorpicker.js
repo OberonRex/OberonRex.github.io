@@ -116,7 +116,7 @@ function returnColor(pPolygon){
 function wireUpColorPicker() {
   $('#color-picker polygon').on('click', function(elem){returnColor(this);});
 
-  $('#color-picker polygon, jps_ColorSwatch').each(function (index, elem) {
+  $('#color-picker polygon, .jps_ColorSwatch').each(function (index, elem) {
     $(elem).attr('data-hex', $(elem).attr('fill'));
   });
   
