@@ -31,14 +31,14 @@ function user_SaveNewName(elem){
   
 }
 
-user_Apply(configElem){
+function user_Apply(configElem){
 	
 }
 
-user_Update(configElem){
+function user_Update(configElem){
 	
 }
 
-user_Delete(configElem){
+function user_Delete(configElem){
 	alert("Delete");
 }
