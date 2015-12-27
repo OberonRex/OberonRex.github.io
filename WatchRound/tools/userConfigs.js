@@ -1,5 +1,5 @@
 function colorProperties(){
-	return $('div#jps_MasterDiv').children('jps_Property[tagName="polygon"]);
+	return $('div#jps_MasterDiv').children('jps_Property[tagName="polygon"]');
 }
 
 function findConfig(elem){
