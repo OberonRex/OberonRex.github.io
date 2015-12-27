@@ -33,13 +33,13 @@ function user_SaveNewName(elem){
 }
 
 function user_Apply(configElem){
-	
+	ImportValues(Decode(configElem.getAttribute('properties')), false);
 }
 
 function user_Update(configElem){
-	
+	CaptureConfig(configElem);
 }
 
 function user_Delete(configElem){
-	alert("Delete");
+	configElem.remove();
 }
