@@ -12,8 +12,8 @@ function findInput(configElem){
   return configElem.getElementsByClassName('jps_ConfigName')[0];
 }
 
-function jps_AddUserConfig(parentElem){
-	var newConfig = jps_AddOne(parentElem, true);
+function jps_AddUserConfig(){
+	var newConfig = jps_AddOne(document.getElementById('jps_UserConfigWrapper'), true);
 	var e = findInput(newConfig);
 	e.value = "New";
 	var l = e.value.length;
