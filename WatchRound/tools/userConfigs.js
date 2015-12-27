@@ -3,7 +3,7 @@
 */
 
 function findConfig(elem){
-	while (!elem.classSet.contains('jps_Config')) 
+	while (!elem.classList.contains('jps_Config')) 
 		elem = elem.parentElement;
 	return elem;
 }
