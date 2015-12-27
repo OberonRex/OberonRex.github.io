@@ -168,7 +168,7 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly')});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', true)});
 	
-	$('.jps_ColorSwatch, .jps_ColorPicker').each(function(){
+	$('.jps_ColorSwatch, .jps_ColorPicker, jps_ColorPainter').each(function(){
 		this.setAttribute('points', '8.85, 0.35 17.15, 5.15 17.15, 14.7 8.85, 19.5 0.6,	14.7 0.6, 5.15');
 		this.setAttribute('stroke', '#000000');
 		this.setAttribute('stroke-width', '1');
