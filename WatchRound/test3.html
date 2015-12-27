@@ -249,12 +249,12 @@
 					<input class="jps_shorter1Column jps_Text jps_ConfigName" 
 						readonly="true" 
 						type="text" 
-						onchange="user_SaveNewName(this);"
+						onchange="user_SaveNewName(findConfig(this));"
 						idtempate="u">
 					<span class="jps_veryWide2ndColumn">
-					<span>Apply</span>
-					<span>Update</span>
-					<span>Delete</span>
+					<span onclick="user_Apply(findConfig(this));">Apply</span>
+					<span onclick="user_Update(findConfig(this));">Update</span>
+					<span onclick="user_Delete(findConfig(this));">Delete</span>
 					</span>
 				</div>
 			</div>	
