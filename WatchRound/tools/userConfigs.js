@@ -1,5 +1,5 @@
 function colorProperties(){
-	return $('div#jps_MasterDiv').children('jps_Property[tagName="polygon"]');
+	return $('.jps_property[id].jps_ColorSwatch');
 }
 
 function findConfig(elem){
