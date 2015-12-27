@@ -1,6 +1,6 @@
-/*
-* For everything to do with user configurations
-*/
+function colorProperties(){
+	return $('div#jps_MasterDiv').children('jps_Property[tagName="polygon"]);
+}
 
 function findConfig(elem){
 	while (!elem.classList.contains('jps_Config')) 
