@@ -15,6 +15,7 @@
 .jps_ListHeader{border-bottom-style: solid; border-bottom-width: 1px;}
 
 .jps_AddButton{float:right;}
+.jps_AddUserConfigButton(float:right;)
 .jps_RemoveButton{float:right;}
 
 .jps_clearboth {clear:both; }
