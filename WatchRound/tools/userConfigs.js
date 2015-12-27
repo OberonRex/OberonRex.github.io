@@ -21,6 +21,7 @@ function jps_AddUserConfig(parentElem){
 	e.value = e.value;
 	e.focus();
 	CaptureConfig(newConfig);
+	SaveEverything();
 }
 
 function CaptureConfig(configElem){
@@ -29,7 +30,7 @@ function CaptureConfig(configElem){
 }
 
 function user_SaveNewName(elem){
-  
+ 	SaveEverything();
 }
 
 function user_Apply(configElem){
@@ -38,8 +39,21 @@ function user_Apply(configElem){
 
 function user_Update(configElem){
 	CaptureConfig(configElem);
+	SaveEverything();
 }
 
 function user_Delete(configElem){
 	configElem.remove();
+	SaveEverything();
+}
+
+function SaveEverything(){
+	var configRoot = document.getElementById('jps_UserConfigWrapper');
+	var litems = $(configRoot).children('.jps_Config:not(.jps_Template)');
+	localStorage.setItem("count", litems.length);
+	for (var n = 0; n < litems.length; n++){
+		var sProp = Encode(litems[n].getAttribute('properties'));
+		var sName = Encode(findInput(litems[n]).value);
+		localStorage.setItem(n, sName + "&" + sProp);
+	}
 }
