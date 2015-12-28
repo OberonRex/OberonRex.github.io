@@ -22,10 +22,14 @@ function EditColorAbs(pPolygon){
 
 function doSwap(){
 	var pList = $('.jps_property[id].jps_ColorSwatch');
+	var swap1 = document.getElementById("swap1");
+	var swap2 = document.getElementById("swap2");
 }
 
 function doReplace(){
 	var pList = $('.jps_property[id].jps_ColorSwatch');
+	var rTarget = document.getElementById("replaceTarget");
+	var rSource = document.getElementById("replaceSource");
 }
 
 function pebbleColor(polyId){
