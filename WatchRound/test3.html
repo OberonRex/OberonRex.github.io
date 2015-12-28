@@ -37,6 +37,11 @@
 			</div>	
 			<div class="jps_clearboth"></div>
 
+			<!--
+			****************************
+			** Color Editors
+			****************************
+			-->
 			<div class="jps_ListWrapper jps_hideList">
 				<span class="jps_ListHeader">Color Editing</span>
 				
@@ -55,10 +60,10 @@
 						<span class="jps_ListHeader">Swap Colors</span>
 						<div class="jps_ListItem">
 							<span>Swap: </span>
-							<svg version="1.1"  width=20 height=20><polygon class="jps_ColorPicker jps_ColorSwatch"/></svg>
+							<svg version="1.1"  width=20 height=20><polygon id="swap1" class="jps_ColorPicker jps_ColorSwatch"/></svg>
 							<span> with </span>
-							<svg version="1.1"  width=20 height=20><polygon class="jps_ColorPicker jps_ColorSwatch"/></svg>
-							<span class="mButton jps_veryWide2ndColumn ">Go</span>
+							<svg version="1.1"  width=20 height=20><polygon id="swap2" class="jps_ColorPicker jps_ColorSwatch"/></svg>
+							<span class="mButton jps_veryWide2ndColumn " onclick="doSwap()">Go</span>
 						</div>
 						<div class="jps_clearboth"></div>
 				</div>
@@ -67,10 +72,10 @@
 						<span class="jps_ListHeader">Replace Color</span>
 						<div class="jps_ListItem">
 							<span>Replace </span>
-							<svg version="1.1"  width=20 height=20> <polygon class="jps_ColorPicker jps_ColorSwatch"/></svg>
+							<svg version="1.1"  width=20 height=20><polygon id="replaceTarget" class="jps_ColorPicker jps_ColorSwatch"/></svg>
 							<span> with </span>
-							<svg version="1.1"  width=20 height=20><polygon class="jps_ColorPicker jps_ColorSwatch"/></svg>
-							<span class="mButton jps_veryWide2ndColumn">Go</span>
+							<svg version="1.1"  width=20 height=20><polygon id="replaceSource" class="jps_ColorPicker jps_ColorSwatch"/></svg>
+							<span class="mButton jps_veryWide2ndColumn" onclick="doReplace();">Go</span>
 						</div>
 						<div class="jps_clearboth"></div>
 				</div>
