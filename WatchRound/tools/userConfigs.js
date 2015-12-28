@@ -61,7 +61,7 @@ function LoadConfigs(){
 		var newConfig = jps_AddOne(configRoot, true);
 		var fStg = localStorage.getItem(n);
 		var pair = fStg.split('&');
-		findInput(newConfig).value = pair[0];
-		newConfig.setAttribute('properties', pair[1]);
+		findInput(newConfig).value = Decode(pair[0]);
+		newConfig.setAttribute('properties', Decode(pair[1]));
 	}
 }
