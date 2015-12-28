@@ -20,6 +20,14 @@ function EditColorAbs(pPolygon){
 	jps_GoToPage('colorPickerPage');
 }
 
+function doSwap(){
+	
+}
+
+function doReplace(){
+	
+}
+
 function pebbleColor(polyId){
 	try{
 		return Number(color_picker_colors[document.getElementById(polyId).getAttribute("data-hex")].binary)
