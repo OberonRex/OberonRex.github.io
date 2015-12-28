@@ -26,8 +26,8 @@ function doSwap(){
 	var swap2 = document.getElementById("swap2");
 	$('.jps_property[id].jps_ColorSwatch').each(function(){
 		if (this.getAttribute('data-hex') == swap1.getAttribute('data-hex')){
-		  	this.setAttribute("fill", swap1.getAttribute("data-hex"));
-		  	this.setAttribute("data-hex", swap1.getAttribute("data-hex"));		
+		  	this.setAttribute("fill", swap2.getAttribute("data-hex"));
+		  	this.setAttribute("data-hex", swap2.getAttribute("data-hex"));		
 		}
 		else if (this.getAttribute('data-hex') == swap2.getAttribute('data-hex')){
 		  	this.setAttribute("fill", swap1.getAttribute("data-hex"));
