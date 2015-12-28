@@ -21,11 +21,11 @@ function EditColorAbs(pPolygon){
 }
 
 function doSwap(){
-	
+	var pList = $('.jps_property[id].jps_ColorSwatch');
 }
 
 function doReplace(){
-	
+	var pList = $('.jps_property[id].jps_ColorSwatch');
 }
 
 function pebbleColor(polyId){
