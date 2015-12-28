@@ -1,7 +1,3 @@
-function colorProperties(){
-	return $('.jps_property[id].jps_ColorSwatch');
-}
-
 function findConfig(elem){
 	while (!elem.classList.contains('jps_Config')) 
 		elem = elem.parentElement;
