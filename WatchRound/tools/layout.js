@@ -178,6 +178,13 @@ function wireUpFramework(){
 	});
 	
 	$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch', function(){EditColor(this);});
+	
+	$("body").on("swipeleft",function(){
+  		alert("left");
+	});
+	$("body").on("swiperight",function(){
+  		alert("right");
+	});
 
 }
 
