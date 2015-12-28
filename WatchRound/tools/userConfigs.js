@@ -56,7 +56,7 @@ function SaveEverything(){
 
 function LoadConfigs(){
 	var configRoot = document.getElementById('jps_UserConfigWrapper');
-	var count = atoi(localStorage.getItem("count"));
+	var count = parseInt(localStorage.getItem("count"));
 	for (var n = 0; n < count; n++){
 		var newConfig = jps_AddOne(configRoot, true);
 		var fStg = localStorage.getItem(n);
