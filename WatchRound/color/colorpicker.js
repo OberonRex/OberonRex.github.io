@@ -21,15 +21,31 @@ function EditColorAbs(pPolygon){
 }
 
 function doSwap(){
-	var pList = $('.jps_property[id].jps_ColorSwatch');
+	//$('.jps_property[id].jps_ColorSwatch');
 	var swap1 = document.getElementById("swap1");
 	var swap2 = document.getElementById("swap2");
+	$('.jps_property[id].jps_ColorSwatch').each(function(){
+		if (this.getAttribute('data-hex') == swap1.getAttribute('data-hex')){
+		  	this.setAttribute("fill", swap1.getAttribute("data-hex"));
+		  	this.setAttribute("data-hex", swap1.getAttribute("data-hex"));		
+		}
+		else if (this.getAttribute('data-hex') == swap2.getAttribute('data-hex')){
+		  	this.setAttribute("fill", swap1.getAttribute("data-hex"));
+		  	this.setAttribute("data-hex", swap1.getAttribute("data-hex"));		
+		}
+	});
 }
 
 function doReplace(){
-	var pList = $('.jps_property[id].jps_ColorSwatch');
+	//var pList = $('.jps_property[id].jps_ColorSwatch');
 	var rTarget = document.getElementById("replaceTarget");
 	var rSource = document.getElementById("replaceSource");
+	$('.jps_property[id].jps_ColorSwatch').each(function(){
+		if (this.getAttribute('data-hex') == rTarget.getAttribute('data-hex')){
+		  	this.setAttribute("fill", rSource.getAttribute("data-hex"));
+		  	this.setAttribute("data-hex", rSource.getAttribute("data-hex"));		
+		}
+	});
 }
 
 function pebbleColor(polyId){
