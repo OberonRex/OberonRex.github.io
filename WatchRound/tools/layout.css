@@ -43,12 +43,9 @@
 
 .lButton{
 	text-align: center;
-	border: 2px outset #888888;
 	background-color: #55FFFF;
 	padding-right: 2px;
 	padding-left: 2px;
-	margin-left:0px;
-	margin-right:0px;
 	vertical-align: middle;
 }
 
