@@ -33,11 +33,20 @@
 }
 
 .mButton{
-   text-align: center;
+	text-align: center;
 	border: 2px outset #888888;
 	background-color: #55FFFF;
 	padding-right: 2px;
 	padding-left: 2px;
+	vertical-align: middle;
+}
+
+.lButton{
+	text-align: center;
+	border: 2px outset #888888;
+	background-color: #55FFFF;
+	margin-top:2px;
+	margin-bottom:2px;
 	vertical-align: middle;
 }
 
