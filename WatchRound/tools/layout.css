@@ -44,11 +44,10 @@
 .lButton{
 	text-align: center;
 	border: 1px solid black;
+	border-collapse: collapse;
 	background-color: #55FFFF;
 	padding-right: 2px;
 	padding-left: 2px;
-	margin-left:1px;
-	margin-right:0px;
 	vertical-align: middle;
 }
 
