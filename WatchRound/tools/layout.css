@@ -43,7 +43,7 @@
 
 .lButton{
 	text-align: center;
-	border: 1px;
+	border: 1px solid black;
 	background-color: #55FFFF;
 	padding-right: 2px;
 	padding-left: 2px;
