@@ -178,7 +178,7 @@ function wireUpFramework(){
 		if (!this.classList.contains('jps_ColorPicker')) this.classList.add('jps_property');
 	});
 	
-	$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch', function(){EditColor(this);});
+	//$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch', function(){EditColor(this);});
 	
 	//$("body").on("swipeleft",function(){
   	//	alert("left");
