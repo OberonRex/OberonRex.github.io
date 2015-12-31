@@ -234,7 +234,8 @@ function jps_GoToPage(pageID){
 				this.style.display = "block";
 				prevPageID = currentPageID;
 				currentPageID = pageID;
-				//document.getElementById('jps_Nav').style.display = this.classList
+				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_Nav') ? 'block' : 'none';
+				document.getElementById('jps_Apply').style.display = this.hasAttribute('jps_Apply') ? 'block' : 'none';
 			}
 			else this.style.display = "none";	
 		})
