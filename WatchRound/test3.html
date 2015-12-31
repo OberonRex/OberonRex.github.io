@@ -9,7 +9,10 @@
 	
 	<div class="jps_stdBox" style="position:fixed; top:0; display:inline">
 		<div class="jps_ListItem jps_hideList ScrollableList" style="white-space: nowrap; overflow:scroll; padding-top:5px; padding-bottom:5px; margin-left:0px; margin-right:0px; display:block">
-			<span class="lButton">Home</span><span class="lButton">Settings</span><span class="lButton">Saved</span><span class="lButton">Acknowledgements</span>
+			<div class="lButton">Home</div>
+			<div class="lButton">Settings</div>
+			<div class="lButton">Saved</div>
+			<div class="lButton">Acknowledgements</div>
 		</div>
 	</div>
 	<div class="jps_stdBox mButton" style="fixed:relative; top:0; visibility:hidden">
@@ -31,7 +34,7 @@
 			****************************
 			-->
 			<div class="jps_ListWrapper jps_hideList">
-				<span class="jps_ListHeader">Presets</span>
+				<div class="jps_ListHeader">Presets</div>
 				<div class="jps_ListItem jps_hideList ScrollableList" style="white-space: nowrap; overflow:scroll;">
 					
 					<img src="images\round1.png" height=50
@@ -56,12 +59,12 @@
 			****************************
 			-->
 			<div class="jps_ListWrapper jps_hideList">
-				<span class="jps_ListHeader">Color Editing</span>
+				<div class="jps_ListHeader">Color Editing</div>
 				
 				<div id="PaintWith" class="jps_ListWrapper jps_hideList jps_ListItem">
-						<span class="jps_ListHeader">Color Painter</span>
+						<div class="jps_ListHeader">Color Painter</div>
 						<div class="jps_ListItem">
-							<span>Paint With: </span>
+							<div>Paint With: </div>
 							<svg version="1.1"  width=20 height=20>
 								<polygon id="paintColor" class="jps_ColorPicker jps_ColorPainter" onclick="EditColorAbs(this);"/>
 							</svg>
@@ -70,25 +73,25 @@
 				</div>
 				
 				<div class="jps_ListWrapper jps_hideList jps_ListItem">
-						<span class="jps_ListHeader">Swap Colors</span>
+						<div class="jps_ListHeader">Swap Colors</div>
 						<div class="jps_ListItem">
-							<span>Swap: </span>
+							<div>Swap: </div>
 							<svg version="1.1"  width=20 height=20><polygon id="swap1" class="jps_ColorPicker jps_ColorSwatch"/></svg>
-							<span> with </span>
+							<div> with </div>
 							<svg version="1.1"  width=20 height=20><polygon id="swap2" class="jps_ColorPicker jps_ColorSwatch"/></svg>
-							<span class="mButton jps_veryWide2ndColumn " onclick="doSwap()">Go</span>
+							<div class="mButton jps_veryWide2ndColumn " onclick="doSwap()">Go</div>
 						</div>
 						<div class="jps_clearboth"></div>
 				</div>
 				
 				<div class="jps_ListWrapper jps_hideList jps_ListItem">
-						<span class="jps_ListHeader">Replace Color</span>
+						<div class="jps_ListHeader">Replace Color</div>
 						<div class="jps_ListItem">
-							<span>Replace </span>
+							<div>Replace </div>
 							<svg version="1.1"  width=20 height=20><polygon id="replaceTarget" class="jps_ColorPicker jps_ColorSwatch"/></svg>
-							<span> with </span>
+							<div> with </div>
 							<svg version="1.1"  width=20 height=20><polygon id="replaceSource" class="jps_ColorPicker jps_ColorSwatch"/></svg>
-							<span class="mButton jps_veryWide2ndColumn" onclick="doReplace();">Go</span>
+							<div class="mButton jps_veryWide2ndColumn" onclick="doReplace();">Go</div>
 						</div>
 						<div class="jps_clearboth"></div>
 				</div>
@@ -103,11 +106,11 @@
 			****************************
 			-->
 			<div id="m" class="jps_ListWrapper jps_hideList dynamic">
-				<span class="jps_ListHeader">Tick Mark Sets</span><span class="jps_AddButton mButton">Add</span>
+				<div class="jps_ListHeader">Tick Mark Sets</div><div class="jps_AddButton mButton">Add</div>
 				<br clear=both>
 				
 				<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
-					<span class="jps_ListHeader">Tick Marks</span><span class="jps_RemoveButton mButton">Del</span>
+					<div class="jps_ListHeader">Tick Marks</div><div class="jps_RemoveButton mButton">Del</div>
 					
 					<!-- put properties here -->
 					<j-intProperty idtemplate="i">Increment: </j-intProperty>
@@ -134,15 +137,15 @@
 			****************************
 			-->
 			<div class="jps_ListWrapper jps_hideList">
-				<span class="jps_ListHeader">Hands</span>
+				<div class="jps_ListHeader">Hands</div>
 			
 				<!-- Hour Hand Parts -->
 				<div id="h" class="jps_ListItem jps_ListWrapper jps_hideList dynamic">
-					<span class="jps_ListHeader">Hour Hand Parts</span><span class="jps_AddButton mButton">Add</span>
+					<div class="jps_ListHeader">Hour Hand Parts</div><div class="jps_AddButton mButton">Add</div>
 					<br clear=both>
 	
 					<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
-						<span class="jps_ListHeader">Parts</span><span class="jps_RemoveButton mButton">Del</span>
+						<div class="jps_ListHeader">Parts</div><div class="jps_RemoveButton mButton">Del</div>
 						
 						<!-- put properties here -->
 						<j-selectProperty idtemplate="s" options="Outline, Fill, Both">Draw Style: </j-selectProperty>
@@ -162,11 +165,11 @@
 				
 				<!-- Minute Hand Parts -->
 				<div id="a" class="jps_ListItem jps_ListWrapper jps_hideList dynamic">
-					<span class="jps_ListHeader">Minute Hand Parts</span><span class="jps_AddButton mButton">Add</span>
+					<div class="jps_ListHeader">Minute Hand Parts</div><div class="jps_AddButton mButton">Add</div>
 					<br clear=both>
 	
 					<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
-						<span class="jps_ListHeader">Parts</span></span><span class="jps_RemoveButton mButton">Del</span>
+						<div class="jps_ListHeader">Parts</div></div><div class="jps_RemoveButton mButton">Del</div>
 						
 						<!-- put properties here -->
 						<j-selectProperty idtemplate="s" options="Outline, Fill, Both">Draw Style: </j-selectProperty>
@@ -186,7 +189,7 @@
 				
 				<!-- Center Circle Properties -->
 				<div class="jps_ListItem jps_ListWrapper jps_hideList">
-					<span class="jps_ListHeader">Center Circles</span>
+					<div class="jps_ListHeader">Center Circles</div>
 						<j-colorProperty id="q">Fill Color: </j-colorProperty>
 						<j-colorProperty id="c">Stroke Color: </j-colorProperty>
 						<j-colorProperty id="if">Inner Fill: </j-colorProperty>
@@ -202,11 +205,11 @@
 			**************************
 			-->
 			<div id="w" class="jps_ListWrapper jps_hideList dynamic">
-				<span class="jps_ListHeader">Windows</span><span class="jps_AddButton mButton">Add</span>
+				<div class="jps_ListHeader">Windows</div><div class="jps_AddButton mButton">Add</div>
 				<br clear=both>
 				
 				<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
-					<span class="jps_ListHeader">Window</span><span class="jps_RemoveButton mButton">Del</span>
+					<div class="jps_ListHeader">Window</div><div class="jps_RemoveButton mButton">Del</div>
 					
 					<!-- put properties here -->
 					<j-colorProperty idtemplate="b">Back Color: </j-colorProperty>
@@ -232,11 +235,11 @@
 			**************************
 			-->
 			<div id="o" class="jps_ListWrapper jps_hideList dynamic">
-				<span class="jps_ListHeader">Outer Circles</span><span class="jps_AddButton mButton">Add</span>
+				<div class="jps_ListHeader">Outer Circles</div><div class="jps_AddButton mButton">Add</div>
 				<br clear=both>
 				
 				<div class="jps_Template jps_ListWrapper jps_ListItem jps_showList">
-					<span class="jps_ListHeader">Outer Circle</span><span class="jps_RemoveButton mButton">Del</span>
+					<div class="jps_ListHeader">Outer Circle</div><div class="jps_RemoveButton mButton">Del</div>
 					
 						<j-intProperty idtemplate="r" value="50">radius: </j-intProperty>
 						<j-intProperty idtemplate="w" value="3">Stroke width: </j-intProperty>
@@ -252,11 +255,11 @@
 	
 			<!-- Misc -->
 			<div class="jps_ListWrapper jps_hideList">
-				<span class="jps_ListHeader">Misc</span>
+				<div class="jps_ListHeader">Misc</div>
 				
 				<!-- Battery Bar -->
 				<div class="jps_ListItem jps_ListWrapper jps_hideList">
-					<span class="jps_ListHeader">Battery Bar</span>
+					<div class="jps_ListHeader">Battery Bar</div>
 						<j-colorProperty id="bc">Back color: </j-colorProperty>
 						<j-colorProperty id="bf">Frame color: </j-colorProperty>
 						<j-colorProperty id="bb">Bar color: </j-colorProperty>
@@ -267,7 +270,7 @@
 	
 				<!-- Weather -->
 				<div class="jps_ListItem jps_ListWrapper jps_hideList">
-					<span class="jps_ListHeader">Weather</span>
+					<div class="jps_ListHeader">Weather</div>
 						<j-selectProperty id="ws" options="Open Weather, W. Underground", NoReload>Source: </j-selectProperty>
 						<j-stgProperty id="wk", NoReload>License Key: </j-stgProperty>
 					<div class="jps_clearboth"></div>
@@ -302,7 +305,7 @@
 			****************************
 			-->
 			<div id="jps_UserConfigWrapper">
-				<span class="jps_ListHeader">Saved Configurations</span><span class="jps_AddUserConfigButton mButton">Add</span>
+				<div class="jps_ListHeader">Saved Configurations</div><div class="jps_AddUserConfigButton mButton">Add</div>
 				<br clear=both>
 				<div class="jps_ListItem jps_Template jps_Config">
 					<br clear=both>
@@ -311,11 +314,11 @@
 						type="text" 
 						onkeyup="user_SaveNewName(findConfig(this));"
 						idtempate="u">
-					<span class="jps_veryWide2ndColumn">
-						<span class="mButton" onclick="user_Apply(findConfig(this));">Load</span>
-						<span class="mButton" onclick="user_Update(findConfig(this));">Update</span>
-						<span class="mButton" onclick="user_Delete(findConfig(this));">Del</span>
-					</span>
+					<div class="jps_veryWide2ndColumn">
+						<div class="mButton" onclick="user_Apply(findConfig(this));">Load</div>
+						<div class="mButton" onclick="user_Update(findConfig(this));">Update</div>
+						<div class="mButton" onclick="user_Delete(findConfig(this));">Del</div>
+					</div>
 					<div class="jps_clearboth"></div>
 				</div>
 			</div>	
