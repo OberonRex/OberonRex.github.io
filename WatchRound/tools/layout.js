@@ -164,6 +164,7 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(this.parentElement, true)});
 	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(this.parentElement);});
 	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {this.parentElement.remove()});
+	$('div#jps_MasterDiv').on('click', '.lButton', function() {jps_GoToTarget(this)});
 	
 	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly')});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', true)});
@@ -179,12 +180,12 @@ function wireUpFramework(){
 	
 	$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch', function(){EditColor(this);});
 	
-	$("body").on("swipeleft",function(){
-  		alert("left");
-	});
-	$("body").on("swiperight",function(){
-  		alert("right");
-	});
+	//$("body").on("swipeleft",function(){
+  	//	alert("left");
+	//});
+	//$("body").on("swiperight",function(){
+  	//	alert("right");
+	//});
 
 }
 
@@ -218,6 +219,10 @@ function jps_AddOne(pElem, show){
 	clone.classList.add( show ? 'jps_showList' : 'jps_hideList');
 	
 	return clone;
+}
+
+function jps_GoToTarget(elem){
+	jps_GoToPage(elem.getAttribute('target'));
 }
 
 var prevPageID;
