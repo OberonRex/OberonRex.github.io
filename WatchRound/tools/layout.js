@@ -234,6 +234,7 @@ function jps_GoToPage(pageID){
 				this.style.display = "block";
 				prevPageID = currentPageID;
 				currentPageID = pageID;
+				//document.getElementById('jps_Nav').style.display = this.classList
 			}
 			else this.style.display = "none";	
 		})
