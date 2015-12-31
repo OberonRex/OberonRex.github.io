@@ -20,6 +20,10 @@ function ReturnProperties(){
 	location.href = return_to + Encode(jps_PropertyString());
 }
 
+function JustReturn(){
+	location.href = return_to;
+}
+
 function Decode(stg){
 	stg = stg.replace(/Q/g, '=');
 	stg = stg.replace(/A/g, '&');
