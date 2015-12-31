@@ -220,10 +220,20 @@ function jps_AddOne(pElem, show){
 	return clone;
 }
 
+var prevPageID;
+var currentPageID;
 function jps_GoToPage(pageID){
 	$('.jps_page').each(
 		function(){
-			this.style.display = this.id == pageID ? "block" : "none";	
+			if (this.id.toLowerCase() == pageID.toLowerCase()){
+				this.style.display = "block";
+				prevPageID = currentPageID;
+				currentPageID = pageID;
+			}
+			else this.style.display = "none";	
 		})
 }
 
+function jps_Return(){
+	jps_GoToPage(prevPageID);
+}
