@@ -9,10 +9,11 @@
 	
 	<div class="jps_stdBox" style="position:fixed; top:0; display:inline">
 		<div class="jps_ListItem jps_hideList ScrollableList" style="white-space: nowrap; overflow:scroll; padding-top:5px; padding-bottom:5px; margin-left:0px; margin-right:0px; display:block">
-			<div class="lButton">Home</div>
-			<div class="lButton">Settings</div>
-			<div class="lButton">Saved</div>
-			<div class="lButton">Acknowledgements</div>
+			<div class="lButton" target="HomePage">Home</div>
+			<div class="lButton" targedt="SettingsPage">Settings</div>
+			<div class="lButton" target="ConfigurationPage">Configuration</div>
+			<div class="lButton" target="UserDefinedPage">User Defined</div>
+			<div class="lButton" target="AckPage">Acknowledgements</div>
 		</div>
 	</div>
 	<div class="jps_stdBox mButton" style="fixed:relative; top:0; visibility:hidden">
@@ -24,6 +25,9 @@
 		<div class="jps_page" id="HomePage" style="display:block">
 		</div>
 		<div class="jps_page" id="SettingsPage" style="display:block">
+		</div>
+		
+		<div class="jps_page" id="ConfigurationPage" style="display:block">
 	
 			<div><img src="images/WatchFace.png" height="50" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.53</div>
 			<br>
@@ -297,7 +301,7 @@
 			
 		</div>
 
-		<div class="jps_page" id="SavedPage" style="display:none">
+		<div class="jps_page" id="UserDefinedPage" style="display:none">
 			
 			<!--
 			****************************
@@ -344,8 +348,8 @@
 	<div class="jps_stdBox" style="position:fixed; bottom:0">
 		<table width=100%>
 			<tr>
-				<td onclick="jps_GoToPage('SettingsPage')" class="mButton" border=1 width=25%>Settings</td>
-				<td onclick="jps_GoToPage('SavedPage')" class="mButton" width=25%>Saved</td>
+				<td onclick="jps_GoToPage('ConfigurationPage')" class="mButton" border=1 width=25%>Settings</td>
+				<td onclick="jps_GoToPage('UserDefinedPage')" class="mButton" width=25%>Saved</td>
 				<td onclick="jps_GoToPage('AckPage')" class="mButton" width=25%>Acknowledgements</td>
 			</tr>
 		</table>
