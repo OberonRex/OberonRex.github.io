@@ -18,7 +18,9 @@
 	
 	
 	<div id="jps_MasterDiv" class="jps_stdBox">
-		<div class="jps_page" id="page1" style="display:block">
+		<div class="jps_page" id="HomePage" style="display:block">
+		</div>
+		<div class="jps_page" id="SettingsPage" style="display:block">
 	
 			<div><img src="images/WatchFace.png" height="50" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.53</div>
 			<br>
@@ -292,7 +294,7 @@
 			
 		</div>
 
-		<div class="jps_page" id="page2" style="display:none">
+		<div class="jps_page" id="SavedPage" style="display:none">
 			
 			<!--
 			****************************
@@ -322,7 +324,7 @@
 			
 		</div>
 
-		<div class="jps_page" id="page3" style="display:none">
+		<div class="jps_page" id="AckPage" style="display:none">
 			Acknowledgements:
 			<ul>
 			<li>Pebble.com for the color picker</li>
@@ -339,9 +341,9 @@
 	<div class="jps_stdBox" style="position:fixed; bottom:0">
 		<table width=100%>
 			<tr>
-				<td onclick="jps_GoToPage('page1')" class="mButton" border=1 width=25%>Settings</td>
-				<td onclick="jps_GoToPage('page2')" class="mButton" width=25%>Saved</td>
-				<td onclick="jps_GoToPage('page3')" class="mButton" width=25%>Acknowledgements</td>
+				<td onclick="jps_GoToPage('SettingsPage')" class="mButton" border=1 width=25%>Settings</td>
+				<td onclick="jps_GoToPage('SavedPage')" class="mButton" width=25%>Saved</td>
+				<td onclick="jps_GoToPage('AckPage')" class="mButton" width=25%>Acknowledgements</td>
 			</tr>
 		</table>
 	</div>
