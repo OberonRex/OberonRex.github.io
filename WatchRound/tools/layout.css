@@ -47,8 +47,10 @@
 	border: 1px solid black;
 	border-collapse: collapse;
 	background-color: #55FFFF;
-	padding-right: 2px;
-	padding-left: 2px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	vertical-align: middle;
 }
 
@@ -57,10 +59,8 @@
 	border: 1px solid black;
 	border-collapse: collapse;
 	background-color: gray;
-	padding-right: 10px;
-	padding-left: 10px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding-right: 2px;
+	padding-left: 2px;
 	vertical-align: middle;
 }
 
