@@ -226,13 +226,13 @@ function jps_GoToTarget(elem){
 }
 
 var prevPageID;
-var currentPageID;
+var currentPageID = null;
 function jps_GoToPage(pageID){
 	$('.jps_page').each(
 		function(){
 			if (this.id.toLowerCase() == pageID.toLowerCase()){
 				this.style.display = "block";
-				prevPageID = currentPageID;
+				prevPageID = currentPageID == null ? 'ConfigurationPage' : currentPageID;
 				currentPageID = pageID;
 				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_Nav') ? 'block' : 'none';
 				document.getElementById('jps_Apply').style.display = this.hasAttribute('jps_Apply') ? 'block' : 'none';
