@@ -227,12 +227,14 @@ function jps_GoToTarget(elem){
 
 var prevPageID;
 var currentPageID = null;
+var prevScrollTop = 0;
 function jps_GoToPage(pageID){
 	$('.jps_page').each(
 		function(){
 			if (this.id.toLowerCase() == pageID.toLowerCase()){
 				this.style.display = "block";
 				prevPageID = currentPageID == null ? 'ConfigurationPage' : currentPageID;
+				prevScrollTop = document.body.scrollTop;
 				currentPageID = pageID;
 				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_Nav') ? 'block' : 'none';
 				document.getElementById('jps_Apply').style.display = this.hasAttribute('jps_Apply') ? 'block' : 'none';
@@ -243,4 +245,5 @@ function jps_GoToPage(pageID){
 
 function jps_Return(){
 	jps_GoToPage(prevPageID);
+	document.body.scrollTop = prevScrollTop;
 }
