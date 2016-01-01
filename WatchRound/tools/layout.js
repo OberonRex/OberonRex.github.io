@@ -234,7 +234,7 @@ function jps_GoToPage(pageID){
 			if (this.id.toLowerCase() == pageID.toLowerCase()){
 				this.style.display = "block";
 				prevPageID = currentPageID == null ? 'ConfigurationPage' : currentPageID;
-				prevScrollTop = document.body.scrollTop;
+				prevScrollTop = document.getElementById("jps_MasterDiv").scrollTop;
 				currentPageID = pageID;
 				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_Nav') ? 'block' : 'none';
 				document.getElementById('jps_Apply').style.display = this.hasAttribute('jps_Apply') ? 'block' : 'none';
@@ -245,5 +245,5 @@ function jps_GoToPage(pageID){
 
 function jps_Return(){
 	jps_GoToPage(prevPageID);
-	document.body.scrollTop = prevScrollTop;
+	document.getElementById("jps_MasterDiv").scrollTop = prevScrollTop;
 }
