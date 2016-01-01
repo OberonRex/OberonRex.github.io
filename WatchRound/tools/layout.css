@@ -1,3 +1,7 @@
+input{
+	font-size: 150%;	
+}
+
 .jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template){display:block;}
 
 .jps_ListWrapper.jps_hideList > .jps_ListItem, 
