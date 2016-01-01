@@ -20,7 +20,7 @@
 				<div style="display:inline">&nbsp;</div>
 			</div>
 		</div>
-		<div class="jps_stdBox mButton" style="fixed:relative; top:0; visibility:hidden; 
+		<div class="jps_stdBox mButton" style="position:relative; top:0; visibility:hidden; 
 		padding-top:15px; padding-bottom:15px; margin-left:0px; margin-right:0px">
 			hidden
 		</div>
@@ -338,14 +338,19 @@
 		
 	</div>
 	
-	<div class="jps_stdBox" id="jps_Apply" style="position:fixed; bottom:0">
-		<table width=100%>
-			<tr>
-				<td onclick="ImportInitialValues()" class="mButton" border=1 width=25%>Reset</td>
-				<td onclick="JustReturn();" class="mButton" width=25%>Cancel</td>
-				<td onclick="ReturnProperties()" class="mButton" width=25%>OK</td>
-			</tr>
-		</table>
+	<div class=" id="jps_Apply">
+		<div class="jps_stdBox" style="position:fixed; bottom:0">
+			<table width=100%>
+				<tr>
+					<td onclick="ImportInitialValues()" class="mButton" border=1 width=25%>Reset</td>
+					<td onclick="JustReturn();" class="mButton" width=25%>Cancel</td>
+					<td onclick="ReturnProperties()" class="mButton" width=25%>OK</td>
+				</tr>
+			</table>
+		</div>
+		<div class="jps_stdBox mButton" style="position:relative; bottom:0; visibility:hidden;">
+			hidden
+		</div>
 	</div>
 	
 	<script type="text/javascript" src="platforms/jquery.js"></script>
