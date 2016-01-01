@@ -22,6 +22,10 @@ input, select{
 .jps_AddUserConfigButton{float:right;}
 .jps_RemoveButton{float:right;}
 
+.jps_ListWrapper, .jps_ListItem{
+	margin-top: 5px;
+}
+
 .jps_clearboth {clear:both; }
 .jps_stdColumn {width:200px;float:left;}
 .jps_longColumn {width:215px;float:left;}
