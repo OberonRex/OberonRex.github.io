@@ -41,9 +41,10 @@ function jps_LoadFontColor(){
 //
 // Button Color
 //
-function jps_SaveButtonColor(){
+function jps_SaveButtonColor(elem){
 	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
-	//localStorage.FontSize = document.body.style.fontSize;
+	$('.mButton,.lButton').css("backgroundColor", elem.value);
+	localStorage.ButtonColor = elem.value;
 }
 function jps_LoadButtonColor(){
 	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
