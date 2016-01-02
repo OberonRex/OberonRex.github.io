@@ -216,6 +216,9 @@ function wireUpFramework(){
 	
 	jps_LoadFontSize();
 	jps_LoadBackgroundColor();
+	jps_LoadFontColor();
+	jps_LoadButtonColor();
+	jps_LoadButtonFontColor();
 	
 	var boxWidth = screen.width;
 	if (boxWidth > 480) boxWidth = 360; else boxWidth = Math.min(screen.width, 480);
