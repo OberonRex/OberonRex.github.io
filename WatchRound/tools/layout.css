@@ -3,6 +3,8 @@ input, select{
 	border:none;
 }
 
+ .jps_FloatRight{float:right;}
+
 .jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template){display:block;}
 
 .jps_ListWrapper.jps_hideList > .jps_ListItem, 
