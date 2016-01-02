@@ -167,7 +167,7 @@ function wireUpFramework(){
 	$('body').on('click', '.lButton', function() {jps_GoToTarget(this)});
 	
 	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly'); this.style.border='single';});
-	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', true) this.style.border='none';});
+	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', true); this.style.border='none';});
 	
 	$('.jps_ColorSwatch, .jps_ColorPicker, jps_ColorPainter').each(function(){
 		this.setAttribute('points', '8.85, 0.35 17.15, 5.15 17.15, 14.7 8.85, 19.5 0.6,	14.7 0.6, 5.15');
