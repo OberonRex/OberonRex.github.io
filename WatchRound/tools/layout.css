@@ -47,7 +47,7 @@ input, select{
 	text-align: center;
 	border: 2px outset #888888;
 	background-color: #D3D3D3;
-	font-color: #FFFFFF;
+	color: #FFFFFF;
 	padding-right: 2px;
 	padding-left: 2px;
 	vertical-align: middle;
@@ -59,7 +59,7 @@ input, select{
 	border: 1px solid black;
 	border-collapse: collapse;
 	background-color: #D3D3D3;
-	font-color: #FFFFFF;
+	color: #FFFFFF;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-top: 6px;
