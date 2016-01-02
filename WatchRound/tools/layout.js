@@ -1,3 +1,10 @@
+function jps_SaveFontSize(){
+	localStorage.FontSize = document.body.style.fontSize;
+}
+function jps_LoadFontSize(){
+	if (localStorage.FontSize != null)	document.body.style.fontSize = localStorage.FontSize;
+}
+
 function jps_toggleShowList(wrapper){
 	if (wrapper.classList.contains('jps_showList'))
 	{
