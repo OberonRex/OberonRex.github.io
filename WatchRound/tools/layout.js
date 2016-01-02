@@ -19,8 +19,8 @@ function jps_SaveBackgroundColor(elem){
 }
 function jps_LoadBackgroundColor(){
 	if (localStorage.backgroundColor != null) document.body.style.backgroundColor = localStorage.backgroundColor;
-	//document.getElementById('jps_BackgroundColor').value = document.body.style.backgroundColor;
-	document.getElementById('jps_BackgroundColor').setAttribute("value", document.body.style.backgroundColor);
+	document.getElementById('jps_BackgroundColor').value = document.body.style.backgroundColor;
+	//document.getElementById('jps_BackgroundColor').setAttribute("value", document.body.style.backgroundColor);
 }
 
 //
@@ -32,7 +32,7 @@ function jps_SaveFontColor(elem){
 }
 function jps_LoadFontColor(){
 	if (localStorage.FontColor != null) document.body.style.color = localStorage.FontColor;
-	//document.getElementById('jps_FontColor').value = document.body.style.color;
+	document.getElementById('jps_FontColor').value = document.body.style.color;
 }
 
 //
