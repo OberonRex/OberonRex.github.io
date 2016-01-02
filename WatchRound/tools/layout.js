@@ -21,6 +21,7 @@ function jps_LoadBackgroundColor(){
 	if (localStorage.backgroundColor != null) {
 		document.body.style.backgroundColor = localStorage.backgroundColor;
 		document.getElementById('jps_BackgroundColor').value = localStorage.backgroundColor;
+		document.getElementById('jps_BackgroundColor').defaultvalue = localStorage.backgroundColor;
 	}
 	//document.getElementById('jps_BackgroundColor').setAttribute("value", document.body.style.backgroundColor);
 }
