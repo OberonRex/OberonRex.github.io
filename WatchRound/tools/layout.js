@@ -37,7 +37,7 @@ function jps_LoadFontColor(){
 	if (localStorage.FontColor != null) {
 		document.body.style.color = localStorage.FontColor;
 		document.getElementById('jps_FontColor').value = localStorage.FontColor;
-		document.getElementById('jps_FontColor').defaultvalue = localStorage.FontColor;
+		//document.getElementById('jps_FontColor').defaultvalue = localStorage.FontColor;
 	}
 }
 
