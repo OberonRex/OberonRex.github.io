@@ -25,13 +25,13 @@ function jps_LoadBackgroundColor(){
 //
 // Font Color
 //
-function jps_SaveFontColor(){
-	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
-	//localStorage.FontSize = document.body.style.fontSize;
+function jps_SaveFontColor(elem){
+	document.body.style.color = elem.value;
+	localStorage.FontColor = document.body.style.color;
 }
 function jps_LoadFontColor(){
-	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
-	//document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
+	if (localStorage.FontColor != null) document.body.style.color = localStorage.FontColor;
+	document.getElementById('jps_FontColor').value = document.body.style.color;
 }
 
 //
