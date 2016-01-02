@@ -7,8 +7,14 @@ function EditColor(pPolygon){
 		jps_GoToPage('colorPickerPage');
 	} else {
 		srcPolygon = document.getElementById('paintColor');
-	  	pPolygon.setAttribute("fill", srcPolygon.getAttribute("data-hex"));
-	  	pPolygon.setAttribute("data-hex", srcPolygon.getAttribute("data-hex"));		
+		if (document.getElementById('EyeDropper').checked){
+		  	srcPolygon.setAttribute("fill", pPolygon.getAttribute("data-hex"));
+		  	srcPolygon.setAttribute("data-hex", pPolygon.getAttribute("data-hex"));		
+		}
+		else {
+		  	pPolygon.setAttribute("fill", srcPolygon.getAttribute("data-hex"));
+		  	pPolygon.setAttribute("data-hex", srcPolygon.getAttribute("data-hex"));		
+		}
 	}
 }
 
