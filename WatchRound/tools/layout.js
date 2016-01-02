@@ -34,8 +34,11 @@ function jps_SaveFontColor(elem){
 	localStorage.FontColor = elem.value;
 }
 function jps_LoadFontColor(){
-	if (localStorage.FontColor != null) document.body.style.color = localStorage.FontColor;
-	document.getElementById('jps_FontColor').value = document.body.style.color;
+	if (localStorage.FontColor != null) {
+		document.body.style.color = localStorage.FontColor;
+		document.getElementById('jps_FontColor').value = localStorage.FontColor;
+		document.getElementById('jps_FontColor').defaultvalue = localStorage.FontColor;
+	}
 }
 
 //
