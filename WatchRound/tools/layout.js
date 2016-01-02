@@ -42,25 +42,28 @@ function jps_LoadFontColor(){
 // Button Color
 //
 function jps_SaveButtonColor(elem){
-	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
 	$('.mButton,.lButton').css("backgroundColor", elem.value);
 	localStorage.ButtonColor = elem.value;
 }
 function jps_LoadButtonColor(){
-	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
-	//document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
+	if (localStorage.ButtonColor != null){
+		$('.mButton,.lButton').css("backgroundColor", localStorage.ButtonColor);
+		document.getElementById('jps_ButtonColor').value = localStorage.ButtonColor;
+	} 
 }
 
 //
 // Button Font Color
 //
 function jps_SaveButtonFontColor(){
-	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
-	//localStorage.FontSize = document.body.style.fontSize;
+	$('.mButton,.lButton').css("font-color", elem.value);
+	localStorage.ButtonFontColor = elem.value;
 }
 function jps_LoadButtonFontColor(){
-	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
-	//document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
+	if (localStorage.ButtonFontColor != null){
+		$('.mButton,.lButton').css("font-color", localStorage.ButtonFontColor);
+		document.getElementById('jps_ButtonFontColor').value = localStorage.ButtonFontColor;
+	} 
 }
 
 function jps_toggleShowList(wrapper){
