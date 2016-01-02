@@ -244,6 +244,7 @@ function jps_GoToPage(pageID){
 }
 
 function jps_Return(){
+	var pTop = prevScrollTop;
 	jps_GoToPage(prevPageID);
-	document.getElementById("jps_MasterDiv").scrollTop = prevScrollTop;
+	document.getElementById("jps_MasterDiv").scrollTop = pTop;
 }
