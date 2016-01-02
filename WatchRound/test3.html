@@ -31,7 +31,10 @@
 			There's no place like home
 		</div>
 		<div class="jps_page" jps_Nav id="SettingsPage" style="display:none">
-			Font size: <input type="range" name="fSize" min="75" max="150">
+			<br><br>
+			Font size: <input type="range" name="fSize" min="75" max="150"
+				onchange="document.body.style.fontSize=this.value+'%'";
+			>
 		</div>
 		
 		<div class="jps_page" jps_Nav jps_Apply id="ConfigurationPage" style="display:block">
