@@ -46,7 +46,8 @@ input, select{
 .mButton{
 	text-align: center;
 	border: 2px outset #888888;
-	background-color: #55FFFF;
+	background-color: #D3D3D3;
+	font-color: #FFFFFF;
 	padding-right: 2px;
 	padding-left: 2px;
 	vertical-align: middle;
@@ -57,7 +58,8 @@ input, select{
 	text-align: center;
 	border: 1px solid black;
 	border-collapse: collapse;
-	background-color: #55FFFF;
+	background-color: #D3D3D3;
+	font-color: #FFFFFF;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-top: 6px;
