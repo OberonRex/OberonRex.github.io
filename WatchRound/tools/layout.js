@@ -1,3 +1,6 @@
+//
+// Font Size
+//
 function jps_SaveFontSize(){
 	document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
 	localStorage.FontSize = document.body.style.fontSize;
@@ -5,6 +8,54 @@ function jps_SaveFontSize(){
 function jps_LoadFontSize(){
 	if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
 	document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
+}
+
+//
+// Background Color
+//
+function jps_SaveBackgroundColor(){
+	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
+	//localStorage.FontSize = document.body.style.fontSize;
+}
+function jps_LoadBackgroundColor(){
+	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
+	//document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
+}
+
+//
+// Font Color
+//
+function jps_SaveFontColor(){
+	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
+	//localStorage.FontSize = document.body.style.fontSize;
+}
+function jps_LoadFontColor(){
+	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
+	//document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
+}
+
+//
+// Button Color
+//
+function jps_SaveButtonColor(){
+	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
+	//localStorage.FontSize = document.body.style.fontSize;
+}
+function jps_LoadButtonColor(){
+	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
+	//document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
+}
+
+//
+// Button Font Color
+//
+function jps_SaveButtonFontColor(){
+	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
+	//localStorage.FontSize = document.body.style.fontSize;
+}
+function jps_LoadButtonFontColor(){
+	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
+	//document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
 }
 
 function jps_toggleShowList(wrapper){
