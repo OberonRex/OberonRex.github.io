@@ -2,7 +2,8 @@ function jps_SaveFontSize(){
 	localStorage.FontSize = document.body.style.fontSize;
 }
 function jps_LoadFontSize(){
-	if (localStorage.FontSize != null)	document.body.style.fontSize = localStorage.FontSize;
+	if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
+	document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
 }
 
 function jps_toggleShowList(wrapper){
@@ -161,6 +162,8 @@ function findWrapper(elem){
 function wireUpFramework(){
 	setupCustomElements();
 	
+	jps_LoadFontSize();
+	
 	var boxWidth = screen.width;
 	if (boxWidth > 480) boxWidth = 360; else boxWidth = Math.min(screen.width, 480);
 	boxWidth -= 20;
@@ -185,15 +188,6 @@ function wireUpFramework(){
 		if (!this.classList.contains('jps_ColorPicker')) this.classList.add('jps_property');
 	});
 	
-	//$('div#jps_MasterDiv').on('click', '.jps_ColorSwatch', function(){EditColor(this);});
-	
-	//$("body").on("swipeleft",function(){
-  	//	alert("left");
-	//});
-	//$("body").on("swiperight",function(){
-  	//	alert("right");
-	//});
-
 }
 
 function jps_RenumberAllChildren(){
