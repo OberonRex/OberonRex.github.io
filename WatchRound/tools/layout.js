@@ -1,8 +1,8 @@
 //
 // Font Size
 //
-function jps_SaveFontSize(){
-	document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
+function jps_SaveFontSize(elem){
+	document.body.style.fontSize = elem.value + '%';
 	localStorage.FontSize = document.body.style.fontSize;
 }
 function jps_LoadFontSize(){
@@ -13,13 +13,13 @@ function jps_LoadFontSize(){
 //
 // Background Color
 //
-function jps_SaveBackgroundColor(){
-	//document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
-	//localStorage.FontSize = document.body.style.fontSize;
+function jps_SaveBackgroundColor(elem){
+	document.body.style.backgroundColor = elem.value;
+	localStorage.backgroundColor = document.body.style.backgroundColor;
 }
 function jps_LoadBackgroundColor(){
-	//if (localStorage.FontSize != null) document.body.style.fontSize = localStorage.FontSize;
-	//document.getElementById('jps_FontSize').value = parseInt(document.body.style.fontSize);
+	if (localStorage.backgroundColor != null) document.body.style.backgroundColor = localStorage.backgroundColor;
+	document.getElementById('jps_BackgroundColor').value = document.body.style.backgroundColor;
 }
 
 //
