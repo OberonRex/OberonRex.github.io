@@ -15,7 +15,7 @@ function jps_LoadFontSize(){
 //
 function jps_SaveBackgroundColor(elem){
 	document.body.style.backgroundColor = elem.value;
-	localStorage.backgroundColor = document.body.style.backgroundColor;
+	localStorage.backgroundColor = elem.value;
 }
 function jps_LoadBackgroundColor(){
 	if (localStorage.backgroundColor != null) {
@@ -31,7 +31,7 @@ function jps_LoadBackgroundColor(){
 //
 function jps_SaveFontColor(elem){
 	document.body.style.color = elem.value;
-	localStorage.FontColor = document.body.style.color;
+	localStorage.FontColor = elem.value;
 }
 function jps_LoadFontColor(){
 	if (localStorage.FontColor != null) document.body.style.color = localStorage.FontColor;
