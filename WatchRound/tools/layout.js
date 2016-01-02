@@ -1,4 +1,5 @@
 function jps_SaveFontSize(){
+	document.body.style.fontSize = document.getElementById('jps_FontSize').value + '%';
 	localStorage.FontSize = document.body.style.fontSize;
 }
 function jps_LoadFontSize(){
