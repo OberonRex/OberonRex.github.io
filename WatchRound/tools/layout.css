@@ -45,7 +45,7 @@ input, select{
 
 .mButton{
 	text-align: center;
-	border: 2px outset #888888;
+	border: 1px solid #888888;
 	background-color: #D3D3D3;
 	color: #000000;
 	padding-right: 2px;
