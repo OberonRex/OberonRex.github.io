@@ -55,7 +55,7 @@ function jps_LoadButtonColor(){
 //
 // Button Font Color
 //
-function jps_SaveButtonFontColor(){
+function jps_SaveButtonFontColor(elem){
 	$('.mButton,.lButton').css("color", elem.value);
 	localStorage.ButtonFontColor = elem.value;
 }
