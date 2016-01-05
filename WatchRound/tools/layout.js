@@ -70,16 +70,16 @@ function setupCustomElements(){
 			
 			var cDiv = document.createElement('div');
 			cDiv.innerHTML = cInner;
-			cDiv.style.float = "left";
+			//cDiv.style.float = "left";
+			cDiv.classList.add('jps_stdColumn');
 			//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
-			cDiv.classList.add('boxit');
 
 			var cSvg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
 			cSvg.setAttribute('version', '1.1');
 			cSvg.setAttribute('width', 20);
 			cSvg.setAttribute('height', 20);
 			cSvg.classList.add('jps_FloatRight');
-			cSvg.classList.add('boxit');
+			//cSvg.classList.add('boxit');
 			//cSvg.style.width = "40px";
 			//var cSvg = document.getElementById("svgMaster").cloneNode(true);
 			//cSvg.removeAttribute('id');
