@@ -20,8 +20,6 @@ input, select{
 	border:none;
 }
 
- .jps_FloatRight{float:right;}
-
 .jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template){display:block;}
 
 .jps_ListWrapper.jps_hideList > .jps_ListItem, 
@@ -47,18 +45,13 @@ input, select{
 }
 
 .jps_clearboth {clear:both; }
+
+.jps_FloatRight{float:right;}
 .jps_stdColumn {width:200px;float:left;}
 .jps_longColumn {width:215px;float:left;}
 .jps_2ndColumn {width:100px;float:left;}
 .jps_short1Column {width:185px;float:left;}
 .jps_Shorter1Column {width:150px;float:left;}
-.jps_veryWide2ndColumn {float:right;}
-.jps_columnRight(width:1em;float:right;)
-
-.jps_footer {
-   position:fixed;
-   bottom:0;
-}
 
 .mButton{
 	text-align: center;
