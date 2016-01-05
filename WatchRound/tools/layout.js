@@ -45,7 +45,7 @@ function setupCustomElements(){
 			
 			var cInput = document.createElement('input');
 			cInput.classList.add('jps_property');
-			cInput.classList.add('jps_FloatRight');
+			cInput.classList.add('jps_ShortFloatRight');
 			cInput.classList.add('jps_Text');
 			cInput.setAttribute('readonly', 'true');
 			cInput.setAttribute('type', this.tagName == 'J-INTPROPERTY' ? 'number' : 'text');
@@ -113,7 +113,7 @@ function setupCustomElements(){
 
 			var cSel = document.createElement('select');
 			cSel.classList.add('jps_property');
-			cSel.classList.add('jps_FloatRight');
+			cSel.classList.add('jps_ShortFloatRight');
 			if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
 			
