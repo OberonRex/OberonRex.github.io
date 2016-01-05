@@ -70,7 +70,7 @@ function setupCustomElements(){
 			
 			var cDiv = document.createElement('div');
 			cDiv.innerHTML = cInner;
-			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+			//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 			cDiv.classList.add('boxit');
 
 			var cSvg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
