@@ -2,7 +2,7 @@ function showTimed(stg){
 	document.getElementById("TimedMsgInner").innerHTML = stg;
 	document.getElementById("TimedMsg").style.display = "block";
 	//if (!setTimeout) alert('no setTimeout');
-	setTimeout(TimedOut, 3000);
+	setTimeout(TimedOut, 1500);
 }
 function TimedOut(){
 	//alert('timed out');
