@@ -192,7 +192,7 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {this.parentElement.remove()});
 	$('body').on('click', '.lButton', function() {jps_GoToTarget(this)});
 	
-	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly'); this.style.border='1px single black';});
+	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly'); this.style.border='1px solid black';});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', 'true'); this.style.border = 'none';});
 	
 	$('.jps_ColorSwatch, .jps_ColorPicker, jps_ColorPainter').each(function(){
