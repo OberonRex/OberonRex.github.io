@@ -239,7 +239,6 @@ function jps_AddOne(pElem, show){
 }
 
 function jps_GoToTarget(elem){
-	alert();
 	jps_GoToPage(elem.getAttribute('target'));
 }
 
