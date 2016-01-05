@@ -1,11 +1,11 @@
 function showTimed(stg){
 	document.getElementById("TimedMsgInner").innerHTML = stg;
 	document.getElementById("TimedMsg").style.display = "block";
-	if (!setTimeout) alert('no setTimeout');
+	//if (!setTimeout) alert('no setTimeout');
 	setTimeout(TimedOut, 3000);
 }
 function TimedOut(){
-	alert('timed out');
+	//alert('timed out');
 	document.getElementById("TimedMsg").style.display = "none";
 }
 function jps_toggleShowList(wrapper){
