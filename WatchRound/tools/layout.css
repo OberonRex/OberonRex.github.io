@@ -1,3 +1,7 @@
+.boxit{
+	border: 1px single black;
+}
+
 .fadeout{
 	display:none; 
 	position:fixed; 
