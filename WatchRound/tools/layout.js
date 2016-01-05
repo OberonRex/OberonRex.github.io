@@ -121,7 +121,7 @@ function setupCustomElements(){
 			var cSel = document.createElement('select');
 			cSel.classList.add('jps_property');
 			//cSel.classList.add('jps_ShortFloatRight');
-			cInput.classList.add('jps_FloatRight');
+			cSel.classList.add('jps_FloatRight');
 			if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
 			
