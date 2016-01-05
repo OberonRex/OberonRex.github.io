@@ -70,7 +70,7 @@ function setupCustomElements(){
 			
 			var cDiv = document.createElement('div');
 			cDiv.innerHTML = cInner;
-			c.Div.style.float = "left";
+			cDiv.style.float = "left";
 			//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 			cDiv.classList.add('boxit');
 
