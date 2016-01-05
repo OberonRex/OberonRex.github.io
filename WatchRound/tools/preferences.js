@@ -16,13 +16,13 @@ function jps_LoadFontSize(){
 //
 function jps_SaveBackgroundColor(elem){
 	document.body.style.backgroundColor = elem.value;
-	//$('input, select').style.backgroundColor = elem.value;
+	$('input, select').css('background-color, elem.value);
 	localStorage.backgroundColor = elem.value;
 }
 function jps_LoadBackgroundColor(){
 	if (localStorage.backgroundColor != null) {
 		document.body.style.backgroundColor = localStorage.backgroundColor;
-		//$('input, select').style.backgroundColor = localStorage.backgroundColor;
+		$('input, select').css('background-color, localStorage.backgroundColor);
 		document.getElementById('jps_BackgroundColor').value = localStorage.backgroundColor;
 	}
 }
