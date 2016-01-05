@@ -47,7 +47,7 @@ input, select{
 .jps_clearboth {clear:both; }
 
 .jps_FloatRight{float:right;}
-.jps_ShortFloatRight({float:right;width:150ox;})
+.jps_ShortFloatRight({float:right;width:100ox;})
 .jps_stdColumn {width:200px;float:left;}
 .jps_longColumn {width:215px;float:left;}
 .jps_2ndColumn {width:100px;float:left;}
