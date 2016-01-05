@@ -75,6 +75,34 @@ function jps_LoadButtonFontColor(){
 	} 
 }
 
+//
+// Alert Color
+//
+function jps_SaveAlertColor(elem){
+	document.getElementById('TimedMsgInner').style.backgroundColor = elem.value;
+	localStorage.AlertColor = elem.value;
+}
+function jps_LoadAlertColor(){
+	if (localStorage.AlertColor != null){
+		document.getElementById('TimedMsgInner').style.backgroundColor = localStorage.AlertColor;
+		document.getElementById('jps_AlertColor').value = localStorage.AlertColor;
+	} 
+}
+
+//
+// Button Font Color
+//
+function jps_SaveAlertFontColor(elem){
+	document.getElementById('TimedMsgInner').style.color = elem.value;
+	localStorage.AlertFontColor = elem.value;
+}
+function jps_LoadAlertFontColor(){
+	if (localStorage.AlertFontColor != null){
+		document.getElementById('TimedMsgInner').style.color = localStorage.AlertFontColor;
+		document.getElementById('jps_AlertFontColor').value = localStorage.AlertFontColor;
+	} 
+}
+
 function jps_toggleShowList(wrapper){
 	if (wrapper.classList.contains('jps_showList'))
 	{
