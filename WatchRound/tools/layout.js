@@ -76,7 +76,8 @@ function setupCustomElements(){
 			cSvg.setAttribute('version', '1.1');
 			cSvg.setAttribute('width', 20);
 			cSvg.setAttribute('height', 20);
-			cSvg.classList.add('jps_ShortFloatRight');
+			cSvg.classList.add('jps_FloatRight');
+			cSvg.style.width = "40px";
 			//var cSvg = document.getElementById("svgMaster").cloneNode(true);
 			//cSvg.removeAttribute('id');
 			
