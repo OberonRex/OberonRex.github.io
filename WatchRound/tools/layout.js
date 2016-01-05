@@ -45,7 +45,7 @@ function setupCustomElements(){
 			
 			var cInput = document.createElement('input');
 			cInput.classList.add('jps_property');
-			cInput.classList.add('jps_2ndColumn');
+			cInput.classList.add('jps_FloatRight');
 			cInput.classList.add('jps_Text');
 			cInput.setAttribute('readonly', 'true');
 			cInput.setAttribute('type', this.tagName == 'J-INTPROPERTY' ? 'number' : 'text');
@@ -76,6 +76,7 @@ function setupCustomElements(){
 			cSvg.setAttribute('version', '1.1');
 			cSvg.setAttribute('width', 20);
 			cSvg.setAttribute('height', 20);
+			cSvg.classList.add('jps_FloatRight');
 			//var cSvg = document.getElementById("svgMaster").cloneNode(true);
 			//cSvg.removeAttribute('id');
 			
@@ -112,7 +113,7 @@ function setupCustomElements(){
 
 			var cSel = document.createElement('select');
 			cSel.classList.add('jps_property');
-			cSel.classList.add('jps_2ndColumn');
+			cSel.classList.add('jps_FloatRight');
 			if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
 			if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
 			
