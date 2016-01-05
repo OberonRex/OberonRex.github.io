@@ -51,9 +51,8 @@ input, select{
 .jps_clearboth {clear:both; }
 
 .jps_FloatRight{float:right;}
-.jps_ShortFloatRight{float:right;width:150px;}
+.jps_ShortFloatRight{float:right;width:200px;}
 .jps_stdColumn {float:left;}
-.jps_longColumn {width:215px;float:left;}
 .jps_Shorter1Column {width:150px;float:left;}
 
 .mButton{
