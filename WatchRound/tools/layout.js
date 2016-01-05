@@ -80,7 +80,7 @@ function setupCustomElements(){
 			cSvg.setAttribute('height', 20);
 			cSvg.classList.add('jps_FloatRight');
 			cSvg.classList.add('boxit');
-			cSvg.style.width = "40px";
+			//cSvg.style.width = "40px";
 			//var cSvg = document.getElementById("svgMaster").cloneNode(true);
 			//cSvg.removeAttribute('id');
 			
