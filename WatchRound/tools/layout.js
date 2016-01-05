@@ -50,6 +50,7 @@ function setupCustomElements(){
 			//cInput.classList.add('jps_FloatRight');
 			cInput.classList.add('jps_Text');
 			cInput.setAttribute('readonly', 'true');
+			cInput.style.border = "none"
 			cInput.setAttribute('type', this.tagName == 'J-INTPROPERTY' ? 'number' : 'text');
 			if (this.hasAttribute('value')) cInput.setAttribute('value', this.getAttribute('value'));
 			if (this.hasAttribute('id')) cInput.setAttribute('id', this.getAttribute('id'));
