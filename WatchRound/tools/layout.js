@@ -71,12 +71,12 @@ function setupCustomElements(){
 			var cDiv = document.createElement('div');
 			cDiv.innerHTML = cInner;
 			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
-			
+
 			var cSvg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
 			cSvg.setAttribute('version', '1.1');
 			cSvg.setAttribute('width', 20);
 			cSvg.setAttribute('height', 20);
-			cSvg.classList.add('jps_FloatRight');
+			cSvg.classList.add('jps_ShortFloatRight');
 			//var cSvg = document.getElementById("svgMaster").cloneNode(true);
 			//cSvg.removeAttribute('id');
 			
