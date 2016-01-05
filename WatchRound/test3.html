@@ -98,7 +98,7 @@
 							<svg version="1.1"  width=20 height=20><polygon id="swap1" class="jps_ColorPicker jps_ColorSwatch"/></svg>
 							<span> with </span>
 							<svg version="1.1"  width=20 height=20><polygon id="swap2" class="jps_ColorPicker jps_ColorSwatch"/></svg>
-							<span class="mButton jps_veryWide2ndColumn " onclick="doSwap()">Go</span>
+							<span class="mButton jps_veryWide2ndColumn " onclick="doSwap(); showTimed('Swapped');">Go</span>
 						</div>
 						<div class="jps_clearboth"></div>
 				</div>
@@ -110,7 +110,7 @@
 							<svg version="1.1"  width=20 height=20><polygon id="replaceTarget" class="jps_ColorPicker jps_ColorSwatch"/></svg>
 							<span> with </span>
 							<svg version="1.1"  width=20 height=20><polygon id="replaceSource" class="jps_ColorPicker jps_ColorSwatch"/></svg>
-							<span class="mButton jps_veryWide2ndColumn" onclick="doReplace();">Go</span>
+							<span class="mButton jps_veryWide2ndColumn" onclick="doReplace();showTimed('Replaced');">Go</span>
 						</div>
 						<div class="jps_clearboth"></div>
 				</div>
@@ -320,8 +320,8 @@
 						onkeyup="user_SaveNewName(findConfig(this));"
 						idtempate="u">
 					<span class="jps_veryWide2ndColumn">
-						<span class="mButton" onclick="user_Apply(findConfig(this));">Load</span>
-						<span class="mButton" onclick="user_Update(findConfig(this));">Upd</span>
+						<span class="mButton" onclick="user_Apply(findConfig(this));showTimed('Loaded');">Load</span>
+						<span class="mButton" onclick="user_Update(findConfig(this));showTimed('Updated');">Upd</span>
 						<span class="mButton" onclick="user_Delete(findConfig(this));">Del</span>
 					</span>
 					<div class="jps_clearboth"></div>
@@ -360,6 +360,8 @@
 			hidden
 		</div>
 	</div>
+	
+	<div class="fadeout" id="TimedMsg" style="display:none"><span class="fadeoutInner" id="TimedMsgInner"></span></div>
 	
 	<script type="text/javascript" src="platforms/jquery.js"></script>
 	<!--<script type="text/javascript" src="platforms/jquery.mobile-1.4.5.js"></script>-->
