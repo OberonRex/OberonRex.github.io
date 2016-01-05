@@ -1,3 +1,20 @@
+.fadeout{
+	display:none; 
+	position:fixed; 
+	bottom:100px; 
+	text-align:center; 
+	width:100%;
+	color:yellow;
+}
+.fadeoutInner{
+	background-color:brown;
+	border-radius: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 input, select{
 	font-size: 100%;
 	border:none;
