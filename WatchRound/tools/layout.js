@@ -38,7 +38,8 @@ function setupCustomElements(){
 			
 			var cDiv = document.createElement('div');
 			cDiv.innerHTML = cInner;
-			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+			cDiv.classList.add('jps_stdColumn');
+			//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 			
 			var cBoth = document.createElement('div');
 			cBoth.classList.add('jps_clearboth');
@@ -113,7 +114,8 @@ function setupCustomElements(){
 			
 			var cDiv = document.createElement('div');
 			cDiv.innerHTML = cInner;
-			cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+			cDiv.classList.add('jps_stdColumn');
+			//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 
 			var cSel = document.createElement('select');
 			cSel.classList.add('jps_property');
