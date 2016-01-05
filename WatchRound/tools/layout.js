@@ -1,3 +1,12 @@
+function showTimed(stg){
+	document.getElementById("TimedMsgInner").innerHTML = stg;
+	document.getElementById("TimedMsg").style.display = "block";
+	setTimeout(TimedOut, 3000);
+}
+function TimedOut(){
+	document.getElementById("TimedMsg").style.display = "none";
+}
+
 //
 // Font Size
 //
