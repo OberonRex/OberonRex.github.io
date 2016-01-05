@@ -169,7 +169,6 @@ function wireUpFramework(){
 	jps_LoadButtonFontColor();
 	
 	var boxWidth = screen.width;
-	alert(boxWidth);
 	if (boxWidth > 640) boxWidth = 360; else boxWidth = Math.min(screen.width, 640);
 	boxWidth -= 20;
 	var rule = ".jps_stdBox {width:" + boxWidth + "px;clear:both;}"
