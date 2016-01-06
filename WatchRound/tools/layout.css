@@ -3,11 +3,6 @@
 }
 
 @keyframes fader{
-	0% { opacity: 1;}
-	10% { opacity: 1;}
-	20% { opacity: 1;}
-	30% { opacity: 1;}
-	40% { opacity: 1;}
 	50% { opacity: 1;}
 	60% { opacity: 0.8;}
 	70% { opacity: 0.6;}
