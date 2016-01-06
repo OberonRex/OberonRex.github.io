@@ -19,150 +19,149 @@ function jps_toggleShowList(wrapper){
 }
 
 function setupCustomElements(){
-		document.registerElement('j-intProperty', {
-			prototype: Object.create(HTMLDivElement.prototype)});
+	document.registerElement('j-intProperty', {
+		prototype: Object.create(HTMLDivElement.prototype)});
 
-		document.registerElement('j-stgProperty', {
-			prototype: Object.create(HTMLDivElement.prototype)});
+	document.registerElement('j-stgProperty', {
+		prototype: Object.create(HTMLDivElement.prototype)});
 
-		document.registerElement('j-colorProperty', {
-			prototype: Object.create(HTMLDivElement.prototype)});
-			
-		document.registerElement('j-selectorProperty', {
-			prototype: Object.create(HTMLDivElement.prototype)});
-			
-		$('j-intProperty,j-stgProperty').each(function(){
-			var cInner = this.innerHTML;
-			this.classList.add('jps_ListItem');
-			
-			var cDiv = document.createElement('div');
-			cDiv.innerHTML = cInner;
-			cDiv.classList.add('jps_stdColumn');
-			//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
-			
-			var cBoth = document.createElement('div');
-			cBoth.classList.add('jps_clearboth');
-			
-			var cInput = document.createElement('input');
-			cInput.classList.add('jps_property');
-			cInput.classList.add('jps_ShortFloatRight');
-			//cInput.classList.add('jps_FloatRight');
-			cInput.classList.add('jps_Text');
-			cInput.setAttribute('readonly', 'true');
-			cInput.style.border = "none";
-			cInput.setAttribute('type', this.tagName == 'J-INTPROPERTY' ? 'number' : 'text');
-			if (this.hasAttribute('value')) cInput.setAttribute('value', this.getAttribute('value'));
-			if (this.hasAttribute('id')) cInput.setAttribute('id', this.getAttribute('id'));
-			if (this.hasAttribute('idtemplate')) cInput.setAttribute('idtemplate', this.getAttribute('idtemplate'));
-			
-			this.removeAttribute('value');
-			this.removeAttribute('id');
-			this.removeAttribute('idtemplate');
-			this.innerHTML = "";
-			
-			this.appendChild(cDiv);
-			this.appendChild(cInput);
-			this.appendChild(cBoth);
-			
-		});
+	document.registerElement('j-colorProperty', {
+		prototype: Object.create(HTMLDivElement.prototype)});
 		
-		$('j-colorProperty').each(function(){
-			var cInner = this.innerHTML;
-			this.classList.add('jps_ListItem');
-			
-			var cDiv = document.createElement('div');
-			cDiv.innerHTML = cInner;
-			//cDiv.style.float = "left";
-			cDiv.classList.add('jps_stdColumn');
-			//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+	document.registerElement('j-selectorProperty', {
+		prototype: Object.create(HTMLDivElement.prototype)});
+		
+	$('j-intProperty,j-stgProperty').each(function(){
+		var cInner = this.innerHTML;
+		this.classList.add('jps_ListItem');
+		
+		var cDiv = document.createElement('div');
+		cDiv.innerHTML = cInner;
+		cDiv.classList.add('jps_stdColumn');
+		//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+		
+		var cBoth = document.createElement('div');
+		cBoth.classList.add('jps_clearboth');
+		
+		var cInput = document.createElement('input');
+		cInput.classList.add('jps_property');
+		cInput.classList.add('jps_ShortFloatRight');
+		//cInput.classList.add('jps_FloatRight');
+		cInput.classList.add('jps_Text');
+		cInput.setAttribute('readonly', 'true');
+		cInput.style.border = "none";
+		cInput.setAttribute('type', this.tagName == 'J-INTPROPERTY' ? 'number' : 'text');
+		if (this.hasAttribute('value')) cInput.setAttribute('value', this.getAttribute('value'));
+		if (this.hasAttribute('id')) cInput.setAttribute('id', this.getAttribute('id'));
+		if (this.hasAttribute('idtemplate')) cInput.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+		
+		this.removeAttribute('value');
+		this.removeAttribute('id');
+		this.removeAttribute('idtemplate');
+		this.innerHTML = "";
+		
+		this.appendChild(cDiv);
+		this.appendChild(cInput);
+		this.appendChild(cBoth);
+		
+	});
+	
+	$('j-colorProperty').each(function(){
+		var cInner = this.innerHTML;
+		this.classList.add('jps_ListItem');
+		
+		var cDiv = document.createElement('div');
+		cDiv.innerHTML = cInner;
+		//cDiv.style.float = "left";
+		cDiv.classList.add('jps_stdColumn');
+		//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 
-			var cSvg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
-			cSvg.setAttribute('version', '1.1');
-			cSvg.setAttribute('width', 20);
-			cSvg.setAttribute('height', 20);
-			cSvg.classList.add('jps_FloatRight');
-			//cSvg.classList.add('boxit');
-			//cSvg.style.width = "40px";
-			//var cSvg = document.getElementById("svgMaster").cloneNode(true);
-			//cSvg.removeAttribute('id');
-			
-			//var cPoly = $(cSvg).find('polygon')[0]; //cSvg.childNodes[1];
-			var cPoly = document.createElementNS("http://www.w3.org/2000/svg", 'polygon');
-			cPoly.classList.add('jps_property');
-			cPoly.classList.add('jps_ColorSwatch');
-			if (this.hasAttribute('id')) cPoly.setAttribute('id', this.getAttribute('id'));
-			if (this.hasAttribute('idtemplate')) cPoly.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+		var cSvg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
+		cSvg.setAttribute('version', '1.1');
+		cSvg.setAttribute('width', 20);
+		cSvg.setAttribute('height', 20);
+		cSvg.classList.add('jps_FloatRight');
+		//cSvg.classList.add('boxit');
+		//cSvg.style.width = "40px";
+		//var cSvg = document.getElementById("svgMaster").cloneNode(true);
+		//cSvg.removeAttribute('id');
+		
+		//var cPoly = $(cSvg).find('polygon')[0]; //cSvg.childNodes[1];
+		var cPoly = document.createElementNS("http://www.w3.org/2000/svg", 'polygon');
+		cPoly.classList.add('jps_property');
+		cPoly.classList.add('jps_ColorSwatch');
+		if (this.hasAttribute('id')) cPoly.setAttribute('id', this.getAttribute('id'));
+		if (this.hasAttribute('idtemplate')) cPoly.setAttribute('idtemplate', this.getAttribute('idtemplate'));
 
-			var cBoth = document.createElement('div');
-			cBoth.classList.add('jps_clearboth');
-			
-			this.removeAttribute('value');
-			this.removeAttribute('id');
-			this.removeAttribute('idtemplate');
-			this.innerHTML = "";
-			
-			this.appendChild(cDiv);
-			//this.appendChild(document.getElementById('xxx').cloneNode(true));
-			this.appendChild(cSvg);
-			cSvg.appendChild(cPoly);
-			this.appendChild(cBoth);
-			
-		});
+		var cBoth = document.createElement('div');
+		cBoth.classList.add('jps_clearboth');
+		
+		this.removeAttribute('value');
+		this.removeAttribute('id');
+		this.removeAttribute('idtemplate');
+		this.innerHTML = "";
+		
+		this.appendChild(cDiv);
+		//this.appendChild(document.getElementById('xxx').cloneNode(true));
+		this.appendChild(cSvg);
+		cSvg.appendChild(cPoly);
+		this.appendChild(cBoth);
+		
+	});
 
-		$('j-selectProperty').each(function(){
-			var cInner = this.innerHTML;
-			this.classList.add('jps_ListItem');
-			
-			var cDiv = document.createElement('div');
-			cDiv.innerHTML = cInner;
-			cDiv.classList.add('jps_stdColumn');
-			//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
+	$('j-selectProperty').each(function(){
+		var cInner = this.innerHTML;
+		this.classList.add('jps_ListItem');
+		
+		var cDiv = document.createElement('div');
+		cDiv.innerHTML = cInner;
+		cDiv.classList.add('jps_stdColumn');
+		//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
 
-			var cSel = document.createElement('select');
-			cSel.classList.add('jps_property');
-			cSel.classList.add('jps_ShortFloatRight');
-			//cSel.classList.add('jps_FloatRight');
-			if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
-			if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+		var cSel = document.createElement('select');
+		cSel.classList.add('jps_property');
+		cSel.classList.add('jps_ShortFloatRight');
+		//cSel.classList.add('jps_FloatRight');
+		if (this.hasAttribute('id')) cSel.setAttribute('id', this.getAttribute('id'));
+		if (this.hasAttribute('idtemplate')) cSel.setAttribute('idtemplate', this.getAttribute('idtemplate'));
+		
+		if (this.getAttribute('id')=='ws'){
+			$(cSel).on('change', function() {
+				//if (this.selectedIndex == 1){
+				//	this.parentElement.classList.add("jps_needsKey");
+				//	this.parentElement.classList.remove("jps_noKey");
+				//} else {
+				//	this.parentElement.classList.remove("jps_needsKey");
+				//	this.parentElement.classList.add("jps_noKey");
+				//}
+				var target = $(this.parentElement).next()[0];
+				if (this.selectedIndex == 1) target.classList.remove('jps_hideKey'); //style.display = "inherit";
+				else target.classList.add('jps_hideKey');//style.display = "none";
 			
-			if (this.getAttribute('id')=='ws'){
-				$(cSel).on('change', function() {
-					//if (this.selectedIndex == 1){
-					//	this.parentElement.classList.add("jps_needsKey");
-					//	this.parentElement.classList.remove("jps_noKey");
-					//} else {
-					//	this.parentElement.classList.remove("jps_needsKey");
-					//	this.parentElement.classList.add("jps_noKey");
-					//}
-					var target = $(this.parentElement).next()[0];
-					if (this.selectedIndex == 1) target.classList.remove('jps_hideKey'); //style.display = "inherit";
-					else target.classList.add('jps_hideKey');//style.display = "none";
-				
-				});
+			});
+		}
+
+		var opts = this.getAttribute('options').split(',');
+		for (var n = 0; n < opts.length; n++)
+			{
+				var opt = document.createElement("option");
+				opt.value = n;
+				opt.innerHTML = opts[n];
+				cSel.appendChild(opt);
 			}
-
-			var opts = this.getAttribute('options').split(',');
-			for (var n = 0; n < opts.length; n++)
-				{
-					var opt = document.createElement("option");
-					opt.value = n;
-					opt.innerHTML = opts[n];
-					cSel.appendChild(opt);
-				}
-			var cBoth = document.createElement('div');
-			cBoth.classList.add('jps_clearboth');
-				
-			this.removeAttribute('value');
-			this.removeAttribute('id');
-			this.removeAttribute('idtemplate');
-			this.innerHTML = "";
+		var cBoth = document.createElement('div');
+		cBoth.classList.add('jps_clearboth');
 			
-			this.appendChild(cDiv);
-			this.appendChild(cSel);
-			this.appendChild(cBoth);
-				
-		});
-
+		this.removeAttribute('value');
+		this.removeAttribute('id');
+		this.removeAttribute('idtemplate');
+		this.innerHTML = "";
+		
+		this.appendChild(cDiv);
+		this.appendChild(cSel);
+		this.appendChild(cBoth);
+			
+	});
 }
 
 function findWrapper(elem){
