@@ -25,6 +25,8 @@ input, select{
 	text-align:right;
 }
 
+.jps_Text{max-width:33%;}
+
 .jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template){display:block;}
 
 .jps_ListWrapper.jps_hideList > .jps_ListItem, 
@@ -52,9 +54,9 @@ input, select{
 .jps_clearboth {clear:both; }
 
 .jps_FloatRight{float:right;}
-.jps_ShortFloatRight{float:right;width:175px;}
+.jps_ShortFloatRight{float:right;}
 .jps_stdColumn {float:left;}
-.jps_Shorter1Column {width:150px;float:left;}
+.jps_Shorter1Column {float:left;}
 
 .mButton{
 	text-align: center;
