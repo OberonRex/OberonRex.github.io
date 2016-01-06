@@ -1,13 +1,12 @@
 function showTimed(stg){
 	document.getElementById("TimedMsgInner").innerHTML = stg;
 	document.getElementById("TimedMsg").style.display = "block";
-	//if (!setTimeout) alert('no setTimeout');
 	setTimeout(TimedOut, 1500);
 }
 function TimedOut(){
-	//alert('timed out');
 	document.getElementById("TimedMsg").style.display = "none";
 }
+
 function jps_toggleShowList(wrapper){
 	if (wrapper.classList.contains('jps_showList'))
 	{
@@ -243,25 +242,27 @@ function jps_GoToTarget(elem){
 }
 
 var prevPageID;
-var currentPageID = null;
+var currentPageID = "HomePage";
 var prevScrollTop = 0;
 function jps_GoToPage(pageID){
+	document.getElementById(currentPageID).setAttribute('sTop', document.getElementById("jps_MasterDiv").scrollTop);
 	$('.jps_page').each(
 		function(){
 			if (this.id.toLowerCase() == pageID.toLowerCase()){
 				this.style.display = "block";
-				prevPageID = currentPageID == null ? 'ConfigurationPage' : currentPageID;
+				prevPageID = currentPageID;
 				prevScrollTop = document.getElementById("jps_MasterDiv").scrollTop;
 				currentPageID = pageID;
 				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_Nav') ? 'block' : 'none';
 				document.getElementById('jps_Apply').style.display = this.hasAttribute('jps_Apply') ? 'block' : 'none';
 			}
 			else this.style.display = "none";	
-		})
+		});
+	var sTop = 0;
+	if (document.getElementById(currentPageID).hasAttribute('sTop')) sTop = document.getElementById(currentPageID).getAttribute('sTop');
+	document.getElementById("jps_MasterDiv").scrollTop = sTop;
 }
 
 function jps_Return(){
-	var pTop = prevScrollTop;
 	jps_GoToPage(prevPageID);
-	document.getElementById("jps_MasterDiv").scrollTop = pTop;
 }
