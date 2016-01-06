@@ -19,13 +19,14 @@
 	padding-bottom: 5px;
 }
 
-.jps_Text{
+input, select{
 	font-size: 100%;
 	border:none;
-	text-align:right;
 }
-
-.jps_Text{max-width:33%;}
+.jps_Text:not(.jps_ConfigName){
+	text-align:right;
+	max-width:33%;
+}
 
 .jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template){display:block;}
 
