@@ -9,15 +9,15 @@
 	
 	<div id="jps_Nav">
 		<div class="jps_stdBox" style="position:fixed; top:0; left:0; display:inline; border:1px solid black; 
-	padding-left:15px; padding-right:15px;">
+			padding-left:15px; padding-right:15px;">
 			<div class="jps_ListItem jps_hideList ScrollableList" 
-	style="white-space: nowrap; overflow:scroll; 
-	padding-top:15px; padding-bottom:15px; margin-left:0px; margin-right:0px; 
-	display:block">
+				style="white-space: nowrap; overflow:scroll; 
+				padding-top:15px; padding-bottom:15px; margin-left:0px; margin-right:0px; 
+				display:block">
 				<div class="lButton" target="HomePage">Home</div>
 				<div class="lButton" target="ConfigurationPage">Configuration</div>
 				<div class="lButton" target="UserDefinedPage">User Defined</div>
-				<div class="lButton" target="SettingsPage">Preferences</div>
+				<div class="lButton" target="PreferencesPage">Preferences</div>
 				<div class="lButton" target="AckPage">Acknowledgements</div>
 				<div style="display:inline">&nbsp;</div>
 			</div>
@@ -27,13 +27,36 @@
 			hidden
 		</div>
 	</div>
-	
+
+	<div id="jps_SubNav" style="display:none">
+		<div class="jps_stdBox" style="position:fixed; top:0; left:0; display:inline; border:1px solid black; 
+			padding-left:15px; padding-right:15px;">
+			<div class="jps_ListItem jps_hideList ScrollableList" 
+				style="white-space: nowrap; overflow:scroll; 
+				padding-top:15px; padding-bottom:15px; margin-left:0px; margin-right:0px; 
+				display:block">
+				<div class="slButton" target="ConfigHomePage">Home</div>
+				<div class="slButton" target="PresetsPage">Presets</div>
+				<div class="slButton" target="TickMarksPage">Tick Marks</div>
+				<div class="slButton" target="HandsPage">Hands</div>
+				<div class="slButton" target="WindowsPage">Windows</div>
+				<div class="slButton" target="OuterCirclesPage">Outer Circles</div>
+				<div class="slButton" target="MiscPage">Misc</div>
+				<div style="display:inline">&nbsp;</div>
+			</div>
+		</div>
+		<div class="jps_stdBox slButton" style="position:relative; top:0; visibility:hidden; 
+		padding-top:15px; padding-bottom:15px; margin-left:0px; margin-right:0px">
+			hidden
+		</div>
+	</div>
+
 	<div id="jps_MasterDiv" class="jps_stdBox">
-		<div class="jps_page" jps_Nav id="HomePage" style="display:block">
+		<div class="jps_page" jps_Nav page="HomePage" id="HomePage" style="display:block">
 			<br><br>
 			<div><img src="images/WatchFace.png" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.01</div>
 		</div>
-		<div class="jps_page" jps_Nav id="SettingsPage" style="display:none">
+		<div class="jps_page" jps_Nav page="PreferencesPage" style="display:none">
 			<br><br>
 			Font size: <input type="range" id="jps_FontSize" min="75" max="200"
 				onchange="jps_SaveFontSize(this);";
@@ -46,14 +69,14 @@
 			<div>Alert Font color: <input id="jps_AlertFontColor" class="jps_FloatRight" type="color" onchange="jps_SaveAlertFontColor(this);" value="#FFFF00"></div><div class="jps_clearboth"></div>		
 		</div>
 		
-		<div class="jps_page" jps_Nav jps_Apply id="ConfigurationPage" style="display:none">
+		<div class="jps_page" jps_Nav jps_Apply page="ConfigurationPage" id="ConfigurationPage" style="display:none">
 	
 			<!--
 			****************************
 			** Presets
 			****************************
 			-->
-			<div class="jps_ListWrapper jps_hideList">
+			<div class="jps_ListWrapper jps_hideList" page="PresetsPage">
 				<span class="jps_ListHeader">Presets</span>
 				<div class="jps_ListItem jps_hideList ScrollableList" style="white-space: nowrap; overflow:scroll;">
 					
@@ -305,7 +328,7 @@
 			</div>
 		</div>
 
-		<div class="jps_page" jps_Nav jps_Apply id="UserDefinedPage" style="display:none">
+		<div class="jps_page" jps_Nav jps_Apply page = "UserDefinedPage" id="UserDefinedPage" style="display:none">
 			
 			<!--
 			****************************
@@ -334,7 +357,7 @@
 			
 		</div>
 
-		<div class="jps_page" jps_Nav id="AckPage" style="display:none">
+		<div class="jps_page" jps_Nav page="AckPage" id="AckPage" style="display:none">
 			Acknowledgements:
 			<ul>
 			<li>Pebble.com for the color picker</li>
@@ -344,7 +367,7 @@
 			</ul>			
 		</div>
 		
-		<div class="jps_page" id="colorPickerPage" style="display:none"></div>
+		<div class="jps_page" page="colorPickerPage" id="colorPickerPage" style="display:none"></div>
 		
 	</div>
 	
