@@ -248,7 +248,7 @@ function jps_GoToPage(pageID){
 	$('[page="' + currentPageID + '"]')[0].setAttribute(sTop, document.getElementById("jps_MasterDiv").scrollTop);
 	$('.jps_page').each(
 		function(){
-			if (this.page.toLowerCase() == pageID.toLowerCase()){
+			if (this.getAttribute('page').toLowerCase() == pageID.toLowerCase()){
 				this.style.display = "block";
 				prevPageID = currentPageID;
 				prevScrollTop = document.getElementById("jps_MasterDiv").scrollTop;
