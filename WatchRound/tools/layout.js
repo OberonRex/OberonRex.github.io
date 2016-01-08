@@ -244,10 +244,11 @@ var prevPageID;
 var currentPageID = "HomePage";
 var prevScrollTop = 0;
 function jps_GoToPage(pageID){
-	document.getElementById(currentPageID).setAttribute('sTop', document.getElementById("jps_MasterDiv").scrollTop);
+	//document.getElementById(currentPageID).setAttribute('sTop', document.getElementById("jps_MasterDiv").scrollTop);
+	$('[page="' + currentPageID + '"]')[0].setAttribute(sTop, document.getElementById("jps_MasterDiv").scrollTop);
 	$('.jps_page').each(
 		function(){
-			if (this.id.toLowerCase() == pageID.toLowerCase()){
+			if (this.page.toLowerCase() == pageID.toLowerCase()){
 				this.style.display = "block";
 				prevPageID = currentPageID;
 				prevScrollTop = document.getElementById("jps_MasterDiv").scrollTop;
@@ -258,7 +259,9 @@ function jps_GoToPage(pageID){
 			else this.style.display = "none";	
 		});
 	var sTop = 0;
-	if (document.getElementById(currentPageID).hasAttribute('sTop')) sTop = document.getElementById(currentPageID).getAttribute('sTop');
+	//if (document.getElementById(currentPageID).hasAttribute('sTop')) sTop = document.getElementById(currentPageID).getAttribute('sTop');
+	if ($('[page="' + currentPageID + '"]')[0].hasAttribute('sTop'))
+		sTop = $('[page="' + currentPageID + '"]')[0].getAttribute('sTop');
 	document.getElementById("jps_MasterDiv").scrollTop = sTop;
 }
 
