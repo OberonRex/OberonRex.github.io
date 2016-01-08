@@ -50,10 +50,12 @@
 
 
 	<div id="jps_MasterDiv" class="jps_stdBox">
+		
 		<div class="jps_page" jps_Nav page="HomePage" style="display:block">
-			<br><br>
+			<br>
 			<div><img src="images/WatchFace.png" style="vertical-align:middle">&nbsp;&nbsp;&nbsp;Round 1.01</div>
 		</div>
+		
 		<div class="jps_page" jps_Nav page="PreferencesPage" style="display:none">
 			Font size: <input type="range" id="jps_FontSize" min="75" max="200"
 				onchange="jps_SaveFontSize(this);";
@@ -66,14 +68,14 @@
 			<div>Alert Font color: <input id="jps_AlertFontColor" class="jps_FloatRight" type="color" onchange="jps_SaveAlertFontColor(this);" value="#FFFF00"></div><div class="jps_clearboth"></div>		
 		</div>
 		
-		<div class="jps_page" jps_Nav jps_Apply page="ConfigurationPage" style="display:none">
+		<div class="jps_page jps_hasSubpages" jps_Nav jps_Apply page="ConfigurationPage" style="display:none">
 	
 			<!--
 			****************************
 			** Presets
 			****************************
 			-->
-			<div class="jps_ListWrapper jps_hideList" page="PresetsPage">
+			<div class="jps_ListWrapper jps_hideList jps_subpage" page="PresetsPage">
 				<span class="jps_ListHeader">Presets</span>
 				<div class="jps_ListItem jps_hideList ScrollableList" style="white-space: nowrap; overflow:scroll;">
 					
@@ -98,7 +100,7 @@
 			** Color Editors
 			****************************
 			-->
-			<div class="jps_ListWrapper jps_hideList">
+			<div class="jps_ListWrapper jps_hideList" id=jps_ColorEditors>
 				<span class="jps_ListHeader">Color Editing</span>
 				
 				<div id="PaintWith" class="jps_ListWrapper jps_hideList jps_ListItem">
@@ -146,7 +148,7 @@
 			** Tick Marks
 			****************************
 			-->
-			<div id="m" class="jps_ListWrapper jps_hideList dynamic">
+			<div id="m" class="jps_ListWrapper jps_hideList dynamic jps_subpage">
 				<span class="jps_ListHeader">Tick Mark Sets</span><span class="jps_AddButton mButton">Add</span>
 				<br clear=both>
 				
@@ -177,7 +179,7 @@
 			** HANDS 
 			****************************
 			-->
-			<div class="jps_ListWrapper jps_hideList">
+			<div class="jps_ListWrapper jps_hideList jps_subpage">
 				<span class="jps_ListHeader">Hands</span>
 			
 				<!-- Hour Hand Parts -->
@@ -245,7 +247,7 @@
 			** Windows 
 			**************************
 			-->
-			<div id="w" class="jps_ListWrapper jps_hideList dynamic">
+			<div id="w" class="jps_ListWrapper jps_hideList dynamic jps_subpage">
 				<span class="jps_ListHeader">Windows</span><span class="jps_AddButton mButton">Add</span>
 				<br clear=both>
 				
@@ -275,7 +277,7 @@
 			** Outer Circles
 			**************************
 			-->
-			<div id="o" class="jps_ListWrapper jps_hideList dynamic">
+			<div id="o" class="jps_ListWrapper jps_hideList dynamic jps_subpage">
 				<span class="jps_ListHeader">Outer Circles</span><span class="jps_AddButton mButton">Add</span>
 				<br clear=both>
 				
@@ -295,7 +297,7 @@
 			<div class="jps_clearboth"></div>
 	
 			<!-- Misc -->
-			<div class="jps_ListWrapper jps_hideList">
+			<div class="jps_ListWrapper jps_hideList jps_subpage">
 				<span class="jps_ListHeader">Misc</span>
 				
 				<!-- Battery Bar -->
@@ -325,7 +327,7 @@
 			</div>
 		</div>
 
-		<div class="jps_page" jps_Nav jps_Apply page="UserDefinedPage" style="display:none">
+		<div class="jps_page" jps_Nav jps_Apply page="UserDefinedPage jps_subpage" style="display:none">
 			
 			<!--
 			****************************
