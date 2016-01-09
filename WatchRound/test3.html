@@ -5,9 +5,9 @@
 </head
 <style>
 </style> 
-<body onload="ImportInitialValues()" style="font-size:150%; background-color: #808080; font-color: #000000;">
+<body onload="ImportInitialValues(); showUniverse();" style="font-size:150%; background-color: #808080; font-color: #000000;">
 	
-	<div id="jps_Universe">
+	<div id="jps_Universe" style="display:none;">
 	
 	<div id="jps_Nav">
 		<div class="jps_stdBox" style="position:fixed; top:0; left:0; display:inline;
@@ -408,6 +408,10 @@
 		$( "#colorPickerPage" ).load( "color/colorpicker.html", function(elem){wireUpColorPicker();});
 		wireUpFramework();
 		LoadConfigs();
+		
+		function showUniverse(){
+			document.getElementById('jps_Universe').style.display = 'block';
+		}
 	</script>
 </body>
 </html>
