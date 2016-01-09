@@ -82,6 +82,7 @@ input, select{
 }
 
 .lButton, .slButton{
+	border-radius: 3px;
 	display:inline;
 	text-align: center;
 	border: 1px solid black;
@@ -97,7 +98,7 @@ input, select{
 	vertical-align: middle;
 }
 
-.slButton{font:75%;}
+.slButton{font-size:75%;}
 
 .spacer{
 	text-align: center;
