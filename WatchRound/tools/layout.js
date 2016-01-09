@@ -34,6 +34,31 @@ function setupCustomElements(){
 	document.registerElement('j-Tip', {
 		prototype: Object.create(HTMLDivElement.prototype)});
 		
+	$('j-Tip').each(function(){
+		var cInner = this.innerHTML;
+		this.classList.add('jps_ListItem');
+		
+		var clrDiv = document.createElement('div');
+		clrDiv.classList.add('jps_clearboth');
+		
+		var cDiv = document.createElement('div');
+		cDiv.innerHTML = cInner;
+		
+		var chkBox = document.createElement('input');
+		chkBox.type = 'checkbox';
+		var id = this.id;
+		chkBox.id = id;
+		
+		var label = document.createElement('label');
+		label.htmlFor = id;
+		label.appendChild(document.createTextNote("Don't show this message again."));
+		
+		this.appendChild(clrDiv);
+		this.appendChild(cDiv);
+		this.appendChild(chkBox);
+		this.appendChild(label);
+	});
+		
 	$('j-intProperty,j-stgProperty').each(function(){
 		var cInner = this.innerHTML;
 		this.classList.add('jps_ListItem');
