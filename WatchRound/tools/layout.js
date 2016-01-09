@@ -188,7 +188,7 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(this.parentElement, true)});
 	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(this.parentElement);});
 	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {this.parentElement.remove()});
-	$('body').on('click', '.lButton', function() {jps_GoToTarget(this)});
+	$('body').on('click', '.lButton, .slButton', function() {jps_GoToTarget(this)});
 	
 	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly'); this.style.border='1px solid black';});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', 'true'); this.style.border = 'none';});
@@ -236,24 +236,37 @@ function jps_AddOne(pElem, show){
 	return clone;
 }
 
+var LastMainButton;
+var LastSubButton;
 function jps_GoToTarget(elem){
-	jps_GoToPage(elem.getAttribute('target'));
+	if (elem.classList.contains('sButton')) LastMainButton = elem;
+	else LastSubButton = elem;
+	if (elem.classList.contains('hasSubPages') jps_GoToPage(currentSubPageID);
+	else jps_GoToPage(elem.getAttribute('target'));
 }
 
+var prevSubPageID;
+var currentSubPageID = "ConfigHomePage";
 var prevPageID;
 var currentPageID = "HomePage";
-var prevScrollTop = 0;
 function jps_GoToPage(pageID){
 	$('[page="' + currentPageID + '"]')[0].setAttribute(sTop, document.getElementById("jps_MasterDiv").scrollTop);
+
 	$('.jps_page').each(
 		function(){
 			if (this.getAttribute('page').toLowerCase() == pageID.toLowerCase()){
 				this.style.display = "block";
+				
 				prevPageID = currentPageID;
-				prevScrollTop = document.getElementById("jps_MasterDiv").scrollTop;
 				currentPageID = pageID;
-				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_Nav') ? 'block' : 'none';
+				
+				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_MainPage') ? 'block' : 'none';
 				document.getElementById('jps_Apply').style.display = this.hasAttribute('jps_Apply') ? 'block' : 'none';
+				
+				document.getElementById('jps_SubNav').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
+				document.getElementById('jps_SubNav2').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
+				
+				if (this.classList.contains('jps_subpage')) currentSubPageID = pageID;
 			}
 			else this.style.display = "none";	
 		});
