@@ -241,7 +241,7 @@ var LastSubButton;
 function jps_GoToTarget(elem){
 	if (elem.classList.contains('sButton')) LastMainButton = elem;
 	else LastSubButton = elem;
-	if (elem.classList.contains('hasSubPages') jps_GoToPage(currentSubPageID);
+	if (elem.classList.contains('hasSubPages')) jps_GoToPage(currentSubPageID);
 	else jps_GoToPage(elem.getAttribute('target'));
 }
 
