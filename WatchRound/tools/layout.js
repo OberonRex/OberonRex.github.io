@@ -36,8 +36,7 @@ function setupCustomElements(){
 		
 	$('j-Tip').each(function(){
 		var cInner = this.innerHTML;
-		this.classList.add('jps_ListItem');
-		
+
 		var clrDiv = document.createElement('div');
 		clrDiv.classList.add('jps_clearboth');
 		
