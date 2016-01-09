@@ -239,7 +239,7 @@ function jps_AddOne(pElem, show){
 var LastMainButton;
 var LastSubButton;
 function jps_GoToTarget(elem){
-	if (elem.classList.contains('sButton')) LastMainButton = elem;
+	if (elem.classList.contains('lButton')) LastMainButton = elem;
 	else LastSubButton = elem;
 	if (elem.classList.contains('hasSubPages')) jps_GoToPage(currentSubPageID);
 	else jps_GoToPage(elem.getAttribute('target'));
