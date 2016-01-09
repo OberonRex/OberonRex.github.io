@@ -247,6 +247,8 @@ function jps_GoToPage(pageID){
 
 	$('.jps_page, .jps_subpage').each(
 		function(){
+			if (!this.hasAttribute('page'))
+				alert();
 			if (this.getAttribute('page').toLowerCase() == pageID.toLowerCase()){
 				this.style.display = "block";
 				
