@@ -262,7 +262,11 @@ function jps_GoToPage(pageID){
 				document.getElementById('jps_SubNav').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
 				document.getElementById('jps_SubNav2').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
 				
-				if (this.hasAttribute('jps_subpage')) currentSubPageID = pageID;
+				if (this.hasAttribute('jps_subpage')) {
+					currentSubPageID = pageID;
+					document.getElementById('jps_ColorEditors').style.display = this.hasAttribute('noColorEditors') ? 'none' : 'block';
+				}
+				else document.getElementById('jps_ColorEditors').style.display = 'none';
 			}
 			else this.style.display = "none";	
 		});
