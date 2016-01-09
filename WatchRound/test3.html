@@ -67,7 +67,7 @@
 			<div>Alert Font color: <input id="jps_AlertFontColor" class="jps_FloatRight" type="color" onchange="jps_SaveAlertFontColor(this);" value="#FFFF00"></div><div class="jps_clearboth"></div>		
 		</div>
 		
-		<div class="jps_page" jps_subpage jps_Apply page="ConfigHomePage" style="display:none">
+		<div class="jps_page" jps_subpage jps_Apply noColorEditors page="ConfigHomePage" style="display:none">
 			Overview?
 		</div>
 	
@@ -123,7 +123,7 @@
 			** Presets
 			****************************
 			-->
-			<div class="jps_ListWrapper jps_showList jps_page" jps_subpage jps_Apply page="PresetsPage" style="display:none">
+			<div class="jps_ListWrapper jps_showList jps_page" jps_subpage jps_Apply noColorEditors page="PresetsPage" style="display:none">
 				<span>Presets</span>
 				<div class="jps_ListItem jps_hideList ScrollableList" style="white-space: nowrap; overflow:scroll;">
 					
@@ -331,7 +331,7 @@
 			** User Defined
 			****************************
 			-->
-		<div class="jps_page" jps_subpage jps_Apply page="UserDefinedPage" style="display:none">
+		<div class="jps_page" jps_subpage jps_Apply noColorEditors page="UserDefinedPage" style="display:none">
 			
 			<div id="jps_UserConfigWrapper">
 				<span class="jps_ListHeader">Saved Configurations</span><span class="jps_AddUserConfigButton mButton">Add</span>
