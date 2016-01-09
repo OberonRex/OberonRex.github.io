@@ -31,6 +31,9 @@ function setupCustomElements(){
 	document.registerElement('j-selectorProperty', {
 		prototype: Object.create(HTMLDivElement.prototype)});
 		
+	document.registerElement('j-Tip', {
+		prototype: Object.create(HTMLDivElement.prototype)});
+		
 	$('j-intProperty,j-stgProperty').each(function(){
 		var cInner = this.innerHTML;
 		this.classList.add('jps_ListItem');
