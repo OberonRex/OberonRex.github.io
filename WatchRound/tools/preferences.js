@@ -45,12 +45,12 @@ function jps_LoadFontColor(){
 // Button Color
 //
 function jps_SaveButtonColor(elem){
-	$('.mButton,.lButton').css("backgroundColor", elem.value);
+	$('.mButton,.lButton,.slButton').css("backgroundColor", elem.value);
 	localStorage.ButtonColor = elem.value;
 }
 function jps_LoadButtonColor(){
 	if (localStorage.ButtonColor != null){
-		$('.mButton,.lButton').css("backgroundColor", localStorage.ButtonColor);
+		$('.mButton,.lButton,.slButton').css("backgroundColor", localStorage.ButtonColor);
 		document.getElementById('jps_ButtonColor').value = localStorage.ButtonColor;
 	} 
 }
