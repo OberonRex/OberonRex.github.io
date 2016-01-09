@@ -50,7 +50,7 @@ function setupCustomElements(){
 		
 		var label = document.createElement('label');
 		label.htmlFor = id;
-		label.appendChild(document.createTextNote("Don't show this message again."));
+		label.appendChild(document.createTextNode("Don't show this message again."));
 
 		this.removeAttribute('id');
 		this.innerHTML = "";
