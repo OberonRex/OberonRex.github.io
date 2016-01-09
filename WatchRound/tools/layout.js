@@ -127,13 +127,6 @@ function setupCustomElements(){
 		
 		if (this.getAttribute('id')=='ws'){
 			$(cSel).on('change', function() {
-				//if (this.selectedIndex == 1){
-				//	this.parentElement.classList.add("jps_needsKey");
-				//	this.parentElement.classList.remove("jps_noKey");
-				//} else {
-				//	this.parentElement.classList.remove("jps_needsKey");
-				//	this.parentElement.classList.add("jps_noKey");
-				//}
 				var target = $(this.parentElement).next()[0];
 				if (this.selectedIndex == 1) target.classList.remove('jps_hideKey'); //style.display = "inherit";
 				else target.classList.add('jps_hideKey');//style.display = "none";
@@ -260,7 +253,7 @@ function jps_GoToPage(pageID){
 				prevPageID = currentPageID;
 				currentPageID = pageID;
 				
-				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_MainPage') ? 'block' : 'none';
+				document.getElementById('jps_Nav').style.display = this.hasAttribute('jps_ShowMainNav') ? 'block' : 'none';
 				document.getElementById('jps_Apply').style.display = this.hasAttribute('jps_Apply') ? 'block' : 'none';
 				
 				document.getElementById('jps_SubNav').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
