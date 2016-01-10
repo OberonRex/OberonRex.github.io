@@ -60,9 +60,8 @@ function setupCustomElements(){
 		
 		var label = document.createElement('label');
 		label.htmlFor = idInp;
-		var tNode = document.createTextNode("Don't show this message again.")
-		tNode.style.fontstyle = "italic";
-		label.appendChild(tNode);
+		label.style.fontstyle = "italic";
+		label.appendChild(document.createTextNode("Don't show this message again.");
 
 		this.innerHTML = "";
 		
