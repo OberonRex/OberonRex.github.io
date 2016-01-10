@@ -63,7 +63,8 @@ function setupCustomElements(){
 		chkBox.type = 'checkbox';
 		var idInp = this.id + "_Inp";
 		chkBox.id = idInp;
-		chkBox.onclick = function(){disableTip(this.id);};
+		chkBox.setAttribute('target', this.id);
+		chkBox.onclick = function(){disableTip(this.getAttribute('target'));};
 		
 		var label = document.createElement('label');
 		label.htmlFor = idInp;
