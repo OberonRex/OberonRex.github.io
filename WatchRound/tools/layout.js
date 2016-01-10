@@ -42,10 +42,11 @@ function setupCustomElements(){
 		
 		var boxDiv = document.createElement('div');
 		boxDiv.style.border = "1px solid black";
-		boxDiv.style.margin = "5px 5px 5px 5px";
+		boxDiv.style.margin = "5px 5px 10px 5px";
 		
 		var cDiv = document.createElement('div');
 		cDiv.innerHTML = cInner;
+		cDiv.style.font-style = "italic";
 		
 		var bar = document.createElement('hr');
 		bar.classList.add('hhr');
@@ -59,7 +60,9 @@ function setupCustomElements(){
 		
 		var label = document.createElement('label');
 		label.htmlFor = idInp;
-		label.appendChild(document.createTextNode("Don't show this message again."));
+		var tNode = document.createTextNode("Don't show this message again.")
+		tNode.style.font-style = "italic";
+		label.appendChild(tNode);
 
 		this.innerHTML = "";
 		
