@@ -36,9 +36,12 @@ function setupCustomElements(){
 		
 	$('j-Tip').each(function(){
 		var cInner = this.innerHTML;
-
+		
 		var clrDiv = document.createElement('div');
 		clrDiv.classList.add('jps_clearboth');
+		
+		var boxDiv = document.createElement('div');
+		boxDiv.style.border = "1px solid black";
 		
 		var cDiv = document.createElement('div');
 		cDiv.innerHTML = cInner;
@@ -62,10 +65,11 @@ function setupCustomElements(){
 		//this.style.border = "1px solid black";
 		
 		this.appendChild(clrDiv);
-		this.appendChild(cDiv);
-		this.appendChild(bar);
-		this.appendChild(chkBox);
-		this.appendChild(label);
+		boxDiv.appendChild(cDiv);
+		boxDiv.appendChild(bar);
+		boxDiv.appendChild(chkBox);
+		boxDiv.appendChild(label);
+		this.appendChild(boxDiv);
 	});
 		
 	$('j-intProperty,j-stgProperty').each(function(){
