@@ -42,15 +42,16 @@ function setupCustomElements(){
 		
 		var boxDiv = document.createElement('div');
 		boxDiv.style.border = "1px solid black";
+		boxDiv.style.margin = "5px 5px 5px 5px";
 		
 		var cDiv = document.createElement('div');
 		cDiv.innerHTML = cInner;
 		
 		var bar = document.createElement('hr');
 		bar.classList.add('hhr');
-		//bar.style.textAlign = "center";
-		//bar.style.width = "50%";
-		
+		bar.style.marginTop = "5px";
+		bar.style.marginBottom = 5px;
+
 		var chkBox = document.createElement('input');
 		chkBox.type = 'checkbox';
 		var idInp = this.id + "_Inp";
