@@ -44,7 +44,9 @@ function setupCustomElements(){
 		cDiv.innerHTML = cInner;
 		
 		var bar = document.createElement('hr');
-		bar.classList.add('hhr');
+		//bar.classList.add('hhr');
+		bar.style.textAlign = "center";
+		bar.style.width = "50%";
 		
 		var chkBox = document.createElement('input');
 		chkBox.type = 'checkbox';
