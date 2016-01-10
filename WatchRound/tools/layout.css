@@ -10,6 +10,8 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+    text-align:center;
+    width:50%;
 } 
 
 @keyframes fader{
