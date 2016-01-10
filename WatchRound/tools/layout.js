@@ -50,7 +50,7 @@ function setupCustomElements(){
 		var bar = document.createElement('hr');
 		bar.classList.add('hhr');
 		bar.style.marginTop = "5px";
-		bar.style.marginBottom = 5px;
+		bar.style.marginBottom = "5px";
 
 		var chkBox = document.createElement('input');
 		chkBox.type = 'checkbox';
