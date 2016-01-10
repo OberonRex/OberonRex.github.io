@@ -17,6 +17,7 @@ function jps_setAllTips(){
 		var idKey = this.id;
 		if (localStorage.idKey != null)	this.style.display = localStorage.idKey ? "none" : "";
 		else this.style.display = "";
+	});
 }
 
 function showTimed(stg){
