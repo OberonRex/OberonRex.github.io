@@ -69,7 +69,7 @@ function setupCustomElements(){
 		boxDiv.style.fontStyle = "italic";
 		
 		var cDiv = document.createElement('div');
-		cDiv.innerHTML = cInner;
+		cDiv.innerHTML = "Tip: " + cInner;
 		//cDiv.style.fontstyle = "italic";
 		
 		var bar = document.createElement('hr');
