@@ -46,7 +46,7 @@ function setupCustomElements(){
 		
 		var cDiv = document.createElement('div');
 		cDiv.innerHTML = cInner;
-		cDiv.style.font-style = "italic";
+		cDiv.style.fontstyle = "italic";
 		
 		var bar = document.createElement('hr');
 		bar.classList.add('hhr');
@@ -61,7 +61,7 @@ function setupCustomElements(){
 		var label = document.createElement('label');
 		label.htmlFor = idInp;
 		var tNode = document.createTextNode("Don't show this message again.")
-		tNode.style.font-style = "italic";
+		tNode.style.fontstyle = "italic";
 		label.appendChild(tNode);
 
 		this.innerHTML = "";
