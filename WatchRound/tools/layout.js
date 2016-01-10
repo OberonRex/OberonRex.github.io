@@ -1,3 +1,7 @@
+function disableTip(id){
+	
+}
+
 function showTimed(stg){
 	document.getElementById("TimedMsgInner").innerHTML = stg;
 	document.getElementById("TimedMsg").style.display = "block";
