@@ -12,7 +12,7 @@ function jps_forceAllTips(value){
 	});
 }
 
-function jps_setAllTips(){
+function jps_loadAllTips(){
 	$('j-Tip').each(function(){
 		var idKey = this.id;
 		if (localStorage.idKey != null)	this.style.display = localStorage.idKey ? "none" : "";
