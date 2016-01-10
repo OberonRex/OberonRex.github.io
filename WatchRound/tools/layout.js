@@ -4,7 +4,7 @@ function disableTip(id){
 	localStorage.idKey = true;
 }
 
-function forceAllTips(value){
+function jps_forceAllTips(value){
 	$('j-Tip').each(function{
 		var idKey = this.id;
 		localStorage.idKey = value;
@@ -12,7 +12,7 @@ function forceAllTips(value){
 	});
 }
 
-function setAllTips(){
+function jps_setAllTips(){
 	$('j-Tip').each(function{
 		var idKey = this.id;
 		if (localStorage.idKey != null)	this.style.display = localStorage.idKey ? "none" : "";
@@ -243,6 +243,8 @@ function wireUpFramework(){
 	
 	jps_LoadAlertColor();
 	jps_LoadAlertFontColor();
+	
+	jps_loadAllTips();
 	
 	var boxWidth = screen.width;
 	if (boxWidth > 640) boxWidth = 360; else boxWidth = Math.min(screen.width, 640);
