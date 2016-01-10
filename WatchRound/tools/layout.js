@@ -43,21 +43,25 @@ function setupCustomElements(){
 		var cDiv = document.createElement('div');
 		cDiv.innerHTML = cInner;
 		
+		var bar = document.createElement('hr');
+		bar.classList.add('hhr');
+		
 		var chkBox = document.createElement('input');
 		chkBox.type = 'checkbox';
-		var id = this.id;
-		chkBox.id = id;
+		var idInp = this.id + "_Inp";
+		chkBox.id = idInp;
 		
 		var label = document.createElement('label');
-		label.htmlFor = id;
+		label.htmlFor = idInp;
 		label.appendChild(document.createTextNode("Don't show this message again."));
 
-		this.removeAttribute('id');
 		this.innerHTML = "";
 		
+		this.style.border = "1px solid black";
 		
 		this.appendChild(clrDiv);
 		this.appendChild(cDiv);
+		this.appendChild(bar);
 		this.appendChild(chkBox);
 		this.appendChild(label);
 	});
