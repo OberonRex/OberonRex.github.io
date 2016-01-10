@@ -43,7 +43,7 @@ function setupCustomElements(){
 		var boxDiv = document.createElement('div');
 		boxDiv.style.border = "1px solid black";
 		boxDiv.style.margin = "5px 5px 10px 5px";
-		boxDiv.style.padding = "5px 5px 10px 5px";
+		boxDiv.style.padding = "5px 0px 10px 5px";
 		
 		var cDiv = document.createElement('div');
 		cDiv.innerHTML = cInner;
