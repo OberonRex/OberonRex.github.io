@@ -1,5 +1,22 @@
 function disableTip(id){
-	document.getElementById(id).style.display = "none";	
+	document.getElementById(id).style.display = "none";
+	var idKey = id + "_hide";
+	localStorage.idKey = true;
+}
+
+function forceAllTips(value){
+	$('j-Tip').each(function{
+		var idKey = this.id;
+		localStorage.idKey = value;
+		this.style.display = value ? "none" : "";
+	});
+}
+
+function setAllTips(){
+	$('j-Tip').each(function{
+		var idKey = this.id;
+		if (localStorage.idKey != null)	this.style.display = localStorage.idKey ? "none" : "";
+		else this.style.display = "";
 }
 
 function showTimed(stg){
