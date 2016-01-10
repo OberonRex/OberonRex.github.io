@@ -1,5 +1,5 @@
 function disableTip(id){
-	
+	document.getElementById(id).style.display = "none";	
 }
 
 function showTimed(stg){
