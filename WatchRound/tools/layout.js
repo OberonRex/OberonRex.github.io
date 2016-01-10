@@ -57,7 +57,7 @@ function setupCustomElements(){
 
 		this.innerHTML = "";
 		
-		this.style.border = "1px solid black";
+		//this.style.border = "1px solid black";
 		
 		this.appendChild(clrDiv);
 		this.appendChild(cDiv);
