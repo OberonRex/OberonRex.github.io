@@ -2,7 +2,7 @@
 	border: 1px solid #000000;
 }
 
-hr { 
+hr, hhr { 
     display: block;
     margin-top: 0.5em;
     margin-bottom: 1.5em;
@@ -10,9 +10,11 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+} 
+hhr{
     text-align:center;
     width:50%;
-} 
+}
 
 @keyframes fader{
 	50% { opacity: 1;}
