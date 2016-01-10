@@ -5,7 +5,7 @@ function disableTip(id){
 }
 
 function jps_forceAllTips(value){
-	$('j-Tip').each(function{
+	$('j-Tip').each(function(){
 		var idKey = this.id;
 		localStorage.idKey = value;
 		this.style.display = value ? "none" : "";
@@ -13,7 +13,7 @@ function jps_forceAllTips(value){
 }
 
 function jps_setAllTips(){
-	$('j-Tip').each(function{
+	$('j-Tip').each(function(){
 		var idKey = this.id;
 		if (localStorage.idKey != null)	this.style.display = localStorage.idKey ? "none" : "";
 		else this.style.display = "";
