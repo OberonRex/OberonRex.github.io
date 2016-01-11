@@ -1,13 +1,13 @@
 function disableTip(id){
 	document.getElementById(id).style.display = "none";
 	var idKey = id + "_hide";
-	localStorage.idKey = true;
+	localStorage[idKey] = true;
 }
 
 function jps_forceAllTips(value){
 	$('j-Tip').each(function(){
 		var idKey = this.id;
-		localStorage.idKey = value;
+		localStorage[idKey] = value;
 		this.style.display = value ? "none" : "";
 	});
 }
@@ -15,7 +15,7 @@ function jps_forceAllTips(value){
 function jps_loadAllTips(){
 	$('j-Tip').each(function(){
 		var idKey = this.id;
-		if (localStorage.idKey != null)	this.style.display = localStorage.idKey ? "none" : "";
+		if (localStorage[idKey] != null)	this.style.display = localStorage[idKey] ? "none" : "";
 		else this.style.display = "";
 	});
 }
