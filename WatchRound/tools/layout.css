@@ -75,19 +75,9 @@ input, select{
 .jps_ListWrapper.jps_showList > .jps_ListHeader:before{content: "- ";}
 .jps_ListWrapper.jps_hideList > .jps_ListHeader:before{content: "+ ";} 
 
-.jps_ListHeader, .jps_Title{
-	border-bottom-style: solid; 
-	border-bottom-width: 1px; 
-	margin-top: 10px;}
-
 .jps_AddButton{float:right;}
 .jps_AddUserConfigButton{float:right;}
 .jps_RemoveButton{float:right;}
-
-.jps_ListWrapper, .jps_ListItem{
-	margin-top: 5px;
-	margin-bottom: 15px;
-}
 
 .jps_clearboth {clear:both; }
 
