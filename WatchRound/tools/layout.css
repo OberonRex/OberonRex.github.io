@@ -83,6 +83,7 @@ input, select{
 
 .jps_ListWrapper, .jps_ListItem{
 	margin-top: 5px;
+	margin-bottom: 15px;
 }
 
 .jps_clearboth {clear:both; }
