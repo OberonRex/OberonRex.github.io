@@ -15,7 +15,7 @@ function jps_forceAllTips(value){
 function jps_loadAllTips(){
 	$('j-Tip').each(function(){
 		var idKey = this.id + "_hide";
-		if (localStorage[idKey] != null) this.style.display = localStorage[idKey] ? "none" : "";
+		if (localStorage[idKey] != null) this.style.display = $.parseJSON(localStorage[idKey]) ? "none" : "";
 		else this.style.display = "";
 	});
 }
