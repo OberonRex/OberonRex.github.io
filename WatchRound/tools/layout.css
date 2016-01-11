@@ -87,11 +87,6 @@ input, select{
 
 .jps_clearboth {clear:both; }
 
-.jps_naked{
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-}
-
 .jps_FloatRight{float:right;}
 .jps_ShortFloatRight{float:right;}
 .jps_stdColumn {float:left;}
