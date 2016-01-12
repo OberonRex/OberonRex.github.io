@@ -51,6 +51,11 @@
 	animation-duration: 1.6s;
 }
 
+.jps_Title{
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+}
+
 input, select{
 	font-size: 100%;
 	border:none;
