@@ -77,16 +77,19 @@ function setupCustomElements(){
 		bar.style.marginTop = "10px";
 		bar.style.marginBottom = "10px";
 
-		var chkBox = document.createElement('input');
-		chkBox.type = 'checkbox';
-		var idInp = this.id + "_Inp";
-		chkBox.id = idInp;
-		chkBox.setAttribute('target', this.id);
-		chkBox.onclick = function(){disableTip(this.getAttribute('target'));};
+		//var chkBox = document.createElement('input');
+		//chkBox.type = 'checkbox';
+		//var idInp = this.id + "_Inp";
+		//chkBox.id = idInp;
+		//chkBox.setAttribute('target', this.id);
+		var disButton = document.createElement('div');
+		disButton.innerHTML = "Don't show this message again.");
+		disButton.classList.add('mButton');
+		disButton.onclick = function(){disableTip(this.getAttribute('target'));};
 		
-		var label = document.createElement('label');
-		label.htmlFor = idInp;
-		label.appendChild(document.createTextNode("Don't show this message again."));
+		//var label = document.createElement('label');
+		//label.htmlFor = idInp;
+		//label.appendChild(document.createTextNode("Don't show this message again."));
 		//label.style.fontstyle = "italic";
 
 		this.innerHTML = "";
