@@ -275,7 +275,7 @@ function wireUpFramework(){
 	jps_loadAllTips();
 	
 	LoadMainHomePageSetting();
-	LoadConfigPageSetting();
+	LoadConfigHomePageSetting();
 	
 	var boxWidth = screen.width;
 	if (boxWidth > 640) boxWidth = 360; else boxWidth = Math.min(screen.width, 640);
