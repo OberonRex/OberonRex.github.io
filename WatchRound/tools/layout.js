@@ -3,6 +3,24 @@ function SetPage(pContext, elem){
 	localStorage[pContext + "_page"] = value;
 }
 
+function LoadMainHomePageSetting(){
+	var key = "main_page";
+	if (localStorage[key] != null){
+		var value = localStorage(key);
+		$('#selectMainHomePage').val(value);
+		jps_GoToPage(value);
+	}
+}
+
+function LoadConfigHomePageSetting(){
+	var key = "config_page";
+	if (localStorage[key] != null){
+		var value = localStorage(key);
+		$('#selectConfigHomePage').val(value);
+		currentSubPageID = value;
+	}
+}
+
 function disableTip(id){
 	document.getElementById(id).style.display = "none";
 	var idKey = id + "_hide";
