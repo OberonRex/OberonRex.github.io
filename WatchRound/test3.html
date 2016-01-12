@@ -83,7 +83,7 @@
 			<br>
 			<div style="border-bottom: 1px solid black; margin-bottom:5px;">Initial Opening Pages</div>
 			
-			<div>Main: <select class="jps_ShortFloatRight">
+			<div>Main: <select id="selectMainHomePage" class="jps_ShortFloatRight" onchange="SetPage("main", this);">
 				<option target="HomePage">Home</option>
 				<option target="ConfigurationPage">Configuration</option>
 				<option target="PreferencesPage">Preferences</option>
@@ -91,7 +91,7 @@
 			</select>
 			</div>
 			
-			<div>Config: <select class="jps_ShortFloatRight">
+			<div>Config: <select id="selectConfigHomePage" class="jps_ShortFloatRight" onchange="SetPage("config", this);>
 				<option target="ConfigHomePage">Overview</option>
 				<option target="PresetsPage">Presets</option>	
 				<option target="UserDefinedPage">User Def</option>	
