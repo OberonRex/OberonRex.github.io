@@ -8,7 +8,8 @@ function LoadMainHomePageSetting(){
 	if (localStorage[key] != null){
 		var value = localStorage[key];
 		$('#selectMainHomePage').val(value);
-		jps_GoToPage(value);
+		if (value != "ConfigurationPage") jps_GoToPage(value);
+		else jps_GoToPage(currentSubPageID);
 	}
 }
 
@@ -274,8 +275,8 @@ function wireUpFramework(){
 	
 	jps_loadAllTips();
 	
-	LoadMainHomePageSetting();
 	LoadConfigHomePageSetting();
+	LoadMainHomePageSetting();
 	
 	var boxWidth = screen.width;
 	if (boxWidth > 640) boxWidth = 360; else boxWidth = Math.min(screen.width, 640);
