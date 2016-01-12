@@ -1,5 +1,6 @@
 function SetPage(pContext, elem){
-	
+	//var idKey = elem.getAttribute('');
+	//localStorage[]
 }
 
 function disableTip(id){
