@@ -1,5 +1,5 @@
 function SetPage(pContext, elem){
-	var value = elem.options[elem.selectedIndex].getAttribute('target');
+	var value = elem.options[elem.selectedIndex].getAttribute('value');
 	localStorage[pContext + "_page"] = value;
 }
 
