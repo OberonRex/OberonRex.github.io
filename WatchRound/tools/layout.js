@@ -65,7 +65,7 @@ function setupCustomElements(){
 		var boxDiv = document.createElement('div');
 		boxDiv.style.border = "1px solid black";
 		boxDiv.style.margin = "5px 5px 10px 5px";
-		boxDiv.style.padding = "10px 0px 10px 5px";
+		boxDiv.style.padding = "10px 5px 10px 5px";
 		boxDiv.style.fontStyle = "italic";
 		
 		var cDiv = document.createElement('div');
@@ -89,7 +89,7 @@ function setupCustomElements(){
 		
 		//var label = document.createElement('label');
 		//label.htmlFor = idInp;
-		//label.appendChild(document.createTextNode("Don't show this message again."));
+		//label.appendChild(document.createTextNode("Don't show this tip again."));
 		//label.style.fontstyle = "italic";
 
 		this.innerHTML = "";
