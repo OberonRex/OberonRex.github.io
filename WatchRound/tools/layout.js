@@ -1,3 +1,7 @@
+function SetPage(pContext, elem){
+	
+}
+
 function disableTip(id){
 	document.getElementById(id).style.display = "none";
 	var idKey = id + "_hide";
