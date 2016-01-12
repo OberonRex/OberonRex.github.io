@@ -99,8 +99,8 @@ function setupCustomElements(){
 		this.appendChild(clrDiv);
 		boxDiv.appendChild(cDiv);
 		boxDiv.appendChild(bar);
-		boxDiv.appendChild(chkBox);
-		boxDiv.appendChild(label);
+		boxDiv.appendChild(disButton);
+		//boxDiv.appendChild(label);
 		this.appendChild(boxDiv);
 	});
 		
