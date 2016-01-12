@@ -60,14 +60,16 @@
 		
 		<div class="jps_page" jps_ShowMainNav page="PreferencesPage" style="display:none">
 			Font size: <input type="range" id="jps_FontSize" min="75" max="200"
-				onchange="jps_SaveFontSize(this);";
-			><div class="jps_clearboth"></div>
+				onchange="jps_SaveFontSize(this);";>
+			<div class="jps_clearboth"></div>
 			<div>Background color: <input id="jps_BackgroundColor" class="jps_FloatRight" type="color" onchange="jps_SaveBackgroundColor(this);" value="#808080"></div><div class="jps_clearboth"></div>
 			<div>Font color: <input id="jps_FontColor" class="jps_FloatRight" type="color" onchange="jps_SaveFontColor(this);" value="#FFFFFF"></div><div class="jps_clearboth"></div>
 			<div>Button color: <input id="jps_ButtonColor" class="jps_FloatRight" type="color" onchange="jps_SaveButtonColor(this);" value="#D3D3D3"></div><div class="jps_clearboth"></div>
 			<div>Button Font color: <input id="jps_ButtonFontColor" class="jps_FloatRight" type="color" onchange="jps_SaveButtonFontColor(this);" value="#000000"></div><div class="jps_clearboth"></div>			
 			<div>Alert color: <input id="jps_AlertColor" class="jps_FloatRight" type="color" onchange="jps_SaveAlertColor(this);" value="#964B00"></div><div class="jps_clearboth"></div>
 			<div>Alert Font color: <input id="jps_AlertFontColor" class="jps_FloatRight" type="color" onchange="jps_SaveAlertFontColor(this);" value="#FFFF00"></div><div class="jps_clearboth"></div>		
+			
+			<div class="jps_clearboth"></div>
 			
 			<br>
 			<hr>
@@ -77,6 +79,8 @@
 			<div class="mButton" style="display:inline" onclick="jps_forceAllTips(false);showTimed('Done');">Reset All Tips</div>
 			<div class="mButton" style="display:inline" onclick="jps_forceAllTips(true);showTimed('Done');">Disable All Tips</div>
 			</span>
+			
+			<div class="jps_clearboth"></div>
 			
 			<br>
 			<hr>
@@ -92,6 +96,8 @@
 					<option target="AckPage">Ack.</option>
 				</select>
 			</div>
+			
+			<div class="jps_clearboth"></div>
 			
 			<div>
 				<div class="jps_stdColumn">Config: </div>
