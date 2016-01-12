@@ -83,7 +83,7 @@ function setupCustomElements(){
 		//chkBox.id = idInp;
 		//chkBox.setAttribute('target', this.id);
 		var disButton = document.createElement('div');
-		disButton.innerHTML = "Don't show this message again.";
+		disButton.innerHTML = "Don't show this tip again.";
 		disButton.classList.add('mButton');
 		disButton.onclick = function(){disableTip(this.getAttribute('target'));};
 		
