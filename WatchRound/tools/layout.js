@@ -6,7 +6,7 @@ function SetPage(pContext, elem){
 function LoadMainHomePageSetting(){
 	var key = "main_page";
 	if (localStorage[key] != null){
-		var value = localStorage(key);
+		var value = localStorage[key];
 		$('#selectMainHomePage').val(value);
 		jps_GoToPage(value);
 	}
@@ -15,7 +15,7 @@ function LoadMainHomePageSetting(){
 function LoadConfigHomePageSetting(){
 	var key = "config_page";
 	if (localStorage[key] != null){
-		var value = localStorage(key);
+		var value = localStorage[key];
 		$('#selectConfigHomePage').val(value);
 		currentSubPageID = value;
 	}
