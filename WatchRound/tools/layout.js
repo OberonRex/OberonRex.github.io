@@ -292,9 +292,9 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_AddUserConfigButton', function() {jps_AddUserConfig()});
 	
 	// ** REDO use of parentElement
-	//$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(findWrapper(this), true)}); // ListWrapper
-	//$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(findWrapper(this));}); // ListWrapper
-	//$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {findWrapper(this).remove()}); // ListWrapper
+	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(findWrapper(this), true)}); // ListWrapper
+	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(findWrapper(this));}); // ListWrapper
+	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {findWrapper(this).remove()}); // ListWrapper
 	
 	$('body').on('click', '.lButton, .slButton', function() {jps_GoToTarget(this)});
 	
