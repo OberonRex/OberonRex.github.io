@@ -225,7 +225,8 @@ function setupCustomElements(){
 		
 		if (this.getAttribute('id')=='ws'){
 			$(cSel).on('change', function() {
-				var target = $(this.parentElement).next()[0]; // REDO "wk".FindListElement
+				//var target = $(this.parentElement).next()[0]; // REDO "wk".FindListElement
+				var target = findListElement(document.getElementById('wk'));
 				if (this.selectedIndex == 1) target.classList.remove('jps_hideKey'); //style.display = "inherit";
 				else target.classList.add('jps_hideKey');//style.display = "none";
 			
@@ -259,6 +260,10 @@ function findWrapper(elem){
 	while (!elem.classList.contains('jps_ListWrapper')) elem = elem.parentElement;
 	return elem;
 }
+function findListElement(elem){
+	while (!elem.classList.contains('jps_ListElement')) elem = elem.parentElement;
+	return elem;
+}
 
 function wireUpFramework(){
 	setupCustomElements();
@@ -287,9 +292,9 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_AddUserConfigButton', function() {jps_AddUserConfig()});
 	
 	// ** REDO use of parentElement
-	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(this.parentElement, true)}); // ListWrapper
-	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(this.parentElement);}); // ListWrapper
-	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {this.parentElement.remove()}); // ListWrapper
+	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(findWrapper(this), true)}); // ListWrapper
+	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(findWrapper(this));}); // ListWrapper
+	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {findWrapper(this).remove()}); // ListWrapper
 	
 	$('body').on('click', '.lButton, .slButton', function() {jps_GoToTarget(this)});
 	
