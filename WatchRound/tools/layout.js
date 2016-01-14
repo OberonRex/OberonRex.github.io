@@ -1,3 +1,10 @@
+function activateInput(inpElem){
+	inpElem.removeAttribute('readonly'); inpElem.style.border='1px solid black';
+}
+function deactivateInput(inpElem){
+	inpElem.setAttribute('readonly', 'true'); inpElem.style.border = 'none';
+}
+
 function SetPage(pContext, elem){
 	var value = elem.options[elem.selectedIndex].getAttribute('value');
 	localStorage[pContext + "_page"] = value;
@@ -94,33 +101,20 @@ function setupCustomElements(){
 		
 		var cDiv = document.createElement('div');
 		cDiv.innerHTML = "Tip: " + cInner;
-		//cDiv.style.fontstyle = "italic";
-		
+
 		var bar = document.createElement('hr');
 		bar.classList.add('hhr');
 		bar.style.marginTop = "10px";
 		bar.style.marginBottom = "10px";
 
-		//var chkBox = document.createElement('input');
-		//chkBox.type = 'checkbox';
-		//var idInp = this.id + "_Inp";
-		//chkBox.id = idInp;
-		//chkBox.setAttribute('target', this.id);
 		var disButton = document.createElement('div');
 		disButton.setAttribute('target', this.id);
 		disButton.innerHTML = "Don't show this tip again.";
 		disButton.classList.add('mButton');
 		disButton.onclick = function(){disableTip(this.getAttribute('target'));};
 		
-		//var label = document.createElement('label');
-		//label.htmlFor = idInp;
-		//label.appendChild(document.createTextNode("Don't show this tip again."));
-		//label.style.fontstyle = "italic";
-
 		this.innerHTML = "";
-		
-		//this.style.border = "1px solid black";
-		
+
 		this.appendChild(clrDiv);
 		boxDiv.appendChild(cDiv);
 		boxDiv.appendChild(bar);
@@ -136,15 +130,13 @@ function setupCustomElements(){
 		var cDiv = document.createElement('div');
 		cDiv.innerHTML = cInner;
 		cDiv.classList.add('jps_stdColumn');
-		//cDiv.classList.add(this.hasAttribute('long') ? 'jps_longColumn' : 'jps_stdColumn');
-		
+
 		var cBoth = document.createElement('div');
 		cBoth.classList.add('jps_clearboth');
 		
 		var cInput = document.createElement('input');
 		cInput.classList.add('jps_property');
 		cInput.classList.add('jps_ShortFloatRight');
-		//cInput.classList.add('jps_FloatRight');
 		cInput.classList.add('jps_Text');
 		cInput.setAttribute('readonly', 'true');
 		cInput.style.border = "none";
@@ -179,12 +171,7 @@ function setupCustomElements(){
 		cSvg.setAttribute('width', 20);
 		cSvg.setAttribute('height', 20);
 		cSvg.classList.add('jps_FloatRight');
-		//cSvg.classList.add('boxit');
-		//cSvg.style.width = "40px";
-		//var cSvg = document.getElementById("svgMaster").cloneNode(true);
-		//cSvg.removeAttribute('id');
-		
-		//var cPoly = $(cSvg).find('polygon')[0]; //cSvg.childNodes[1];
+
 		var cPoly = document.createElementNS("http://www.w3.org/2000/svg", 'polygon');
 		cPoly.classList.add('jps_property');
 		cPoly.classList.add('jps_ColorSwatch');
@@ -225,10 +212,9 @@ function setupCustomElements(){
 		
 		if (this.getAttribute('id')=='ws'){
 			$(cSel).on('change', function() {
-				//var target = $(this.parentElement).next()[0]; // REDO "wk".FindListElement
 				var target = findListItem(document.getElementById('wk'));
-				if (this.selectedIndex == 1) target.classList.remove('jps_hideKey'); //style.display = "inherit";
-				else target.classList.add('jps_hideKey');//style.display = "none";
+				if (this.selectedIndex == 1) target.classList.remove('jps_hideKey');
+				else target.classList.add('jps_hideKey');
 			
 			});
 		}
@@ -291,15 +277,14 @@ function wireUpFramework(){
 
 	$('div#jps_MasterDiv').on('click', '.jps_AddUserConfigButton', function() {jps_AddUserConfig()});
 	
-	// ** REDO use of parentElement
-	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(findWrapper(this), true)}); // ListWrapper
-	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(findWrapper(this));}); // ListWrapper
-	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {findWrapper(this).remove()}); // ListWrapper
+	$('div#jps_MasterDiv').on('click', '.jps_AddButton', function() {jps_AddOne(findWrapper(this), true)});
+	$('div#jps_MasterDiv').on('click', '.jps_ListHeader', function(){jps_toggleShowList(findWrapper(this));});
+	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {findWrapper(this).remove()});
 	
 	$('body').on('click', '.lButton, .slButton', function() {jps_GoToTarget(this)});
 	
-	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){this.removeAttribute('readonly'); this.style.border='1px solid black';});
-	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){this.setAttribute('readonly', 'true'); this.style.border = 'none';});
+	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){activateInput(this)});
+	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){deactivateInput(this)});
 	
 	$('.jps_ColorSwatch, .jps_ColorPicker, jps_ColorPainter').each(function(){
 		this.setAttribute('points', '8.85, 0.35 17.15, 5.15 17.15, 14.7 8.85, 19.5 0.6,	14.7 0.6, 5.15');
