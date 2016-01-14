@@ -288,8 +288,8 @@ function wireUpFramework(){
 	
 	$('body').on('click', '.lButton, .slButton', function() {jps_GoToTarget(this)});
 	
-	//$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){activateInput(this)});
-	$('div#jps_MasterDiv').on('click', '.jps_Text', function(){activateInput(this)});
+	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){activateInput(this)});
+	//$('div#jps_MasterDiv').on('click', '.jps_Text', function(){activateInput(this)});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){deactivateInput(this)});
 	
 	$('.jps_ColorSwatch, .jps_ColorPicker, jps_ColorPainter').each(function(){
