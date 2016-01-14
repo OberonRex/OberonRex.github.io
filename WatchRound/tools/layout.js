@@ -3,8 +3,8 @@ function activateInput(inpElem){
 	//var val = inpElem.value;
 	//inpElem.value = "";
 	//inpElem.value = val;
-	inpElem.setSelectionRange(inpElem.value.length, inpElem.value.length);
-	//inpElem.setSelectionRange(0, inpElem.value.length);
+	//inpElem.setSelectionRange(inpElem.value.length, inpElem.value.length);
+	inpElem.setSelectionRange(0, inpElem.value.length);
 }
 function deactivateInput(inpElem){
 	inpElem.setAttribute('readonly', 'true'); inpElem.style.border = 'none';
