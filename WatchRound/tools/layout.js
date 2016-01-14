@@ -1,9 +1,10 @@
 function activateInput(inpElem){
 	inpElem.removeAttribute('readonly'); inpElem.style.border='1px solid black';
-	var val = inpElem.value;
-	inpElem.value = "";
-	inpElem.value = val;
-	inpElem.setSelectionRange(inpElem.value.length, inpElem.value.length);
+	//var val = inpElem.value;
+	//inpElem.value = "";
+	//inpElem.value = val;
+	//inpElem.setSelectionRange(inpElem.value.length, inpElem.value.length);
+	inpElem.setSelectionRange(0, inpElem.value.length);
 }
 function deactivateInput(inpElem){
 	inpElem.setAttribute('readonly', 'true'); inpElem.style.border = 'none';
