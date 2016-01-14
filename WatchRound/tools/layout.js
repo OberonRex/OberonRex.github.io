@@ -3,8 +3,8 @@ function activateInput(inpElem){
 	//var val = inpElem.value;
 	//inpElem.value = "";
 	//inpElem.value = val;
-	//inpElem.setSelectionRange(inpElem.value.length, inpElem.value.length);
-	inpElem.setSelectionRange(0, inpElem.value.length);
+	inpElem.setSelectionRange(inpElem.value.length, inpElem.value.length);
+	//inpElem.setSelectionRange(0, inpElem.value.length);
 }
 function deactivateInput(inpElem){
 	inpElem.setAttribute('readonly', 'true'); inpElem.style.border = 'none';
@@ -288,7 +288,8 @@ function wireUpFramework(){
 	
 	$('body').on('click', '.lButton, .slButton', function() {jps_GoToTarget(this)});
 	
-	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){activateInput(this)});
+	//$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){activateInput(this)});
+	$('div#jps_MasterDiv').on('click', '.jps_Text', function(){activateInput(this)});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){deactivateInput(this)});
 	
 	$('.jps_ColorSwatch, .jps_ColorPicker, jps_ColorPainter').each(function(){
