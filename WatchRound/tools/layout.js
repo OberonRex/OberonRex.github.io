@@ -1,6 +1,6 @@
 function activateInput(inpElem){
 	inpElem.removeAttribute('readonly'); inpElem.style.border='1px solid black';
-	inpElem.setSelectionRange(inpElem.value.length);
+	inpElem.setSelectionRange(inpElem.value.length, inpElem.value.length);
 }
 function deactivateInput(inpElem){
 	inpElem.setAttribute('readonly', 'true'); inpElem.style.border = 'none';
