@@ -1,32 +1,3 @@
-function ResizeColorSwatches(percent){
-	
-	$('.jps_ColorSwatch').each(function(){
-	
-		//var trg = document.getElementById("fb2");
-		var trgParent = this.parentElement;
-		var mul = percent/100;
-		
-		var pointsStg = "8.85,0.35 17.15,5.15 17.15,14.7 8.85,19.5 0.6,14.7 0.6,5.15";
-		var points = pointsStg.split(" ");
-		
-		var newStg = "";
-		for (var n = 0; n <= 5; n++)
-		{
-			var xy = points[n].split(",");
-			var x = xy[0] * mul;
-			var y = xy[1] * mul;
-			newStg += x + "," + y + " ";
-		}
-		
-		var w = 20;
-		var h = 20;
-		
-		this.setAttribute("points", newStg);
-		trgParent.setAttribute("width", w * mul);
-		trgParent.setAttribute("height", h * mul);
-	});
-}
-
 function activateInput(inpElem){
 	inpElem.removeAttribute('readonly'); inpElem.style.border='1px solid black';
 	//var val = inpElem.value;
