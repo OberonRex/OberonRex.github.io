@@ -9,7 +9,15 @@ function findInput(configElem){
 }
 
 function jps_AddUserConfig(){
-	var newConfig = jps_AddOne(document.getElementById('jps_UserConfigWrapper'), true);
+	var root = document.getElementById('jps_UserConfigWrapper');
+	
+	//var n = 1;
+	//var avail = false;
+	//while (!avail){
+	//	
+	//}
+	
+	var newConfig = jps_AddOne(root, true);
 	var e = findInput(newConfig);
 	e.value = "New";
 	var l = e.value.length;
