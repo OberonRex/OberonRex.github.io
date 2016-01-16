@@ -11,7 +11,7 @@ function findInput(configElem){
 function NotFound(root, base, n){
 	var target = base + n;
 	var found = false;
-	$(root).find('.jpsConfigName').each(function(){
+	$(root).find('.jps_ConfigName').each(function(){
 		if (this.value == target) found = true;
 	});
 	return !found;
