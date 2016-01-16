@@ -11,11 +11,9 @@ function findInput(configElem){
 function jps_AddUserConfig(){
 	var root = document.getElementById('jps_UserConfigWrapper');
 	
-	//var n = 1;
-	//var avail = false;
-	//while (!avail){
-	//	
-	//}
+	var n = 1;
+	var base = "New ";
+	//while ($(root).children('.jps_Config [Name="' + base + n + '"]').length > 0) n++;
 	
 	var newConfig = jps_AddOne(root, true);
 	var e = findInput(newConfig);
