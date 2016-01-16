@@ -8,13 +8,13 @@ function findInput(configElem){
   return configElem.getElementsByClassName('jps_ConfigName')[0];
 }
 
-function NotFound(root, base, n){
+function jps_Found(root, base, n){
 	var target = base + n;
 	var found = false;
 	$(root).find('.jps_ConfigName').each(function(){
 		if (this.value == target) found = true;
 	});
-	return !found;
+	return found;
 }
 
 function jps_AddUserConfig(){
@@ -22,7 +22,7 @@ function jps_AddUserConfig(){
 	
 	var n = 1;
 	var base = "New ";
-	while (NotFound(root, base, n)) n++;
+	while (jps_Found(root, base, n)) n++;
 	
 	var newConfig = jps_AddOne(root, true);
 	var e = findInput(newConfig);
