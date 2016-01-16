@@ -8,12 +8,21 @@ function findInput(configElem){
   return configElem.getElementsByClassName('jps_ConfigName')[0];
 }
 
+function NotFound(root, base, n){
+	var target = base + n;
+	var found = false;
+	$(root).find('.jpsConfigName').each(function(){
+		if (this.value == target) found = true;
+	});
+	return !found;
+}
+
 function jps_AddUserConfig(){
 	var root = document.getElementById('jps_UserConfigWrapper');
 	
 	var n = 1;
 	var base = "New ";
-	while ($(root).children('.jps_Config [Name="' + base + n + '"]').length > 0) n++;
+	while (NotFound(root, base, n)) n++;
 	
 	var newConfig = jps_AddOne(root, true);
 	var e = findInput(newConfig);
