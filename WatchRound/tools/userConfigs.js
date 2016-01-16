@@ -13,11 +13,11 @@ function jps_AddUserConfig(){
 	
 	var n = 1;
 	var base = "New ";
-	//while ($(root).children('.jps_Config [Name="' + base + n + '"]').length > 0) n++;
+	while ($(root).children('.jps_Config [Name="' + base + n + '"]').length > 0) n++;
 	
 	var newConfig = jps_AddOne(root, true);
 	var e = findInput(newConfig);
-	e.value = "New";
+	e.value = base + n;
 	var l = e.value.length;
 	e.setSelectionRange(l, l);
 	e.value = e.value;
