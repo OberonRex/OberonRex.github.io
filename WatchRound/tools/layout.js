@@ -256,11 +256,15 @@ function findListItem(elem){
 	return elem;
 }
 
+var production = false;
 function wireUpFramework(){
 	setupCustomElements();
 	
 	var boxWidth = screen.width;
-	if (boxWidth > 640) boxWidth = 360; else boxWidth = Math.min(screen.width, 640);
+	if (!production) {
+		if (boxWidth > 640) boxWidth = 360; else boxWidth = Math.min(screen.width, 640);
+	}
+		
 	boxWidth -= 20;
 	var rule = ".jps_stdBox {width:" + boxWidth + "px;clear:both;}"
 	document.styleSheets[0].insertRule(rule, 1);
