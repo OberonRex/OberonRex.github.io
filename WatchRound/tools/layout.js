@@ -1,9 +1,15 @@
+function setHighLightColor(newColor){
+	var rules = document.styleSheets[0].rules;
+	for (var n = 0; n < rules.length; n++) {
+	  if (rules[n].selectorText = "jps_button" {
+	    rules[n].style.backgroudColor = newColor;
+	    break;
+	  }
+	}	
+}
+
 function activateInput(inpElem){
 	inpElem.removeAttribute('readonly'); inpElem.style.border='1px solid black';
-	//var val = inpElem.value;
-	//inpElem.value = "";
-	//inpElem.value = val;
-	//inpElem.setSelectionRange(inpElem.value.length, inpElem.value.length);
 	inpElem.setSelectionRange(0, inpElem.value.length);
 }
 function deactivateInput(inpElem){
