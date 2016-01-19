@@ -49,13 +49,17 @@ function user_Apply(configElem){
 }
 
 function user_Update(configElem){
-	CaptureConfig(configElem);
-	SaveEverything();
+	if (confirm("Update with current settings? This cannot be undone.")){
+		CaptureConfig(configElem);
+		SaveEverything();
+	}
 }
 
 function user_Delete(configElem){
-	configElem.remove();
-	SaveEverything();
+	if (confirm("Permanently delete? This cannot be undone.")){
+		configElem.remove();
+		SaveEverything();
+	}
 }
 
 function SaveEverything(){
