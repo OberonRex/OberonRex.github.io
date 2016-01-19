@@ -97,42 +97,32 @@ input, select{
 .jps_Shorter1Column {float:left;}
 
 .mButton{
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+.jButton{
 	border-radius: 3px;
 	text-align: center;
 	border: 1px solid black;
 	background-color: #D3D3D3;
 	color: #000000;
-	padding-right: 2px;
-	padding-left: 2px;
 	vertical-align: middle;
 }
 
 .oButton{
 	font-size: 60%;
-	border-radius: 3px;
-	text-align: center;
-	border: 1px solid black;
-	background-color: #D3D3D3;
-	color: #000000;
-	vertical-align: middle;
 }
 
 
 .lButton, .slButton{
-	border-radius: 3px;
-	display:inline;
-	text-align: center;
-	border: 1px solid black;
-	border-collapse: collapse;
-	background-color: #D3D3D3;
-	color: #000000;
 	padding-right: 10px;
 	padding-left: 10px;
 	padding-top: 6px;
 	padding-bottom: 6px;
 	margin-top: 6px;
 	margin-bottom: 6px;
-	vertical-align: middle;
+	display:inline;
 }
 
 .slButton{font-size:85%;}
