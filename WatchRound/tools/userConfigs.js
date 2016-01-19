@@ -46,12 +46,14 @@ function user_SaveNewName(elem){
 
 function user_Apply(configElem){
 	ImportValues(Decode(configElem.getAttribute('properties')), false);
+	showTimed("Loaded");
 }
 
 function user_Update(configElem){
 	if (confirm("Update with current settings? This cannot be undone.")){
 		CaptureConfig(configElem);
 		SaveEverything();
+		showTimed("Updated");
 	}
 }
 
