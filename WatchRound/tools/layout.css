@@ -69,7 +69,7 @@ input, select{
 	text-align:right;
 	max-width:33%;
 }
-.jps_ConfigName{max-width:50%;}
+.jps_ConfigName{max-width:100%;}
 
 .jps_ListWrapper.jps_showList > .jps_ListItem:not(.jps_Template){display:block;}
 
