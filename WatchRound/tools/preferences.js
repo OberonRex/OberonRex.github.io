@@ -1,7 +1,7 @@
 function setHighLightColor(newColor){
 	var rules = document.styleSheets[0].rules;
 	for (var n = 0; n < rules.length; n++) {
-	  if (rules[n].selectorText = ".jps_button:hover") {
+	  if (rules[n].selectorText = ".jButton:hover") {
 	    rules[n].style.backgroudColor = newColor;
 	    break;
 	  }
