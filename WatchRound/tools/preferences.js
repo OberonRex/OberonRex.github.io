@@ -3,7 +3,7 @@ function setHighLightColor(newColor){
 	for (var n = 0; n < rules.length; n++) {
 	  if (rules[n].selectorText = ".jButton:hover") {
 	    rules[n].style.cssText = "background-color: " + newColor;
-	    break;
+	    //break;
 	  }
 	}	
 }
