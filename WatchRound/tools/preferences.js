@@ -100,18 +100,16 @@ function jps_LoadButtonFontColor(){
 	} 
 }
 
-var ClickColor = "yellow";
 //
 // Button Hover Color
 //
 function jps_SaveButtonClickColor(elem){
 	localStorage.ButtonClickColor = elem.value;
-	ClickColor = elem.value;
 }
 
 function jps_LoadButtonClickColor(){
 	if (localStorage.ButtonClickColor != null){
-		ClickColor = localStorage.ButtonClickColor;
+		document.getElementById('jps_ButtonClickColor').value = localStorage.ButtonClickColor;
 	}
 }
 
