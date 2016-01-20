@@ -292,7 +292,7 @@ function wireUpFramework(){
 	
 	jps_LoadButtonColor();
 	jps_LoadButtonFontColor();
-	jps_LoadButtonHoverColor();
+	jps_LoadButtonClickColor();
 	
 	jps_LoadAlertColor();
 	jps_LoadAlertFontColor();
