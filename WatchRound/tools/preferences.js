@@ -1,13 +1,3 @@
-function setHighLightColor(newColor){
-	var rules = document.styleSheets[0].rules;
-	for (var n = 0; n < rules.length; n++) {
-	  if (rules[n].selectorText == ".jButton:hover") {
-	    rules[n].style.cssText = "background-color: " + newColor;
-	    break;
-	  }
-	}	
-}
-
 function ResizeColorSwatches(percent){
 	
 	$('.jps_ColorSwatch').each(function(){
@@ -110,17 +100,18 @@ function jps_LoadButtonFontColor(){
 	} 
 }
 
+var ClickColor = "yellow";
 //
 // Button Hover Color
 //
-function jps_SaveButtonHoverColor(elem){
-	localStorage.ButtonHoverColor = elem.value;
-	setHighLightColor(elem.value);
+function jps_SaveButtonClickColor(elem){
+	localStorage.ButtonClickColor = elem.value;
+	ClickColor = elem.value;
 }
 
-function jps_LoadButtonHoverColor(){
-	if (localStorage.ButtonHoverColor != null){
-		setHighLightColor(localStorage.ButtonHoverColor);
+function jps_LoadButtonClickColor(){
+	if (localStorage.ButtonClickColor != null){
+		ClickColor = localStorage.ButtonClickColor;
 	}
 }
 
