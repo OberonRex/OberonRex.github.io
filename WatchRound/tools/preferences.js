@@ -1,3 +1,13 @@
+function setHighLightColor(newColor){
+	var rules = document.styleSheets[0].rules;
+	for (var n = 0; n < rules.length; n++) {
+	  if (rules[n].selectorText = "jps_button") {
+	    rules[n].style.backgroudColor = newColor;
+	    break;
+	  }
+	}	
+}
+
 function ResizeColorSwatches(percent){
 	
 	$('.jps_ColorSwatch').each(function(){
@@ -98,6 +108,20 @@ function jps_LoadButtonFontColor(){
 		$('.mButton,.lButton,.slButton').css("color", localStorage.ButtonFontColor);
 		document.getElementById('jps_ButtonFontColor').value = localStorage.ButtonFontColor;
 	} 
+}
+
+//
+// Button Hover Color
+//
+function jps_SaveButtonHoverColor(elem){
+	localStorage.ButtonHoverColor = elem.value;
+	setHighLightColor = elem.value;
+}
+
+function jps_LoadButtonHoverColor(){
+	if (localStorage.ButtonHoverColor != null){
+		setHighLightColor(localStorage.ButtonHoverColor);
+	}
 }
 
 //
