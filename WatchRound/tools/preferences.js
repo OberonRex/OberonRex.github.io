@@ -115,7 +115,7 @@ function jps_LoadButtonFontColor(){
 //
 function jps_SaveButtonHoverColor(elem){
 	localStorage.ButtonHoverColor = elem.value;
-	setHighLightColor = elem.value;
+	setHighLightColor(elem.value);
 }
 
 function jps_LoadButtonHoverColor(){
