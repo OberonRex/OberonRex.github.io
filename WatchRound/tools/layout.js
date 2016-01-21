@@ -363,7 +363,7 @@ function jps_GoToPage(pageID){
 				
 				document.getElementById('jps_Nav').style.display = 
 					(this.hasAttribute('jps_ShowMainNav') || this.hasAttribute('jps_subpage')) ? 'block' : 'none';
-				//document.getElementById('jps_Apply').style.display = this.hasAttribute('jps_Apply') ? 'block' : 'none';
+
 				document.getElementById('jps_Apply').style.display = 'block';
 				
 				document.getElementById('jps_SubNav').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
