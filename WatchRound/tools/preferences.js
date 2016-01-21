@@ -75,15 +75,18 @@ function jps_LoadFontColor(){
 //
 // Button Color
 //
+var ButtonColor;
 function jps_SaveButtonColor(elem){
 	$('.mButton,.lButton,.slButton').css("backgroundColor", elem.value);
 	localStorage.ButtonColor = elem.value;
+	ButtonColor = elem.value;
 }
 function jps_LoadButtonColor(){
 	if (localStorage.ButtonColor != null){
 		$('.mButton,.lButton,.slButton').css("backgroundColor", localStorage.ButtonColor);
 		document.getElementById('jps_ButtonColor').value = localStorage.ButtonColor;
 	} 
+	ButtonColor = document.getElementById('jps_ButtonColor').value;
 }
 
 //
@@ -101,16 +104,19 @@ function jps_LoadButtonFontColor(){
 }
 
 //
-// Button Hover Color
+// Button Click Color
 //
+var ButtonClickColor;
 function jps_SaveButtonClickColor(elem){
 	localStorage.ButtonClickColor = elem.value;
+	ButtonClickColor;
 }
 
 function jps_LoadButtonClickColor(){
 	if (localStorage.ButtonClickColor != null){
 		document.getElementById('jps_ButtonClickColor').value = localStorage.ButtonClickColor;
 	}
+	ButtonClickColor = document.getElementById('jps_ButtonClickColor').value;
 }
 
 //
