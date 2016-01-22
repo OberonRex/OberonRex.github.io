@@ -112,6 +112,7 @@ function setupCustomElements(){
 		disButton.setAttribute('target', this.id);
 		disButton.innerHTML = "Don't show this tip again.";
 		disButton.classList.add('mButton');
+		disButton.classList.add('jButton');
 		disButton.onclick = function(){disableTip(this.getAttribute('target'));};
 		
 		this.innerHTML = "";
