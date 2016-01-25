@@ -365,8 +365,8 @@ function jps_GoToPage(pageID){
 				document.getElementById('jps_Nav').style.display = 
 					(this.hasAttribute('jps_ShowMainNav') || this.hasAttribute('jps_subpage')) ? 'block' : 'none';
 
-				document.getElementById('jps_Apply').style.display = 'block';
-				
+				document.getElementById('jps_Apply').style.display = this.classList.contains('jps_noApply') ? 'none' : 'block';
+
 				document.getElementById('jps_SubNav').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
 				document.getElementById('jps_SubNav2').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
 				
