@@ -339,7 +339,10 @@ function jps_AddOne(pElem, show){
 }
 
 function AdjustMenuButtons(menuID, pageID){
-	//$(document.getElementById(menuID))
+	//$(document.getElementById(menuID)).children('.jButton').each(function{
+	//	this.
+	//});
+	$(document.getElementById(menuID)).children('.jButton').css('backgroundColor', this.getAttribute('page') == pageID ? ButtonClickColor : ButtonColor);
 }
 
 //var LastMainButton;
