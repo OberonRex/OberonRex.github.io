@@ -13,12 +13,12 @@ function SetPage(pContext, elem){
 
 function LoadMainHomePageSetting(){
 	var key = "main_page";
-	if (localStorage[key] != null){
-		var value = localStorage[key];
-		$('#selectMainHomePage').val(value);
-		if (value != "ConfigurationPage") jps_GoToPage(value);
-		else jps_GoToPage(currentSubPageID);
-	}
+	var value = localStorage[key] != null ? localStorage[key] : "HomePage";
+	
+	$('#selectMainHomePage').val(value);
+	
+	if (value != "ConfigurationPage") jps_GoToPage(value);
+	else jps_GoToPage(currentSubPageID);
 }
 
 function LoadConfigHomePageSetting(){
@@ -300,6 +300,7 @@ function wireUpFramework(){
 	
 	jps_loadAllTips();
 	
+	// Do Config first
 	LoadConfigHomePageSetting();
 	LoadMainHomePageSetting();
 	
