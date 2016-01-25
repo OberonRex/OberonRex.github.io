@@ -338,7 +338,7 @@ function jps_AddOne(pElem, show){
 	return clone;
 }
 
-function AdjustMenuButton(menuID, pageID){
+function AdjustMenuButtons(menuID, pageID){
 	//$(document.getElementById(menuID))
 }
 
