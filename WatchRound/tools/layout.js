@@ -341,7 +341,12 @@ function jps_AddOne(pElem, show){
 
 function AdjustMenuButtons(menuID, pageID){
 	$(document.getElementById(menuID)).children('.jButton').each(function(){
-		this.style.backgroundColor = this.getAttribute('target') == pageID ? ButtonClickColor : ButtonColor;
+		if (this.getAttribute('target') == pageID)
+		{
+			this.style.backgroundColor = ButtonClickColor;
+			this.scrollIntoView();
+		}
+		else this.style.backgroundColor = ButtonColor;
 	});
 	//$(document.getElementById(menuID)).children('.jButton').css('backgroundColor', this.getAttribute('page') == pageID ? ButtonClickColor : ButtonColor);
 }
