@@ -344,7 +344,7 @@ function AdjustMenuButtons(menuID, pageID){
 		if (this.getAttribute('target') == pageID)
 		{
 			this.style.backgroundColor = ButtonClickColor;
-			this.scrollIntoView();
+			//this.scrollIntoView(); Doesn't work
 		}
 		else this.style.backgroundColor = ButtonColor;
 	});
