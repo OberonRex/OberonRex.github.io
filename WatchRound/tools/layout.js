@@ -273,9 +273,10 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {findWrapper(this).remove()});
 	
 	$('body').on('click', '.lButton, .slButton', function() {jps_GoToTarget(this)});
+	$('body').on('click', '.mButton, oButton', function(){jps_Click(this)});
+	$('body').on('mouseup', '.mButton, oButton', function(){jps_UnClick(this)});
 	
 	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){activateInput(this)});
-	//$('div#jps_MasterDiv').on('click', '.jps_Text', function(){activateInput(this)});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){deactivateInput(this)});
 	
 	$('.jps_ColorSwatch, .jps_ColorPicker, jps_ColorPainter').each(function(){
@@ -337,6 +338,13 @@ function jps_AddOne(pElem, show){
 	clone.classList.add( show ? 'jps_showList' : 'jps_hideList');
 	
 	return clone;
+}
+
+function jps_Click(elem){
+	this.style.backgroundColor = ButtonClickColor;	
+}
+function jps_UnClick(elem){
+	this.style.backgroundColor = ButtonColor;
 }
 
 function AdjustMenuButtons(menuID, pageID){
