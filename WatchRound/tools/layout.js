@@ -387,7 +387,7 @@ function jps_GoToPage(pageID){
 					// show or don't show color tools
 					document.getElementById('jps_ColorEditors').style.display = this.hasAttribute('noColorEditors') ? 'none' : 'block';
 					AdjustMenuButtons('jps_SubNav', pageID);
-					AdjsutMenuButtons('jps_MainNav', 'ConfigurationPage');
+					AdjustMenuButtons('jps_MainNav', 'ConfigurationPage');
 				}
 				// don't show color tools
 				else {
