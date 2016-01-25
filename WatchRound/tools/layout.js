@@ -273,8 +273,8 @@ function wireUpFramework(){
 	$('div#jps_MasterDiv').on('click', '.jps_RemoveButton', function() {findWrapper(this).remove()});
 	
 	$('body').on('click', '.lButton, .slButton', function() {jps_GoToTarget(this)});
-	$('body').on('mousedown', '.mButton, oButton', function(){jps_Click(this)});
-	$('body').on('mouseup', '.mButton, oButton', function(){jps_UnClick(this)});
+	//$('body').on('mousedown', '.mButton, oButton', function(){jps_Click(this)});
+	//$('body').on('mouseup', '.mButton, oButton', function(){jps_UnClick(this)});
 	
 	$('div#jps_MasterDiv').on('focus', '.jps_Text', function(){activateInput(this)});
 	$('div#jps_MasterDiv').on('blur', '.jps_Text', function(){deactivateInput(this)});
