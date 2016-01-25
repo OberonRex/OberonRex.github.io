@@ -85,6 +85,7 @@ function jps_LoadButtonColor(){
 	if (localStorage.ButtonColor != null){
 		$('.mButton,.lButton,.slButton').css("backgroundColor", localStorage.ButtonColor);
 		document.getElementById('jps_ButtonColor').value = localStorage.ButtonColor;
+		ButtonColor = localStorage.ButtonColor;
 	} 
 	ButtonColor = document.getElementById('jps_ButtonColor').value;
 }
