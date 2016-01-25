@@ -341,10 +341,10 @@ function jps_AddOne(pElem, show){
 }
 
 function jps_Click(elem){
-	this.style.backgroundColor = ButtonClickColor;	
+	elem.style.backgroundColor = ButtonClickColor;	
 }
 function jps_UnClick(elem){
-	this.style.backgroundColor = ButtonColor;
+	elem.style.backgroundColor = ButtonColor;
 }
 
 function AdjustMenuButtons(menuID, pageID){
