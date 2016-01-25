@@ -338,6 +338,10 @@ function jps_AddOne(pElem, show){
 	return clone;
 }
 
+function AdjustMenuButton(menuID, pageID){
+	//$(document.getElementById(menuID))
+}
+
 //var LastMainButton;
 //var LastSubButton;
 function jps_GoToTarget(elem){
@@ -362,19 +366,31 @@ function jps_GoToPage(pageID){
 				prevPageID = currentPageID;
 				currentPageID = pageID;
 				
+				// If a main page or subpage, show main navigation bar
 				document.getElementById('jps_Nav').style.display = 
 					(this.hasAttribute('jps_ShowMainNav') || this.hasAttribute('jps_subpage')) ? 'block' : 'none';
-
+				
+				// Show reset/cancel/apply buttons?
 				document.getElementById('jps_Apply').style.display = this.classList.contains('jps_noApply') ? 'none' : 'block';
 
+				// If subpage, show sub navigation bar
 				document.getElementById('jps_SubNav').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
 				document.getElementById('jps_SubNav2').style.display = this.hasAttribute('jps_subpage') ? 'block' : 'none';
 				
+				// If it's a sub page...
 				if (this.hasAttribute('jps_subpage')) {
+					// remember pageID as currentSubPageID
 					currentSubPageID = pageID;
+					// show or don't show color tools
 					document.getElementById('jps_ColorEditors').style.display = this.hasAttribute('noColorEditors') ? 'none' : 'block';
+					AdjustMenuButtons('jps_subNav', pageID);
+					AdjsutMenuButtons('jps_MainNav', 'ConfigHomePage');
 				}
-				else document.getElementById('jps_ColorEditors').style.display = 'none';
+				// don't show color tools
+				else {
+					if (this.hasAttribute('jps_ShowMainNav')) AdjustMenuButtons('jps_MainNav', pageID);
+					document.getElementById('jps_ColorEditors').style.display = 'none';
+				}
 			}
 			else this.style.display = "none";	
 		});
