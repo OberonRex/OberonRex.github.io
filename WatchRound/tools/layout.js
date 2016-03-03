@@ -7,7 +7,8 @@ function DoImport(){
 	//alert("coming soon but not yet implemented");
 	localStorage.clear();
 
-	var data = JSON.parse(ls);
+	var cp = document.getElementById("CopyPaste");
+	var data = JSON.parse(cp.value);
 	Object.keys(data).forEach(function (k){
 		localStorage.setItem(k, data[k]);
 	})
