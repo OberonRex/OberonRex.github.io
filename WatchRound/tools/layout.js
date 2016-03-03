@@ -4,7 +4,13 @@ function DoExport(){
 }
 
 function DoImport(){
-	alert("coming soon but not yet implemented");
+	//alert("coming soon but not yet implemented");
+	localStorage.clear();
+
+	var data = JSON.parse(ls);
+	Object.keys(data).forEach(function (k){
+		localStorage.setItem(k, data[k]);
+	})
 }
 
 function test(){
