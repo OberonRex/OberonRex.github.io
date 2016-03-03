@@ -1,10 +1,10 @@
 function DoExport(){
-	//var cp = document.GetElementById("CopyPaste");
-	//cp.value = JSON.stringify(localStorage);
+	var cp = document.getElementById("CopyPaste");
+	cp.value = JSON.stringify(localStorage);
 }
 
 function DoImport(){
-	//alert("coming soon but not yet implemented");
+	alert("coming soon but not yet implemented");
 }
 
 function test(){
