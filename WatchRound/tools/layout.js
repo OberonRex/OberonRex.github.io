@@ -1,6 +1,6 @@
 function test(){
 	var ls = JSON.stringify(localStorage);
-	ls = JSON.stringify(ls);
+	//ls = JSON.stringify(ls);
 	
 	var t;
 	var data = JSON.parse(ls);
