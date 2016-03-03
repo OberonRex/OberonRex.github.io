@@ -13,7 +13,7 @@ function DoImport(){
 	})
 }
 
-function testxx(){
+function testxxx(){
 //	var ls = JSON.stringify(localStorage);
 	//ls = JSON.stringify(ls);
 	
