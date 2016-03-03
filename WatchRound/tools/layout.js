@@ -1,11 +1,12 @@
 function DoExport(){
-	var cp = document.GetElementById("CopyPaste");
-	cp.value = JSON.stringify(localStorage);
+	//var cp = document.GetElementById("CopyPaste");
+	//cp.value = JSON.stringify(localStorage);
 }
 
 function DoImport(){
-	alert("coming soon but not yet implemented");
+	//alert("coming soon but not yet implemented");
 }
+
 function test(){
 //	var ls = JSON.stringify(localStorage);
 	//ls = JSON.stringify(ls);
