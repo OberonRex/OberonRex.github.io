@@ -7,14 +7,14 @@ function DoImport(){
 	alert("coming soon but not yet implemented");
 }
 function test(){
-	var ls = JSON.stringify(localStorage);
+//	var ls = JSON.stringify(localStorage);
 	//ls = JSON.stringify(ls);
 	
-	var t;
-	var data = JSON.parse(ls);
-	Object.keys(data).forEach(function (k){
-		var t = data[k];
-	})
+//	var t;
+//	var data = JSON.parse(ls);
+//	Object.keys(data).forEach(function (k){
+//		var t = data[k];
+//	})
 }
 
 function activateInput(inpElem){
