@@ -1,3 +1,14 @@
+function test(){
+	var ls = JSON.stringify(localStorage);
+	ls = JSON.stringify(ls);
+	
+	var t;
+	var data = JSON.parse(ls);
+	Object.keys(data).forEach(function (k){
+		var t = data[k];
+	})
+}
+
 function activateInput(inpElem){
 	inpElem.removeAttribute('readonly'); inpElem.style.border='1px solid black';
 	inpElem.setSelectionRange(0, inpElem.value.length);
