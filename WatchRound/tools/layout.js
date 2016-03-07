@@ -50,14 +50,16 @@ function LoadMainHomePageSetting(){
 
 function LoadConfigHomePageSetting(){
 	var key = "config_page";
-	//var value = localStorage[key] != null ? localStorage[key] : "HomePage";
-	//$('#selectConfigHomePage').val(value);
-	//currentSubPageID = value;
-	if (localStorage[key] != null){
-		var value = localStorage[key];
-		$('#selectConfigHomePage').val(value);
-		currentSubPageID = value;
-	}
+	
+	var value = localStorage[key] != null ? localStorage[key] : "ConfigHomePage";
+	$('#selectConfigHomePage').val(value);
+	currentSubPageID = value;
+	
+	//if (localStorage[key] != null){
+	//	var value = localStorage[key];
+	//	$('#selectConfigHomePage').val(value);
+	//	currentSubPageID = value;
+	//}
 }
 
 function disableTip(id){
